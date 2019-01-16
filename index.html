@@ -4,19 +4,18 @@
         <script src="js/jquery.js"></script>
         <script type="module" src="js/index.js"></script>
         <script>
-            alert("Checking session...");
             $.ajax({
                 type: 'GET',
                 url: 'http://iptvjoss.com/iptv/php/check-session.php',
                 dataType: 'text',
                 cache: false,
                 success: function(a) {
-                    alert(a);
-                    return;
                     if (a == 0) {
+                        alert("This line");
                         // Logged in
                         window.location.href = "home.html";
                     } else {
+                        alert("This line 2");
                         // Not logged in
                         window.location.href = "login.html";
                     }
