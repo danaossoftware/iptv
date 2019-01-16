@@ -7,7 +7,7 @@ function login() {
     }
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/iptv/php/login.php',
+        url: 'http://iptvjoss.com/tv/php/login.php',
         data: {'email': email, 'password': password},
         dataType: 'text',
         cache: false,
