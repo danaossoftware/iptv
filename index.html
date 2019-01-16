@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery.js"></script>
+        <script type="module" src="js/index.js"></script>
+        <script>
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost/iptv/php/check-session.php',
+                dataType: 'text',
+                cache: false,
+                success: function(a) {
+                    if (a == 0) {
+                        // Logged in
+                        window.location.href = "home.html";
+                    } else {
+                        // Not logged in
+                        window.location.href = "login.html";
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <video id="video"></video>
+    </body>
+</html>

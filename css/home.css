@@ -1,0 +1,9 @@
+.menu-item {
+    border-radius: 10px;
+    transition: background-color .3s;
+    padding: 10px;
+}
+
+.menu-item:active {
+    background-color: #eeeeee;
+}

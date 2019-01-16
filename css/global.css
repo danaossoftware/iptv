@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'PalanquinBold';
+    src: url('../font/Palanquin-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PalanquinRegular';
+    src: url('../font/Palanquin-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: url('../font/Mohave-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'SegoeUILight';
+    src: url('../font/SegoeUILight.ttf');
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: 'PalanquinRegular';
+}
+
+.flat-input {
+    border: 0;
+    height: 40px;
+}
+
+.flat-button {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    transition: background-color .3s;
+    color: dodgerblue;
+    font-family: 'PalanquinBold';
+    font-size: 18px;
+    background-color: #ffffff;
+}
+
+.flat-button:active {
+    background-color: #dddddd;
+}
+
+.button1 {
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #01b875;
+    color: white;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.button1:active {
+    background-color: #019258;
+}
