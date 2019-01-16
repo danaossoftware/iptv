@@ -13,7 +13,7 @@ function signup() {
     }
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/tv/php/signup.php',
+        url: 'http://iptvjoss.com/iptv/php/signup.php',
         data: {'email': email, 'password': password},
         dataType: 'text',
         cache: false,

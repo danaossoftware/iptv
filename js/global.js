@@ -1,4 +1,4 @@
-const SERVER_URL = "http://iptvjoss.com/tv/php/";
+const SERVER_URL = "http://iptvjoss.com/iptv/php/";
 
 function occurrences(string, subString, allowOverlapping) {
     string += "";
