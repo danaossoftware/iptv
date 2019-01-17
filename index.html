@@ -10,20 +10,21 @@
                 dataType: 'text',
                 cache: false,
                 success: function(a) {
+                    alert("Hello world 7");
                     if (a == 0) {
-                        alert("This line");
                         // Logged in
                         window.location.href = "home.html";
                     } else {
-                        alert("This line 2");
                         // Not logged in
                         window.location.href = "login.html";
                     }
+                },
+                error: function(a, b, c) {
+                    alert(a+' '+b+' '+c);
                 }
             });
         </script>
     </head>
     <body>
-        <video id="video"></video>
     </body>
 </html>
