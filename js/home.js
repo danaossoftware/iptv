@@ -107,8 +107,8 @@ function loadChannels() {
                     channels.push(channel);
                     var categoryIndex = findCategoryIndex(groupTitle);
                     $("#category-panel-" + categoryIndex).append("<img id='" + channelId + "' class='channel' src='" + channelLogoURL + "' onerror='this.src=\"img/channel-placeholder.jpg\"' width='80px' height='60px' style='margin: 5px; border-radius: 10px; cursor: pointer;'>");
+                    $("#category-panel-" + categoryIndex).css("display", "flex");
                 }
-                $("#category-panel-0").css("display", "flex");
             } catch (e) {
             }
             setCategoryClickListener();

@@ -15,9 +15,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="72" column="134" selection-start-line="72" selection-start-column="134" selection-end-line="72" selection-end-column="134" />
+            <state relative-caret-position="187">
+              <caret line="109" column="81" lean-forward="true" selection-start-line="109" selection-start-column="81" selection-end-line="109" selection-end-column="81" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -63,7 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hh/mm</find>
       <find>session_start</find>
       <find>Email</find>
       <find>email</find>
@@ -93,6 +94,7 @@
       <find>channels&quot;</find>
       <find>#channels</find>
       <find>category-panel</find>
+      <find>-0</find>
     </findStrings>
     <replaceStrings>
       <replace>width: calc(33% - 20px);</replace>
@@ -268,12 +270,12 @@
       <workItem from="1547714315966" duration="1404000" />
       <workItem from="1547733561103" duration="173000" />
       <workItem from="1547739466516" duration="18000" />
-      <workItem from="1547806313491" duration="16021000" />
+      <workItem from="1547806313491" duration="16089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57980000" />
+    <option name="totallyTimeSpent" value="58048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -774,9 +776,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="72" column="134" selection-start-line="72" selection-start-column="134" selection-end-line="72" selection-end-column="134" />
+        <state relative-caret-position="187">
+          <caret line="109" column="81" lean-forward="true" selection-start-line="109" selection-start-column="81" selection-end-line="109" selection-end-column="81" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
