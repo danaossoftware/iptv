@@ -1,14 +1,14 @@
 function login() {
     $("#error").css("display", "none");
-    var email = $("#email").val();
+    var phone = $("#phone").val();
     var password = $("#password").val();
-    if (email == '' || password == '') {
+    if (phone == '' || password == '') {
         return;
     }
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/login.php',
-        data: {'email': email, 'password': password},
+        url: 'http://localhost/iptv/php/login.php',
+        data: {'phone': phone, 'password': password},
         dataType: 'text',
         cache: false,
         success: function(a) {

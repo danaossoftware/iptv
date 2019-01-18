@@ -1,8 +1,8 @@
 <?php
 include 'db.php';
-$email = $_GET["email"];
+$phone = $_GET["phone"];
 $password = $_GET["password"];
-if ($c->query("INSERT INTO users (id, email, password) VALUES ('" . uniqid() . "', '" . $email . "', '" . $password . "')")) {
+if ($c->query("INSERT INTO users (id, phone, password) VALUES ('" . uniqid() . "', '" . $phone . "', '" . $password . "')")) {
     echo 0;
 } else {
     echo -1;

@@ -1,11 +1,12 @@
 <?php
 include 'db.php';
-$email = $_GET["email"];
+$phone = $_GET["phone"];
 $password = $_GET["password"];
-$results = $c->query("SELECT * FROM users WHERE email='" . $email . "' AND password='" . $password . "'");
+$results = $c->query("SELECT * FROM users WHERE phone='" . $phone . "' AND password='" . $password . "'");
 if ($results && $results->num_rows > 0) {
+    session_id("iptv");
     session_start();
-    $_SESSION["iptv_user_id"] = $results->fetch_assoc()["id"];
+    $_SESSION["userid"] = $results->fetch_assoc()["id"];
     echo 0;
 } else {
     echo -1;

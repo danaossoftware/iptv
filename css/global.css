@@ -18,6 +18,11 @@
     src: url('../font/SegoeUILight.ttf');
 }
 
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../font/SegoeUI.ttf');
+}
+
 * {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -41,6 +46,38 @@ body {
 .flat-input {
     border: 0;
     height: 40px;
+}
+
+.input1 {
+    width: 87%;
+    background-color: #eeeeee;
+    height: 30px;
+    border-radius: 1px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input2 {
+    width: 87%;
+    background-color: #eeeeee;
+    height: 30px;
+    border-radius: 3px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input3 {
+    width: 87%;
+    background-color: white;
+    height: 30px;
+    border-radius: 3px;
+    border: 0;
+    font-family: SegoeUILight, Arial;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .flat-button {
@@ -70,4 +107,63 @@ body {
 
 .button1:active {
     background-color: #019258;
+}
+
+.button2 {
+    color: #3a3f3f;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    background-image: linear-gradient(white, #eeeeee);
+    border: 0;
+}
+
+.button2:active {
+    background-image: linear-gradient(#eeeeee, white);
+}
+
+.button4 {
+    background-color: #2270f3;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    font-family: SegoeUI;
+    cursor: pointer;
+    transition: background-color .1s;
+}
+
+.button4:hover {
+    background-color: #226cdf;
+}
+
+.button4:active {
+    background-color: #1b5bc7;
+}
+
+.button5 {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    font-family: SegoeUI;
+    cursor: pointer;
+    transition: background-color .1s;
+}
+
+.button5:hover {
+    background-color: #d04536;
+}
+
+.button5:active {
+    background-color: #b43a2d;
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery.js"></script>
+        <script src="js/global.js"></script>
+        <script src="js/profile.js"></script>
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/profile.css" rel="stylesheet">
+    </head>
+    <body>
+        <div style="width: 100%; display: flex; flex-flow: column nowrap;">
+            <div id="titlebar" style="position: fixed; left: 0; top: 0; width: 100%; height: 50px; background-color: #666666; display: flex; align-items: center; flex-flow: row nowrap;">
+                <div onclick="window.history.back()" style="width: 40px; height: 100%; display: flex; justify-content: center; align-items: center;">
+                    <img src="img/back.png" width="20px" height="20px">
+                </div>
+                <div style="margin-left: 10px; color: white;">Profil</div>
+            </div>
+            <img src="img/cover.jpg" width="100%" height="200px" style="margin-top: 50px; object-fit: cover;">
+            <div style="width: 100%; margin-top: -50px; display: flex; justify-content: center;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2); background-color: white; display: flex; justify-content: center; align-items: center;">
+                    <div style="width: 98%; height: 98%; border-radius: 50%; background-color: #cccccc; display: flex; justify-content: center; align-items: center;">
+                        <img width="98%" height="98%" style="border-radius: 50%; background-color: #ffffff;" src="img/profile_icon.png">
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <div class="button2" style="width: 150px; display: flex; justify-content: center; align-items: center; flex-flow: row nowrap;">
+                    <img src="img/subscribe.png" width="15px" height="15px">
+                    <div style="color: #3a3f3f; margin-left: 5px; font-size: 14px;">LANGGANAN</div>
+                </div>
+                <div onclick="editProfile()" class="button2" style="width: 150px; margin-left: 15px; display: flex; justify-content: center; align-items: center; flex-flow: row nowrap;">
+                    <img src="img/logout-2.png" width="17px" height="17px">
+                    <div style="color: #3a3f3f; margin-left: 5px; font-size: 14px;">EDIT PROFIL</div>
+                </div>
+            </div>
+            <!-- NAMA PENGGUNA -->
+            <div style="color: #72757a; font-size: 14px; margin-top: 20px; margin-left: 30px;">NAMA PENGGUNA</div>
+            <div style="color: #388dbb; margin-top: -10px; margin-left: 30px; font-size: 22px;">projectsid</div>
+            <div style="width: calc(100% - 60px); margin-top: 15px; margin-left: 30px; height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
+            <!-- STATUS AKUN -->
+            <div style="color: #72757a; font-size: 14px; margin-top: 20px; margin-left: 30px;">STATUS AKUN</div>
+            <div style="display: flex; flex-flow: row nowrap; margin-top: -10px; margin-left: 30px; align-items: center;">
+                <div style="color: #388dbb; font-size: 22px;">Aktif</div>
+                <div style="width: 10px; height: 10px; border-radius: 50%; margin-left: 5px; margin-top: 3px; background-color: lawngreen;"></div>
+            </div>
+            <div style="width: calc(100% - 60px); margin-top: 15px; margin-left: 30px; height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
+            <!-- BATAS WAKTU -->
+            <div style="color: #72757a; font-size: 14px; margin-top: 20px; margin-left: 30px;">BATAS WAKTU</div>
+            <div style="color: #388dbb; margin-top: -10px; margin-left: 30px; font-size: 22px;">10 Februari 2019</div>
+            <div style="width: calc(100% - 60px); margin-top: 15px; margin-left: 30px; height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
+            <!-- APAKAH TRIAL? -->
+            <div style="color: #72757a; font-size: 14px; margin-top: 20px; margin-left: 30px;">AKUN TRIAL</div>
+            <div style="color: #388dbb; margin-top: -10px; margin-left: 30px; font-size: 22px;">Tidak</div>
+            <div style="width: calc(100% - 60px); margin-top: 15px; margin-left: 30px; height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
+            <!-- KONEKSI AKTIF -->
+            <div style="color: #72757a; font-size: 14px; margin-top: 20px; margin-left: 30px;">KONEKSI AKTIF</div>
+            <div style="color: #388dbb; margin-top: -10px; margin-left: 30px; font-size: 22px;">0</div>
+            <div style="width: calc(100% - 60px); margin-top: 15px; margin-left: 30px; height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
+            <!-- DIBUAT PADA -->
+            <div style="color: #72757a; font-size: 14px; margin-top: 20px; margin-left: 30px;">DIBUAT PADA</div>
+            <div style="color: #388dbb; margin-top: -10px; margin-left: 30px; font-size: 22px;">10 Januari 2019</div>
+            <div style="width: calc(100% - 60px); margin-top: 15px; margin-left: 30px; height: 1px; background-color: rgba(0, 0, 0, 0.1);"></div>
+            <!-- MAKSIMUM KONEKSI -->
+            <div style="color: #72757a; font-size: 14px; margin-top: 20px; margin-left: 30px;">MAKSIMUM KONEKSI</div>
+            <div style="color: #388dbb; margin-top: -10px; margin-left: 30px; font-size: 22px; margin-bottom: 20px;">1</div>
+        </div>
+    </body>
+</html>

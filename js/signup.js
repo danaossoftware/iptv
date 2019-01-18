@@ -1,9 +1,9 @@
 function signup() {
     $("#error").css("display", "none");
-    var email = $("#email").val();
+    var phone = $("#phone").val();
     var password = $("#password").val();
-    if (email == '' || password == '') {
-        alert("Mohon masukkan email dan kata sandi");
+    if (phone == '' || password == '') {
+        alert("Mohon masukkan phone dan kata sandi");
         return;
     }
     if (password.length < 8) {
@@ -13,17 +13,18 @@ function signup() {
     }
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/signup.php',
-        data: {'email': email, 'password': password},
+        url: 'http://localhost/iptv/php/signup.php',
+        data: {'phone': phone, 'password': password},
         dataType: 'text',
         cache: false,
         success: function(a) {
+
             if (a == 0) {
                 // Success
                 window.location.href = 'home.html';
             } else if (a == -1) {
                 // User sudah ada
-                $("#error").html("Email sudah digunakan");
+                $("#error").html("phone sudah digunakan");
                 $("#error").css("display", "block");
             }
         }
