@@ -70,7 +70,7 @@ function loadChannels() {
                 } else {
                     indicatorDisplay = "none";
                 }
-                $("#channels").append("<div id='category-panel-" + i + "' style='display: none; width: 100%; height: 100%; position: absolute; left: 0; top: 0;'></div>")
+                $("#channels").append("<div id='category-panel-" + i + "' style='display: none; justify-content: center; align-items: center; align-content: center; width: 100%; height: 100%; position: absolute; left: 0; top: 0;'></div>")
                 $("#categories").append("<div class=\"category-selector\" style=\"cursor: pointer; padding-left: 40px; padding-right: 40px; display: flex; align-items: center; color: white; font-size: 20px; position: relative;\">\n" +
                     "" + categoryName + "\n" +
                     "<div class=\"category-indicator-top\" style=\"display: " + indicatorDisplay + "; width: 100%; height: 2px; position: absolute; left: 0; top: 0; background-color: #941b3a;\"></div>\n" +
@@ -106,7 +106,7 @@ function loadChannels() {
                     };
                     channels.push(channel);
                     var categoryIndex = findCategoryIndex(groupTitle);
-                    $("#category-panel-" + categoryIndex).append("<img id='" + channelId + "' class='channel' src='" + channelLogoURL + "' onerror='this.src=\"img/channel-placeholder.jpg\"' width='100px' height='80px' style='margin: 5px; border-radius: 10px; cursor: pointer;'>");
+                    $("#category-panel-" + categoryIndex).append("<img id='" + channelId + "' class='channel' src='" + channelLogoURL + "' onerror='this.src=\"img/channel-placeholder.jpg\"' width='80px' height='60px' style='margin: 5px; border-radius: 10px; cursor: pointer;'>");
                 }
                 $("#category-panel-0").css("display", "block");
             } catch (e) {
