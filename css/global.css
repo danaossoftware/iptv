@@ -102,11 +102,11 @@ body {
     height: 40px;
     border-radius: 10px;
     border: 0;
-    background-color: #ff0000;
+    background-color: #01b875;
     color: white;
     cursor: pointer;
     transition: background-color .5s;
-    min-height: 40px;
+    flex-shrink: 0;
 }
 
 .button1:active {
