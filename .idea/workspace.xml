@@ -15,11 +15,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="109" column="81" lean-forward="true" selection-start-line="109" selection-start-column="81" selection-end-line="109" selection-end-column="81" />
+            <state relative-caret-position="221">
+              <caret line="72" column="188" selection-start-line="72" selection-start-column="188" selection-end-line="72" selection-end-column="188" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -270,12 +268,12 @@
       <workItem from="1547714315966" duration="1404000" />
       <workItem from="1547733561103" duration="173000" />
       <workItem from="1547739466516" duration="18000" />
-      <workItem from="1547806313491" duration="16089000" />
+      <workItem from="1547806313491" duration="16110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58048000" />
+    <option name="totallyTimeSpent" value="58069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -776,11 +774,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="109" column="81" lean-forward="true" selection-start-line="109" selection-start-column="81" selection-end-line="109" selection-end-column="81" />
+        <state relative-caret-position="221">
+          <caret line="72" column="188" selection-start-line="72" selection-start-column="188" selection-end-line="72" selection-end-column="188" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
