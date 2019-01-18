@@ -1,7 +1,6 @@
 <?php
-session_id("iptv");
 session_start();
-if (isset($_SESSION["userid"]) && $_SESSION["userid"] != '') {
+if (isset($_SESSION["iptvjoss_user_id"]) && $_SESSION["iptvjoss_user_id"] != '') {
     echo 0;
 } else {
     echo -1;

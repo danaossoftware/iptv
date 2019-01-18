@@ -1,3 +1,5 @@
+const SERVER_URL = "http://iptvjoss.com/iptv/php/";
+
 function signup() {
     $("#error").css("display", "none");
     var phone = $("#phone").val();
@@ -13,15 +15,14 @@ function signup() {
     }
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/iptv/php/signup.php',
-        data: {'phone': phone, 'password': password},
+        url: 'http://iptvjoss.com/iptv/php/signup.php',
+        data: {'phone': phone, 'username': randomString(), 'password': password},
         dataType: 'text',
         cache: false,
         success: function(a) {
-
             if (a == 0) {
                 // Success
-                window.location.href = 'home.html';
+                window.location.href = 'wait-for-confirmation.html';
             } else if (a == -1) {
                 // User sudah ada
                 $("#error").html("phone sudah digunakan");
@@ -29,4 +30,23 @@ function signup() {
             }
         }
     });
+}
+
+function guid() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
+
+function randomString() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 10; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
 }

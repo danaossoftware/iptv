@@ -2,8 +2,39 @@ var categories = [];
 var channels = [];
 
 $(document).ready(function () {
+    loadProfile();
     loadChannels();
 });
+
+function loadProfile() {
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'get-user-info.php',
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            if (a < 0) {
+                // Error
+            } else {
+                var user = JSON.parse(a);
+                var name = user["name"];
+                name = name.toUpperCase();
+                if (name == '') {
+                    $("#welcome-text").html("SELAMAT DATANG");
+                } else {
+                    if (name.includes(" ")) {
+                        name = name.substring(0, name.indexOf(" "));
+                    }
+                    $("#welcome-text").html("SELAMAT DATANG "+name);
+                }
+                var profilePictureURL = user["profile_picture_url"];
+                if (profilePictureURL != "") {
+                    $("#profile-picture").attr("src", profilePictureURL);
+                }
+            }
+        }
+    });
+}
 
 function loadChannels() {
     categories = [];
@@ -11,7 +42,7 @@ function loadChannels() {
     $("#categories").find("*").remove();
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/iptv/channels.m3u',
+        url: 'http://iptvjoss.com/iptv/channels.m3u',
         dataType: 'text',
         cache: false,
         success: function (a) {
@@ -167,4 +198,16 @@ function showMenu() {
 function hideMenu() {
     $("#menu").fadeOut(300);
     $("#menu-container").fadeOut(300);
+}
+
+function logout() {
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'logout.php',
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            window.location.href = "login.html";
+        }
+    });
 }

@@ -19,12 +19,11 @@
             <div style="margin-left: 10px; color: white;">Profil</div>
         </div>
         <div style="width: 100%; display: flex; justify-content: center; flex-flow: column nowrap; align-items: center; align-content: center; margin-top: 80px;">
-            <div onclick="changeProfilePicture()" id="profile-picture-container" style="width: 120px; height: 120px; position: relative; cursor: pointer;">
+            <div id="profile-picture-container" style="width: 120px; height: 120px; position: relative; cursor: pointer;">
                 <img id="profile-picture" src="img/profile_icon.png" width="100%" height="100%" style="border-radius: 50%;">
-                <div id="profile-picture-edit-container" style="background-color: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; left: 0; top: 0; border-radius: 50%; display: none; justify-content: center; align-items: center;">
-                    <div style="color: white; font-family: 'SegoeUILight', Arial; font-size: 25px;">Ubah</div>
-                </div>
             </div>
+            <button onclick="changeProfilePicture()" class="button2" style="width: 150px;">Ubah Foto Profil</button>
+            <button onclick="deleteProfilePicture()" class="button3" style="width: 150px; margin-top: 10px;">Hapus Foto Profil</button>
             <input id="select-profile-picture" type="file" name="browse" style="width: 0; height: 0; overflow: hidden;">
             <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 15px;">
                 <div style="color: black; font-size: 18px;">Nama :</div>
@@ -48,6 +47,17 @@
     <div id="loading-container" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .8);">
         <div style="width: 200px; height: 200px; border-radius: 30px; background-color: white; display: flex; justify-content: center; align-items: center;">
             <div class="loader" style="transform: scale(.5, .5);"></div>
+        </div>
+    </div>
+    <div id="prompt-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); display: none; justify-content: center; align-items: center;">
+        <div style="width: 300px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5); padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; margin-left: 30px; display: flex; flex-flow: column nowrap;">
+            <div style="width: 100%; display: flex; justify-content: center; font-family: 'PalanquinBold'; font-size: 20px;">Peringatan</div>
+            <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, 0.1); margin-top: 5px;"></div>
+            <div id="prompt-text" style="color: black; margin-top: 7px;"></div>
+            <div style="width: 100%; display: flex; justify-content: flex-end;">
+                <button id="prompt-cancel" class="flat-button" style="height: 30px; font-size: 15px;">Batal</button>
+                <button id="prompt-ok" class="flat-button" style="height: 30px; font-size: 15px;">OK</button>
+            </div>
         </div>
     </div>
     </body>

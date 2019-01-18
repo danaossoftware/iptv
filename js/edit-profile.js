@@ -1,3 +1,5 @@
+var profilePictureFile = null;
+
 $(document).ready(function() {
     loadProfile();
 });
@@ -5,7 +7,7 @@ $(document).ready(function() {
 function loadProfile() {
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/iptv/php/get-user-info.php',
+        url: 'http://iptvjoss.com/iptv/php/get-user-info.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -17,6 +19,8 @@ function loadProfile() {
                 $("#name").val(user["name"]);
                 $("#username").val(user["username"]);
                 $("#city").val(user["city"]);
+                var profilePictureURL = user["profile_picture_url"];
+                $("#profile-picture").attr("src", profilePictureURL);
             }
         }
     });
@@ -42,21 +46,83 @@ function saveEdittedProfile() {
         return;
     }
     $("#loading-container").css("display", "flex");
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost/iptv/php/update-profile.php',
-        data: {'name': name, 'username': username, 'city': city},
-        dataType: 'text',
-        cache: false,
-        success: function(a) {
-            if (a == -1) {
-                $("#error").html("Maaf, nama pengguna sudah digunakan");
-                $("#error").css("display", "block");
-            } else {
-                window.location.href = "home.html";
+    var profilePictureURL = "";
+    if (profilePictureFile != null) {
+        var profilePictureName = guid();
+        profilePictureURL = 'http://iptvjoss.com/iptv/userdata/imgs/'+profilePictureName;
+        var fd = new FormData();
+        fd.append("img-file-name", profilePictureName);
+        fd.append("img-file", profilePictureFile);
+        $.ajax({
+            type: 'POST',
+            url: SERVER_URL+'upload-img.php',
+            data: fd,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function(a) {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://iptvjoss.com/iptv/php/update-profile.php',
+                    data: {'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
+                    dataType: 'text',
+                    cache: false,
+                    success: function(a) {
+                        if (a == -1) {
+                            $("#error").html("Maaf, nama pengguna sudah digunakan");
+                            $("#error").css("display", "block");
+                        } else {
+                            window.location.href = "home.html";
+                        }
+                    },
+                    error: function(a, b, c) {
+                    }
+                });
             }
-        },
-        error: function(a, b, c) {
-        }
+        });
+    } else {
+        $.ajax({
+            type: 'GET',
+            url: 'http://iptvjoss.com/iptv/php/update-profile.php',
+            data: {'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
+            dataType: 'text',
+            cache: false,
+            success: function(a) {
+                if (a == -1) {
+                    $("#error").html("Maaf, nama pengguna sudah digunakan");
+                    $("#error").css("display", "block");
+                } else {
+                    window.location.href = "home.html";
+                }
+            },
+            error: function(a, b, c) {
+            }
+        });
+    }
+}
+
+function changeProfilePicture() {
+    $("#select-profile-picture").on("change", function() {
+        var file = $(this).prop("files")[0];
+        profilePictureFile = file;
+        var fr = new FileReader();
+        fr.onload = function() {
+            $("#profile-picture").attr("src", fr.result);
+        };
+        fr.readAsDataURL(file);
     });
+    $("#select-profile-picture").click();
+}
+
+function deleteProfilePicture() {
+    $("#prompt-text").html("Apakah Anda yakin ingin menghapus foto profil Anda?")
+    $("#prompt-cancel").on("click", function() {
+        $("#prompt-container").css("display", "none");
+    });
+    $("#prompt-ok").on("click", function() {
+        profilePictureFile = null;
+        $("#profile-picture").attr("src", "img/profile_icon.png");
+        $("#prompt-container").css("display", "none");
+    });
+    $("#prompt-container").css("display", "flex");
 }
