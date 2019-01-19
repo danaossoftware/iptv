@@ -36,3 +36,7 @@ $(document).ready(function() {
         }
     });
 });
+
+function playVideo() {
+    $("#video")[0].play();
+}
