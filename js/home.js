@@ -70,7 +70,7 @@ function loadChannels() {
                 } else {
                     indicatorDisplay = "none";
                 }
-                $("#channels").append("<div id='category-panel-" + i + "' style='display: none; flex-flow: column wrap; justify-content: center; align-items: flex-start; align-content: flex-start; width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: scroll; overflow-y: hidden;'></div>")
+                $("#channels").append("<div id='category-panel-" + i + "' style='display: none; flex-flow: column wrap; justify-content: center; align-items: flex-start; align-content: flex-start; width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow-x: scroll; overflow-y: hidden;'></div>")
                 $("#categories").append("<div class=\"category-selector\" style=\"cursor: pointer; padding-left: 40px; padding-right: 40px; display: flex; align-items: center; color: white; font-size: 20px; position: relative;\">\n" +
                     "" + categoryName + "\n" +
                     "<div class=\"category-indicator-top\" style=\"display: " + indicatorDisplay + "; width: 100%; height: 2px; position: absolute; left: 0; top: 0; background-color: #941b3a;\"></div>\n" +
