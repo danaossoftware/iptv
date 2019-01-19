@@ -13,6 +13,7 @@ function signup() {
         $("#error").css("display", "block");
         return;
     }
+    $("#loading-container").css("display", "flex");
     $.ajax({
         type: 'GET',
         url: 'http://iptvjoss.com/iptv/php/signup.php',
@@ -20,6 +21,7 @@ function signup() {
         dataType: 'text',
         cache: false,
         success: function(a) {
+            $("#loading-container").css("display", "none");
             if (a == 0) {
                 // Success
                 window.location.href = 'wait-for-confirmation.html';

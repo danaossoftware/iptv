@@ -12,7 +12,8 @@ $(document).ready(function() {
         hls.loadSource(videoURL);
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED,function() {
-            video.play();
+            $("#loading-container").css("display", "none");
+            //video.play();
         });
     }
     // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
@@ -37,6 +38,12 @@ $(document).ready(function() {
     });
 });
 
+function pauseVideo() {
+    $("#play-video-container").css("display", "flex");
+    $("#video")[0].pause();
+}
+
 function playVideo() {
+    $("#play-video-container").css("display", "none");
     $("#video")[0].play();
 }
