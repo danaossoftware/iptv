@@ -40,10 +40,12 @@ $(document).ready(function() {
 
 function pauseVideo() {
     $("#play-video-container").css("display", "flex");
+    $("#play-video-container").hide();
+    $("#play-video-container").fadeIn(300);
     $("#video")[0].pause();
 }
 
 function playVideo() {
-    $("#play-video-container").css("display", "none");
+    $("#play-video-container").fadeOut(300);
     $("#video")[0].play();
 }

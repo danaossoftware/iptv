@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/js/playvideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/playvideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playvideo.html" beforeDir="false" afterPath="$PROJECT_DIR$/playvideo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +168,7 @@
         <entry file="file://$PROJECT_DIR$/playvideo.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -190,8 +187,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/playvideo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+            <state relative-caret-position="410">
+              <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -291,8 +288,8 @@
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/js/signup.js" />
         <option value="$PROJECT_DIR$/signup.html" />
-        <option value="$PROJECT_DIR$/js/playvideo.js" />
         <option value="$PROJECT_DIR$/playvideo.html" />
+        <option value="$PROJECT_DIR$/js/playvideo.js" />
       </list>
     </option>
   </component>
@@ -406,12 +403,12 @@
       <workItem from="1547733561103" duration="173000" />
       <workItem from="1547739466516" duration="18000" />
       <workItem from="1547806313491" duration="16943000" />
-      <workItem from="1547853966874" duration="2916000" />
+      <workItem from="1547853966874" duration="3005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61818000" />
+    <option name="totallyTimeSpent" value="61907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -904,7 +901,7 @@
     <entry file="file://$PROJECT_DIR$/playvideo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -921,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/playvideo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        <state relative-caret-position="410">
+          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
         </state>
       </provider>
     </entry>
