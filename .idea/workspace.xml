@@ -2,74 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/account.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/channels/live.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/automation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/landing.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/live-categories.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/live.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/purchase.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/upgrade.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/automation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/channels.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/epgtimeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/epgtimeshift.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/landing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/live-categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/live.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/movie-categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/players.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/purchase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/recordings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/series-categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/streamformat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/timeformat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/upgrade.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/live-categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/get-channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/get-purchase-info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/get-settings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/update-settings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/purchase.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recordings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/series-categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/automation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/common.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/control.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/epgtimeline.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/epgtimeshift.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/player.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/players.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/streamformat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/timeformat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/systemdata/settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upgrade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/channels.m3u" beforeDir="false" afterPath="$PROJECT_DIR$/channels.m3u" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/edit-profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/edit-profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/notifications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/notifications.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/send-reset-email.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/send-reset-email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reset-email-sent.html" beforeDir="false" afterPath="$PROJECT_DIR$/reset-email-sent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/live.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -94,6 +27,15 @@
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -215,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/settings/epgtimeshift.html" />
         <option value="$PROJECT_DIR$/js/epgtimeshift.js" />
         <option value="$PROJECT_DIR$/settings/streamformat.html" />
@@ -266,6 +207,7 @@
         <option value="$PROJECT_DIR$/css/live.css" />
         <option value="$PROJECT_DIR$/channels/live.html" />
         <option value="$PROJECT_DIR$/js/live.js" />
+        <option value="$PROJECT_DIR$/php/db.php" />
       </list>
     </option>
   </component>
@@ -400,12 +342,12 @@
       <workItem from="1547853966874" duration="3700000" />
       <workItem from="1547861402701" duration="54254000" />
       <workItem from="1548041925015" duration="678000" />
-      <workItem from="1548093513811" duration="9236000" />
+      <workItem from="1548093513811" duration="9376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126770000" />
+    <option name="totallyTimeSpent" value="126910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -436,13 +378,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/systemdata/settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1311,6 +1246,13 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
