@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/upgrade.js"></script>
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/magic-check.min.css" rel="stylesheet">
+    <link href="css/upgrade.css" rel="stylesheet">
+</head>
+<body>
+<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-position: center center; background-size: cover; background-attachment: fixed; object-fit: cover; background-image: url('img/settings-bg.png');"></div>
+<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5);"></div>
+<div style="position: absolute; left: 0; top: 0; width: 100%; display: flex; flex-flow: column nowrap; align-items: center; margin-top: 20px;">
+    <div style="width: 100%; display: flex; justify-content: center; color: white; font-size: 20px; font-family: 'PalanquinBold';">UPGRADE AKUN ANDA</div>
+    <div style="width: 100%; display: flex; justify-content: center; color: white;">Upgrade akun Anda untuk mendapatkan fitur-fitur terbaik</div>
+    <!-- BULANAN -->
+    <div style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#6181e6, #8355b7); padding: 20px;">
+        <div style="color: white;">BULANAN</div>
+        <div style="width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; height: 1px; background-color: rgba(255, 255, 255, .8); margin-top: 8px;"></div>
+        <div style="color: white; font-family: 'PalanquinBold'; font-size: 25px;">75rb</div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 1
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 2
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 3
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 4
+        </div>
+        <div onclick="window.location.href='purchase.html?type=1'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+            <div style="color: white;">UPGRADE</div>
+        </div>
+    </div>
+    <!-- 3 BULAN -->
+    <div id="type-3" style="width: 160px; transition: width .5s; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#95f69e, #02c7fc); padding: 20px; position: relative;">
+        <div style="color: white;">3 BULAN</div>
+        <div style="width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; height: 1px; background-color: rgba(255, 255, 255, .8); margin-top: 8px;"></div>
+        <div style="color: white; font-family: 'PalanquinBold'; font-size: 25px;">210rb</div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 1
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 2
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 3
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 4
+        </div>
+        <div onclick="window.location.href='purchase.html?type=2'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+            <div style="color: white;">UPGRADE</div>
+        </div>
+        <img src="img/best.png" width="50px" height="50px" style="position: absolute; top: 0; right: 10px;">
+    </div>
+    <!-- 6 BULAN -->
+    <div style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#ff4e51, #f9d223); padding: 20px;">
+        <div style="color: white;">6 BULAN</div>
+        <div style="width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; height: 1px; background-color: rgba(255, 255, 255, .8); margin-top: 8px;"></div>
+        <div style="color: white; font-family: 'PalanquinBold'; font-size: 25px;">420rb</div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 1
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 2
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 3
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 4
+        </div>
+        <div onclick="window.location.href='purchase.html?type=3'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+            <div style="color: white;">UPGRADE</div>
+        </div>
+    </div>
+    <!-- 1 TAHUN -->
+    <div style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#24c4da, #4367ad); padding: 20px;">
+        <div style="color: white;">1 TAHUN</div>
+        <div style="width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; height: 1px; background-color: rgba(255, 255, 255, .8); margin-top: 8px;"></div>
+        <div style="color: white; font-family: 'PalanquinBold'; font-size: 25px;">850rb</div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 1
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 2
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 3
+        </div>
+        <div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
+            Fitur 4
+        </div>
+        <div onclick="window.location.href='purchase.html?type=3'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+            <div style="color: white;">UPGRADE</div>
+        </div>
+    </div>
+    <div style="color: white; margin-top: 10px;">*Syarat dan ketentuan berlaku</div>
+    <div onclick="window.history.back()" style="margin-top: 20px; margin-right: 10px; margin-bottom: 30px; width: 200px; margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
+        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+        KEMBALI
+    </div>
+</div>
+</body>
+</html>

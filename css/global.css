@@ -63,13 +63,13 @@ body {
 }
 
 .input2 {
-    width: 87%;
+    width: calc(100% - 10px);
     background-color: #eeeeee;
     height: 30px;
     border-radius: 3px;
     border: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .input3 {
@@ -82,6 +82,28 @@ body {
     font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.input4 {
+    border: 0;
+    width: calc(100% - 10px);
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.input5 {
+    border: 0;
+    width: calc(100% - 10px);
+    height: 35px;
+    background-color: rgba(255, 255, 255, .3);
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+}
+
+.input5::placeholder {
+    color: white;
 }
 
 .flat-button {
@@ -187,6 +209,96 @@ body {
     background-color: #b43a2d;
 }
 
+.button6 {
+    width: 100px;
+    background-color: #73ad87;
+    border-radius: 3px;
+}
+
+.button6:active {
+    background-color: #4d7a5a;
+}
+
+.button7 {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #27a9e1, #4281ea);
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.button7:active {
+    background-image: linear-gradient(to right, #258fc1, #3e6acf);
+}
+
+.button8 {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #f04055, #db8540);
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.button8:active {
+    background-image: linear-gradient(to right, #d43b50, #b66a37);
+}
+
+.button9 {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #39b1e3, #22d987);
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.button9:active {
+    background-image: linear-gradient(to right, #3191bf, #20b16d);
+}
+
+.button10 {
+    background-color: white;
+    color: black;
+    height: 35px;
+    width: 100px;
+    border: 0;
+}
+
+.button10:active {
+    background-color: #dddddd;
+}
+
+.button11 {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #41b3e6, #4281ea);
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.button11:active {
+    background-image: linear-gradient(to right, #4281ea, #41b3e6);
+}
+
 .loader {
     color: #4eccb6;
     font-size: 20px;
@@ -200,7 +312,7 @@ body {
     animation: load4 1.3s infinite linear;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
-    transform: translateZ(0);
+    transform: translateZ(0) scale(0.6, 0.6);
 }
 
 @-webkit-keyframes load4 {
@@ -257,4 +369,26 @@ body {
     87.5% {
         box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
     }
+}
+
+.radio {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.radio-inner {
+    width: 11px;
+    height: 11px;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
+}
+
+.options-item:active {
+    background-color: #eeeeee;
 }

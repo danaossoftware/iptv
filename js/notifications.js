@@ -1,3 +1,5 @@
+var notificationsJSON;
+
 $(document).ready(function() {
     getNotifications();
 });
@@ -13,6 +15,7 @@ function getNotifications() {
                 // Error
             } else {
                 var notifications = JSON.parse(a);
+                notificationsJSON = notifications;
                 var items = "";
                 for (var i=0; i<notifications.length; i++) {
                     var notification = notifications[i];
@@ -22,18 +25,38 @@ function getNotifications() {
                         content = content.substr(0, 128);
                         content += "...";
                     }
-                    items += "<div class=\"notification-item\" style=\"padding-left: 30px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; width: calc(100% - 50px); display: flex; flex-flow: row nowrap;\">\n" +
-                        "                    <div style=\"color: #9999a2;\">19:32</div>\n" +
-                        "                    <img src=\"img/message.png\" width=\"25px\" height=\"25px\" style=\"margin-left: 20px; margin-top: 6px;\">\n" +
+                    items += "<div class=\"notification-item\" style=\"background-color: rgba(136, 136, 136, .5); padding-left: 30px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; width: calc(100% - 50px); display: flex; flex-flow: row nowrap; margin-top: 10px;\">\n" +
+                        "                    <div style=\"color: #eeeeee;\">19:32</div>\n" +
                         "                    <div style=\"display: flex; flex-flow: column nowrap; margin-left: 20px;\">\n" +
-                        "                        <div style=\"color: #8181ac;\">"+title+"</div>\n" +
-                        "                        <div style=\"color: #777777; margin-top: 10px;\">"+content+"</div>\n" +
+                        "                        <div style=\"color: white; font-family: 'PalanquinBold'; font-size: 17px;\">"+title+"</div>\n" +
+                        "                        <div style=\"color: white; margin-top: 10px;\">"+content+"</div>\n" +
                         "                    </div>\n" +
-                        "                </div>\n" +
-                        "                <div style=\"width: calc(100% - 40px); margin-left: 40px; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 0;\"></div>";
+                        "                </div></div>";
                 }
                 $("#notifications").append(items);
+                $("#loading-container").fadeOut(300);
+                setNotificationClickListener();
             }
         }
     });
+}
+
+function setNotificationClickListener() {
+    $(".notification-item").on("click", function() {
+        var index = $(this).parent().children().index(this);
+        var notification = notificationsJSON[index];
+        var title = notification["title"];
+        var content = notification["content"];
+        $("#notification-title").html(title);
+        $("#notification-text").html(content);
+        openNotificationReviewDialog();
+    });
+}
+
+function openNotificationReviewDialog() {
+    $("#notification-dialog-ctr").css("display", "flex").hide().fadeIn(300);
+}
+
+function closeNotificationReviewDialog() {
+    $("#notification-dialog-ctr").fadeOut(300);
 }

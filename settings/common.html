@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../js/jquery.js"></script>
+        <script src="../js/global.js"></script>
+        <script src="../js/common.js"></script>
+        <link href="../css/global.css" rel="stylesheet">
+        <link href="../css/magic-check.min.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+    </head>
+    <body>
+        <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-position: center center; background-size: cover; object-fit: cover; background-image: url('../img/settings-bg.png'); background-attachment: fixed;"></div>
+        <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .7);"></div>
+        <div style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
+            <div style="width: 100%; position: relative; height: 50px;">
+                <div style="position: absolute; left: 50px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
+                    <img src="../img/icon.png" width="35px" height="35px" style="">
+                    <div style="color: #888888; margin-left: 30px;">| Pengaturan | Pengaturan Umum</div>
+                </div>
+                <div style="position: absolute; right: 30px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
+                    <div style="color: white; font-size: 20px;">21:31</div>
+                    <div style="color: white; font-size: 17px; margin-left: 10px;">19 Januari 2019</div>
+                </div>
+            </div>
+            <div style="width: calc(100% - 100px); margin-left: 30px; display: flex; flex-flow: column nowrap; background-color: rgba(136, 136, 136, .5); margin-top: 20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
+                <div style="width: 100%; display: flex; justify-content: center; color: white; margin-top: 10px;">PENGATURAN UMUM</div>
+                <!-- AUTOSTART -->
+                <div onclick="checkOrUncheckAutostart()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
+                    <input class="magic-checkbox" type="checkbox" name="layout" id="auto-start" value="option">
+                    <label for="auto-start"></label>
+                    <div style="color: white; margin-top: -4px;">Mulai otomatis ketika boot</div>
+                </div>
+                <!-- SHOW FULL EPG -->
+                <div onclick="checkOrUncheckFullEPG()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
+                    <input class="magic-checkbox" type="checkbox" name="layout" id="full-epg" value="option">
+                    <label for="auto-start"></label>
+                    <div style="color: white; margin-top: -4px;">Tampilkan EPG penuh</div>
+                </div>
+                <!-- SUBTITLE AKTIF -->
+                <div onclick="checkOrUncheckActiveSubtitle()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
+                    <input class="magic-checkbox" type="checkbox" name="layout" id="active-subtitle" value="option">
+                    <label for="auto-start"></label>
+                    <div style="color: white; margin-top: -4px;">Subtitel Aktif</div>
+                </div>
+                <!-- USER AGENT -->
+                <div style="color: white; margin-top: 20px;">User Agent:</div>
+                <input id="user-agent" type="text" name="user-agent" class="input4" style="width: calc(100% - 10px); height: 30px; margin-top: 5px;">
+                <!-- LANGUAGE -->
+                <div style="color: white; margin-top: 20px;">Bahasa:</div>
+                <div onclick="showLanguageSelectDialog()" style="background-color: white; position: relative; border: 0; width: 100%; height: 30px; margin-top: 5px;">
+                    <div id="language-text" style="height: 100%; color: black; margin-left: 10px; position: absolute; left: 0; top: 0; display: flex; align-items: center; margin-top: -2px;">Bahasa Indonesia</div>
+                    <div style="position: absolute; right: 10px; top: 0; height: 100%; display: flex; align-items: center;">
+                        <img src="../img/triangle.png" width="10px" height="10px" style="">
+                    </div>
+                </div>
+            </div>
+            <div style="width: calc(100% - 80px); margin-left: 40px; margin-top: 15px; display: flex; flex-flow: row nowrap; justify-content: space-around;">
+                <div onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
+                    <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                    SIMPAN
+                </div>
+                <div onclick="window.history.back()" style="margin-right: 20px; margin-left: 10px; width: calc(50% - 30px); height: 40px; overflow: hidden;" class="button8">
+                    <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                    KEMBALI
+                </div>
+            </div>
+        </div>
+        <div id="language-select-dialog-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5); display: none; justify-content: center; align-items: center;">
+            <div style="width: 300px; border-radius: 10px; background-color: white; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); display: flex; flex-flow: column nowrap;">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <div style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">BAHASA</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 10px;"></div>
+                <div class="options-item" onclick="selectLanguage(0)" style="width: 100%; display: flex; flex-flow: row nowrap; align-items: center; padding-bottom: 8px; padding-top: 5px;">
+                    <img id="indonesian-check-img" src="../img/check-2.png" width="20px" height="20px" style="margin-left: 10px;">
+                    <div style="color: black; margin-left: 5px;">Bahasa Indonesia</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div class="options-item" onclick="selectLanguage(1)" style="width: 100%; display: flex; flex-flow: row nowrap; align-items: center; padding-bottom: 8px; padding-top: 5px;">
+                    <img id="english-check-img" src="../img/check-2.png" width="20px" height="20px" style="margin-left: 10px; visibility: hidden;">
+                    <div style="color: black; margin-left: 5px;">English</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div style="width: 100%; display: flex; flex-flow: row nowrap; margin-top: 10px; margin-bottom: 10px;">
+                    <div onclick="selectCheckedLanguage()" style="margin-right: 10px; width: calc(50% - 25px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
+                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        SIMPAN
+                    </div>
+                    <div onclick="closeLanguageSelectDialog()" style="margin-right: 10px; width: calc(50% - 25px); margin-left: 5px; height: 40px; overflow: hidden;" class="button8">
+                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        TUTUP
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .8);">
+            <div style="width: 150px; height: 150px; background-color: white; border-radius: 10px; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); display: flex; justify-content: center; flex-flow: column nowrap; position: relative;">
+                <div class="loader" style=""></div>
+            </div>
+        </div>
+    </body>
+</html>

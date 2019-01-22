@@ -1,16 +1,36 @@
 const SERVER_URL = "http://iptvjoss.com/iptv/php/";
 
+$(document).ready(function() {
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'check-session.php',
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            if (a == 0) {
+                window.location.href = "landing.html";
+            }
+        }
+    });
+});
+
 function signup() {
     $("#error").css("display", "none");
     var phone = $("#phone").val();
     var password = $("#password").val();
     if (phone == '' || password == '') {
-        alert("Mohon masukkan phone dan kata sandi");
+        $("#error").html("Mohon masukkan phone dan kata sandi");
+        $("#error").css("display", "block");
         return;
     }
     if (password.length < 8) {
         $("#error").html("Masukkan kata sandi minimum 8 karakter");
         $("#error").css("display", "block");
+        return;
+    }
+    if (!validatePhoneNumber(phone)) {
+        $("#error").html("Mohon periksa nomor telepon Anda");
+        $("#error").show();
         return;
     }
     $("#loading-container").css("display", "flex");
@@ -25,9 +45,9 @@ function signup() {
             if (a == 0) {
                 // Success
                 window.location.href = 'wait-for-confirmation.html';
-            } else if (a == -1) {
+            } else if (a == -2) {
                 // User sudah ada
-                $("#error").html("phone sudah digunakan");
+                $("#error").html("Nomor handphone sudah digunakan");
                 $("#error").css("display", "block");
             }
         }
@@ -51,4 +71,16 @@ function randomString() {
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
     return text;
+}
+
+function validatePhoneNumber(phone) {
+    var isPhone = true;
+    for (var i=0; i<phone.length; i++) {
+        var char = phone.charAt(i);
+        if (char < '0' || char > '9') {
+            isPhone = false;
+            break;
+        }
+    }
+    return isPhone;
 }

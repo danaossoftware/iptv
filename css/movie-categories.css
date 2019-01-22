@@ -1,0 +1,27 @@
+.category {
+    width: 100px;
+    height: 60px;
+    background-color: rgba(170, 170, 170, .5);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    transition: background-color .3s;
+}
+
+.category:active {
+    background-color: rgba(170, 170, 170, .8);
+}
+
+.menu-item:active {
+    background-color: #eeeeee;
+}
+
+.top-menu-item:active {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bottom-menu-item:active {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

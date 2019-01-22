@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="../js/live.js"></script>
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/live.css" rel="stylesheet">
+</head>
+<body>
+<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; background-attachment: fixed; background-position: center center; background-size: cover; background-image: url('../img/player-bg.jpg');"></div>
+<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .3);"></div>
+<div style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
+    <div style="position: relative; width: 100%; display: flex; justify-content: center; height: 50px;">
+        <div style="position: absolute; left: 50px; top: 20px; display: flex; justify-content: flex-start; align-items: center;">
+            <img src="../img/icon.png" width="40px" height="40px">
+            <div style="color: #888888; margin-left: 20px; margin-top: 8px;">| Langsung</div>
+        </div>
+        <div style="display: flex; flex-flow: row nowrap; margin-top: 28px; align-items: center;">
+            <div style="color: white; font-size: 20px;">08:36</div>
+            <div style="color: white; margin-left: 20px; font-size: 16px;">19 Januari 2019</div>
+        </div>
+        <div style="position: absolute; right: 0; top: 20px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <div style="width: 50px; display: flex; justify-content: center;">
+                <img src="../img/search.png" width="23px" height="23px">
+            </div>
+            <div onclick="showOrHideMenu()" style="width: 50px; display: flex; justify-content: center;">
+                <img src="../img/menu.png" width="20px" height="20px">
+            </div>
+        </div>
+    </div>
+    <div style="width: calc(100% - 40px); height: calc(100% - 105px); margin-top: 20px; display: flex; flex-flow: row nowrap; padding-left: 20px; padding-right: 20px;">
+        <div style="width: calc(50% - 8px); margin-right: 8px; height: 100%; background-color: rgba(0, 0, 0, .5);">
+            <div style="width: 100%; position: relative; height: 50px; display: flex; justify-content: center; margin-top: 5px;">
+                <div style="width: 30px; height: 50px; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; left: 0;">
+                    <img src="../img/left.png" width="10px" height="15px">
+                </div>
+                <div style="width: 30px; height: 50px; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; right: 0;">
+                    <img src="../img/right-2.png" width="10px" height="15px">
+                </div>
+                <div id="category-name" style="color: white; font-family: 'PalanquinBold';"></div>
+            </div>
+            <div id="channels" style="overflow-x: hidden; overflow: -moz-scrollbars-none; width: 100%; height: calc(100% - 55px); display: flex; flex-flow: column nowrap;">
+            </div>
+        </div>
+        <div id="live-video-container" style="width: calc(50% - 8px); margin-left: 8px; height: 100%; display: flex; flex-flow: column nowrap; align-items: center;">
+            <div style="width: 100%; height: 50%; display: flex; align-items: flex-start; justify-content: center;">
+                <video id="live-video" width="100%" height="100%">
+                </video>
+            </div>
+            <div style="width: 100%; height: 50%; display: flex; justify-content: center; align-items: center;">
+                <img id="channel-logo" src="../img/channel-2.png" width="80px" height="70px">
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed; left: 0; bottom: 0; margin-left: 20px; margin-right: 20px; width: calc(100% - 40px); height: 30px; background-color: rgba(0, 0, 0, .5);"></div>
+</div>
+</body>
+</html>

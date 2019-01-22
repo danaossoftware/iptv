@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/players.js"></script>
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/players.css" rel="stylesheet">
+</head>
+<body>
+<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-position: center center; background-size: cover; background-attachment: fixed; object-fit: cover; background-image: url('../img/settings-bg.png');"></div>
+<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .5);"></div>
+<div style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
+    <div style="width: 100%; position: relative; height: 50px;">
+        <div style="position: absolute; left: 50px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img src="../img/icon.png" width="35px" height="35px" style="">
+            <div style="color: #888888; margin-left: 30px;">| Pengaturan | Pilihan Pemutar</div>
+        </div>
+        <div style="position: absolute; right: 30px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <div style="color: white; font-size: 20px;">21:31</div>
+            <div style="color: white; font-size: 17px; margin-left: 10px;">19 Januari 2019</div>
+        </div>
+    </div>
+    <div style="width: calc(100% - 100px); margin-left: 30px; display: flex; flex-flow: column nowrap; background-color: rgba(136, 136, 136, .5); margin-top: 20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
+        <div style="width: 100%; display: flex; justify-content: center; color: white; margin-top: 10px;">PILIHAN PEMUTAR</div>
+        <div onclick="selectOption(0)" style="width: 100%; display: flex; flex-flow: row nowrap;">
+            <div id="default" class="radio">
+                <div class="radio-inner"></div>
+            </div>
+            <div style="color: white; margin-left: 10px;">Pemutar Built-In (Standar)</div>
+        </div>
+        <div onclick="selectOption(1)" style="margin-top: 20px; width: 100%; display: flex; flex-flow: row nowrap;">
+            <div id="vlc" class="radio">
+                <div class="radio-inner"></div>
+            </div>
+            <div style="color: white; margin-left: 10px;">VLC Player</div>
+        </div>
+        <div onclick="selectOption(2)" style="margin-top: 20px; width: 100%; display: flex; flex-flow: row nowrap;">
+            <div id="mx" class="radio">
+                <div class="radio-inner"></div>
+            </div>
+            <div style="color: white; margin-left: 10px;">MX Player</div>
+        </div>
+    </div>
+    <div style="width: calc(100% - 80px); margin-left: 40px; display: flex; flex-flow: row nowrap; margin-top: 15px;">
+        <div onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
+            <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+            SIMPAN
+        </div>
+        <div onclick="window.history.back()" style="margin-right: 20px; width: calc(50% - 30px); margin-left: 10px; height: 40px; overflow: hidden;" class="button8">
+            <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+            KEMBALI
+        </div>
+    </div>
+</div>
+<div id="loading-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .8);">
+    <div style="width: 150px; height: 150px; background-color: white; border-radius: 10px; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); display: flex; justify-content: center; flex-flow: column nowrap; position: relative;">
+        <div class="loader" style=""></div>
+    </div>
+</div>
+</body>
+</html>

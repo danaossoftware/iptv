@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery.js"></script>
+        <script src="js/global.js"></script>
+        <script src="js/purchase.js"></script>
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/purchase.css" rel="stylesheet">
+    </head>
+    <body>
+        <div style="width: calc(100% - 60px); display: flex; flex-flow: column nowrap; padding: 30px;">
+            <div style="width: 100%; display: flex; justify-content: space-between;">
+                <div onclick="openBankChangeDialog()" style="display: flex; flex-flow: row nowrap; align-items: center;">
+                    <img id="bank-type-img" src="img/mandiri.png" width="100px" height="35px">
+                    <div style="cursor: pointer; color: #3e97eb; margin-left: 10px; margin-top: 15px;">Ubah bank</div>
+                </div>
+                <div style="display: flex; flex-flow: row nowrap; align-items: center;">
+                    <img src="img/cart.png" width="15px" height="15px">
+                    <div id="price" style="color: black; margin-left: 10px; font-family: 'PalanquinBold'; margin-top: -3px;">Rp0,-</div>
+                </div>
+            </div>
+            <div style="width: 100%; height: 1px; background-color: rgba(51, 51, 51, .2); margin-top: 20px;"></div>
+            <div style="color: #444444; font-family: 'SegoeUILight'; font-size: 21px; margin-top: 20px;">Pembelian</div>
+            <div style="color: #000000; font-size: 17px;">Dana Prakoso</div>
+            <div id="purchase-desc" style="color: #888888; font-size: 13px;">Upgrade akun IPTV Joss selama 0 bulan</div>
+            <div style="width: 100%; height: 1px; background-color: rgba(51, 51, 51, .2); margin-top: 20px;"></div>
+            <div style="color: #444444; font-family: 'SegoeUILight'; font-size: 21px; margin-top: 20px;">Bayar dengan</div>
+            <div style="position: relative; height: 20px;">
+                <div id="bank-name" style="position: absolute; left: 0; top: 0; color: #000000; font-size: 17px;">PT Bank Mandiri (Persero) Tbk</div>
+                <div id="price-2" style="position: absolute; right: 0; top: 0;">Rp0,-</div>
+            </div>
+            <div style="width: 100%; font-size: 14px; display: flex; justify-content: flex-end; color: #aaaaaa;">IDR</div>
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">
+                Pastikan transfer ke rekening kami:
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="account-number" style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">900 00 4200200 7</div>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="account-holder" style="color: black;">a/n ANDI SUPARTO</div>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+                <div style="width: 350px; text-align: center;">
+                    <div style="color: black;">Segera konfirmasi via PM Telegram di nomor <b>082301937088</b>, sertakan bukti transfernya agar bisa kami proses lebih cepat.</div>
+                </div>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">
+                <div onclick="window.location.href='landing.html'" style="color: #3e97eb; cursor: pointer;">Kembali ke Beranda</div>
+            </div>
+        </div>
+        <div id="bank-change-dialog" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .8); display: none; justify-content: center; align-items: center;">
+            <div style="background-color: white; width: 300px; display: flex; flex-flow: column nowrap; border-radius: 10px;">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <div style="color: black; font-family: 'PalanquinBold'; font-size: 18px;">UBAH BANK</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 10px;"></div>
+                <div id="bank-types">
+                    <div class="bank-item" style="width: 100%; display: flex; flex-flow: row nowrap; align-items: center;">
+                        <div style="width: 50px; height: 40px; display: flex; justify-content: center; align-items: center;">
+                            <img id="bca-check-img" class="bank-item-check-img" src="img/check-2.png" width="20px" height="20px" style="margin-left: 10px;">
+                        </div>
+                        <img src="img/bca.png" width="62px" height="21px" style="margin-left: 10px;">
+                    </div>
+                    <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                    <div class="bank-item" style="width: 100%; display: flex; flex-flow: row nowrap; align-items: center;">
+                        <div style="width: 50px; height: 40px; display: flex; justify-content: center; align-items: center;">
+                            <img id="mandiri-check-img" class="bank-item-check-img" src="img/check-2.png" width="20px" height="20px" style="margin-left: 10px; visibility: hidden;">
+                        </div>
+                        <img src="img/mandiri.png" width="62px" height="21px" style="margin-left: 10px;">
+                    </div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div style="width: 100%; display: flex; flex-flow: row nowrap; margin-top: 10px; margin-bottom: 10px;">
+                    <div onclick="closeBankChangeDialog()" style="width: calc(50% - 25px); margin-left: 20px; margin-right: 5px; height: 40px; overflow: hidden;" class="button9">
+                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        TUTUP
+                    </div>
+                    <div onclick="setBankType()" style="width: calc(50% - 25px); margin-left: 5px; margin-right: 20px; height: 40px; overflow: hidden;" class="button7">
+                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        UBAH
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .8);">
+            <div style="width: 150px; height: 150px; background-color: white; border-radius: 10px; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); display: flex; justify-content: center; flex-flow: column nowrap; position: relative;">
+                <div class="loader" style=""></div>
+            </div>
+        </div>
+    </body>
+</html>

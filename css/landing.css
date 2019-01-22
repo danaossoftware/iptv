@@ -1,0 +1,23 @@
+#live-tv {
+    background-image: linear-gradient(#0cd997, #461ff9);
+}
+
+#live-tv:active {
+    background-image: linear-gradient(#461ff9, #0cd997);
+}
+
+#movies {
+    background-image: linear-gradient(to right, #d31d58, #f7a53f);
+}
+
+#movies:active {
+    background-image: linear-gradient(to right, #f7a53f, #d31d58);
+}
+
+#series {
+    background-image: linear-gradient(to right, #90369c, #5994cc);
+}
+
+#series:active {
+    background-image: linear-gradient(to right, #5994cc, #90369c);
+}

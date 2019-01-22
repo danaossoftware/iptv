@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery.js"></script>
+        <script src="js/global.js"></script>
+        <script src="js/live-categories.js"></script>
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/live-categories.css" rel="stylesheet">
+    </head>
+    <body>
+        <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; background-attachment: fixed; background-position: center center; background-size: cover; object-fit: cover; background-image: url('img/bg.jpg');"></div>
+        <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; background-color: rgba(136, 136, 136, .8);"></div>
+        <div style="position: absolute; left: 0; top: 0; width: 100%; display: flex; flex-flow: column nowrap;">
+            <div style="position: relative; width: 100%; display: flex; flex-flow: row nowrap; justify-content: center; align-items: center;">
+                <img src="img/icon.png" width="40px" height="40px" style="position: absolute; left: 50px; top: 15px;">
+                <div style="color: white; font-family: 'PalanquinBold'; font-size: 18px; margin-top: 20px;">LIVE TV</div>
+                <div style="position: absolute; right: 0; top: 20px; display: flex; flex-flow: row nowrap; align-items: center;">
+                    <div style="width: 50px; display: flex; justify-content: center;">
+                        <img src="img/search.png" width="23px" height="23px">
+                    </div>
+                    <div onclick="showOrHideMenu()" style="width: 50px; display: flex; justify-content: center;">
+                        <img src="img/menu.png" width="20px" height="20px">
+                    </div>
+                </div>
+            </div>
+            <div id="menu-container" style="z-index: 1000; width: 250px; box-shadow: 0 4px 32px rgba(0, 0, 0, .5); border-radius: 10px; position: absolute; right: 20px; top: 50px; background-color: white; display: none; flex-flow: column nowrap;">
+                <div onclick="window.location.href='landing.html'" class="menu-item top-menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+                    <img src="img/home-2.png" width="25px" height="25px">
+                    <div style="color: black; margin-left: 10px;">Beranda</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div onclick="refreshCategories()" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+                    <img src="img/tv.png" width="25px" height="25px">
+                    <div style="color: black; margin-left: 10px;">Perbarui Daftar Channel</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div onclick="Android.restartApp()" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+                    <img src="img/book-2.png" width="25px" height="25px">
+                    <div style="color: black; margin-left: 10px;">Perbarui Panel Bantuan</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div onclick="sortCategories()" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+                    <img src="img/sort.png" width="25px" height="25px">
+                    <div style="color: black; margin-left: 10px;">Urutkan</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div onclick="window.location.href='settings.html'" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+                    <img src="img/settings-3.png" width="25px" height="25px">
+                    <div style="color: black; margin-left: 10px;">Pengaturan</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+                <div class="menu-item bottom-menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+                    <img src="img/logout-3.png" width="25px" height="25px">
+                    <div style="color: black; margin-left: 10px;">Keluar</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+            </div>
+            <div id="categories" style="width: 100%; display: flex; flex-flow: row wrap; margin-top: 10px; margin-bottom: 20px;">
+            </div>
+            <div style="margin-bottom: 20px; width: calc(100% - 40px); padding-right: 40px; display: flex; justify-content: center;">
+                <div onclick="window.location.href='landing.html'" style="margin-right: 7px; width: 200px; height: 40px; overflow: hidden;" class="button9">
+                    <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                    BERANDA
+                </div>
+                <div onclick="window.history.back()" style="margin-left: 7px; width: 200px; height: 40px; overflow: hidden;" class="button8">
+                    <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                    KEMBALI
+                </div>
+            </div>
+        </div>
+        <div id="sort-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .8); display: none; justify-content: center; align-items: center;">
+            <div style="width: 400px; border-radius: 10px; background-color: white; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); display: flex; flex-flow: column nowrap;">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <div style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">URUTKAN</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+                <div onclick="selectSortType(0)" style="width: calc(100% - 10px); padding-left: 10px; padding-top: 5px; padding-bottom: 5px; display: flex; flex-flow: row nowrap; align-items: center;">
+                    <img id="sort-type-img-1" src="img/check-2.png" width="17px" height="17px" style="visibility: hidden;">
+                    <div style="color: black; font-size: 17px; margin-left: 10px;">Standar</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+                <div onclick="selectSortType(1)" style="width: calc(100% - 10px); padding-left: 10px; padding-top: 5px; padding-bottom: 5px; display: flex; flex-flow: row nowrap; align-items: center;">
+                    <img id="sort-type-img-2" src="img/check-2.png" width="17px" height="17px" style="">
+                    <div style="color: black; font-size: 17px; margin-left: 10px;">A-Z</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+                <div onclick="selectSortType(2)" style="width: calc(100% - 10px); padding-left: 10px; padding-top: 5px; padding-bottom: 5px; display: flex; flex-flow: row nowrap; align-items: center;">
+                    <img id="sort-type-img-3" src="img/check-2.png" width="17px" height="17px" style="visibility: hidden;">
+                    <div style="color: black; font-size: 17px; margin-left: 10px;">Z-A</div>
+                </div>
+                <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+                <div style="width: 100%; position: relative; height: 40px; margin-bottom: 10px; margin-top: 10px; display: flex; flex-flow: row nowrap; justify-content: center;">
+                    <div onclick="applySorting()" style="margin-right: 5px; width: 150px; height: 40px; overflow: hidden;" class="button7">
+                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        SIMPAN
+                    </div>
+                    <div onclick="closeSortDialog()" style="margin-left: 5px; width: 150px; height: 40px;" class="button8">
+                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        TUTUP
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
