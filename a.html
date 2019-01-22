@@ -10,7 +10,7 @@
             var video = document.getElementById('video');
             if(Hls.isSupported()) {
                 var hls = new Hls();
-                hls.loadSource(videoURL);
+                hls.loadSource("http://techslides.com/demos/sample-videos/small.mp4");
                 hls.attachMedia(video);
                 hls.on(Hls.Events.MANIFEST_PARSED,function() {
                     //video.play();
