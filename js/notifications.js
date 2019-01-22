@@ -25,7 +25,7 @@ function getNotifications() {
                         content = content.substr(0, 128);
                         content += "...";
                     }
-                    items += "<div class=\"notification-item\" style=\"background-color: rgba(136, 136, 136, .5); padding-left: 30px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; width: calc(100% - 50px); display: flex; flex-flow: row nowrap; margin-top: 10px;\">\n" +
+                    items += "<div class=\"notification-item\" style=\"background-color: rgba(136, 136, 136, .5); padding-left: 30px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; width: calc(100% - 50px); display: flex; flex-flow: row nowrap; margin-top: 10px; overflow: hidden;\">\n" +
                         "                    <div style=\"color: #eeeeee;\">19:32</div>\n" +
                         "                    <div style=\"display: flex; flex-flow: column nowrap; margin-left: 20px;\">\n" +
                         "                        <div style=\"color: white; font-family: 'PalanquinBold'; font-size: 17px;\">"+title+"</div>\n" +
