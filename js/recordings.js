@@ -2,5 +2,5 @@ $(document).ready(function() {
 });
 
 function changeDirectory() {
-    Android.changeRecordDir();
+    Native.changeRecordDir();
 }
