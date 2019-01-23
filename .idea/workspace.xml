@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/live.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/live.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/live.html" beforeDir="false" afterPath="$PROJECT_DIR$/channels/live.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/channels/live.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -70,11 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/live.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="116" column="12" lean-forward="true" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="12" />
+            <state>
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -203,8 +203,8 @@
         <option value="$PROJECT_DIR$/js/landing.js" />
         <option value="$PROJECT_DIR$/js/global.js" />
         <option value="$PROJECT_DIR$/css/live.css" />
-        <option value="$PROJECT_DIR$/channels/live.html" />
         <option value="$PROJECT_DIR$/js/live.js" />
+        <option value="$PROJECT_DIR$/channels/live.html" />
       </list>
     </option>
   </component>
@@ -347,18 +347,19 @@
       <workItem from="1548217908966" duration="1790000" />
       <workItem from="1548219747833" duration="1717000" />
       <workItem from="1548221574179" duration="1793000" />
-      <workItem from="1548223580351" duration="1761000" />
+      <workItem from="1548223580351" duration="1798000" />
+      <workItem from="1548225412921" duration="299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141806000" />
+    <option name="totallyTimeSpent" value="142142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40015128" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40620273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1176,6 +1177,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/live.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/live.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1186,7 +1200,7 @@
     <entry file="file://$PROJECT_DIR$/channels/live.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1223,20 +1237,6 @@
             <element signature="n#style#0;n#div#7;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/live.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="116" column="12" lean-forward="true" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
