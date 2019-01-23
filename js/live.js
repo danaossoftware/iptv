@@ -103,12 +103,12 @@ function setChannelClickListener() {
     $(".channel").unbind().on("click", function () {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
-        Native.show(channelURL);
         playVideo(channelURL);
     });
 }
 
 function playVideo(videoURL) {
+    $("#loading-container").css("display", "flex").hide().fadeIn(300);
     var video = document.getElementById('live-video');
     if (Hls.isSupported()) {
         var hls = new Hls();
