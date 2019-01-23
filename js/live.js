@@ -94,7 +94,7 @@ function loadChannels() {
                     "</div>");
                 setChannelClickListener();
             }
-            //playVideo(channels[0]["url"]);
+            playVideo(channels[0]["url"]);
         }
     });
 }
@@ -116,13 +116,13 @@ function playVideo(videoURL) {
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, function () {
             video.play();
-            //$("#loading-container").fadeOut(300);
+            $("#loading-container").fadeOut(300);
         });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
         video.src = videoURL;
         video.addEventListener('loadedmetadata', function () {
             video.play();
-            //$("#loading-container").fadeOut(300);
+            $("#loading-container").fadeOut(300);
         });
     }
     $("#live-video-container").css("visibility", "visible");
