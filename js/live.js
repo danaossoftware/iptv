@@ -132,6 +132,7 @@ function setChannelClickListener() {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
         $("#menu-container").css("display", "flex").hide().fadeIn(300);
+        menuShowed = true;
     });
 }
 
