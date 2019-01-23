@@ -6,10 +6,25 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
         $(document).ready(function() {
+            var video = document.getElementById('video');
+            if(Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource("http://techslides.com/demos/sample-videos/small.mp4");
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                    //video.play();
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = videoURL;
+                video.addEventListener('loadedmetadata',function() {
+                    //video.play();
+                });
+            }
         });
 
         function playVideo() {
-            $("#video")[0].play();
+            var video = document.getElementById('video');
+            video.play();
         }
     </script>
     <link href="css/global.css" rel="stylesheet">
@@ -18,7 +33,6 @@
 <body style="background-color: black;">
 <div style="width: 100%; height: 100%; position: relative;">
     <video onclick="playVideo()" id="video" width="100%" height="100%">
-        <source src="http://techslides.com/demos/sample-videos/small.mp4">
     </video>
 </div>
 </body>
