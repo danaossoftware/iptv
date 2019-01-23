@@ -115,15 +115,10 @@ function loadChannels() {
 }
 
 function setChannelClickListener() {
-    $(".channel").mouseup(function() {
+    $(".channel").on("touchstart", function() {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
         playVideo(channelURL);
-    }).mousedown(function () {
-        pressEvent = window.setTimeout(function() {
-            $("#menu-container").css("display", "flex").hide().fadeIn(300);
-            menuShowed = true;
-        }, 1000);
     });
 }
 
