@@ -5,6 +5,9 @@ var fullScreen = false;
 var menuShowed = false;
 var pressEvent;
 var currentChannel = 0;
+var currentChannelMenu = 0;
+var recording = false;
+var recordingData = [];
 
 $(document).ready(function () {
     $.ajax({
@@ -114,14 +117,14 @@ function loadChannels() {
             }
             setChannelClickListener();
             playVideo(channels[0]["url"]);
-            $("#loading-container").fadeOut(300);
+            $("#loading-container").hide();
         }
     });
 }
 
 function setChannelClickListener() {
     $(".channel").unbind().click(function() {
-        var channelNum = $(this).parent().children().index($(this));
+        var channelNum = $(this).parent().parent().children().index($(this).parent());
         if (channelNum != currentChannel) {
             var channelURL = channels[channelNum]["url"];
             playVideo(channelURL);
@@ -129,15 +132,15 @@ function setChannelClickListener() {
         }
     });
     $(".channel-menu").unbind().click(function() {
-        var channelNum = $(this).parent().children().index($(this));
-        var channelURL = channels[channelNum]["url"];
+        var channelNum = $(this).parent().parent().children().index($(this).parent());
+        currentChannelMenu = channelNum;
         $("#menu-container").css("display", "flex").hide().fadeIn(300);
         menuShowed = true;
     });
 }
 
 function playVideo(videoURL) {
-    $("#loading-container").css("display", "flex").hide().fadeIn(300);
+    $("#loading-container").css("display", "flex");
     var video = document.getElementById('live-video');
     if (Hls.isSupported()) {
         var hls = new Hls();
@@ -146,6 +149,11 @@ function playVideo(videoURL) {
         hls.on(Hls.Events.MANIFEST_PARSED, function () {
             video.play();
             $("#loading-container").fadeOut(300);
+        });
+        hls.on(Hls.Events.BUFFER_APPENDING, function (event, data) {
+            if (recording) {
+                recordingData.push(data.data);
+            }
         });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
         video.src = videoURL;
@@ -199,4 +207,40 @@ function backKey() {
     } else {
         window.history.back();
     }
+}
+
+function playWithVLC() {
+    var channelURL = channels[currentChannelMenu]["url"];
+    Native.playWithVLC(channelURL);
+}
+
+function playWithMX() {
+    var channelURL = channels[currentChannelMenu]["url"];
+    Native.playWithMX(channelURL);
+}
+
+function addToFavorite() {
+    var channel = JSON.stringify(channels[currentChannelMenu]);
+    $("#loading-container").css("display", "flex").hide().fadeIn(300);
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'add-to-favorite.php',
+        data: {'channel-info': channel},
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            $("#loading-container").fadeOut(300);
+            Native.show("Ditambahkan ke Favorit");
+        }
+    });
+}
+
+function startRecording() {
+    Native.show("Mulai merekam...");
+    recording = true;
+    recordingData = [];
+    setTimeout(function() {
+        recording = false;
+        Native.writeFile("/sdcard/a.mp4", recordingData);
+    }, 5000);
 }
