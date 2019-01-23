@@ -115,7 +115,11 @@ function loadChannels() {
 }
 
 function setChannelClickListener() {
-    $(".channel").on("touchstart", function() {
+    $(".channel").longclick(1000, function() {
+        $("#menu-container").css("display", "flex").hide().fadeIn(300);
+        menuShowed = true;
+    });
+    $(".channel").unbind().click(function() {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
         playVideo(channelURL);
