@@ -1,5 +1,6 @@
 var m3uData;
 var selectedCategoryName;
+var hls = null;
 
 $(document).ready(function() {
     var params = location.search;
@@ -109,18 +110,36 @@ function setChannelClickListener() {
 
 function playVideo(videoURL) {
     var video = document.getElementById('live-video');
-    if(Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoURL);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED,function() {
-            video.play();
-        });
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = videoURL;
-        video.addEventListener('loadedmetadata',function() {
-            video.play();
-        });
+    video.stop();
+    if (hls == null) {
+        if (Hls.isSupported()) {
+            hls = new Hls();
+            hls.loadSource(videoURL);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                video.play();
+                $("#loading-container").fadeOut(300);
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoURL;
+            video.addEventListener('loadedmetadata', function () {
+                video.play();
+                $("#loading-container").fadeOut(300);
+            });
+        }
+    } else {
+        if (Hls.isSupported()) {
+            hls.loadSource(videoURL);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                video.play();
+            });
+        } else {
+            video.src = videoURL;
+            video.addEventListener('loadedmetadata', function () {
+                video.play();
+            });
+        }
     }
     $("#live-video-container").css("visibility", "visible");
 }
