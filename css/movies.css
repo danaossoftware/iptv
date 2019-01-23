@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.channel:active {
+    background-color: #e67e22;
+}
+
+.menu-item:active {
+    background-color: #eeeeee;
+}
