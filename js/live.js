@@ -94,7 +94,7 @@ function loadChannels() {
                     "</div>");
                 setChannelClickListener();
             }
-            playVideo(channels[0]["url"]);
+            //playVideo(channels[0]["url"]);
         }
     });
 }
@@ -103,6 +103,7 @@ function setChannelClickListener() {
     $(".channel").unbind().on("click", function () {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
+        Native.show(channelURL);
         playVideo(channelURL);
     });
 }
