@@ -106,6 +106,9 @@ function loadChannels() {
                     "   <img src='" + logoURL + "' width='30px' height='28px' style='margin-left: 15px;'>" +
                     "   <div style='color: white; margin-left: 10px; margin-top: -3px;'>" + channelName + "</div>" +
                     "</div>" +
+                    "<div style='position: absolute; top: 0; right: 0; width: 50px; height: 100%; display: flex; justify-content: center; align-items: center;'>" +
+                    "   <img src='../img/menu.png' style='width: 10px; height: 15px;'>"+
+                    "</div>"+
                     "</div>");
             }
             setChannelClickListener();
