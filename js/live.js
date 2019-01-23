@@ -146,9 +146,9 @@ function occurrences(string, subString, allowOverlapping) {
 }
 
 function switchToFullScreen() {
-    $("#live-video").css("position", "absolute");
-    $("#live-video").css("left", "0");
-    $("#live-video").css("top", "0");
-    $("#live-video").css("width", "100%");
-    $("#live-video").css("height", "100%");
+    $("#live-video-container").css("position", "absolute");
+    $("#live-video-container").css("left", "0");
+    $("#live-video-container").css("top", "0");
+    $("#live-video-container").css("width", "100%");
+    $("#live-video-container").css("height", "100%");
 }
