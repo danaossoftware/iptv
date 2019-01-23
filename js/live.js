@@ -144,3 +144,8 @@ function occurrences(string, subString, allowOverlapping) {
     }
     return n;
 }
+
+function switchToFullScreen() {
+    $("#video").requestFullScreen();
+    $("#video").addClass("controls");
+}
