@@ -21,9 +21,13 @@ $(document).ready(function() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            var price = "Rp"+formatMoney(a, ",", ".")+",-";
-            $("#price").html(price);
-            $("#price-2").html(price);
+            try {
+                var price = "Rp" + formatMoney(a, ",", ".") + ",-";
+                $("#price").html(price);
+                $("#price-2").html(price);
+            } catch (e) {
+                console.log(e);
+            }
             $("#loading-container").fadeOut(300);
         }
     });
