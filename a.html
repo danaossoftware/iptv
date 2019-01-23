@@ -14,6 +14,8 @@
                 hls.on(Hls.Events.MANIFEST_PARSED,function() {
                     Native.show("Ready to play");
                     setTimeout(function() {
+                        Native.show("Playing video");
+                        var video = document.getElementById('video');
                         video.play();
                     }, 5000);
                 });
@@ -22,6 +24,8 @@
                 video.addEventListener('loadedmetadata',function() {
                     Native.show("Ready to play 2");
                     setTimeout(function() {
+                        Native.show("Playing video");
+                        var video = document.getElementById('video');
                         video.play();
                     }, 5000);
                 });
