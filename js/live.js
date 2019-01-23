@@ -2,6 +2,8 @@ const SERVER_URL = "http://iptvjoss.com/iptv/php/";
 var m3uData;
 var selectedCategoryName;
 var fullScreen = false;
+var menuShowed = false;
+var pressEvent;
 
 $(document).ready(function () {
     $.ajax({
@@ -113,10 +115,15 @@ function loadChannels() {
 }
 
 function setChannelClickListener() {
-    $(".channel").unbind().on("click", function () {
+    $(".channel").mouseup(function() {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
         playVideo(channelURL);
+    }).mousedown(function () {
+        pressEvent = window.setTimeout(function() {
+            $("#menu-container").css("display", "flex").hide().fadeIn(300);
+            menuShowed = true;
+        }, 1000);
     });
 }
 
@@ -177,6 +184,9 @@ function backKey() {
         $("#live-video-container").css("margin-left", "8px");
         $("#live-video-container").css("background", "rgba(0, 0, 0, .5)");
         fullScreen = false;
+    } else if (menuShowed) {
+        $("#menu-container").fadeOut(300);
+        menuShowed = false;
     } else {
         window.history.back();
     }
