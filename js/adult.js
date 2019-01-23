@@ -112,7 +112,9 @@ function loadChannels() {
                     "</div>");
             }
             setChannelClickListener();
-            playVideo(channels[0]["url"]);
+            if (channels.length > 0) {
+                playVideo(channels[0]["url"]);
+            }
             $("#loading-container").hide();
         }
     });
