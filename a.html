@@ -9,17 +9,17 @@
             var video = document.getElementById('video');
             if(Hls.isSupported()) {
                 var hls = new Hls();
-                hls.loadSource("http://tvku.live:8888/live/projectsid/semogalekasselesai/78.m3u8");
+                hls.loadSource("http://tvku.live:8888/live/projectsid/semogalekasselesai/31.m3u8");
                 hls.attachMedia(video);
                 hls.on(Hls.Events.MANIFEST_PARSED,function() {
                     Native.show("Ready to play");
-                    //video.play();
+                    video.play();
                 });
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = videoURL;
                 video.addEventListener('loadedmetadata',function() {
                     Native.show("Ready to play 2");
-                    //video.play();
+                    video.play();
                 });
             }
         });
@@ -34,7 +34,7 @@
 </head>
 <body style="background-color: black;">
 <div style="width: 100%; height: 100%; position: relative;">
-    <video onclick="playVideo()" id="video" width="100%" height="100%">
+    <video id="video" width="100%" height="100%">
     </video>
 </div>
 </body>
