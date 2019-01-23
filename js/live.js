@@ -151,4 +151,10 @@ function switchToFullScreen() {
     $("#live-video-container").css("top", "0");
     $("#live-video-container").css("width", "100%");
     $("#live-video-container").css("height", "100%");
+    $("#live-video-container").css("background", "black");
+}
+
+function backKey() {
+    console.log("On back key...");
+    Native.show("On back key...");
 }
