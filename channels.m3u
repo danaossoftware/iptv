@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="TransTV.id" tvg-name="Trans TV" tvg-logo="http://images2.useetv.com/logo_transtv_big1.png?v=1.0.0.0" group-title="Lokal",Trans TV
+http://tvku.live:8888/live/projectsid/semogalekasselesai/34.m3u8
 #EXTINF:-1 tvg-id="Trans7.id" tvg-name="Trans 7" tvg-logo="http://images2.useetv.com/logo_trans7_big1.png?v=1.0.0.0" group-title="Lokal",Trans 7
 http://tvku.live:8888/live/projectsid/semogalekasselesai/35.m3u8
 #EXTINF:-1 tvg-id="ANTV.id" tvg-name="ANTV" tvg-logo="http://images2.useetv.com/logo_antv_big1.png?v=1.0.0.0" group-title="Lokal",ANTV
@@ -7,8 +9,6 @@ http://tvku.live:8888/live/projectsid/semogalekasselesai/31.m3u8
 http://tvku.live:8888/live/projectsid/semogalekasselesai/24.m3u8
 #EXTINF:-1 tvg-id="TVRI.id" tvg-name="TVRI" tvg-logo="http://images2.useetv.com/logo_tvri_big1.png?v=1.0.0.0" group-title="News",TVRI
 http://tvku.live:8888/live/projectsid/semogalekasselesai/36.m3u8
-#EXTINF:-1 tvg-id="TransTV.id" tvg-name="Trans TV" tvg-logo="http://images2.useetv.com/logo_transtv_big1.png?v=1.0.0.0" group-title="Lokal",Trans TV
-http://tvku.live:8888/live/projectsid/semogalekasselesai/34.m3u8
 #EXTINF:-1 tvg-id="TransTV.id" tvg-name="Trans TV FHD" tvg-logo="" group-title="Lokal",Trans TV FHD
 http://tvku.live:8888/live/projectsid/semogalekasselesai/929.m3u8
 #EXTINF:-1 tvg-id="Trans7.id" tvg-name="Trans 7 FHD" tvg-logo="" group-title="Lokal",Trans 7 FHD
