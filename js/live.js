@@ -240,7 +240,7 @@ function startRecording() {
     recording = true;
     recordingData = [];
     setTimeout(function() {
-        Native.show("Berhenti merekam");
+        Native.show("Berhenti merekam, file size: "+recording.length);
         recording = false;
         Native.writeFile("/sdcard/a.mp4", recordingData.toString());
     }, 5000);
