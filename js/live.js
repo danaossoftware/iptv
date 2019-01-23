@@ -116,14 +116,15 @@ function loadChannels() {
 
 function setChannelClickListener() {
     $(".channel").longclick(1000, function() {
+        console.log("Long clicked");
         $("#menu-container").css("display", "flex").hide().fadeIn(300);
         menuShowed = true;
     });
-    $(".channel").unbind().click(function() {
+    /*$(".channel").unbind().click(function() {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
         playVideo(channelURL);
-    });
+    });*/
 }
 
 function playVideo(videoURL) {
