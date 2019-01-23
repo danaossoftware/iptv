@@ -164,5 +164,8 @@ function backKey() {
         $("#live-video-container").css("width", "100%");
         $("#live-video-container").css("height", "100%");
         $("#live-video-container").css("background", "rgba(0, 0, 0, .5)");
+        fullScreen = false;
+    } else {
+        window.history.back();
     }
 }
