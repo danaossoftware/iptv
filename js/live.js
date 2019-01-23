@@ -3,7 +3,7 @@ var selectedCategoryName;
 var fullScreen = false;
 
 $(document).ready(function () {
-    $.ajax({
+    /*$.ajax({
         type: 'GET',
         url: 'http://iptvjoss.com/iptv/php/check-session.php',
         dataType: 'text',
@@ -13,7 +13,7 @@ $(document).ready(function () {
                 window.location.href = 'login.html';
             }
         }
-    });
+    });*/
     var params = location.search;
     params = params.substr(1, params.length);
     var category = params.split("&")[0].split("=")[1];
