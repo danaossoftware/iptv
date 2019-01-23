@@ -2,7 +2,7 @@ var m3uData;
 var selectedCategoryName;
 var hls = null;
 
-$(document).ready(function() {
+$(document).ready(function () {
     var params = location.search;
     params = params.substr(1, params.length);
     var category = params.split("&")[0].split("=")[1];
@@ -15,10 +15,10 @@ $(document).ready(function() {
 function loadChannels() {
     $.ajax({
         type: 'GET',
-        url: SERVER_URL+'get-channels.php',
+        url: SERVER_URL + 'get-channels.php',
         dataType: 'text',
         cache: false,
-        success: function(a) {
+        success: function (a) {
             m3uData = a;
             var length = occurrences(m3uData, "#EXTINF");
             channels = [];
@@ -27,16 +27,16 @@ function loadChannels() {
                     var a = 0;
                     for (var i = 0; i < length; i++) {
                         a = m3uData.indexOf("#EXTINF", a) + 7;
-                        var b = m3uData.indexOf("tvg-name", a)+10;
+                        var b = m3uData.indexOf("tvg-name", a) + 10;
                         var c = m3uData.indexOf("\"", b);
-                        var channelName = m3uData.substr(b, c-b);
-                        b = m3uData.indexOf("tvg-logo", a)+10;
+                        var channelName = m3uData.substr(b, c - b);
+                        b = m3uData.indexOf("tvg-logo", a) + 10;
                         c = m3uData.indexOf("\"", b);
-                        var logoURL = m3uData.substr(b, c-b);
+                        var logoURL = m3uData.substr(b, c - b);
                         a = m3uData.indexOf("group-title", a);
                         b = m3uData.indexOf("http", a);
                         c = m3uData.indexOf("\n", b);
-                        var channelURL = m3uData.substr(b, c-b);
+                        var channelURL = m3uData.substr(b, c - b);
                         channelURL = channelURL.trim();
                         channels.push({'name': channelName, 'logo': logoURL, 'url': channelURL});
                     }
@@ -58,13 +58,13 @@ function loadChannels() {
                             b = m3uData.indexOf("tvg-name", a) + 10;
                             c = m3uData.indexOf("\"", b);
                             var channelName = m3uData.substr(b, c - b);
-                            b = m3uData.indexOf("tvg-logo", a)+10;
+                            b = m3uData.indexOf("tvg-logo", a) + 10;
                             c = m3uData.indexOf("\"", b);
-                            var logoURL = m3uData.substr(b, c-b);
+                            var logoURL = m3uData.substr(b, c - b);
                             a = m3uData.indexOf("group-title", a);
                             b = m3uData.indexOf("http", a);
                             c = m3uData.indexOf("\n", b);
-                            var channelURL = m3uData.substr(b, c-b);
+                            var channelURL = m3uData.substr(b, c - b);
                             channelURL = channelURL.trim();
                             channels.push({'name': channelName, 'logo': logoURL, 'url': channelURL});
                         }
@@ -88,8 +88,8 @@ function loadChannels() {
                 }
                 $("#channels").append("<div class=\"channel\" style=\"cursor: pointer; margin-left: 10px; margin-right: 10px; margin-top: 5px; position: relative; width: calc(100% - 20px);\">\n" +
                     "<div style='margin-left: 10px; display: flex; flex-flow: row nowrap; align-items: center;'>" +
-                    "   <div style='color: white; font-family: \"PalanquinBold\";'>"+(i+1)+"</div>"+
-                    "   <img src='"+logoURL+"' width='30px' height='28px' style='margin-left: 15px;'>" +
+                    "   <div style='color: white; font-family: \"PalanquinBold\";'>" + (i + 1) + "</div>" +
+                    "   <img src='" + logoURL + "' width='30px' height='28px' style='margin-left: 15px;'>" +
                     "   <div style='color: white; margin-left: 10px; margin-top: -3px;'>" + channelName + "</div>" +
                     "</div>" +
                     "</div>");
@@ -101,7 +101,7 @@ function loadChannels() {
 }
 
 function setChannelClickListener() {
-    $(".channel").unbind().on("click", function() {
+    $(".channel").unbind().on("click", function () {
         var channelNum = $(this).parent().children().index($(this));
         var channelURL = channels[channelNum]["url"];
         playVideo(channelURL);
@@ -109,37 +109,24 @@ function setChannelClickListener() {
 }
 
 function playVideo(videoURL) {
-    var video = document.getElementById('live-video');
-    video.stop();
-    if (hls == null) {
-        if (Hls.isSupported()) {
-            hls = new Hls();
-            hls.loadSource(videoURL);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                video.play();
-                $("#loading-container").fadeOut(300);
-            });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = videoURL;
-            video.addEventListener('loadedmetadata', function () {
-                video.play();
-                $("#loading-container").fadeOut(300);
-            });
-        }
-    } else {
-        if (Hls.isSupported()) {
-            hls.loadSource(videoURL);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                video.play();
-            });
-        } else {
-            video.src = videoURL;
-            video.addEventListener('loadedmetadata', function () {
-                video.play();
-            });
-        }
+    if (hls != null) {
+        var video = document.getElementById('live-video');
+        video.stop();
+    }
+    if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(videoURL);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+            video.play();
+            $("#loading-container").fadeOut(300);
+        });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoURL;
+        video.addEventListener('loadedmetadata', function () {
+            video.play();
+            $("#loading-container").fadeOut(300);
+        });
     }
     $("#live-video-container").css("visibility", "visible");
 }
