@@ -94,6 +94,7 @@ function loadChannels() {
                     "</div>");
                 setChannelClickListener();
             }
+            playVideo(channels[0]["url"]);
         }
     });
 }
@@ -101,23 +102,27 @@ function loadChannels() {
 function setChannelClickListener() {
     $(".channel").unbind().on("click", function() {
         var channelNum = $(this).parent().children().index($(this));
-        var channelURL = channels[channelNum]["name"];
-        var video = document.getElementById('live-video');
-        if(Hls.isSupported()) {
-            var hls = new Hls();
-            hls.loadSource("http://techslides.com/demos/sample-videos/small.mp4");
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED,function() {
-                //video.play();
-            });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = videoURL;
-            video.addEventListener('loadedmetadata',function() {
-                //video.play();
-            });
-        }
-        $("#live-video-container").css("visibility", "visible");
+        var channelURL = channels[channelNum]["url"];
+        playVideo(channelURL);
     });
+}
+
+function playVideo(videoURL) {
+    var video = document.getElementById('live-video');
+    if(Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource(videoURL);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function() {
+            video.play();
+        });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoURL;
+        video.addEventListener('loadedmetadata',function() {
+            video.play();
+        });
+    }
+    $("#live-video-container").css("visibility", "visible");
 }
 
 function occurrences(string, subString, allowOverlapping) {
