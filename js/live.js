@@ -1,5 +1,6 @@
 var m3uData;
 var selectedCategoryName;
+var fullScreen = false;
 
 $(document).ready(function () {
     var params = location.search;
@@ -152,9 +153,16 @@ function switchToFullScreen() {
     $("#live-video-container").css("width", "100%");
     $("#live-video-container").css("height", "100%");
     $("#live-video-container").css("background", "black");
+    fullScreen = true;
 }
 
 function backKey() {
-    console.log("On back key...");
-    Native.show("On back key...");
+    if (fullScreen) {
+        $("#live-video-container").css("position", "");
+        $("#live-video-container").css("left", "");
+        $("#live-video-container").css("top", "");
+        $("#live-video-container").css("width", "100%");
+        $("#live-video-container").css("height", "100%");
+        $("#live-video-container").css("background", "rgba(0, 0, 0, .5)");
+    }
 }
