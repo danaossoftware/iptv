@@ -108,6 +108,7 @@ function setChannelClickListener() {
 }
 
 function playVideo(videoURL) {
+    var video = document.getElementById('live-video');
     if (Hls.isSupported()) {
         var hls = new Hls();
         hls.loadSource(videoURL);
