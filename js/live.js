@@ -108,7 +108,7 @@ function loadChannels() {
                     "</div>" +
                     "</div>");
             }
-            //setChannelClickListener();
+            setChannelClickListener();
             playVideo(channels[0]["url"]);
         }
     });
