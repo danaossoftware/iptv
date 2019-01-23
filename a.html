@@ -13,13 +13,17 @@
                 hls.attachMedia(video);
                 hls.on(Hls.Events.MANIFEST_PARSED,function() {
                     Native.show("Ready to play");
-                    video.play();
+                    setTimeout(function() {
+                        video.play();
+                    }, 5000);
                 });
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = videoURL;
                 video.addEventListener('loadedmetadata',function() {
                     Native.show("Ready to play 2");
-                    video.play();
+                    setTimeout(function() {
+                        video.play();
+                    }, 5000);
                 });
             }
         });
