@@ -15,7 +15,7 @@
                     Native.show("Ready to play");
                     setTimeout(function() {
                         Native.show("Playing video");
-                        $("#video").click();
+                        $("#video")[0].click();
                     }, 5000);
                 });
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
@@ -24,7 +24,7 @@
                     Native.show("Ready to play 2");
                     setTimeout(function() {
                         Native.show("Playing video");
-                        $("#video").click();
+                        $("#video")[0].click();
                     }, 5000);
                 });
             }
