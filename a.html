@@ -26,7 +26,7 @@
 
         function playVideo() {
             var video = document.getElementById('video');
-            //video.play();
+            video.play();
         }
     </script>
     <link href="css/global.css" rel="stylesheet">
@@ -34,7 +34,7 @@
 </head>
 <body style="background-color: black;">
 <div style="width: 100%; height: 100%; position: relative;">
-    <video onclick="Native.show('Hello world 2');" id="video" width="100%" height="100%">
+    <video onclick="playVideo()" id="video" width="100%" height="100%">
     </video>
 </div>
 </body>
