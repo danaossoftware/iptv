@@ -107,8 +107,8 @@ function loadChannels() {
                     "   <div style='color: white; margin-left: 10px; margin-top: -3px;'>" + channelName + "</div>" +
                     "</div>" +
                     "</div>");
-                setChannelClickListener();
             }
+            setChannelClickListener();
             playVideo(channels[0]["url"]);
         }
     });
