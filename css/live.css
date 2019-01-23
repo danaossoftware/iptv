@@ -6,3 +6,7 @@
 .channel:active {
     background-color: #e67e22;
 }
+
+.menu-item:active {
+    background-color: #eeeeee;
+}
