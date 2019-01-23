@@ -147,6 +147,6 @@ function occurrences(string, subString, allowOverlapping) {
 
 function switchToFullScreen() {
     console.log("Switching to full screen...");
-    $("#video").requestFullScreen();
+    $("#video")[0].requestFullScreen();
     $("#video").addClass("controls");
 }
