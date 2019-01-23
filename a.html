@@ -12,19 +12,19 @@
                 hls.loadSource("http://tvku.live:8888/live/projectsid/semogalekasselesai/78.m3u8");
                 hls.attachMedia(video);
                 hls.on(Hls.Events.MANIFEST_PARSED,function() {
-                    //video.play();
+                    video.play();
                 });
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = videoURL;
                 video.addEventListener('loadedmetadata',function() {
-                    //video.play();
+                    video.play();
                 });
             }
         });
 
         function playVideo() {
             var video = document.getElementById('video');
-            video.play();
+            //video.play();
         }
     </script>
     <link href="css/global.css" rel="stylesheet">
