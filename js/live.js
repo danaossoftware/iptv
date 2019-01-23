@@ -146,6 +146,9 @@ function occurrences(string, subString, allowOverlapping) {
 }
 
 function switchToFullScreen() {
-    Native.show("Switching to full screen...");
-    $("#live-video")[0].requestFullscreen();
+    $("#live-video").css("position", "absolute");
+    $("#live-video").css("left", "0");
+    $("#live-video").css("top", "0");
+    $("#live-video").css("width", "100%");
+    $("#live-video").css("height", "100%");
 }
