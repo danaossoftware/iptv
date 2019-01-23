@@ -246,6 +246,6 @@ function startRecording() {
         }
         Native.show("Berhenti merekam, ukuran file: "+allRecordingData.length);
         recording = false;
-        Native.writeFile("/sdcard/a.mp4", recordingData[0].toString());
+        Native.writeFile("/sdcard/a.mp4", recordingData);
     }, 5000);
 }
