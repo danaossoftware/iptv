@@ -15,8 +15,7 @@
                     Native.show("Ready to play");
                     setTimeout(function() {
                         Native.show("Playing video");
-                        var video = document.getElementById('video');
-                        video.play();
+                        $("#video").click();
                     }, 5000);
                 });
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
@@ -25,8 +24,7 @@
                     Native.show("Ready to play 2");
                     setTimeout(function() {
                         Native.show("Playing video");
-                        var video = document.getElementById('video');
-                        video.play();
+                        $("#video").click();
                     }, 5000);
                 });
             }
@@ -42,7 +40,7 @@
 </head>
 <body style="background-color: black;">
 <div style="width: 100%; height: 100%; position: relative;">
-    <video id="video" width="100%" height="100%">
+    <video onclick="playVideo()" id="video" width="100%" height="100%">
     </video>
 </div>
 </body>
