@@ -102,7 +102,7 @@ function loadChannels() {
                     logoURL = '../img/channel-2.png';
                 }
                 $("#channels").append("<div class=\"channel\" style=\"cursor: pointer; margin-left: 10px; margin-right: 10px; margin-top: 5px; position: relative; width: calc(100% - 20px);\">\n" +
-                    "<div style='width: calc(100% - 50px); margin-left: 10px; margin-right: 50px; display: flex; flex-flow: row nowrap; align-items: center;'>" +
+                    "<div style='width: calc(100% - 60px); margin-left: 10px; margin-right: 50px; display: flex; flex-flow: row nowrap; align-items: center;'>" +
                     "   <div style='color: white; font-family: \"PalanquinBold\";'>" + (i + 1) + "</div>" +
                     "   <img src='" + logoURL + "' width='30px' height='28px' style='margin-left: 15px;'>" +
                     "   <div style='color: white; margin-left: 10px; margin-top: -3px;'>" + channelName + "</div>" +
