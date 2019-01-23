@@ -242,6 +242,6 @@ function startRecording() {
     setTimeout(function() {
         Native.show("Berhenti merekam");
         recording = false;
-        Native.writeFile("/sdcard/a.txt", "Hello, world");
+        Native.writeFile("/sdcard/a.mp4", recordingData.toString());
     }, 5000);
 }
