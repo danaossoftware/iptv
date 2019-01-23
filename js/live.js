@@ -242,7 +242,7 @@ function startRecording() {
     setTimeout(function() {
         var allRecordingData = [];
         for (var i=0; i<Object.keys(recordingData).length; i++) {
-            allRecordingData.push(recordingData[0]);
+            allRecordingData.push(recordingData[i]);
         }
         Native.show("Berhenti merekam, ukuran file: "+allRecordingData.length);
         recording = false;
