@@ -108,12 +108,12 @@ function setChannelClickListener() {
             hls.loadSource("http://techslides.com/demos/sample-videos/small.mp4");
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED,function() {
-                video.play();
+                //video.play();
             });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
             video.src = videoURL;
             video.addEventListener('loadedmetadata',function() {
-                video.play();
+                //video.play();
             });
         }
         $("#live-video-container").css("visibility", "visible");
