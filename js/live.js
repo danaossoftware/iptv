@@ -163,7 +163,7 @@ function switchToFullScreen() {
     $("#live-video-container").css("left", "0");
     $("#live-video-container").css("top", "0");
     $("#live-video-container").css("width", "100%");
-    $("#live-video-container").css("height", "100%");
+    $("#live-video-container").css("margin-left", "0");
     $("#live-video-container").css("background", "black");
     fullScreen = true;
 }
@@ -173,8 +173,8 @@ function backKey() {
         $("#live-video-container").css("position", "");
         $("#live-video-container").css("left", "");
         $("#live-video-container").css("top", "");
-        $("#live-video-container").css("width", "100%");
-        $("#live-video-container").css("height", "100%");
+        $("#live-video-container").css("width", "calc(50% - 8px)");
+        $("#live-video-container").css("margin-left", "8px");
         $("#live-video-container").css("background", "rgba(0, 0, 0, .5)");
         fullScreen = false;
     } else {
