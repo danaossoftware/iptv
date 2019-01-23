@@ -4,6 +4,7 @@ var selectedCategoryName;
 var fullScreen = false;
 var menuShowed = false;
 var pressEvent;
+var currentChannel = 0;
 
 $(document).ready(function () {
     $.ajax({
@@ -121,8 +122,11 @@ function loadChannels() {
 function setChannelClickListener() {
     $(".channel").unbind().click(function() {
         var channelNum = $(this).parent().children().index($(this));
-        var channelURL = channels[channelNum]["url"];
-        playVideo(channelURL);
+        if (channelNum != currentChannel) {
+            var channelURL = channels[channelNum]["url"];
+            playVideo(channelURL);
+            currentChannel = channelNum;
+        }
     });
     $(".channel-menu").unbind().click(function() {
         var channelNum = $(this).parent().children().index($(this));
