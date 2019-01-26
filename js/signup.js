@@ -1,4 +1,4 @@
-const SERVER_URL = "http://danaos.xyz/iptv/php/";
+const SERVER_URL = "http://iptvjoss.com/iptv/php/";
 
 $(document).ready(function() {
     $.ajax({
@@ -36,7 +36,7 @@ function signup() {
     $("#loading-container").css("display", "flex");
     $.ajax({
         type: 'GET',
-        url: 'http://danaos.xyz/iptv/php/signup.php',
+        url: 'http://iptvjoss.com/iptv/php/signup.php',
         data: {'phone': phone, 'username': randomString(), 'password': password},
         dataType: 'text',
         cache: false,

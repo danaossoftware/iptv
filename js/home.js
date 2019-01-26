@@ -42,7 +42,7 @@ function loadChannels() {
     $("#categories").find("*").remove();
     $.ajax({
         type: 'GET',
-        url: 'http://danaos.xyz/iptv/channels.m3u',
+        url: 'http://iptvjoss.com/iptv/channels.m3u',
         dataType: 'text',
         cache: false,
         success: function (a) {
