@@ -2,17 +2,17 @@ var xmlData = null;
 var selectedLanguage = 0;
 var checkedLanguage = 0;
 
-$(document).ready(function() {
+$(document).ready(function () {
     loadSettings();
 });
 
 function loadSettings() {
     $.ajax({
         type: 'GET',
-        url: SERVER_URL+'get-settings.php',
+        url: SERVER_URL + 'get-settings.php',
         dataType: 'text',
         cache: false,
-        success: function(a) {
+        success: function (a) {
             var parser = new DOMParser();
             var xml = parser.parseFromString(a, "text/xml");
             xmlData = xml;
@@ -20,11 +20,9 @@ function loadSettings() {
             var autoStart = parseInt(common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue);
             var fullEPG = parseInt(common.getElementsByTagName("full-epg")[0].childNodes[0].nodeValue);
             var subtitle = parseInt(common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue);
-            try {
-                var userAgent = Native.getUserAgent();
-                Native.show(userAgent);
-                $("#user-agent").val(userAgent);
-            } catch (e) {}
+            var userAgent = Native.getUserAgent();
+            Native.show("Text"+userAgent);
+            $("#user-agent").val(userAgent);
             var language = parseInt(common.getElementsByTagName("language")[0].childNodes[0].nodeValue);
             selectedLanguage = language;
             if (autoStart == 1) {
@@ -80,12 +78,12 @@ function saveSettings() {
     fd.append("settings", settingsXML);
     $.ajax({
         type: 'POST',
-        url: SERVER_URL+'update-settings.php',
+        url: SERVER_URL + 'update-settings.php',
         data: fd,
         processData: false,
         contentType: false,
         cache: false,
-        success: function(a) {
+        success: function (a) {
             $("#loading-container").fadeOut(300);
         }
     });
