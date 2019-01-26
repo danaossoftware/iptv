@@ -1,9 +1,9 @@
-const SERVER_URL = "http://localhost/iptv/php/";
+const SERVER_URL = "http://danaos.xyz/iptv/php/";
 
 $(document).ready(function() {
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/iptv/php/check-session.php',
+        url: 'http://danaos.xyz/iptv/php/check-session.php',
         dataType: 'text',
         cache: false,
         success: function(a) {

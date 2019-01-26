@@ -9,7 +9,7 @@ $(document).ready(function() {
 function loadProfile() {
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/iptv/php/get-user-info.php',
+        url: 'http://danaos.xyz/iptv/php/get-user-info.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
