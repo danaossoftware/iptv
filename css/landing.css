@@ -14,10 +14,10 @@
     background-image: linear-gradient(to right, #f7a53f, #d31d58);
 }
 
-#series {
+#adult {
     background-image: linear-gradient(to right, #90369c, #5994cc);
 }
 
-#series:active {
+#adult:active {
     background-image: linear-gradient(to right, #5994cc, #90369c);
 }
