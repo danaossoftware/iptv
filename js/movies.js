@@ -1,4 +1,4 @@
-const SERVER_URL = "http://iptvjoss.com/iptv/php/";
+const SERVER_URL = "http://localhost/iptv/php/";
 var m3uData;
 var selectedCategoryName;
 var fullScreen = false;
@@ -12,7 +12,7 @@ var recordingData = [];
 $(document).ready(function () {
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/check-session.php',
+        url: 'http://localhost/iptv/php/check-session.php',
         dataType: 'text',
         cache: false,
         success: function(a) {

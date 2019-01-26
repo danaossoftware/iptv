@@ -7,7 +7,7 @@ $(document).ready(function() {
 function loadProfile() {
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/get-user-info.php',
+        url: 'http://localhost/iptv/php/get-user-info.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -49,7 +49,7 @@ function saveEdittedProfile() {
     var profilePictureURL = "";
     if (profilePictureFile != null) {
         var profilePictureName = guid();
-        profilePictureURL = 'http://iptvjoss.com/iptv/userdata/imgs/'+profilePictureName;
+        profilePictureURL = 'http://localhost/iptv/userdata/imgs/'+profilePictureName;
         var fd = new FormData();
         fd.append("img-file-name", profilePictureName);
         fd.append("img-file", profilePictureFile);
@@ -63,7 +63,7 @@ function saveEdittedProfile() {
             success: function(a) {
                 $.ajax({
                     type: 'GET',
-                    url: 'http://iptvjoss.com/iptv/php/update-profile.php',
+                    url: 'http://localhost/iptv/php/update-profile.php',
                     data: {'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
                     dataType: 'text',
                     cache: false,
@@ -83,7 +83,7 @@ function saveEdittedProfile() {
     } else {
         $.ajax({
             type: 'GET',
-            url: 'http://iptvjoss.com/iptv/php/update-profile.php',
+            url: 'http://localhost/iptv/php/update-profile.php',
             data: {'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
             dataType: 'text',
             cache: false,

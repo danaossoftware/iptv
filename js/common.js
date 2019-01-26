@@ -50,8 +50,10 @@ function saveSettings() {
     var common = xmlData.getElementsByTagName("common")[0];
     if ($("#auto-start").prop("checked") == true) {
         common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue = 1;
+        Native.setStartAtBoot(true);
     } else {
         common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue = 0;
+        Native.setStartAtBoot(false);
     }
     if ($("#full-epg").prop("checked") == true) {
         common.getElementsByTagName("full-epg")[0].childNodes[0].nodeValue = 1;
