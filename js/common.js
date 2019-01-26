@@ -22,6 +22,7 @@ function loadSettings() {
             var subtitle = parseInt(common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue);
             try {
                 var userAgent = Native.getUserAgent();
+                Native.show(userAgent);
                 $("#user-agent").val(userAgent);
             } catch (e) {}
             var language = parseInt(common.getElementsByTagName("language")[0].childNodes[0].nodeValue);
