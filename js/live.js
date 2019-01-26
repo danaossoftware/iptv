@@ -10,6 +10,13 @@ var recording = false;
 var recordingData = [];
 
 $(document).ready(function () {
+    $("#time").html(getTime());
+    $("#date").html(getDate());
+    setTimeout(function() {
+        $("#time").html(getTime());
+        $("#date").html(getDate());
+        setTimeout(this, 1000);
+    }, 1000);
     $.ajax({
         type: 'GET',
         url: 'http://iptvjoss.com/iptv/php/check-session.php',

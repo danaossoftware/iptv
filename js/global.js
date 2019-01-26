@@ -41,3 +41,33 @@ function guid() {
     }
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 }
+
+function getTime() {
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    if (hour < 10) {
+        hour = "0"+hour;
+    }
+    if (minute < 10) {
+        minute = "0"+minute;
+    }
+    return hour+":"+minute;
+}
+
+function getDate() {
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var monthNames = [
+        "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+    ];
+    return day+" "+monthNames[month]+" "+year;
+}
+
+function getMonthNames() {
+    return [
+        "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+    ];
+}

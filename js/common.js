@@ -3,6 +3,13 @@ var selectedLanguage = 0;
 var checkedLanguage = 0;
 
 $(document).ready(function () {
+    $("#time").html(getTime());
+    $("#date").html(getDate());
+    setTimeout(function() {
+        $("#time").html(getTime());
+        $("#date").html(getDate());
+        setTimeout(this, 1000);
+    }, 1000);
     loadSettings();
 });
 
@@ -21,7 +28,6 @@ function loadSettings() {
             var fullEPG = parseInt(common.getElementsByTagName("full-epg")[0].childNodes[0].nodeValue);
             var subtitle = parseInt(common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue);
             var userAgent = Native.getUserAgent();
-            Native.show("Text"+userAgent);
             $("#user-agent").val(userAgent);
             var language = parseInt(common.getElementsByTagName("language")[0].childNodes[0].nodeValue);
             selectedLanguage = language;

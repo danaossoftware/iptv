@@ -2,6 +2,13 @@ var xmlData;
 var selectedDecoder = 0;
 
 $(document).ready(function() {
+    $("#time").html(getTime());
+    $("#date").html(getDate());
+    setTimeout(function() {
+        $("#time").html(getTime());
+        $("#date").html(getDate());
+        setTimeout(this, 1000);
+    }, 1000);
     loadSettings();
 });
 
