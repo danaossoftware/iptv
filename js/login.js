@@ -21,9 +21,9 @@ function login() {
     if (phone == '' || password == '') {
         return;
     }
-    var rememberMe = false;
+    var rememberMe = 0;
     if ($("#remember-me").prop("checked") == true) {
-        rememberMe = true;
+        rememberMe = 1;
     }
     $.ajax({
         type: 'GET',

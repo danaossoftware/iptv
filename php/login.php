@@ -18,7 +18,7 @@ if ($results && $results->num_rows > 0) {
     $c->query("UPDATE users SET active_connections = active_connections+1 WHERE id='" . $row["id"] . "'");
     session_start();
     $_SESSION["iptvjoss_user_id"] = $row["id"];
-    if ($rememberMe) {
+    if ($rememberMe == 1) {
         $params = session_get_cookie_params();
         setcookie(session_name(), $_COOKIE[session_name()], time() + 1*24*60*60, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
     }
