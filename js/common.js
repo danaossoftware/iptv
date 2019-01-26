@@ -20,6 +20,7 @@ function loadSettings() {
             var autoStart = parseInt(common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue);
             var fullEPG = parseInt(common.getElementsByTagName("full-epg")[0].childNodes[0].nodeValue);
             var subtitle = parseInt(common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue);
+            Native.show("Test");
             try {
                 var userAgent = Native.getUserAgent();
                 Native.show(userAgent);
