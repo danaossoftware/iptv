@@ -20,7 +20,10 @@ function loadSettings() {
             var autoStart = parseInt(common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue);
             var fullEPG = parseInt(common.getElementsByTagName("full-epg")[0].childNodes[0].nodeValue);
             var subtitle = parseInt(common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue);
-            var userAgent = Native.getUserAgent();
+            try {
+                var userAgent = Native.getUserAgent();
+                $("#user-agent").val(userAgent);
+            } catch (e) {}
             var language = parseInt(common.getElementsByTagName("language")[0].childNodes[0].nodeValue);
             selectedLanguage = language;
             if (autoStart == 1) {
@@ -32,7 +35,6 @@ function loadSettings() {
             if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
             }
-            $("#user-agent").val(userAgent);
             if (language == 0) {
                 $("#language-text").html("Bahasa Indonesia");
             } else if (language == 1) {
