@@ -20,7 +20,7 @@ function loadSettings() {
             var autoStart = parseInt(common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue);
             var fullEPG = parseInt(common.getElementsByTagName("full-epg")[0].childNodes[0].nodeValue);
             var subtitle = parseInt(common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue);
-            var userAgent = common.getElementsByTagName("user-agent")[0].childNodes[0].nodeValue;
+            var userAgent = Native.getUserAgent();
             var language = parseInt(common.getElementsByTagName("language")[0].childNodes[0].nodeValue);
             selectedLanguage = language;
             if (autoStart == 1) {
@@ -70,9 +70,7 @@ function saveSettings() {
     var userAgent = $("#user-agent").val();
     common.getElementsByTagName("user-agent")[0].childNodes[0].nodeValue = userAgent;
     common.getElementsByTagName("language")[0].childNodes[0].nodeValue = selectedLanguage;
-    Object.defineProperty(navigator, 'userAgent', {
-        get: function () { return userAgent; }
-    });
+    Native.setUserAgent(userAgent);
     var serializer = new XMLSerializer();
     var settingsXML = serializer.serializeToString(xmlData);
     var fd = new FormData();
