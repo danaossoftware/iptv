@@ -13,3 +13,7 @@ function logout() {
         }
     });
 }
+
+function backKey() {
+    Native.finishApp();
+}
