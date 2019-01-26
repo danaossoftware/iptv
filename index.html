@@ -4,6 +4,10 @@
         <script src="js/jquery.js"></script>
         <script type="module" src="js/index.js"></script>
         <script>
+            Object.defineProperty(navigator, 'userAgent', {
+                get: function () { return "Chrome/60.0.3112.113"; }
+            });
+
             $.ajax({
                 type: 'GET',
                 url: 'http://iptvjoss.com/iptv/php/check-session.php',

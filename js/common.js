@@ -62,11 +62,17 @@ function saveSettings() {
     }
     if ($("#active-subtitle").prop("checked") == true) {
         common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue = 1;
+        Native.enableSubtitle(true);
     } else {
         common.getElementsByTagName("active-subtitle")[0].childNodes[0].nodeValue = 0;
+        Native.enableSubtitle(false);
     }
-    common.getElementsByTagName("user-agent")[0].childNodes[0].nodeValue = $("#user-agent").val();
+    var userAgent = $("#user-agent").val();
+    common.getElementsByTagName("user-agent")[0].childNodes[0].nodeValue = userAgent;
     common.getElementsByTagName("language")[0].childNodes[0].nodeValue = selectedLanguage;
+    Object.defineProperty(navigator, 'userAgent', {
+        get: function () { return userAgent; }
+    });
     var serializer = new XMLSerializer();
     var settingsXML = serializer.serializeToString(xmlData);
     var fd = new FormData();
