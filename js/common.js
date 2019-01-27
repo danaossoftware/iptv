@@ -23,17 +23,17 @@ function loadSettings() {
             var parser = new DOMParser();
             var xml = parser.parseFromString(a, "text/xml");
             xmlData = xml;
-            /*var userAgent = Native.getUserAgent();
+            var userAgent = Native.getUserAgent();
             $("#user-agent").val(userAgent);
             selectedLanguage = language;
             var autoStart = Native.readInt("autostart", 0);
             if (autoStart == 1) {
                 $("#auto-start").prop("checked", true);
             }
-            var fullEPG = Native.readInt("full_epg", 0);
+            /*var fullEPG = Native.readInt("full_epg", 0);
             if (fullEPG == 1) {
                 $("#full-epg").prop("checked", true);
-            }
+            }*/
             var subtitle = Native.readInt("active_subtitle", 0);
             if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
@@ -43,7 +43,7 @@ function loadSettings() {
                 $("#language-text").html("Bahasa Indonesia");
             } else if (language == 1) {
                 $("#language-text").html("English");
-            }*/
+            }
             $("#loading-container").fadeOut(300);
         }
     });
@@ -64,10 +64,8 @@ function saveSettings() {
         Native.writeInt("full_epg", 0);
     }*/
     if ($("#active-subtitle").prop("checked") == true) {
-        Native.writeInt("active_subtitle", 1);
         Native.enableSubtitle(1);
     } else {
-        Native.writeInt("active_subtitle", 0);
         Native.enableSubtitle(0);
     }
     var userAgent = $("#user-agent").val();
