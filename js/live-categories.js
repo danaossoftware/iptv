@@ -10,6 +10,16 @@ $(document).ready(function() {
             $("#menu-container").css("display", "none");
         }
     });
+    if (getLanguage() == 1) {
+        $("#text1").html("Home");
+        $("#text2").html("HOME");
+        $("#text3").html("BACK");
+        $("#text4").html("Refresh Channel List");
+        $("#text5").html("Refresh Guide Panel");
+        $("#text6").html("Sort by");
+        $("#text7").html("Settings");
+        $("#text8").html("Log Out");
+    }
 });
 
 function loadCategories() {

@@ -60,15 +60,34 @@ function getDate() {
     var day = date.getDate();
     var month = date.getMonth();
     var year = date.getFullYear();
-    var monthNames = [
+    var monthNamesID = [
         "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"
     ];
-    return day+" "+monthNames[month]+" "+year;
+    var monthNamesEN = [
+        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+    ];
+    if (getLanguage() == 0) {
+        return day+" "+monthNamesID[month]+" "+year;
+    } else {
+        return day+" "+monthNamesEN[month]+" "+year;
+    }
 }
 
 function getMonthName(month) {
-    var monthNames = [
+    var language = Native.readInt("language", 0);
+    var monthNamesID = [
         "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"
     ];
-    return monthNames[month];
+    var monthNamesEN = [
+        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+    ];
+    if (language == 0) {
+        return monthNamesID[month];
+    } else {
+        return monthNamesEN[month];
+    }
+}
+
+function getLanguage() {
+    return Native.readInt("language", 0);
 }
