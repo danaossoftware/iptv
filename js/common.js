@@ -62,7 +62,7 @@ function saveSettings() {
         Native.writeInt("full_epg", 1);
     } else {
         Native.writeInt("full_epg", 0);
-    }
+    }*/
     if ($("#active-subtitle").prop("checked") == true) {
         Native.writeInt("active_subtitle", 1);
         Native.enableSubtitle(1);
@@ -71,8 +71,9 @@ function saveSettings() {
         Native.enableSubtitle(0);
     }
     var userAgent = $("#user-agent").val();
-    Native.setUserAgent(userAgent);*/
+    Native.setUserAgent(userAgent);
     $("#loading-container").fadeOut(300);
+    Native.show("Pengaturan disimpan");
 }
 
 function selectLanguage(language) {
