@@ -53,27 +53,23 @@ function saveSettings() {
     $("#loading-container").css("display", "flex");
     $("#loading-container").hide();
     $("#loading-container").fadeIn(300);
-    Native.show("This line");
     if ($("#auto-start").prop("checked") == true) {
-        Native.setStartAtBoot(true);
+        //Native.setStartAtBoot(1);
     } else {
-        Native.setStartAtBoot(false);
+        Native.setStartAtBoot(0);
     }
-    Native.show("This line 2");
     if ($("#full-epg").prop("checked") == true) {
         Native.writeInt("full_epg", 1);
     } else {
         Native.writeInt("full_epg", 0);
     }
-    Native.show("This line 3");
     if ($("#active-subtitle").prop("checked") == true) {
         Native.writeInt("active_subtitle", 1);
-        Native.enableSubtitle(true);
+        Native.enableSubtitle(1);
     } else {
         Native.writeInt("active_subtitle", 0);
-        Native.enableSubtitle(false);
+        Native.enableSubtitle(0);
     }
-    Native.show("This line 4");
     var userAgent = $("#user-agent").val();
     Native.setUserAgent(userAgent);
     $("#loading-container").fadeOut(300);
