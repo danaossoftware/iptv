@@ -53,7 +53,7 @@ function saveSettings() {
     $("#loading-container").css("display", "flex");
     $("#loading-container").hide();
     $("#loading-container").fadeIn(300);
-    if ($("#auto-start").prop("checked") == true) {
+    /*if ($("#auto-start").prop("checked") == true) {
         //Native.setStartAtBoot(1);
     } else {
         Native.setStartAtBoot(0);
@@ -71,7 +71,7 @@ function saveSettings() {
         Native.enableSubtitle(0);
     }
     var userAgent = $("#user-agent").val();
-    Native.setUserAgent(userAgent);
+    Native.setUserAgent(userAgent);*/
     $("#loading-container").fadeOut(300);
 }
 
