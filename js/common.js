@@ -23,7 +23,7 @@ function loadSettings() {
             var parser = new DOMParser();
             var xml = parser.parseFromString(a, "text/xml");
             xmlData = xml;
-            var userAgent = Native.getUserAgent();
+            /*var userAgent = Native.getUserAgent();
             $("#user-agent").val(userAgent);
             selectedLanguage = language;
             var autoStart = Native.readInt("autostart", 0);
@@ -43,7 +43,7 @@ function loadSettings() {
                 $("#language-text").html("Bahasa Indonesia");
             } else if (language == 1) {
                 $("#language-text").html("English");
-            }
+            }*/
             $("#loading-container").fadeOut(300);
         }
     });
