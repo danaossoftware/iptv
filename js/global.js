@@ -89,6 +89,5 @@ function getMonthName(month) {
 }
 
 function getLanguage() {
-    return 0;
-    //return Native.readInt("language", 0);
+    return Native.readInt("language", 0);
 }
