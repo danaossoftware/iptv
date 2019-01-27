@@ -12,12 +12,14 @@ $(document).ready(function() {
 });
 
 function loadSettings() {
+    Native.show("Loading settings...");
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-settings.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
+            Native.show(a);
             var parser = new DOMParser();
             xmlData = parser.parseFromString(a, "text/xml");
             $("#loading-container").fadeOut(300);
