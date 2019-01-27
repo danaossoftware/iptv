@@ -15,36 +15,15 @@ if ($results && $results->num_rows > 0) {
         echo -3;
         return;
     }
-    $activeConnections = trim($row["active_connections"]);
-    echo $activeConnections . "<br/>";
     $maximumConnections = $row["maximum_connections"];
-    echo $maximumConnections . "<br/>";
-    $totalActive = 0;
-    if ($activeConnections != "") {
-        $totalActive = sizeof(explode(";", $activeConnections))/2;
-    }
-    echo $totalActive . "<br/>";
-    if ($totalActive >= $maximumConnections) {
-        // Maximum connections reached
+    $userId = $row["id"];
+    $results2 = $c->query("SELECT * FROM sessions WHERE user_id='" . $userId . "'");
+    if ($results2->num_rows >= $maximumConnections) {
         echo -4;
         return;
     }
-    $ip = $_SERVER['REMOTE_ADDR'];
-    echo $ip . "<br/>";
-    if ($totalActive == 0) {
-        $activeConnections = ($ip . ";" . round(microtime(true) * 1000));
-    } else {
-        $activeConnections .= (";" . $ip . ";" . round(microtime(true) * 1000));
-    }
-    echo $activeConnections . "<br/>";
-    $c->query("UPDATE users SET active_connections='" . $activeConnections . "' WHERE id='" . $row["id"] . "'");
-    $c->query("UPDATE users SET last_update=" . round(microtime(true)*1000) . " WHERE id='" . $row["id"] . "'");
-    session_start();
-    $_SESSION["iptvjoss_user_id"] = $row["id"];
-    if ($rememberMe == 1) {
-        $params = session_get_cookie_params();
-        setcookie(session_name(), $_COOKIE[session_name()], time() + 1*24*60*60, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
-    }
+    $lastActive = round(microtime(true)*1000);
+    $c->query("INSERT INTO sessions (id, user_id, ip, last_active, remember_me) VALUES ('" . uniqid(). "', '" . $userId . "', '" . $ip . "', " . $lastActive . ", " . $rememberMe . ")");
     echo 0;
 } else {
     echo -1;
