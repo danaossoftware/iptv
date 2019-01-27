@@ -53,12 +53,12 @@ function saveSettings() {
     $("#loading-container").css("display", "flex");
     $("#loading-container").hide();
     $("#loading-container").fadeIn(300);
-    /*if ($("#auto-start").prop("checked") == true) {
+    if ($("#auto-start").prop("checked") == true) {
         //Native.setStartAtBoot(1);
     } else {
         Native.setStartAtBoot(0);
     }
-    if ($("#full-epg").prop("checked") == true) {
+    /*if ($("#full-epg").prop("checked") == true) {
         Native.writeInt("full_epg", 1);
     } else {
         Native.writeInt("full_epg", 0);
