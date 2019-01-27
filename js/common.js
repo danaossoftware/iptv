@@ -30,17 +30,16 @@ function loadSettings() {
                 $("#auto-start").prop("checked", true);
             }
             var subtitle = Native.readInt("enable_subtitle", 0);
-            Native.show("Subtitle: "+subtitle);
-            /*if (subtitle == 1) {
+            if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
-            }*/
-            /*var language = Native.readInt("language", 0);
+            }
+            var language = Native.readInt("language", 0);
             if (language == 0) {
                 $("#language-text").html("Bahasa Indonesia");
             } else if (language == 1) {
                 $("#language-text").html("English");
             }
-            selectedLanguage = language;*/
+            selectedLanguage = language;
             $("#loading-container").fadeOut(300);
         }
     });
