@@ -16,17 +16,21 @@ if ($results && $results->num_rows > 0) {
         return;
     }
     $activeConnections = trim($row["active_connections"]);
+    echo $activeConnections . "<br/>";
     $maximumConnections = $row["maximum_connections"];
+    echo $maximumConnections . "<br/>";
     $totalActive = 0;
     if ($activeConnections != "") {
         $totalActive = explode(";", $activeConnections) / 2;
     }
+    echo $totalActive . "<br/>";
     if ($totalActive >= $maximumConnections) {
         // Maximum connections reached
         echo -4;
         return;
     }
     $ip = $_SERVER['REMOTE_ADDR'];
+    echo $ip . "<br/>";
     if ($totalActive == 0) {
         $activeConnections = ($ip . ";" . round(microtime(true) * 1000));
     } else {
