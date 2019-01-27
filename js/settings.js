@@ -1,7 +1,6 @@
 var xmlData;
 
 $(document).ready(function() {
-    alert("Settings page");
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function() {
@@ -9,7 +8,6 @@ $(document).ready(function() {
         $("#date").html(getDate());
         setTimeout(this, 1000);
     }, 1000);
-    alert("Loading settings...");
     loadSettings();
 });
 
