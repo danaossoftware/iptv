@@ -25,14 +25,10 @@ function loadSettings() {
             xmlData = xml;
             var userAgent = Native.getUserAgent();
             $("#user-agent").val(userAgent);
-            var autoStart = Native.readInt("autostart", 0);
+            /*var autoStart = Native.readInt("autostart", 0);
             if (autoStart == 1) {
                 $("#auto-start").prop("checked", true);
             }
-            /*var fullEPG = Native.readInt("full_epg", 0);
-            if (fullEPG == 1) {
-                $("#full-epg").prop("checked", true);
-            }*/
             var subtitle = Native.readInt("enable_subtitle", 0);
             if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
@@ -43,7 +39,7 @@ function loadSettings() {
             } else if (language == 1) {
                 $("#language-text").html("English");
             }
-            selectedLanguage = language;
+            selectedLanguage = language;*/
             $("#loading-container").fadeOut(300);
         }
     });
