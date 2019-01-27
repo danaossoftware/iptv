@@ -38,6 +38,7 @@ if ($results && $results->num_rows > 0) {
     }
     echo $activeConnections . "<br/>";
     $c->query("UPDATE users SET active_connections='" . $activeConnections . "' WHERE id='" . $row["id"] . "'");
+    $c->query("UPDATE users SET last_update=" . round(microtime(true)*1000) . " WHERE id='" . $row["id"] . "'");
     session_start();
     $_SESSION["iptvjoss_user_id"] = $row["id"];
     if ($rememberMe == 1) {

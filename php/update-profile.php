@@ -2,6 +2,7 @@
 include 'db.php';
 session_start();
 $userId = $_SESSION["iptvjoss_user_id"];
+$c->query("UPDATE users SET last_update=" . round(microtime(true)*1000) . " WHERE id='" . $userId . "'");
 $name = $_GET["name"];
 $username = $_GET["username"];
 $city = $_GET["city"];
