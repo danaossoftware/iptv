@@ -23,6 +23,7 @@ if ($results && $results->num_rows > 0) {
         return;
     }
     $lastActive = round(microtime(true)*1000);
+    $ip = $_SERVER["REMOTE_ADDR"];
     $c->query("INSERT INTO sessions (id, user_id, ip, last_active, remember_me) VALUES ('" . uniqid(). "', '" . $userId . "', '" . $ip . "', " . $lastActive . ", " . $rememberMe . ")");
     echo 0;
 } else {
