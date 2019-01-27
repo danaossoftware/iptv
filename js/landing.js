@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    Native.show("Hello world");
     if (getLanguage() == 1) {
         $("#text1").html("RECORD");
     }
