@@ -19,8 +19,7 @@ function loadSettings() {
         cache: false,
         success: function(a) {
             var parser = new DOMParser();
-            var xml = parser.parseFromString(a, "text/xml");
-            xmlData = xml;
+            xmlData = parser.parseFromString(a, "text/xml");
             $("#loading-container").fadeOut(300);
         }
     });
