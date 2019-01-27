@@ -29,8 +29,8 @@ function loadSettings() {
             if (autoStart == 1) {
                 $("#auto-start").prop("checked", true);
             }
-            Native.show("Text "+123);
-            //var subtitle = Native.readInt("enable_subtitle", 0);
+            var subtitle = Native.readInt("enable_subtitle", 0);
+            Native.show("Subtitle: "+subtitle);
             /*if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
             }*/
