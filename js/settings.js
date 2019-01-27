@@ -18,7 +18,6 @@ function loadSettings() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            alert(a);
             var parser = new DOMParser();
             var xml = parser.parseFromString(a, "text/xml");
             xmlData = xml;
