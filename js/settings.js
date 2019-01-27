@@ -19,7 +19,6 @@ function loadSettings() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            Native.show(a);
             var parser = new DOMParser();
             xmlData = parser.parseFromString(a, "text/xml");
             $("#loading-container").fadeOut(300);
