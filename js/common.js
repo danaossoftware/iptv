@@ -25,11 +25,11 @@ function loadSettings() {
             xmlData = xml;
             var userAgent = Native.getUserAgent();
             $("#user-agent").val(userAgent);
-            /*var autoStart = Native.readInt("autostart", 0);
+            var autoStart = Native.readInt("autostart", 0);
             if (autoStart == 1) {
                 $("#auto-start").prop("checked", true);
             }
-            var subtitle = Native.readInt("enable_subtitle", 0);
+            /*var subtitle = Native.readInt("enable_subtitle", 0);
             if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
             }
