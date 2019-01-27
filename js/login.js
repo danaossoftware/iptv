@@ -47,6 +47,25 @@ function login() {
                 // Password not macthes
                 $("#alert-text").html("Kata sandi tidak cocok");
                 $("#alert-container").css("display", "flex");
+            } else if (a == -4) {
+                // Maximum connections reached
+                $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
+                $("#alert-container").css("display", "flex");
+                $.ajax({
+                    type: 'GET',
+                    url: SERVER_URL+'get-configuration.php',
+                    data: {'name': 'admin-info'},
+                    dataType: 'text',
+                    cache: false,
+                    success: function(a) {
+                        if (a < 0) {
+                            // Error
+                        } else {
+                            $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin di "+a["config1"].split("=")[1]+".");
+                            $("#alert-container").css("display", "flex");
+                        }
+                    }
+                });
             }
         }
     });

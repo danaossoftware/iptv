@@ -15,7 +15,24 @@ if ($results && $results->num_rows > 0) {
         echo -3;
         return;
     }
-    $c->query("UPDATE users SET active_connections = active_connections+1 WHERE id='" . $row["id"] . "'");
+    $activeConnections = trim($row["active_connections"]);
+    $maximumConnections = $row["maximum_connections"];
+    $totalActive = 0;
+    if ($activeConnections != "") {
+        $totalActive = explode(";", $activeConnections) / 2;
+    }
+    if ($totalActive >= $maximumConnections) {
+        // Maximum connections reached
+        echo -4;
+        return;
+    }
+    $ip = $_SERVER['REMOTE_ADDR'];
+    if ($totalActive == 0) {
+        $activeConnections = ($ip . ";" . round(microtime(true) * 1000));
+    } else {
+        $activeConnections .= (";" . $ip . ";" . round(microtime(true) * 1000));
+    }
+    $c->query("UPDATE users SET active_connections=" . $activeConnections . " WHERE id='" . $row["id"] . "'");
     session_start();
     $_SESSION["iptvjoss_user_id"] = $row["id"];
     if ($rememberMe == 1) {
