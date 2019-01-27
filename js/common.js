@@ -25,7 +25,6 @@ function loadSettings() {
             xmlData = xml;
             var userAgent = Native.getUserAgent();
             $("#user-agent").val(userAgent);
-            selectedLanguage = language;
             var autoStart = Native.readInt("autostart", 0);
             if (autoStart == 1) {
                 $("#auto-start").prop("checked", true);
@@ -44,6 +43,7 @@ function loadSettings() {
             } else if (language == 1) {
                 $("#language-text").html("English");
             }
+            selectedLanguage = language;
             $("#loading-container").fadeOut(300);
         }
     });
