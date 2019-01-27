@@ -27,7 +27,7 @@ function loadSettings() {
             }
             $("#active-connections").html(account["active_connections"]);
             var madeDate = new Date(parseInt(account["made_on"]));
-            $("#made-on").html(madeDate.getDate()+" "+getMonthName()[madeDate.getMonth()]+" "+madeDate.getFullYear());
+            $("#made-on").html(madeDate.getDate()+" "+getMonthName([madeDate.getMonth()])+" "+madeDate.getFullYear());
             $("#maximum-connections").html(account["maximum_connections"]);
             $("#loading-container").fadeOut(300);
         }
