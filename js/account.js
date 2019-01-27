@@ -25,11 +25,19 @@ function loadSettings() {
             } else {
                 $("#is-trial").html("TIDAK");
             }
-            $("#active-connections").html(account["active_connections"]);
             var madeDate = new Date(parseInt(account["made_on"]));
             $("#made-on").html(madeDate.getDate()+" "+getMonthName([madeDate.getMonth()])+" "+madeDate.getFullYear());
             $("#maximum-connections").html(account["maximum_connections"]);
             $("#loading-container").fadeOut(300);
+        }
+    });
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'get-active-connections.php',
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            $("#active-connections").html(a);
         }
     });
 }
