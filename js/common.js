@@ -29,10 +29,11 @@ function loadSettings() {
             if (autoStart == 1) {
                 $("#auto-start").prop("checked", true);
             }
-            var subtitle = Native.readInt("enable_subtitle", 0);
-            if (subtitle == 1) {
+            Native.show("Text "+123);
+            //var subtitle = Native.readInt("enable_subtitle", 0);
+            /*if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
-            }
+            }*/
             /*var language = Native.readInt("language", 0);
             if (language == 0) {
                 $("#language-text").html("Bahasa Indonesia");
