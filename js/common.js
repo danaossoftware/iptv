@@ -54,9 +54,9 @@ function saveSettings() {
     $("#loading-container").hide();
     $("#loading-container").fadeIn(300);
     if ($("#auto-start").prop("checked") == true) {
-        //Native.setStartAtBoot(1);
+        Native.setStartAtBoot(1);
     } else {
-        //Native.setStartAtBoot(0);
+        Native.setStartAtBoot(0);
     }
     /*if ($("#full-epg").prop("checked") == true) {
         Native.writeInt("full_epg", 1);
