@@ -34,7 +34,7 @@ function loadSettings() {
             if (fullEPG == 1) {
                 $("#full-epg").prop("checked", true);
             }*/
-            var subtitle = Native.readInt("active_subtitle", 0);
+            var subtitle = Native.readInt("enable_subtitle", 0);
             if (subtitle == 1) {
                 $("#active-subtitle").prop("checked", true);
             }
