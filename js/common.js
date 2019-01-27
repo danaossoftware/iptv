@@ -61,6 +61,11 @@ function saveSettings() {
     }
     var userAgent = $("#user-agent").val();
     Native.setUserAgent(userAgent);
+    var language = Native.readInt("language", 0);
+    Native.writeInt("language", selectedLanguage);
+    if (selectedLanguage != language) {
+        Native.restartApp();
+    }
     $("#loading-container").fadeOut(300);
     Native.show("Pengaturan disimpan");
 }
