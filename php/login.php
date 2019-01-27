@@ -21,7 +21,7 @@ if ($results && $results->num_rows > 0) {
     echo $maximumConnections . "<br/>";
     $totalActive = 0;
     if ($activeConnections != "") {
-        $totalActive = explode(";", $activeConnections) / 2;
+        $totalActive = sizeof(explode(";", $activeConnections))/2;
     }
     echo $totalActive . "<br/>";
     if ($totalActive >= $maximumConnections) {
