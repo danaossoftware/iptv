@@ -50,20 +50,22 @@ function loadSettings() {
 }
 
 function saveSettings() {
-    Native.show("Saving settings...");
-    /*$("#loading-container").css("display", "flex");
+    $("#loading-container").css("display", "flex");
     $("#loading-container").hide();
     $("#loading-container").fadeIn(300);
+    Native.show("This line");
     if ($("#auto-start").prop("checked") == true) {
         Native.setStartAtBoot(true);
     } else {
         Native.setStartAtBoot(false);
     }
+    Native.show("This line 2");
     if ($("#full-epg").prop("checked") == true) {
         Native.writeInt("full_epg", 1);
     } else {
         Native.writeInt("full_epg", 0);
     }
+    Native.show("This line 3");
     if ($("#active-subtitle").prop("checked") == true) {
         Native.writeInt("active_subtitle", 1);
         Native.enableSubtitle(true);
@@ -71,8 +73,9 @@ function saveSettings() {
         Native.writeInt("active_subtitle", 0);
         Native.enableSubtitle(false);
     }
+    Native.show("This line 4");
     var userAgent = $("#user-agent").val();
-    Native.setUserAgent(userAgent);*/
+    Native.setUserAgent(userAgent);
     $("#loading-container").fadeOut(300);
 }
 
