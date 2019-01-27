@@ -54,10 +54,8 @@ function saveSettings() {
     $("#loading-container").hide();
     $("#loading-container").fadeIn(300);
     if ($("#auto-start").prop("checked") == true) {
-        common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue = 1;
         Native.setStartAtBoot(true);
     } else {
-        common.getElementsByTagName("autostart")[0].childNodes[0].nodeValue = 0;
         Native.setStartAtBoot(false);
     }
     if ($("#full-epg").prop("checked") == true) {
