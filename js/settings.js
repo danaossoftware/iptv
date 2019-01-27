@@ -12,7 +12,6 @@ $(document).ready(function() {
 });
 
 function loadSettings() {
-    Native.show("Loading settings...");
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-settings.php',
