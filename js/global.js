@@ -58,7 +58,15 @@ function getTime() {
     if (minute < 10) {
         minute = "0"+minute;
     }
-    return hour+":"+minute;
+    if (timeFormat == 1) {
+        if (date.getHours() >= 12) {
+            return hour + ":" + minute + " " + "PM";
+        } else {
+            return hour + ":" + minute + " " + "AM";
+        }
+    } else if (timeFormat == 0) {
+        return hour + ":" + minute;
+    }
 }
 
 function getDate() {
