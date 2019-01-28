@@ -127,7 +127,7 @@ function setCategoryClickListener() {
                 categoryName = "Semua";
             }
         } else if (selectedSortType == 2) {
-            if (index == categories.length-1) {
+            if (index == categories.length) {
                 categoryName = "Semua";
             }
         }
@@ -224,7 +224,48 @@ function setItemsBorder() {
 
 function downKey() {
     if (pointerIndex < categories.length) {
+        pointerIndex += 2;
+    }
+    setItemsBorder();
+}
+
+function upKey() {
+    if (pointerIndex > 0) {
+        pointerIndex -= 2;
+    }
+    setItemsBorder();
+}
+
+function rightKey() {
+    if (pointerIndex < categories.length+2) {
         pointerIndex++;
     }
     setItemsBorder();
+}
+
+function leftKey() {
+    if (pointerIndex > 0) {
+        pointerIndex--;
+    }
+    setItemsBorder();
+}
+
+function enterKey() {
+    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+        var categoryName = categories[pointerIndex];
+        if (selectedSortType == 1) {
+            if (pointerIndex == 0) {
+                categoryName = "Semua";
+            }
+        } else if (selectedSortType == 2) {
+            if (pointerIndex == categories.length) {
+                categoryName = "Semua";
+            }
+        }
+        window.location.href = "channels/live.html?cat="+pointerIndex+"&name="+categoryName;
+    } else if (pointerIndex == categories.length+1) {
+        window.location.href = "landing.html";
+    } else if (pointerIndex == categories.length+2) {
+        window.history.back();
+    }
 }
