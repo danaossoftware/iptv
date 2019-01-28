@@ -32,199 +32,199 @@ $(document).ready(function () {
 function setItemSizes() {
     if (pointerIndex == 0) {
         $("#general").css("background-color", "#3498db");
-        $("#text1").css("color", "white");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "white");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#general").offset().top
         }, 1000);
     } else if (pointerIndex == 1) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "#3498db");
-        $("#text2").css("color", "white");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "white");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#general").offset().top
         }, 1000);
     } else if (pointerIndex == 2) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "#3498db");
-        $("#text3").css("color", "white");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "white");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#general").offset().top
         }, 1000);
     } else if (pointerIndex == 3) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "#3498db");
-        $("#text4").css("color", "white");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "white");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#time-format").offset().top
         }, 1000);
     } else if (pointerIndex == 4) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "#3498db");
-        $("#text5").css("color", "white");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "white");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#time-format").offset().top
         }, 1000);
     } else if (pointerIndex == 5) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "#3498db");
-        $("#text6").css("color", "white");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "white");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#time-format").offset().top
         }, 1000);
     } else if (pointerIndex == 6) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "#3498db");
-        $("#text7").css("color", "white");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "white");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#player").offset().top
         }, 1000);
     } else if (pointerIndex == 7) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "#3498db");
-        $("#text8").css("color", "white");
         $("#player").css("background-color", "white");
-        $("#text9").css("color", "black");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "white");
+        $("#text6").css("color", "black");
         $("#items").animate({
             scrollTop: $("#player").offset().top
         }, 1000);
     } else if (pointerIndex == 8) {
         $("#general").css("background-color", "white");
-        $("#text1").css("color", "black");
         $("#epg-time-shift").css("background-color", "white");
-        $("#text2").css("color", "black");
         $("#stream-format").css("background-color", "white");
-        $("#text3").css("color", "black");
         $("#time-format").css("background-color", "white");
-        $("#text4").css("color", "black");
         $("#epg-time-line").css("background-color", "white");
-        $("#text5").css("color", "black");
         $("#automation").css("background-color", "white");
-        $("#text6").css("color", "black");
         $("#control").css("background-color", "white");
-        $("#text7").css("color", "black");
         $("#players").css("background-color", "white");
-        $("#text8").css("color", "black");
         $("#player").css("background-color", "#3498db");
-        $("#text9").css("color", "white");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "white");
         $("#items").animate({
             scrollTop: $("#player").offset().top
         }, 1000);
