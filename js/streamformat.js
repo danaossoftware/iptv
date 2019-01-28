@@ -1,4 +1,3 @@
-var xmlData;
 var selectedStreamFormat = 0;
 
 $(document).ready(function() {
@@ -25,10 +24,7 @@ function loadSettings() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(a, "text/xml");
-            xmlData = xml;
-            var streamFormat = parseInt(xml.getElementsByTagName("stream-format")[0].childNodes[0].nodeValue);
+            var streamFormat = Native.readInt("stream_format", 0);
             selectOption(streamFormat);
             $("#loading-container").fadeOut(300);
         }
@@ -48,17 +44,11 @@ function selectOption(option) {
 
 function saveSettings() {
     $("#loading-container").css("display", "flex").hide().fadeIn(300);
-    xmlData.getElementsByTagName("stream-format")[0].childNodes[0].nodeValue = selectedStreamFormat;
-    var fd = new FormData();
-    fd.append("settings", new XMLSerializer().serializeToString(xmlData));
-    $.ajax({
-        type: 'POST',
-        url: SERVER_URL+'update-settings.php',
-        data: fd,
-        processData: false,
-        contentType: false,
-        success: function(a) {
-            $("#loading-container").fadeOut(300);
-        }
-    });
+    Native.writeInt("stream_format", selectedStreamFormat);
+    $("#loading-container").fadeOut(300);
+    if (getLanguage() == 0) {
+        Native.show("Pengaturan disimpan");
+    } else if (getLanguage() == 1) {
+        Native.show("Settings saved");
+    }
 }

@@ -1,4 +1,3 @@
-var xmlData;
 var selectedTimelineOption = 0;
 
 $(document).ready(function() {
@@ -26,10 +25,7 @@ function loadSettings() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(a, "text/xml");
-            xmlData = xml;
-            var epgTimeLine = parseInt(xml.getElementsByTagName("epg-time-line")[0].childNodes[0].nodeValue);
+            var epgTimeLine = Native.readInt("epg_time_line", 0);
             selectOption(epgTimeLine);
             $("#loading-container").fadeOut(300);
         }
@@ -49,17 +45,11 @@ function selectOption(option) {
 
 function saveSettings() {
     $("#loading-container").css("display", "flex").hide().fadeIn(300);
-    xmlData.getElementsByTagName("epg-time-line")[0].childNodes[0].nodeValue = selectedTimelineOption;
-    var fd = new FormData();
-    fd.append("settings", new XMLSerializer().serializeToString(xmlData));
-    $.ajax({
-        type: 'POST',
-        url: SERVER_URL+'update-settings.php',
-        data: fd,
-        processData: false,
-        contentType: false,
-        success: function(a) {
-            $("#loading-container").fadeOut(300);
-        }
-    });
+    Native.writeInt("epg_time_line", selectedTimelineOption);
+    $("#loading-container").fadeOut(300);
+    if (getLanguage() == 0) {
+        Native.show("Pengaturan disimpan");
+    } else if (getLanguage() == 1) {
+        Native.show("Settings saved");
+    }
 }

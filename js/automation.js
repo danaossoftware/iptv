@@ -1,9 +1,7 @@
-var xmlData;
-
-$(document).ready(function() {
+$(document).ready(function () {
     $("#time").html(getTime());
     $("#date").html(getDate());
-    setTimeout(function() {
+    setTimeout(function () {
         $("#time").html(getTime());
         $("#date").html(getDate());
         setTimeout(this, 1000);
@@ -19,31 +17,20 @@ $(document).ready(function() {
 });
 
 function loadSettings() {
-    $.ajax({
-        type: 'GET',
-        url: SERVER_URL+'get-settings.php',
-        dataType: 'text',
-        cache: false,
-        success: function(a) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(a, "text/xml");
-            xmlData = xml;
-            var autoUpdateChannels = parseInt(xml.getElementsByTagName("automation")[0].getElementsByTagName("auto-update-channels")[0].childNodes[0].nodeValue);
-            var autoUpdateEPG = parseInt(xml.getElementsByTagName("automation")[0].getElementsByTagName("auto-update-epg")[0].childNodes[0].nodeValue);
-            if (autoUpdateChannels == 1) {
-                $("#auto-update-channels").prop("checked", true);
-            }
-            if (autoUpdateEPG == 1) {
-                $("#auto-update-epg").prop("checked", true);
-            }
-            $("#loading-container").fadeOut(300);
-            setCheckBoxItemListener();
-        }
-    });
+    var autoUpdateChannels = Native.readInt("auto_update_channels", 0);
+    var autoUpdateEPG = Native.readInt("auto_update_epg", 0);
+    if (autoUpdateChannels == 1) {
+        $("#auto-update-channels").prop("checked", true);
+    }
+    if (autoUpdateEPG == 1) {
+        $("#auto-update-epg").prop("checked", true);
+    }
+    $("#loading-container").fadeOut(300);
+    setCheckBoxItemListener();
 }
 
 function setCheckBoxItemListener() {
-    $(".checkbox-item").on("click", function() {
+    $(".checkbox-item").on("click", function () {
         var checked = $(this).find(".magic-checkbox").prop("checked");
         checked = !checked;
         $(this).find(".magic-checkbox").prop("checked", checked);
@@ -52,7 +39,6 @@ function setCheckBoxItemListener() {
 
 function saveSettings() {
     $("#loading-container").css("display", "flex").hide().fadeIn(300);
-    var automation = xmlData.getElementsByTagName("automation")[0];
     var autoUpdateChannels = 0;
     if ($("#auto-update-channels").prop("checked")) {
         autoUpdateChannels = 1;
@@ -61,18 +47,12 @@ function saveSettings() {
     if ($("#auto-update-epg").prop("checked")) {
         autoUpdateEPG = 1;
     }
-    automation.getElementsByTagName("auto-update-channels")[0].childNodes[0].nodeValue = autoUpdateChannels;
-    automation.getElementsByTagName("auto-update-epg")[0].childNodes[0].nodeValue = autoUpdateEPG;
-    var fd = new FormData();
-    fd.append("settings", new XMLSerializer().serializeToString(xmlData));
-    $.ajax({
-        type: 'POST',
-        url: SERVER_URL+'update-settings.php',
-        data: fd,
-        processData: false,
-        contentType: false,
-        success: function(a) {
-            $("#loading-container").fadeOut(300);
-        }
-    });
+    Native.writeInt("auto_update_channels", autoUpdateChannels);
+    Native.writeInt("auto_update_epg", autoUpdateEPG);
+    $("#loading-container").fadeOut(300);
+    if (getLanguage() == 0) {
+        Native.show("Pengaturan disimpan");
+    } else if (getLanguage() == 1) {
+        Native.show("Settings saved");
+    }
 }

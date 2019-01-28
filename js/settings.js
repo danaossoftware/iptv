@@ -1,9 +1,7 @@
-var xmlData;
-
-$(document).ready(function() {
+$(document).ready(function () {
     $("#time").html(getTime());
     $("#date").html(getDate());
-    setTimeout(function() {
+    setTimeout(function () {
         $("#time").html(getTime());
         $("#date").html(getDate());
         setTimeout(this, 1000);
@@ -26,20 +24,6 @@ $(document).ready(function() {
     }
 });
 
-function loadSettings() {
-    $.ajax({
-        type: 'GET',
-        url: SERVER_URL+'get-settings.php',
-        dataType: 'text',
-        cache: false,
-        success: function(a) {
-            var parser = new DOMParser();
-            xmlData = parser.parseFromString(a, "text/xml");
-            $("#loading-container").fadeOut(300);
-        }
-    });
-}
-
 function setPassword() {
     $("#error").css("display", "none");
     var password = $("#control-password").val();
@@ -55,21 +39,14 @@ function setPassword() {
         return;
     }
     $("#loading-container").css("display", "flex").hide().fadeIn(300);
-    xmlData.getElementsByTagName("control-password")[0].childNodes[0].nodeValue = password;
-    var fd = new FormData();
-    fd.append("settings", new XMLSerializer().serializeToString(xmlData));
-    $.ajax({
-        type: 'POST',
-        url: SERVER_URL+'update-settings.php',
-        data: fd,
-        contentType: false,
-        processData: false,
-        cache: false,
-        success: function(a) {
-            $("#control-dialog-container").css("display", "none");
-            $("#loading-container").fadeOut(300);
-        }
-    });
+    $("#control-dialog-container").css("display", "none");
+    Native.writeString("parental_control_password", password);
+    $("#loading-container").fadeOut(300);
+    if (getLanguage() == 0) {
+        Native.show("Pengaturan disimpan");
+    } else if (getLanguage() == 1) {
+        Native.show("Settings saved");
+    }
 }
 
 function openControlDialog() {
