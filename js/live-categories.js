@@ -394,14 +394,19 @@ function focusChannel(index) {
     categoryItem.css("width", "calc(50% - 24px)");
     categoryItem.css("height", "56px");
     categoryItem.css("border", "2px solid white");
+    $("html, body").animate({
+        scrollTop: categoryItem.offset().top
+    }, 0);
 }
 
 function editTextFinished(code, value) {
+    Native.show("Searching for: "+value);
     if (code == 1) {
         value = value.toLowerCase();
         for (var i=0; i<categories.length; i++) {
             var category = categories[i];
             if (category.toLowerCase() == value) {
+                Native.show("Channel found: "+category);
                 focusChannel(i);
                 break;
             }
