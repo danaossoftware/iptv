@@ -656,6 +656,7 @@ function openControlDialog() {
 
 function closeControlDialog() {
     $("#control-dialog-container").fadeOut(300);
+    controlShown = false;
 }
 
 function saveSettings() {
