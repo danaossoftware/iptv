@@ -107,6 +107,7 @@ function selectCheckedLanguage() {
     } else if (selectedLanguage == 1) {
         $("#language-text").html("English");
     }
+    selectLanguageDialogShown = false;
 }
 
 function closeLanguageSelectDialog() {
