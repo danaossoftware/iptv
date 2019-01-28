@@ -590,7 +590,7 @@ function enterKey() {
                 $("#control-password").val("");
                 $("#repeated-control-password").val("");
                 $("#control-dialog-container").css("display", "flex").hide().fadeIn(300);
-                controlShown = 0;
+                controlPointerIndex = 0;
             }
         } else if (pointerIndex == 7) {
             window.location.href = "settings/players.html";
