@@ -220,9 +220,19 @@ function setItemsBorder() {
     currentCategory.css("width", "calc(50% - 24px)");
     currentCategory.css("height", "56px");
     currentCategory.css("border", "2px solid white");
-    $("html, body").animate({
-        scrollTop: $(".category:eq("+pointerIndex+")").offset().top
-    }, 0);
+    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+        $("html, body").animate({
+            scrollTop: $(".category:eq(" + pointerIndex + ")").offset().top
+        }, 0);
+    } else if (pointerIndex == categories.length+1) {
+        $("html, body").animate({
+            scrollTop: $("#home").offset().top
+        }, 0);
+    } else if (pointerIndex == categories.length+2) {
+        $("html, body").animate({
+            scrollTop: $("#back").offset().top
+        }, 0);
+    }
 }
 
 function downKey() {
