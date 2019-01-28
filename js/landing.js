@@ -122,36 +122,68 @@ function enterKey() {
 function setMenuItemBorder() {
     if (pointerIndex == 0) {
         $("#live-tv").css("border", "3px solid white");
+        $("#live-tv").css("width", "144px");
+        $("#live-tv").css("height", "144px");
         $("#movies").css("border", "0");
+        $("#movies").css("width", "150px");
+        $("#movies").css("height", "100px");
         $("#adult").css("border", "0");
+        $("#adult").css("width", "150px");
+        $("#adult").css("height", "100px");
         $("#record").css("border", "0");
+        $("#record").css("width", "calc(100% - 10px)");
+        $("#record").css("height", "30px");
         $("#notifications").css("border", "0");
         $("#profile").css("border", "0");
         $("#settings").css("border", "0");
         $("#logout").css("border", "0");
     } else if (pointerIndex == 1) {
         $("#live-tv").css("border", "0");
+        $("#live-tv").css("width", "150px");
+        $("#live-tv").css("height", "150px");
         $("#movies").css("border", "3px solid white");
+        $("#movies").css("width", "144px");
+        $("#movies").css("height", "94px");
         $("#adult").css("border", "0");
+        $("#adult").css("width", "150px");
+        $("#adult").css("height", "100px");
         $("#record").css("border", "0");
+        $("#record").css("width", "calc(100% - 10px)");
+        $("#record").css("height", "30px");
         $("#notifications").css("border", "0");
         $("#profile").css("border", "0");
         $("#settings").css("border", "0");
         $("#logout").css("border", "0");
     } else if (pointerIndex == 2) {
         $("#live-tv").css("border", "0");
+        $("#live-tv").css("width", "150px");
+        $("#live-tv").css("height", "150px");
         $("#movies").css("border", "0");
+        $("#movies").css("width", "150px");
+        $("#movies").css("height", "100px");
         $("#adult").css("border", "3px solid white");
+        $("#adult").css("width", "144px");
+        $("#adult").css("height", "94px");
         $("#record").css("border", "0");
+        $("#record").css("width", "calc(100% - 10px)");
+        $("#record").css("height", "30px");
         $("#notifications").css("border", "0");
         $("#profile").css("border", "0");
         $("#settings").css("border", "0");
         $("#logout").css("border", "0");
     } else if (pointerIndex == 3) {
         $("#live-tv").css("border", "0");
+        $("#live-tv").css("width", "150px");
+        $("#live-tv").css("height", "150px");
         $("#movies").css("border", "0");
+        $("#movies").css("width", "150px");
+        $("#movies").css("height", "100px");
         $("#adult").css("border", "0");
+        $("#adult").css("width", "150px");
+        $("#adult").css("height", "100px");
         $("#record").css("border", "3px solid white");
+        $("#record").css("width", "calc(100% - 16px)");
+        $("#record").css("height", "24px");
         $("#notifications").css("border", "0");
         $("#profile").css("border", "0");
         $("#settings").css("border", "0");
