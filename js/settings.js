@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#time").html(getTime());
+    /*$("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function () {
         $("#time").html(getTime());
@@ -20,7 +20,7 @@ $(document).ready(function () {
         $("#text11").html("Save");
         $("#text12").html("Close");
         $("#text13").html("SETTINGS");
-    }
+    }*/
 });
 
 function setPassword() {
