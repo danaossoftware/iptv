@@ -1,4 +1,11 @@
+var pointerIndex = 0;
+
 $(document).ready(function () {
+    if (Native.isAndroidTV() == 1) {
+        $("#epg-time-shift").css("border", "3px solid #3498db");
+        $("#epg-time-shift").css("width", "calc(100% - 16px)");
+        $("#epg-time-shift").css("height", "24px");
+    }
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function () {
@@ -29,5 +36,61 @@ function saveSettings() {
         Native.show("Pengaturan disimpan");
     } else if (getLanguage() == 1) {
         Native.show("Settings saved");
+    }
+}
+
+function setItemsBorder() {
+    if (pointerIndex == 0) {
+        $("#epg-time-shift").css("border", "3px solid #3498db");
+        $("#epg-time-shift").css("width", "calc(100% - 16px)");
+        $("#epg-time-shift").css("height", "24px");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+    } else if (pointerIndex == 1) {
+        $("#epg-time-shift").css("border", "0");
+        $("#epg-time-shift").css("width", "calc(100% - 20px)");
+        $("#epg-time-shift").css("height", "30px");
+        $("#save").css("width", "calc(50% - 36px)");
+        $("#save").css("height", "34px");
+        $("#save").css("border", "3px solid #3498db");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+    } else if (pointerIndex == 2) {
+        $("#epg-time-shift").css("border", "0");
+        $("#epg-time-shift").css("width", "calc(100% - 20px)");
+        $("#epg-time-shift").css("height", "30px");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#back").css("width", "calc(50% - 36px)");
+        $("#back").css("height", "34px");
+        $("#back").css("border", "3px solid #3498db");
+    }
+}
+
+function enterKey() {
+    if (pointerIndex == 0) {
+        Native.showEditTextDialog(1, getLanguage(), "EPG Time Shift", $("#epg-time-shift").val());
+    } else if (pointerIndex == 1) {
+        saveSettings();
+    } else if (pointerIndex == 2) {
+        window.history.back();
+    }
+}
+
+function downKey() {
+    if (pointerIndex == 0) {
+        pointerIndex = 1;
+    }
+}
+
+function editTextFinised(code, value) {
+    if (code == 1) {
+        $("#epg-time-shift").val(value);
     }
 }

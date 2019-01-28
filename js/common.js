@@ -285,15 +285,15 @@ function upKey() {
 }
 
 function rightKey() {
-    if (selectLanguagePointerIndex == 2) {
-        selectLanguagePointerIndex = 3;
+    if (selectLanguagePointerIndex == 4) {
+        selectLanguagePointerIndex = 5;
     }
     setSelectLanguageItemsBorder();
 }
 
 function leftKey() {
-    if (selectLanguagePointerIndex == 3) {
-        selectLanguagePointerIndex = 2;
+    if (selectLanguagePointerIndex == 5) {
+        selectLanguagePointerIndex = 4;
     }
     setSelectLanguageItemsBorder();
 }

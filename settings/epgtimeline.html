@@ -24,13 +24,13 @@
     </div>
     <div style="width: calc(100% - 100px); margin-left: 30px; display: flex; flex-flow: column nowrap; background-color: rgba(136, 136, 136, .5); margin-top: 20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
         <div style="width: 100%; display: flex; justify-content: center; color: white; margin-top: 10px;">EPG TIMELINE</div>
-        <div onclick="selectOption(0)" style="width: 100%; display: flex; flex-flow: row nowrap;">
+        <div id="option1" onclick="selectOption(0)" style="width: 100%; display: flex; flex-flow: row nowrap;">
             <div id="epg-channels" class="radio">
                 <div class="radio-inner"></div>
             </div>
             <div id="text2" style="color: white; margin-left: 10px;">Tampilkan channel dengan EPG</div>
         </div>
-        <div onclick="selectOption(1)" style="margin-top: 20px; width: 100%; display: flex; flex-flow: row nowrap;">
+        <div id="option2" onclick="selectOption(1)" style="margin-top: 20px; width: 100%; display: flex; flex-flow: row nowrap;">
             <div id="all-channels" class="radio">
                 <div class="radio-inner"></div>
             </div>
@@ -38,11 +38,11 @@
         </div>
     </div>
     <div style="width: calc(100% - 80px); margin-left: 40px; display: flex; flex-flow: row nowrap; margin-top: 15px;">
-        <div onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
+        <div id="save" onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
             <div id="text4" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
             SIMPAN
         </div>
-        <div onclick="window.history.back()" style="margin-right: 20px; width: calc(50% - 30px); margin-left: 10px; height: 40px; overflow: hidden;" class="button8">
+        <div id="back" onclick="window.history.back()" style="margin-right: 20px; width: calc(50% - 30px); margin-left: 10px; height: 40px; overflow: hidden;" class="button8">
             <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
             KEMBALI
         </div>

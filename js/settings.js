@@ -1,4 +1,6 @@
 var pointerIndex = 0;
+var controlShown = false;
+var controlPointerIndex = 0;
 
 $(document).ready(function () {
     if (Native.isAndroidTV() == 1) {
@@ -436,65 +438,187 @@ function setItemSizes() {
     }
 }
 
-function rightKey() {
-    if (pointerIndex < 8) {
-        pointerIndex++;
-    } else if (pointerIndex == 9) {
-        pointerIndex = 10;
+function setControlItemsBorder() {
+    if (controlPointerIndex == 0) {
+        $("#control-password").css("border", "3px solid #3498db");
+        $("#control-password").css("width", "calc(100% - 16px)");
+        $("#control-password").css("height", "24px");
+        $("#repeated-control-password").css("border", "0");
+        $("#repeated-control-password").css("width", "calc(100% - 10px)");
+        $("#repeated-control-password").css("height", "30px");
+        $("#save").css("width", "calc(50% - 25px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 25px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (controlPointerIndex == 1) {
+        $("#control-password").css("border", "0");
+        $("#control-password").css("width", "calc(100% - 10px)");
+        $("#control-password").css("height", "30px");
+        $("#repeated-control-password").css("border", "3px solid #3498db");
+        $("#repeated-control-password").css("width", "calc(100% - 16px)");
+        $("#repeated-control-password").css("height", "24px");
+        $("#save").css("width", "calc(50% - 25px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 25px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (controlPointerIndex == 2) {
+        $("#control-password").css("border", "0");
+        $("#control-password").css("width", "calc(100% - 10px)");
+        $("#control-password").css("height", "30px");
+        $("#repeated-control-password").css("border", "0");
+        $("#repeated-control-password").css("width", "calc(100% - 10px)");
+        $("#repeated-control-password").css("height", "30px");
+        $("#save").css("width", "calc(50% - 31px)");
+        $("#save").css("height", "34px");
+        $("#save").css("border", "3px solid #3498db");
+        $("#close").css("width", "calc(50% - 25px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (controlPointerIndex == 3) {
+        $("#control-password").css("border", "0");
+        $("#control-password").css("width", "calc(100% - 10px)");
+        $("#control-password").css("height", "30px");
+        $("#repeated-control-password").css("border", "0");
+        $("#repeated-control-password").css("width", "calc(100% - 10px)");
+        $("#repeated-control-password").css("height", "30px");
+        $("#save").css("width", "calc(50% - 25px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 31px)");
+        $("#close").css("height", "34px");
+        $("#close").css("border", "3px solid #3498db");
     }
-    setItemSizes();
+}
+
+function rightKey() {
+    if (!controlShown) {
+        if (pointerIndex < 8) {
+            pointerIndex++;
+        } else if (pointerIndex == 9) {
+            pointerIndex = 10;
+        }
+        setItemSizes();
+    } else {
+        if (controlPointerIndex == 2) {
+            controlPointerIndex = 3;
+        }
+        setControlItemsBorder();
+    }
 }
 
 function leftKey() {
-    if (pointerIndex > 0) {
-        pointerIndex--;
-    } else if (pointerIndex == 10) {
-        pointerIndex = 9;
+    if (!controlShown) {
+        if (pointerIndex > 0) {
+            pointerIndex--;
+        } else if (pointerIndex == 10) {
+            pointerIndex = 9;
+        }
+        setItemSizes();
+    } else {
+        if (controlPointerIndex > 0) {
+            controlPointerIndex--;
+        }
+        setControlItemsBorder();
     }
-    setItemSizes();
 }
 
 function upKey() {
-    if (pointerIndex == 9 || pointerIndex == 10) {
-        pointerIndex = 6;
-    } else if (pointerIndex > 2) {
-        pointerIndex -= 3;
+    if (!controlShown) {
+        if (pointerIndex == 9 || pointerIndex == 10) {
+            pointerIndex = 6;
+        } else if (pointerIndex > 2) {
+            pointerIndex -= 3;
+        }
+        setItemSizes();
+    } else {
+        if (controlPointerIndex > 0) {
+            controlPointerIndex--;
+        }
+        setControlItemsBorder();
     }
-    setItemSizes();
 }
 
 function downKey() {
-    if (pointerIndex < 6) {
-        pointerIndex += 3;
-    } else if (pointerIndex == 6 || pointerIndex == 7 || pointerIndex == 8) {
-        pointerIndex = 9;
+    if (!controlShown) {
+        if (pointerIndex < 6) {
+            pointerIndex += 3;
+        } else if (pointerIndex == 6 || pointerIndex == 7 || pointerIndex == 8) {
+            pointerIndex = 9;
+        }
+        setItemSizes();
+    } else {
+        if (controlPointerIndex < 3) {
+            controlPointerIndex++;
+        }
+        setControlItemsBorder();
     }
-    setItemSizes();
 }
 
 function enterKey() {
-    if (pointerIndex == 0) {
-        window.location.href = "settings/common.html";
-    } else if (pointerIndex == 1) {
-        window.location.href = "settings/epgtimeshift.html";
-    } else if (pointerIndex == 2) {
-        window.location.href = "settings/streamformat.html";
-    } else if (pointerIndex == 3) {
-        window.location.href = "settings/timeformat.html";
-    } else if (pointerIndex == 4) {
-        window.location.href = "settings/epgtimeline.html";
-    } else if (pointerIndex == 5) {
-        window.location.href = "settings/automation.html";
-    } else if (pointerIndex == 6) {
-        openControlDialog();
-    } else if (pointerIndex == 7) {
-        window.location.href = "settings/players.html";
-    } else if (pointerIndex == 8) {
-        window.location.href = "settings/player.html";
-    } else if (pointerIndex == 9) {
-        window.history.href = "home.html";
-    } else if (pointerIndex == 10) {
-        window.history.back();
+    if (!controlShown) {
+        if (pointerIndex == 0) {
+            window.location.href = "settings/common.html";
+        } else if (pointerIndex == 1) {
+            window.location.href = "settings/epgtimeshift.html";
+        } else if (pointerIndex == 2) {
+            window.location.href = "settings/streamformat.html";
+        } else if (pointerIndex == 3) {
+            window.location.href = "settings/timeformat.html";
+        } else if (pointerIndex == 4) {
+            window.location.href = "settings/epgtimeline.html";
+        } else if (pointerIndex == 5) {
+            window.location.href = "settings/automation.html";
+        } else if (pointerIndex == 6) {
+            controlShown = !controlShown;
+            if (controlShown) {
+                $("#control-password").css("border", "3px solid #3498db");
+                $("#control-password").css("width", "calc(100% - 16px)");
+                $("#control-password").css("height", "24px");
+                $("#repeated-control-password").css("border", "0");
+                $("#repeated-control-password").css("width", "calc(100% - 10px)");
+                $("#repeated-control-password").css("height", "30px");
+                $("#save").css("width", "calc(50% - 25px)");
+                $("#save").css("height", "40px");
+                $("#save").css("border", "0");
+                $("#close").css("width", "calc(50% - 25px)");
+                $("#close").css("height", "40px");
+                $("#close").css("border", "0");
+                $("#control-password").val("");
+                $("#repeated-control-password").val("");
+                $("#control-dialog-container").css("display", "flex").hide().fadeIn(300);
+                controlShown = 0;
+            }
+        } else if (pointerIndex == 7) {
+            window.location.href = "settings/players.html";
+        } else if (pointerIndex == 8) {
+            window.location.href = "settings/player.html";
+        } else if (pointerIndex == 9) {
+            window.history.href = "home.html";
+        } else if (pointerIndex == 10) {
+            window.history.back();
+        }
+    } else {
+        if (controlPointerIndex == 0) {
+            var title = "Kata Sandi Kontrol Orang Tua";
+            if (getLanguage() == 1) {
+                title = "Parental Control Password";
+            }
+            Native.showEditTextDialog(1, getLanguage(), title, "");
+        } else if (controlPointerIndex == 1) {
+            var title = "Kata Sandi Kontrol Orang Tua";
+            if (getLanguage() == 1) {
+                title = "Parental Control Password";
+            }
+            Native.showEditTextDialog(2, getLanguage(), title, "");
+        } else if (controlPointerIndex == 2) {
+            setPassword();
+        } else if (controlPointerIndex == 3) {
+            closeControlDialog();
+        }
     }
 }
 
@@ -534,4 +658,12 @@ function closeControlDialog() {
 }
 
 function saveSettings() {
+}
+
+function editTextFinised(code, value) {
+    if (code == 1) {
+        $("#control-password").val(value);
+    } else if (code == 2) {
+        $("#repeated-control-password").val(value);
+    }
 }
