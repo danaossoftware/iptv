@@ -304,15 +304,27 @@ function setItemsBorder() {
 }
 
 function downKey() {
-    if (pointerIndex < categories.length) {
-        pointerIndex += 2;
+    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+        if (pointerIndex < categories.length) {
+            pointerIndex += 2;
+        }
+    } else {
+        if (pointerIndex < categories.length+2) {
+            pointerIndex++;
+        }
     }
     setItemsBorder();
 }
 
 function upKey() {
-    if (pointerIndex > 0) {
-        pointerIndex -= 2;
+    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+        if (pointerIndex > 0) {
+            pointerIndex -= 2;
+        }
+    } else {
+        if (pointerIndex > -2) {
+            pointerIndex--;
+        }
     }
     setItemsBorder();
 }
