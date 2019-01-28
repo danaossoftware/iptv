@@ -50,7 +50,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: 500
         }, 1000);
     } else if (pointerIndex == 1) {
