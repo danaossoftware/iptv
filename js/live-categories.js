@@ -307,6 +307,8 @@ function downKey() {
     if (pointerIndex >= 0 && pointerIndex <= categories.length) {
         if (pointerIndex < categories.length) {
             pointerIndex += 2;
+        } else {
+            pointerIndex++;
         }
     } else {
         if (pointerIndex < categories.length+2) {
@@ -407,7 +409,11 @@ function editTextFinished(code, value) {
             var category = categories[i];
             if (category.toLowerCase() == value) {
                 Native.show("Channel found: "+category);
-                focusChannel(i);
+                if (selectedSortType == 1) {
+                    focusChannel(i+1);
+                } else if (selectedSortType == 2) {
+                    focusChannel(i-1);
+                }
                 break;
             }
         }
