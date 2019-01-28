@@ -60,6 +60,12 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#general").offset().top
         }, 500);
@@ -91,6 +97,12 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#general").offset().top
         }, 500);
@@ -122,6 +134,12 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#general").offset().top
         }, 500);
@@ -153,6 +171,12 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#time-format").offset().top
         }, 500);
@@ -184,6 +208,12 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#time-format").offset().top
         }, 500);
@@ -215,6 +245,12 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#time-format").offset().top
         }, 500);
@@ -246,6 +282,12 @@ function setItemSizes() {
         $("#text4").css("color", "white");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#player").offset().top
         }, 500);
@@ -277,6 +319,12 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "white");
         $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#player").offset().top
         }, 500);
@@ -308,15 +356,91 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "white");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#player").offset().top
         }, 500);
+    } else if (pointerIndex == 9) {
+        $("#general").css("background-color", "white");
+        $("#epg-time-shift").css("background-color", "white");
+        $("#stream-format").css("background-color", "white");
+        $("#time-format").css("background-color", "white");
+        $("#epg-time-line").css("background-color", "white");
+        $("#automation").css("background-color", "white");
+        $("#control").css("background-color", "white");
+        $("#players").css("background-color", "white");
+        $("#player").css("background-color", "white");
+        $("#general-img").attr("src", "img/settings-3.png");
+        $("#epg-time-shift-img").attr("src", "img/history-2.png");
+        $("#stream-format-img").attr("src", "img/tv.png");
+        $("#time-format-img").attr("src", "img/time.png");
+        $("#epg-time-line-img").attr("src", "img/timeline.png");
+        $("#automation-img").attr("src", "img/automation.png");
+        $("#control-img").attr("src", "img/shield.png");
+        $("#players-img").attr("src", "img/play-3.png");
+        $("#player-img").attr("src", "img/settings-4.png");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
+        $("#home").css("width", "194px");
+        $("#home").css("height", "34px");
+        $("#home").css("border", "3px solid white");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+    } else if (pointerIndex == 10) {
+        $("#general").css("background-color", "white");
+        $("#epg-time-shift").css("background-color", "white");
+        $("#stream-format").css("background-color", "white");
+        $("#time-format").css("background-color", "white");
+        $("#epg-time-line").css("background-color", "white");
+        $("#automation").css("background-color", "white");
+        $("#control").css("background-color", "white");
+        $("#players").css("background-color", "white");
+        $("#player").css("background-color", "white");
+        $("#general-img").attr("src", "img/settings-3.png");
+        $("#epg-time-shift-img").attr("src", "img/history-2.png");
+        $("#stream-format-img").attr("src", "img/tv.png");
+        $("#time-format-img").attr("src", "img/time.png");
+        $("#epg-time-line-img").attr("src", "img/timeline.png");
+        $("#automation-img").attr("src", "img/automation.png");
+        $("#control-img").attr("src", "img/shield.png");
+        $("#players-img").attr("src", "img/play-3.png");
+        $("#player-img").attr("src", "img/settings-4.png");
+        $("#text1").css("color", "black");
+        $("#text14").css("color", "black");
+        $("#text2").css("color", "black");
+        $("#text3").css("color", "black");
+        $("#text15").css("color", "black");
+        $("#text16").css("color", "black");
+        $("#text4").css("color", "black");
+        $("#text5").css("color", "black");
+        $("#text6").css("color", "black");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "194px");
+        $("#back").css("height", "34px");
+        $("#back").css("border", "3px solid white");
     }
 }
 
 function rightKey() {
     if (pointerIndex < 8) {
         pointerIndex++;
+    } else if (pointerIndex == 9) {
+        pointerIndex = 10;
     }
     setItemSizes();
 }
@@ -324,12 +448,16 @@ function rightKey() {
 function leftKey() {
     if (pointerIndex > 0) {
         pointerIndex--;
+    } else if (pointerIndex == 10) {
+        pointerIndex = 9;
     }
     setItemSizes();
 }
 
 function upKey() {
-    if (pointerIndex > 2) {
+    if (pointerIndex == 9 || pointerIndex == 10) {
+        pointerIndex = 6;
+    } else if (pointerIndex > 2) {
         pointerIndex -= 3;
     }
     setItemSizes();
@@ -338,6 +466,8 @@ function upKey() {
 function downKey() {
     if (pointerIndex < 6) {
         pointerIndex += 3;
+    } else if (pointerIndex == 6 || pointerIndex == 7 || pointerIndex == 8) {
+        pointerIndex = 9;
     }
     setItemSizes();
 }
@@ -361,6 +491,10 @@ function enterKey() {
         window.location.href = "settings/players.html";
     } else if (pointerIndex == 8) {
         window.location.href = "settings/player.html";
+    } else if (pointerIndex == 9) {
+        window.history.href = "home.html";
+    } else if (pointerIndex == 10) {
+        window.history.back();
     }
 }
 
