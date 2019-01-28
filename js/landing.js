@@ -264,8 +264,8 @@ function setMenuItemBorder() {
         $("#notifications").css("width", "60px");
         $("#notifications").css("height", "60px");
         $("#profile").css("border", "2px solid white");
-        $("#profile").css("width", "54px");
-        $("#profile").css("height", "54px");
+        $("#profile").css("width", "56px");
+        $("#profile").css("height", "56px");
         $("#settings").css("border", "0");
         $("#settings").css("width", "60px");
         $("#settings").css("height", "60px");
@@ -292,8 +292,8 @@ function setMenuItemBorder() {
         $("#profile").css("width", "60px");
         $("#profile").css("height", "60px");
         $("#settings").css("border", "2px solid white");
-        $("#settings").css("width", "54px");
-        $("#settings").css("height", "54px");
+        $("#settings").css("width", "56px");
+        $("#settings").css("height", "56px");
         $("#logout").css("border", "0");
         $("#logout").css("width", "60px");
         $("#logout").css("height", "60px");
@@ -320,7 +320,7 @@ function setMenuItemBorder() {
         $("#settings").css("width", "60px");
         $("#settings").css("height", "60px");
         $("#logout").css("border", "2px solid white");
-        $("#logout").css("width", "54px");
-        $("#logout").css("height", "54px");
+        $("#logout").css("width", "56px");
+        $("#logout").css("height", "56px");
     }
 }
