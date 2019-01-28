@@ -43,30 +43,32 @@ function guid() {
 }
 
 function getTime() {
-    var date = new Date();
-    var hour;
-    var timeFormat = Native.readInt("time_format", 0);
-    if (timeFormat == 0) {
-        hour = date.getHours();
-    } else if (timeFormat == 1) {
-        hour = date.getHours()%12;
-    }
-    var minute = date.getMinutes();
-    if (hour < 10) {
-        hour = "0"+hour;
-    }
-    if (minute < 10) {
-        minute = "0"+minute;
-    }
-    if (timeFormat == 1) {
-        if (date.getHours() >= 12) {
-            return hour + ":" + minute + " " + "PM";
-        } else {
-            return hour + ":" + minute + " " + "AM";
+    try {
+        var date = new Date();
+        var hour;
+        var timeFormat = Native.readInt("time_format", 0);
+        if (timeFormat == 0) {
+            hour = date.getHours();
+        } else if (timeFormat == 1) {
+            hour = date.getHours() % 12;
         }
-    } else if (timeFormat == 0) {
-        return hour + ":" + minute;
-    }
+        var minute = date.getMinutes();
+        if (hour < 10) {
+            hour = "0" + hour;
+        }
+        if (minute < 10) {
+            minute = "0" + minute;
+        }
+        if (timeFormat == 1) {
+            if (date.getHours() >= 12) {
+                return hour + ":" + minute + " " + "PM";
+            } else {
+                return hour + ":" + minute + " " + "AM";
+            }
+        } else if (timeFormat == 0) {
+            return hour + ":" + minute;
+        }
+    } catch (e) {}
 }
 
 function getDate() {
