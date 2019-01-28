@@ -25,19 +25,13 @@
             <div style="width: calc(100% - 100px); margin-left: 30px; display: flex; flex-flow: column nowrap; background-color: rgba(136, 136, 136, .5); margin-top: 20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
                 <div id="text2" style="width: 100%; display: flex; justify-content: center; color: white; margin-top: 10px;">PENGATURAN UMUM</div>
                 <!-- AUTOSTART -->
-                <div onclick="checkOrUncheckAutostart()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
+                <div id="item1" onclick="checkOrUncheckAutostart()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
                     <input class="magic-checkbox" type="checkbox" name="layout" id="auto-start" value="option">
                     <label for="auto-start"></label>
                     <div id="text3" style="color: white; margin-top: -4px;">Mulai otomatis ketika boot</div>
                 </div>
-                <!-- SHOW FULL EPG -->
-                <!--<div onclick="checkOrUncheckFullEPG()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
-                    <input class="magic-checkbox" type="checkbox" name="layout" id="full-epg" value="option">
-                    <label for="auto-start"></label>
-                    <div style="color: white; margin-top: -4px;">Tampilkan EPG penuh</div>
-                </div>-->
                 <!-- SUBTITLE AKTIF -->
-                <div onclick="checkOrUncheckActiveSubtitle()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
+                <div id="item2" onclick="checkOrUncheckActiveSubtitle()" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
                     <input class="magic-checkbox" type="checkbox" name="layout" id="active-subtitle" value="option">
                     <label for="active-subtitle"></label>
                     <div id="text4" style="color: white; margin-top: -4px;">Subtitel Aktif</div>
@@ -47,7 +41,7 @@
                 <input id="user-agent" type="text" name="user-agent" class="input4" style="width: calc(100% - 10px); height: 30px; margin-top: 5px;">
                 <!-- LANGUAGE -->
                 <div id="text5" style="color: white; margin-top: 20px;">Bahasa:</div>
-                <div onclick="showLanguageSelectDialog()" style="background-color: white; position: relative; border: 0; width: 100%; height: 30px; margin-top: 5px;">
+                <div id="item3" onclick="showLanguageSelectDialog()" style="background-color: white; position: relative; border: 0; width: 100%; height: 30px; margin-top: 5px;">
                     <div id="language-text" style="height: 100%; color: black; margin-left: 10px; position: absolute; left: 0; top: 0; display: flex; align-items: center; margin-top: -2px;"></div>
                     <div style="position: absolute; right: 10px; top: 0; height: 100%; display: flex; align-items: center;">
                         <img src="../img/triangle.png" width="10px" height="10px" style="">
@@ -55,11 +49,11 @@
                 </div>
             </div>
             <div style="width: calc(100% - 80px); margin-left: 40px; margin-top: 15px; display: flex; flex-flow: row nowrap; justify-content: space-around;">
-                <div onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
+                <div id="item4" onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
                     <div id="text6" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
                     SIMPAN
                 </div>
-                <div onclick="window.history.back()" style="margin-right: 20px; margin-left: 10px; width: calc(50% - 30px); height: 40px; overflow: hidden;" class="button8">
+                <div id="item5" onclick="window.history.back()" style="margin-right: 20px; margin-left: 10px; width: calc(50% - 30px); height: 40px; overflow: hidden;" class="button8">
                     <div id="text7" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
                     KEMBALI
                 </div>

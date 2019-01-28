@@ -1,8 +1,12 @@
 var xmlData = null;
 var selectedLanguage = 0;
 var checkedLanguage = 0;
+var pointerIndex = 0;
 
 $(document).ready(function () {
+    if (Native.isAndroidTV() == 1) {
+        $("#autostart").css("background-color", "#3498db");
+    }
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function() {
@@ -133,4 +137,105 @@ function checkOrUncheckActiveSubtitle() {
     } else if ($("#active-subtitle").prop("checked") == false) {
         $("#active-subtitle").prop("checked", true);
     }
+}
+
+function setItemsBorder() {
+    if (pointerIndex == 0) {
+        $("#item1").css("background-color", "#3498db");
+        $("#item2").css("background-color", "");
+        $("#user-agent").css("border", "0");
+        $("#user-agent").css("width", "calc(100% - 10px);");
+        $("#user-agent").css("height", "30px");
+        $("#item3").css("border", "0");
+        $("#item3").css("width", "calc(100% - 10px);");
+        $("#item3").css("height", "30px");
+        $("#item4").css("border", "0");
+        $("#item4").css("width", "calc(50% - 30px)");
+        $("#item4").css("height", "40px");
+        $("#item5").css("border", "0");
+        $("#item5").css("width", "calc(50% - 30px)");
+        $("#item5").css("height", "40px");
+    } else if (pointerIndex == 1) {
+        $("#item1").css("background-color", "");
+        $("#item2").css("background-color", "#3498db");
+        $("#user-agent").css("border", "0");
+        $("#user-agent").css("width", "calc(100% - 10px);");
+        $("#user-agent").css("height", "30px");
+        $("#item3").css("border", "0");
+        $("#item3").css("width", "calc(100% - 10px);");
+        $("#item3").css("height", "30px");
+        $("#item4").css("border", "0");
+        $("#item4").css("width", "calc(50% - 30px)");
+        $("#item4").css("height", "40px");
+        $("#item5").css("border", "0");
+        $("#item5").css("width", "calc(50% - 30px)");
+        $("#item5").css("height", "40px");
+    } else if (pointerIndex == 2) {
+        $("#item1").css("background-color", "");
+        $("#item2").css("background-color", "");
+        $("#user-agent").css("border", "2px solid #3498db");
+        $("#user-agent").css("width", "calc(100% - 14px);");
+        $("#user-agent").css("height", "26px");
+        $("#item3").css("border", "0");
+        $("#item3").css("width", "calc(100% - 10px);");
+        $("#item3").css("height", "30px");
+        $("#item4").css("border", "0");
+        $("#item4").css("width", "calc(50% - 30px)");
+        $("#item4").css("height", "40px");
+        $("#item5").css("border", "0");
+        $("#item5").css("width", "calc(50% - 30px)");
+        $("#item5").css("height", "40px");
+    } else if (pointerIndex == 3) {
+        $("#item1").css("background-color", "");
+        $("#item2").css("background-color", "");
+        $("#user-agent").css("border", "0");
+        $("#user-agent").css("width", "calc(100% - 10px);");
+        $("#user-agent").css("height", "30px");
+        $("#item3").css("border", "2px solid #3498db");
+        $("#item3").css("width", "calc(100% - 14px);");
+        $("#item3").css("height", "26px");
+        $("#item4").css("border", "0");
+        $("#item4").css("width", "calc(50% - 30px)");
+        $("#item4").css("height", "40px");
+        $("#item5").css("border", "0");
+        $("#item5").css("width", "calc(50% - 30px)");
+        $("#item5").css("height", "40px");
+    } else if (pointerIndex == 3) {
+        $("#item1").css("background-color", "");
+        $("#item2").css("background-color", "");
+        $("#user-agent").css("border", "0");
+        $("#user-agent").css("width", "calc(100% - 10px);");
+        $("#user-agent").css("height", "30px");
+        $("#item3").css("border", "0");
+        $("#item3").css("width", "calc(100% - 10px);");
+        $("#item3").css("height", "30px");
+        $("#item4").css("border", "3px solid white");
+        $("#item4").css("width", "calc(50% - 36px)");
+        $("#item4").css("height", "34px");
+        $("#item5").css("border", "0");
+        $("#item5").css("width", "calc(50% - 30px)");
+        $("#item5").css("height", "40px");
+    } else if (pointerIndex == 4) {
+        $("#item1").css("background-color", "");
+        $("#item2").css("background-color", "");
+        $("#user-agent").css("border", "0");
+        $("#user-agent").css("width", "calc(100% - 10px);");
+        $("#user-agent").css("height", "30px");
+        $("#item3").css("border", "0");
+        $("#item3").css("width", "calc(100% - 10px);");
+        $("#item3").css("height", "30px");
+        $("#item4").css("border", "0");
+        $("#item4").css("width", "calc(50% - 30px)");
+        $("#item4").css("height", "40px");
+        $("#item5").css("border", "3px solid white");
+        $("#item5").css("width", "calc(50% - 36px)");
+        $("#item5").css("height", "34px");
+    }
+}
+
+function downKey() {
+    if (pointerIndex < 5) {
+        pointerIndex++;
+    }
+    setItemsBorder();
 }
