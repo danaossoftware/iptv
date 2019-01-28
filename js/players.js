@@ -1,10 +1,9 @@
-var xmlData;
 var selectedPlayer = 0;
 
-$(document).ready(function() {
+$(document).ready(function () {
     $("#time").html(getTime());
     $("#date").html(getDate());
-    setTimeout(function() {
+    setTimeout(function () {
         $("#time").html(getTime());
         $("#date").html(getDate());
         setTimeout(this, 1000);
@@ -22,20 +21,9 @@ $(document).ready(function() {
 });
 
 function loadSettings() {
-    $.ajax({
-        type: 'GET',
-        url: SERVER_URL+'get-settings.php',
-        dataType: 'text',
-        cache: false,
-        success: function(a) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(a, "text/xml");
-            xmlData = xml;
-            selectedPlayer = xml.getElementsByTagName("player")[0].childNodes[0].nodeValue;
-            selectOption(selectedPlayer);
-            $("#loading-container").css("display", "none");
-        }
-    });
+    selectedPlayer = Native.readInt("default_player", 0);
+    selectOption(selectedPlayer);
+    $("#loading-container").css("display", "none");
 }
 
 function selectOption(option) {
@@ -57,17 +45,11 @@ function selectOption(option) {
 
 function saveSettings() {
     $("#loading-container").css("display", "flex").hide().fadeIn(300);
-    xmlData.getElementsByTagName("player")[0].childNodes[0].nodeValue = selectedPlayer;
-    var fd = new FormData();
-    fd.append("settings", new XMLSerializer().serializeToString(xmlData));
-    $.ajax({
-        type: 'POST',
-        url: SERVER_URL+'update-settings.php',
-        data: fd,
-        processData: false,
-        contentType: false,
-        success: function(a) {
-            $("#loading-container").fadeOut(300);
-        }
-    });
+    Native.writeInt("default_player", selectedPlayer);
+    $("#loading-container").fadeOut(300);
+    if (getLanguage() == 0) {
+        Native.show("Pengaturan disimpan");
+    } else if (getLanguage() == 1) {
+        Native.show("Settings saved");
+    }
 }
