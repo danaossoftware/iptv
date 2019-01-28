@@ -645,6 +645,7 @@ function setPassword() {
     } else if (getLanguage() == 1) {
         Native.show("Settings saved");
     }
+    controlShown = false;
 }
 
 function openControlDialog() {
