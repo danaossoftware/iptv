@@ -1,4 +1,3 @@
-const SERVER_URL = "http://iptvjoss.com/iptv/php/";
 var m3uData;
 var selectedCategoryName;
 var fullScreen = false;
