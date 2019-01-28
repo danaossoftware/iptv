@@ -16,7 +16,7 @@
     <div style="width: 100%; position: relative; height: 50px;">
         <div style="position: absolute; left: 50px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
             <img src="../img/icon.png" width="35px" height="35px" style="">
-            <div style="color: #888888; margin-left: 30px;">| Pengaturan | Pengaturan Pemutar</div>
+            <div id="text1" style="color: #888888; margin-left: 30px;">| Pengaturan | Pengaturan Pemutar</div>
         </div>
         <div style="position: absolute; right: 30px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
             <div id="time" style="color: white; font-size: 20px;"></div>
@@ -24,48 +24,48 @@
         </div>
     </div>
     <div style="width: calc(100% - 100px); margin-left: 30px; display: flex; flex-flow: column nowrap; background-color: rgba(136, 136, 136, .5); margin-top: 20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
-        <div style="width: 100%; display: flex; justify-content: center; color: white; margin-top: 10px;">PENGATURAN PEMUTAR</div>
+        <div id="text2" style="width: 100%; display: flex; justify-content: center; color: white; margin-top: 10px;">PENGATURAN PEMUTAR</div>
         <!-- NATIVE DECODER -->
         <div onclick="selectDecoder(0)" style="width: 100%; display: flex; flex-flow: row nowrap; align-items: center;">
             <div id="default" class="radio">
                 <div class="radio-inner"></div>
             </div>
-            <div style="color: white; margin-left: 10px;">Dekoder Native</div>
+            <div id="text3" style="color: white; margin-left: 10px;">Aktifkan decoder native</div>
         </div>
         <!-- HARDWARE DECODER -->
         <div onclick="selectDecoder(1)" style="margin-top: 10px; width: 100%; display: flex; flex-flow: row nowrap; align-items: center;">
             <div id="vlc" class="radio">
                 <div class="radio-inner"></div>
             </div>
-            <div style="color: white; margin-left: 10px;">Dekoder Perangkat Keras</div>
+            <div id="text4" style="color: white; margin-left: 10px;">Aktifkan decoder hardware</div>
         </div>
         <!-- SOFTWARE DECODER -->
         <div onclick="selectDecoder(2)" style="margin-top: 10px; width: 100%; display: flex; flex-flow: row nowrap; align-items: center;">
             <div id="mx" class="radio">
                 <div class="radio-inner"></div>
             </div>
-            <div style="color: white; margin-left: 10px;">Dekoder Perangkat Lunak</div>
+            <div id="text5" style="color: white; margin-left: 10px;">Aktifkan decoder perangkat lunak</div>
         </div>
         <!-- OPEN SL ES -->
         <div class="checkbox-item" style="width: 100%; display: flex; flex-flow: row nowrap; margin-top: 20px;">
             <input class="magic-checkbox" type="checkbox" name="layout" id="enable-opensl-es" value="option">
             <label for="enable-opensl-es"></label>
-            <div style="color: white; margin-top: -4px;">Aktifkan OpenSL ES</div>
+            <div id="text6" style="color: white; margin-top: -4px;">Aktifkan OpenSL ES</div>
         </div>
         <!-- OPEN GL -->
         <div class="checkbox-item" style="width: 100%; display: flex; flex-flow: row nowrap; margin-top: 10px;">
             <input class="magic-checkbox" type="checkbox" name="layout" id="enable-opengl" value="option">
             <label for="enable-opengl"></label>
-            <div style="color: white; margin-top: -4px;">Aktifkan OpenGL</div>
+            <div id="text7" style="color: white; margin-top: -4px;">Aktifkan OpenGL</div>
         </div>
     </div>
     <div style="width: calc(100% - 80px); margin-left: 40px; display: flex; flex-flow: row nowrap; margin-top: 15px;">
         <div onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
-            <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+            <div id="text8" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
             SIMPAN
         </div>
         <div onclick="window.history.back()" style="margin-right: 20px; width: calc(50% - 30px); margin-left: 10px; height: 40px; overflow: hidden;" class="button8">
-            <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+            <div id="text9" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
             KEMBALI
         </div>
     </div>

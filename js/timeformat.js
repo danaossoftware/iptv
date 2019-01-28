@@ -10,6 +10,14 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | Time Format");
+        $("#text2").html("TIME FORMAT");
+        $("#text3").html("12 Hours");
+        $("#text4").html("24 Hours");
+        $("#text5").html("SAVE");
+        $("#text6").html("BACK");
+    }
 });
 
 function loadSettings() {

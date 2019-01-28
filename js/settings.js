@@ -9,6 +9,21 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("General");
+        $("#text2").html("Stream Format");
+        $("#text3").html("Time Format");
+        $("#text4").html("Parental Control");
+        $("#text5").html("Default Player");
+        $("#text6").html("Player Settings");
+        $("#text7").html("HOME");
+        $("#text8").html("BACK");
+        $("#text9").html("Password:");
+        $("#text10").html("Repeat password:");
+        $("#text11").html("Save");
+        $("#text12").html("Close");
+        $("#text13").html("SETTINGS");
+    }
 });
 
 function loadSettings() {

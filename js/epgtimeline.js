@@ -10,6 +10,13 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | EPG Timeline");
+        $("#text2").html("Show channels with EPG");
+        $("#text3").html("Show all channels");
+        $("#text4").html("SAVE");
+        $("#text5").html("BACK");
+    }
 });
 
 function loadSettings() {

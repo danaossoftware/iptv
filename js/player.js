@@ -10,6 +10,17 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | Player Settings");
+        $("#text2").html("PLAYER SETTINGS");
+        $("#text3").html("Enable native decoder");
+        $("#text4").html("Enable hardware decoder");
+        $("#text5").html("Enable software decoder");
+        $("#text6").html("Enable OpenSL ES");
+        $("#text7").html("Enable OpenGL");
+        $("#text8").html("SAVE");
+        $("#text9").html("BACK");
+    }
 });
 
 function loadSettings() {

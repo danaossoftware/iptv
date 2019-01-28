@@ -9,6 +9,13 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | Automation");
+        $("#text2").html("Refresh channels & movies automatically");
+        $("#text3").html("Refresh EPG automatically");
+        $("#text4").html("SAVE");
+        $("#text5").html("BACK");
+    }
 });
 
 function loadSettings() {

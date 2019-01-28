@@ -14,7 +14,7 @@
         <div style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
             <div style="width: 100%; display: flex; justify-content: center; position: relative; height: 50px;">
                 <img src="img/icon.png" width="35px" height="35px" style="position: absolute; left: 50px; top: 10px;">
-                <div style="color: white; font-family: 'PalanquinBold'; font-size: 20px; margin-top: 10px;">PENGATURAN</div>
+                <div id="text13" style="color: white; font-family: 'PalanquinBold'; font-size: 20px; margin-top: 10px;">PENGATURAN</div>
                 <div style="display: flex; flex-flow: row nowrap; position: absolute; top: 10px; right: 30px; align-items: center;">
                     <div id="time" style="color: white; font-size: 20px;"></div>
                     <div id="date" style="margin-left: 18px; color: white; font-size: 16px;"></div>
@@ -23,7 +23,7 @@
             <div style="margin-top: 20px; margin-bottom: 20px; width: calc(100% - 80px); padding-left: 40px; padding-right: 40px; display: flex; flex-flow: row wrap;">
                 <div onclick="window.location.href='settings/common.html'" style="width: calc(33% - 10px); margin-right: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/settings-3.png" width="40px" height="40px">
-                    <div style="color: black;">Umum</div>
+                    <div id="text1" style="color: black;">Umum</div>
                 </div>
                 <div onclick="window.location.href='settings/epgtimeshift.html'" style="width: calc(33% - 20px); margin-left: 10px; margin-right: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/history-2.png" width="40px" height="40px">
@@ -31,11 +31,11 @@
                 </div>
                 <div onclick="window.location.href='settings/streamformat.html'" style="width: calc(33% - 10px); margin-left: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/tv.png" width="40px" height="40px">
-                    <div style="color: black;">Format Stream</div>
+                    <div id="text2" style="color: black;">Format Stream</div>
                 </div>
                 <div onclick="window.location.href='settings/timeformat.html'" style="width: calc(33% - 10px); margin-top: 20px; margin-right: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/time.png" width="40px" height="40px">
-                    <div style="color: black;">Format Waktu</div>
+                    <div id="text3" style="color: black;">Format Waktu</div>
                 </div>
                 <div onclick="window.location.href='settings/epgtimeline.html'" style="width: calc(33% - 20px); margin-top: 20px; margin-left: 10px; margin-right: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/timeline.png" width="40px" height="40px">
@@ -47,24 +47,24 @@
                 </div>
                 <div onclick="openControlDialog()" style="width: calc(33% - 10px); margin-top: 20px; margin-right: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/shield.png" width="40px" height="40px">
-                    <div style="color: black;">Kontrol Orang Tua</div>
+                    <div id="text4" style="color: black;">Kontrol Orang Tua</div>
                 </div>
                 <div onclick="window.location.href='settings/players.html'" style="width: calc(33% - 20px); margin-top: 20px; margin-left: 10px; margin-right: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/play-3.png" width="40px" height="40px">
-                    <div style="color: black;">Pilihan Pemutar</div>
+                    <div id="text5" style="color: black;">Pilihan Pemutar</div>
                 </div>
                 <div onclick="window.location.href='settings/player.html'" style="width: calc(33% - 10px); margin-top: 20px; margin-left: 10px; background-color: white; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3); display: flex; flex-flow: column nowrap; align-items: center; padding-top: 20px; padding-bottom: 20px;">
                     <img src="img/settings-4.png" width="40px" height="40px">
-                    <div style="color: black;">Pengaturan Pemutar</div>
+                    <div id="text6" style="color: black;">Pengaturan Pemutar</div>
                 </div>
             </div>
             <div style="margin-bottom: 20px; width: calc(100% - 40px); padding-right: 40px; display: flex; justify-content: center;">
                 <div onclick="window.location.href='landing.html'" style="margin-right: 7px; width: 200px; height: 40px; overflow: hidden;" class="button9">
-                    <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                    <div id="text7" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
                     BERANDA
                 </div>
                 <div onclick="window.history.back()" style="margin-left: 7px; width: 200px; height: 40px; overflow: hidden;" class="button8">
-                    <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                    <div id="text8" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
                     KEMBALI
                 </div>
             </div>
@@ -74,18 +74,18 @@
                 <div style="width: 100%; display: flex; justify-content: center;">
                     <div style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">ATUR KATA SANDI</div>
                 </div>
-                <div style="color: black;">Kata sandi:</div>
+                <div id="text9" style="color: black;">Kata sandi:</div>
                 <input class="input2" id="control-password" type="password" name="password">
-                <div style="color: black;">Ulangi kata sandi:</div>
+                <div id="text10" style="color: black;">Ulangi kata sandi:</div>
                 <input class="input2" id="repeated-control-password" type="password" name="password">
                 <div id="error" style="margin-left: 15px; color: #e74c3c; font-family: 'PalanquinBold'; display: none;"></div>
                 <div style="width: 100%; display: flex; flex-flow: row nowrap; margin-top: 10px; margin-bottom: 10px;">
                     <div onclick="setPassword()" style="margin-right: 10px; width: calc(50% - 25px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
-                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        <div id="text11" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
                         SIMPAN
                     </div>
                     <div onclick="closeControlDialog()" style="margin-right: 10px; width: calc(50% - 25px); margin-left: 5px; height: 40px; overflow: hidden;" class="button8">
-                        <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                        <div id="text12" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
                         TUTUP
                     </div>
                 </div>

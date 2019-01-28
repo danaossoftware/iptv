@@ -11,6 +11,18 @@ $(document).ready(function () {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | General");
+        $("#text2").html("GENERAL SETTINGS");
+        $("#text3").html("Automatically started after boot");
+        $("#text4").html("Enable subtitle");
+        $("#text5").html("Language");
+        $("#text6").html("SAVE");
+        $("#text7").html("BACK");
+        $("#text8").html("LANGUAGE");
+        $("#text9").html("SAVE");
+        $("#text10").html("CLOSE");
+    }
 });
 
 function loadSettings() {

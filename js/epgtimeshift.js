@@ -9,6 +9,12 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | EPG Time Shift");
+        $("#text2").html("SAVE");
+        $("#text3").html("BACK");
+
+    }
 });
 
 function loadSettings() {

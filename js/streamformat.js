@@ -10,6 +10,12 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | Stream Format");
+        $("#text2").html("STREAM FORMAT");
+        $("#text3").html("SAVE");
+        $("#text4").html("BACK");
+    }
 });
 
 function loadSettings() {

@@ -16,7 +16,7 @@
     <div style="width: 100%; position: relative; height: 50px;">
         <div style="position: absolute; left: 50px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
             <img src="../img/icon.png" width="35px" height="35px" style="">
-            <div style="color: #888888; margin-left: 30px;">| Pengaturan | Automation</div>
+            <div id="text1" style="color: #888888; margin-left: 30px;">| Pengaturan | Automation</div>
         </div>
         <div style="position: absolute; right: 30px; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
             <div id="time" style="color: white; font-size: 20px;"></div>
@@ -29,22 +29,22 @@
         <div class="checkbox-item" style="display: flex; flex-flow: row nowrap; margin-top: 30px;">
             <input class="magic-checkbox" type="checkbox" name="layout" id="auto-update-channels" value="option">
             <label for="auto-update-channels"></label>
-            <div style="color: white; margin-top: -4px;">Perbarui otomatis channel & film setiap hari</div>
+            <div id="text2" style="color: white; margin-top: -4px;">Perbarui channel & film setiap hari</div>
         </div>
         <!-- AUTO UPDATE EPG -->
         <div class="checkbox-item" style="display: flex; flex-flow: row nowrap; margin-top: 20px;">
             <input class="magic-checkbox" type="checkbox" name="layout" id="auto-update-epg" value="option">
             <label for="auto-update-epg"></label>
-            <div style="color: white; margin-top: -4px;">Perbarui otomatis EPG</div>
+            <div id="text3" style="color: white; margin-top: -4px;">Perbarui EPG otomatis</div>
         </div>
     </div>
     <div style="width: calc(100% - 80px); margin-left: 40px; display: flex; flex-flow: row nowrap; margin-top: 15px;">
         <div onclick="saveSettings()" style="margin-right: 10px; width: calc(50% - 30px); margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
-            <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+            <div id="text4" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
             SIMPAN
         </div>
         <div onclick="window.history.back()" style="margin-right: 20px; width: calc(50% - 30px); margin-left: 10px; height: 40px; overflow: hidden;" class="button8">
-            <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+            <div id="text5" style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
             KEMBALI
         </div>
     </div>

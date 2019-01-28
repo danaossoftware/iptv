@@ -10,6 +10,15 @@ $(document).ready(function() {
         setTimeout(this, 1000);
     }, 1000);
     loadSettings();
+    if (getLanguage() == 1) {
+        $("#text1").html("| Settings | Default Player");
+        $("#text2").html("DEFAULT PLAYER");
+        $("#text3").html("Built-In (standard) player");
+        $("#text4").html("VLC Player");
+        $("#text5").html("MX Player");
+        $("#text6").html("SAVE");
+        $("#text7").html("BACK");
+    }
 });
 
 function loadSettings() {
