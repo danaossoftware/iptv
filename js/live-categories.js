@@ -1,5 +1,5 @@
 var m3uData;
-var menuShowed = false;
+var menuShown = false;
 var selectedSortType = 1;
 var pointerIndex = 0;
 
@@ -169,12 +169,12 @@ function isCategoryAlreadyAdded(name) {
 }
 
 function showOrHideMenu() {
-    if (!menuShowed) {
+    if (!menuShown) {
         $("#menu-container").css("display", "flex");
-        menuShowed = true;
+        menuShown = true;
     } else {
         $("#menu-container").css("display", "none");
-        menuShowed = false;
+        menuShown = false;
     }
 }
 
@@ -216,11 +216,49 @@ function setItemsBorder() {
     allCategories.css("width", "calc(50% - 20px)");
     allCategories.css("height", "60px");
     allCategories.css("border", "0");
-    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+    if (pointerIndex == -1) {
+        $("#search").css("border", "2px solid white");
+        $("#search").css("width", "46px");
+        $("#search").css("height", "46px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#search").offset().top
+        }, 0);
+    } else if (pointerIndex == -2) {
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "2px solid white");
+        $("#menu").css("width", "46px");
+        $("#menu").css("height", "46px");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#search").offset().top
+        }, 0);
+    } else if (pointerIndex >= 0 && pointerIndex <= categories.length) {
         var currentCategory = $("#categories").find(".category:eq("+pointerIndex+")");
         currentCategory.css("width", "calc(50% - 24px)");
         currentCategory.css("height", "56px");
         currentCategory.css("border", "2px solid white");
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
         $("#home").css("width", "200px");
         $("#home").css("height", "40px");
         $("#home").css("border", "0");
@@ -231,6 +269,12 @@ function setItemsBorder() {
             scrollTop: $(".category:eq(" + pointerIndex + ")").offset().top
         }, 0);
     } else if (pointerIndex == categories.length+1) {
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
         $("#home").css("width", "194px");
         $("#home").css("height", "34px");
         $("#home").css("border", "3px solid white");
@@ -241,6 +285,12 @@ function setItemsBorder() {
             scrollTop: $("#home").offset().top
         }, 0);
     } else if (pointerIndex == categories.length+2) {
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
         $("#home").css("width", "200px");
         $("#home").css("height", "40px");
         $("#home").css("border", "0");
@@ -282,7 +332,15 @@ function leftKey() {
 }
 
 function enterKey() {
-    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+    if (pointerIndex == -1) {
+        var title = "Cari channel";
+        if (getLanguage() == 1) {
+            title = "Find channel";
+        }
+        Native.showEditTextDialog(1, getLanguage(), title, "");
+    } else if (pointerIndex == -2) {
+        showOrHideMenu();
+    } else if (pointerIndex >= 0 && pointerIndex <= categories.length) {
         var categoryName = categories[pointerIndex];
         if (selectedSortType == 1) {
             if (pointerIndex == 0) {
@@ -298,5 +356,41 @@ function enterKey() {
         window.location.href = "landing.html";
     } else if (pointerIndex == categories.length+2) {
         window.history.back();
+    }
+}
+
+function focusChannel(index) {
+    var allCategories = $("#categories").find(".category");
+    allCategories.css("width", "calc(50% - 20px)");
+    allCategories.css("height", "60px");
+    allCategories.css("border", "0");
+    $("#search").css("border", "0");
+    $("#search").css("width", "50px");
+    $("#search").css("height", "50px");
+    $("#menu").css("border", "0");
+    $("#menu").css("width", "50px");
+    $("#menu").css("height", "50px");
+    $("#home").css("width", "200px");
+    $("#home").css("height", "40px");
+    $("#home").css("border", "0");
+    $("#back").css("width", "200px");
+    $("#back").css("height", "40px");
+    $("#back").css("border", "0");
+    var categoryItem = $("#categories").find(".category:eq("+index+")");
+    categoryItem.css("width", "calc(50% - 24px)");
+    categoryItem.css("height", "56px");
+    categoryItem.css("border", "2px solid white");
+}
+
+function editTextFinished(code, value) {
+    if (code == 1) {
+        value = value.toLowerCase();
+        for (var i=0; i<categories.length; i++) {
+            var category = categories[i];
+            if (category.toLowerCase() == value) {
+                focusChannel(i);
+                break;
+            }
+        }
     }
 }
