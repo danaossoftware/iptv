@@ -16,20 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
+            <state relative-caret-position="492">
+              <caret line="226" column="42" lean-forward="true" selection-start-line="226" selection-start-column="42" selection-end-line="226" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="203">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -81,7 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>native</find>
       <find>full-epg</find>
       <find>user-agent</find>
       <find>auto-start</find>
@@ -103,7 +102,6 @@
       <find>live-tv</find>
       <find>notifications</find>
       <find>54px</find>
-      <find>umum</find>
       <find>height</find>
       <find>stream-format</find>
       <find>margin-top</find>
@@ -111,6 +109,8 @@
       <find>general</find>
       <find>$(&quot;#epg-time-shift&quot;).css(&quot;width&quot;, &quot;calc(33% - 10px)&quot;);</find>
       <find>width: calc(33% - 10px);</find>
+      <find>scroll</find>
+      <find>umum</find>
     </findStrings>
     <replaceStrings>
       <replace>width: calc(33% - 20px);</replace>
@@ -199,8 +199,8 @@
         <option value="$PROJECT_DIR$/js/global.js" />
         <option value="$PROJECT_DIR$/landing.html" />
         <option value="$PROJECT_DIR$/js/landing.js" />
-        <option value="$PROJECT_DIR$/js/settings.js" />
         <option value="$PROJECT_DIR$/settings.html" />
+        <option value="$PROJECT_DIR$/js/settings.js" />
       </list>
     </option>
   </component>
@@ -379,12 +379,12 @@
       <workItem from="1548650992558" duration="1666000" />
       <workItem from="1548652962305" duration="1762000" />
       <workItem from="1548654784034" duration="1784000" />
-      <workItem from="1548656602972" duration="553000" />
+      <workItem from="1548656602972" duration="1533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194568000" />
+    <option name="totallyTimeSpent" value="195548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -899,17 +899,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="203">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -953,6 +946,13 @@
             <element signature="n#style#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="226" column="42" lean-forward="true" selection-start-line="226" selection-start-column="42" selection-end-line="226" selection-end-column="42" />
         </state>
       </provider>
     </entry>
