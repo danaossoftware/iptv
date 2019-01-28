@@ -57,6 +57,7 @@ function saveSettings() {
     } else if (getLanguage() == 1) {
         Native.show("Settings saved");
     }
+    Native.restartApp();
 }
 
 function setItemsBorder() {

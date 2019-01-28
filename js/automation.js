@@ -138,7 +138,7 @@ function enterKey() {
     if (pointerIndex == 0) {
         $("#auto-update-channels").prop("checked", !$("#auto-update-channels").prop("checked"));
     } else if (pointerIndex == 1) {
-        $("#auto-update-epg").prop("checked", !$("#auto-update-channels").prop("checked"));
+        $("#auto-update-epg").prop("checked", !$("#auto-update-epg").prop("checked"));
     } else if (pointerIndex == 2) {
         saveSettings();
     } else if (pointerIndex == 3) {
