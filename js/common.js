@@ -239,27 +239,41 @@ function setItemsBorder() {
 
 function setSelectLanguageItemsBorder() {
     if (selectLanguagePointerIndex == 0) {
-        selectLanguage(0);
+        $("#language1").css("background-color", "#eeeeee");
+        $("#language2").css("background-color", "white");
+        $("#select-language-save").css("border", "0");
+        $("#select-language-save").css("width", "calc(50% - 25px)");
+        $("#select-language-save").css("height", "40px");
+        $("#select-language-close").css("border", "0");
+        $("#select-language-close").css("width", "calc(50% - 25px)");
+        $("#select-language-close").css("height", "40px");
     } else if (selectLanguagePointerIndex == 1) {
-        selectLanguage(1);
+        $("#language1").css("background-color", "white");
+        $("#language2").css("background-color", "#eeeeee");
+        $("#select-language-save").css("border", "0");
+        $("#select-language-save").css("width", "calc(50% - 25px)");
+        $("#select-language-save").css("height", "40px");
+        $("#select-language-close").css("border", "0");
+        $("#select-language-close").css("width", "calc(50% - 25px)");
+        $("#select-language-close").css("height", "40px");
     } else if (selectLanguagePointerIndex == 2) {
-        $("#indonesian-check-img").css("visibility", "hidden");
-        $("#english-check-img").css("visibility", "hidden");
-        $("#select-language-save").css("border", "2px solid #3498db");
-        $("#select-language-save").css("width", "calc(50% - 29px)");
-        $("#select-language-save").css("height", "36px");
+        $("#language1").css("background-color", "white");
+        $("#language2").css("background-color", "white");
+        $("#select-language-save").css("border", "3px solid #3498db");
+        $("#select-language-save").css("width", "calc(50% - 31px)");
+        $("#select-language-save").css("height", "34px");
         $("#select-language-close").css("border", "0");
         $("#select-language-close").css("width", "calc(50% - 25px)");
         $("#select-language-close").css("height", "40px");
     } else if (selectLanguagePointerIndex == 3) {
-        $("#indonesian-check-img").css("visibility", "hidden");
-        $("#english-check-img").css("visibility", "hidden");
+        $("#language1").css("background-color", "white");
+        $("#language2").css("background-color", "white");
         $("#select-language-save").css("border", "0");
         $("#select-language-save").css("width", "calc(50% - 25px)");
         $("#select-language-save").css("height", "40px");
-        $("#select-language-close").css("border", "2px solid #3498db");
-        $("#select-language-close").css("width", "calc(50% - 29px)");
-        $("#select-language-close").css("height", "36px");
+        $("#select-language-close").css("border", "3px solid #3498db");
+        $("#select-language-close").css("width", "calc(50% - 31px)");
+        $("#select-language-close").css("height", "34px");
     }
 }
 
