@@ -328,14 +328,18 @@ function upKey() {
 }
 
 function rightKey() {
-    if (pointerIndex < categories.length+2) {
+    if (pointerIndex == -1) {
+        pointerIndex = -2;
+    } else if (pointerIndex < categories.length+2) {
         pointerIndex++;
     }
     setItemsBorder();
 }
 
 function leftKey() {
-    if (pointerIndex > 0) {
+    if (pointerIndex == -2) {
+        pointerIndex = -1;
+    } else if (pointerIndex > 0) {
         pointerIndex--;
     }
     setItemsBorder();
