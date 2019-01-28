@@ -204,7 +204,7 @@ function setItemsBorder() {
         $("#item5").css("border", "0");
         $("#item5").css("width", "calc(50% - 30px)");
         $("#item5").css("height", "40px");
-    } else if (pointerIndex == 3) {
+    } else if (pointerIndex == 4) {
         $("#item1").css("background-color", "");
         $("#item2").css("background-color", "");
         $("#user-agent").css("border", "0");
@@ -219,7 +219,7 @@ function setItemsBorder() {
         $("#item5").css("border", "0");
         $("#item5").css("width", "calc(50% - 30px)");
         $("#item5").css("height", "40px");
-    } else if (pointerIndex == 4) {
+    } else if (pointerIndex == 5) {
         $("#item1").css("background-color", "");
         $("#item2").css("background-color", "");
         $("#user-agent").css("border", "0");
