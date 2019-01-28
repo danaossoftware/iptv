@@ -382,7 +382,7 @@ function enterKey() {
     }
 }
 
-function editTextFinised(code, value) {
+function editTextFinished(code, value) {
     if (code == 1) {
         $("#user-agent").val(value);
     }

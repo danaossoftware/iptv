@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/live-categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/live-categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/epgtimeshift.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/epgtimeshift.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/live-categories.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="397" column="6" lean-forward="true" selection-start-line="397" selection-start-column="6" selection-end-line="397" selection-end-column="6" />
+            <state relative-caret-position="410">
+              <caret line="412" column="9" lean-forward="true" selection-start-line="412" selection-start-column="9" selection-end-line="412" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -111,7 +113,6 @@
       <find>downkey</find>
       <find>showEditText</find>
       <find>edittext</find>
-      <find>editTextFinised</find>
       <find>enterkey</find>
       <find>500</find>
       <find>bahasa</find>
@@ -133,9 +134,9 @@
       <find>allc</find>
       <find>upkey</find>
       <find>categories</find>
+      <find>editTextFinised</find>
     </findStrings>
     <replaceStrings>
-      <replace>width: calc(33% - 20px);</replace>
       <replace>http://iptvjoss.com/tv/</replace>
       <replace>http://iptvjoss.com/iptv/</replace>
       <replace>$_SESSION[&quot;iptvjoss_user_id</replace>
@@ -165,13 +166,14 @@
       <replace>#3498db</replace>
       <replace>#back</replace>
       <replace>menuShown</replace>
+      <replace>editTextFinished</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Dana\Documents\WebFiles\tv</dir>
       <dir>C:\Users\Dana\Documents\WebFiles\iptv\settings</dir>
       <dir>C:\Users\Dana\Documents\WebFiles\iptv\php</dir>
-      <dir>C:\Users\Dana\Documents\WebFiles\iptv</dir>
       <dir>C:\Users\Dana\Documents\WebFiles\iptv\js</dir>
+      <dir>C:\Users\Dana\Documents\WebFiles\iptv</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -303,6 +305,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -417,12 +420,12 @@
       <workItem from="1548712602010" duration="1782000" />
       <workItem from="1548714451658" duration="1812000" />
       <workItem from="1548716294099" duration="1781000" />
-      <workItem from="1548718099065" duration="498000" />
+      <workItem from="1548718099065" duration="563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209325000" />
+    <option name="totallyTimeSpent" value="209390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1058,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/live-categories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="397" column="6" lean-forward="true" selection-start-line="397" selection-start-column="6" selection-end-line="397" selection-end-column="6" />
+        <state relative-caret-position="410">
+          <caret line="412" column="9" lean-forward="true" selection-start-line="412" selection-start-column="9" selection-end-line="412" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />

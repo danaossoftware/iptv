@@ -662,7 +662,7 @@ function closeControlDialog() {
 function saveSettings() {
 }
 
-function editTextFinised(code, value) {
+function editTextFinished(code, value) {
     if (code == 1) {
         $("#control-password").val(value);
     } else if (code == 2) {

@@ -111,7 +111,7 @@ function leftKey() {
     setItemsBorder();
 }
 
-function editTextFinised(code, value) {
+function editTextFinished(code, value) {
     if (code == 1) {
         $("#epg-time-shift").val(value);
     }
