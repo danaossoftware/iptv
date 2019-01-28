@@ -90,7 +90,7 @@ function setItemsBorder() {
         $("#back").css("height", "40px");
         $("#back").css("border", "0");
     } else if (pointerIndex == 3) {
-        $("#option1").css("background-color", "#3498db");
+        $("#option1").css("background-color", "");
         $("#option2").css("background-color", "");
         $("#option3").css("background-color", "");
         $("#save").css("width", "calc(50% - 36px)");

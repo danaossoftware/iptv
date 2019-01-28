@@ -237,9 +237,9 @@ function enterKey() {
     } else if (pointerIndex == 2) {
         selectDecoder(2);
     } else if (pointerIndex == 3) {
-        $("#option4").prop("checked", !$("#option4").prop("checked"));
+        $("#enable-opensl-es").prop("checked", !$("#enable-opensl-es").prop("checked"));
     } else if (pointerIndex == 4) {
-        $("#option5").prop("checked", !$("#option5").prop("checked"));
+        $("#enable-opengl").prop("checked", !$("#enable-opengl").prop("checked"));
     } else if (pointerIndex == 5) {
         saveSettings();
     } else if (pointerIndex == 6) {
