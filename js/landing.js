@@ -3,6 +3,10 @@ var pointerIndex = 0;
 // 1 = Movies
 // 2 = VIP
 // 3 = Record
+// 4 = Notifications
+// 5 = Profile
+// 6 = Settings
+// 7 = Log Out
 
 $(document).ready(function() {
     if (Native.isAndroidTV() == 1) {
@@ -62,22 +66,34 @@ function backKey() {
 function rightKey() {
     if (pointerIndex < 2) {
         pointerIndex++;
+    } else if (pointerIndex >= 4 && pointerIndex < 7) {
+        pointerIndex++;
     }
     setMenuItemBorder();
 }
 
 function downKey() {
-    pointerIndex = 3;
+    if (pointerIndex == 0 || pointerIndex == 1 || pointerIndex == 2) {
+        pointerIndex = 3;
+    } else {
+        pointerIndex = 0;
+    }
     setMenuItemBorder();
 }
 
 function upKey() {
-    pointerIndex = 0;
+    if (pointerIndex == 3) {
+        pointerIndex = 0;
+    } else {
+        pointerIndex = 4;
+    }
     setMenuItemBorder();
 }
 
 function leftKey() {
-    if (pointerIndex > 0) {
+    if (pointerIndex > 0 && pointerIndex <= 3) {
+        pointerIndex--;
+    } else if (pointerIndex > 4 && pointerIndex <= 7) {
         pointerIndex--;
     }
     setMenuItemBorder();
@@ -92,6 +108,14 @@ function enterKey() {
         window.location.href = "adult.html"
     } else if (pointerIndex == 3) {
         window.location.href = "recordings.html";
+    } else if (pointerIndex == 3) {
+        window.location.href = "notifications.html";
+    } else if (pointerIndex == 4) {
+        window.location.href = "account.html";
+    } else if (pointerIndex == 5) {
+        window.location.href = "settings.html";
+    } else if (pointerIndex == 6) {
+        logout();
     }
 }
 
@@ -101,20 +125,72 @@ function setMenuItemBorder() {
         $("#movies").css("border", "0");
         $("#adult").css("border", "0");
         $("#record").css("border", "0");
+        $("#notifications").css("border", "0");
+        $("#profile").css("border", "0");
+        $("#settings").css("border", "0");
+        $("#logout").css("border", "0");
     } else if (pointerIndex == 1) {
         $("#live-tv").css("border", "0");
         $("#movies").css("border", "3px solid white");
         $("#adult").css("border", "0");
         $("#record").css("border", "0");
+        $("#notifications").css("border", "0");
+        $("#profile").css("border", "0");
+        $("#settings").css("border", "0");
+        $("#logout").css("border", "0");
     } else if (pointerIndex == 2) {
         $("#live-tv").css("border", "0");
         $("#movies").css("border", "0");
         $("#adult").css("border", "3px solid white");
         $("#record").css("border", "0");
+        $("#notifications").css("border", "0");
+        $("#profile").css("border", "0");
+        $("#settings").css("border", "0");
+        $("#logout").css("border", "0");
     } else if (pointerIndex == 3) {
         $("#live-tv").css("border", "0");
         $("#movies").css("border", "0");
         $("#adult").css("border", "0");
         $("#record").css("border", "3px solid white");
+        $("#notifications").css("border", "0");
+        $("#profile").css("border", "0");
+        $("#settings").css("border", "0");
+        $("#logout").css("border", "0");
+    } else if (pointerIndex == 4) {
+        $("#live-tv").css("border", "0");
+        $("#movies").css("border", "0");
+        $("#adult").css("border", "0");
+        $("#record").css("border", "0");
+        $("#notifications").css("border", "2px solid white");
+        $("#profile").css("border", "0");
+        $("#settings").css("border", "0");
+        $("#logout").css("border", "0");
+    } else if (pointerIndex == 5) {
+        $("#live-tv").css("border", "0");
+        $("#movies").css("border", "0");
+        $("#adult").css("border", "0");
+        $("#record").css("border", "0");
+        $("#notifications").css("border", "0");
+        $("#profile").css("border", "2px solid white");
+        $("#settings").css("border", "0");
+        $("#logout").css("border", "0");
+    } else if (pointerIndex == 6) {
+        $("#live-tv").css("border", "0");
+        $("#movies").css("border", "0");
+        $("#adult").css("border", "0");
+        $("#record").css("border", "0");
+        $("#notifications").css("border", "0");
+        $("#profile").css("border", "0");
+        $("#settings").css("border", "2px solid white");
+        $("#logout").css("border", "0");
+    } else if (pointerIndex == 7) {
+        $("#live-tv").css("border", "0");
+        $("#movies").css("border", "0");
+        $("#adult").css("border", "0");
+        $("#record").css("border", "0");
+        $("#notifications").css("border", "0");
+        $("#profile").css("border", "0");
+        $("#settings").css("border", "0");
+        $("#logout").css("border", "2px solid white");
     }
 }
