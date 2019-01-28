@@ -3,12 +3,6 @@ var menuShowed = false;
 var selectedSortType = 1;
 
 $(document).ready(function() {
-    if (Native.isAndroidTV() == 1) {
-        var firstCategory = $("#categories").find(".category");
-        firstCategory.css("border", "2px solid white");
-        firstCategory.css("width", "calc(50% - 24px)");
-        firstCategory.css("height", "56px");
-    }
     loadCategories();
     $(document).mouseup(function(e) {
         var container = $("#menu-container");
@@ -112,6 +106,12 @@ function loadCategories() {
                         "</div>");
                 }
                 setCategoryClickListener();
+                if (Native.isAndroidTV() == 1) {
+                    var firstCategory = $("#categories").find(".category");
+                    firstCategory.css("border", "2px solid white");
+                    firstCategory.css("width", "calc(50% - 24px)");
+                    firstCategory.css("height", "56px");
+                }
             }
         }
     });
