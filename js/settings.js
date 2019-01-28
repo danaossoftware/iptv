@@ -1,6 +1,9 @@
 $(document).ready(function () {
     if (Native.isAndroidTV() == 1) {
-        //$("#general").css("width", "33%");
+        $("#general").css("width", "33%");
+        $("#general").css("height", "90px");
+        $("#general").css("margin-top", "-5px");
+        $("#general").css("margin-left", "-5px");
     }
     $("#time").html(getTime());
     $("#date").html(getDate());
