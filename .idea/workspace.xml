@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/automation.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/automation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/epgtimeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/epgtimeline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/epgtimeshift.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/epgtimeshift.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/player.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/player.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/players.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/players.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/streamformat.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/streamformat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/epgtimeshift.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/epgtimeshift.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/settings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -142,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings/epgtimeshift.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+            <state relative-caret-position="102">
+              <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -151,6 +136,15 @@
                 <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/epgtimeshift.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -203,7 +197,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings/timeformat.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="526">
@@ -325,7 +319,6 @@
         <option value="$PROJECT_DIR$/landing.html" />
         <option value="$PROJECT_DIR$/settings/common.html" />
         <option value="$PROJECT_DIR$/js/common.js" />
-        <option value="$PROJECT_DIR$/js/epgtimeshift.js" />
         <option value="$PROJECT_DIR$/js/streamformat.js" />
         <option value="$PROJECT_DIR$/js/epgtimeline.js" />
         <option value="$PROJECT_DIR$/js/timeformat.js" />
@@ -344,6 +337,7 @@
         <option value="$PROJECT_DIR$/settings/players.html" />
         <option value="$PROJECT_DIR$/settings/streamformat.html" />
         <option value="$PROJECT_DIR$/settings/timeformat.html" />
+        <option value="$PROJECT_DIR$/js/epgtimeshift.js" />
       </list>
     </option>
   </component>
@@ -528,12 +522,12 @@
       <workItem from="1548662261408" duration="1891000" />
       <workItem from="1548677563703" duration="2045000" />
       <workItem from="1548712602010" duration="1782000" />
-      <workItem from="1548714451658" duration="431000" />
+      <workItem from="1548714451658" duration="567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205665000" />
+    <option name="totallyTimeSpent" value="205801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -861,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/epgtimeshift.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="81" column="6" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/streamformat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -1120,20 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings/epgtimeshift.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings/player.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
@@ -1185,6 +1158,27 @@
             <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/epgtimeshift.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/epgtimeshift.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
         </state>
       </provider>
     </entry>

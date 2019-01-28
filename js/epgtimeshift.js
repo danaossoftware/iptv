@@ -87,6 +87,28 @@ function downKey() {
     if (pointerIndex == 0) {
         pointerIndex = 1;
     }
+    setItemsBorder();
+}
+
+function upKey() {
+    if (pointerIndex > 0) {
+        pointerIndex--;
+    }
+    setItemsBorder();
+}
+
+function rightKey() {
+    if (pointerIndex == 1) {
+        pointerIndex = 2;
+    }
+    setItemsBorder();
+}
+
+function leftKey() {
+    if (pointerIndex == 2) {
+        pointerIndex = 1;
+    }
+    setItemsBorder();
 }
 
 function editTextFinised(code, value) {
