@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    if (Native.isAndroidTV() == 1) {
+        //$("#general").css("width", "33%");
+    }
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function () {

@@ -311,8 +311,8 @@ function setMenuItemBorder() {
         $("#record").css("width", "calc(100% - 10px)");
         $("#record").css("height", "30px");
         $("#notifications").css("border", "0");
-        $("#notifications").css("width", "56px");
-        $("#notifications").css("height", "56px");
+        $("#notifications").css("width", "60px");
+        $("#notifications").css("height", "60px");
         $("#profile").css("border", "0");
         $("#profile").css("width", "60px");
         $("#profile").css("height", "60px");
