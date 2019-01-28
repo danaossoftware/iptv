@@ -4,7 +4,7 @@ var selectedSortType = 1;
 
 $(document).ready(function() {
     if (Native.isAndroidTV() == 1) {
-        var firstCategory = $("#categories").find("div:eq(0)");
+        var firstCategory = $("#categories").find(".category");
         firstCategory.css("border", "2px solid white");
         firstCategory.css("width", "calc(50% - 24px)");
         firstCategory.css("height", "56px");
