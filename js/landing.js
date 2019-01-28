@@ -105,9 +105,9 @@ function enterKey() {
     if (pointerIndex == 0) {
         window.location.href = "live-categories.html";
     } else if (pointerIndex == 1) {
-        window.location.href = "movies.html"
+        window.location.href = "channels/movies.html"
     } else if (pointerIndex == 2) {
-        window.location.href = "adult.html"
+        window.location.href = "channels/adult.html"
     } else if (pointerIndex == 3) {
         window.location.href = "recordings.html";
     } else if (pointerIndex == 4) {

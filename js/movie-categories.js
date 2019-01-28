@@ -75,6 +75,12 @@ function loadCategories() {
                         "</div>");
                 }
                 setCategoryClickListener();
+                if (Native.isAndroidTV() == 1) {
+                    var firstCategory = $("#categories").find("div:eq(0)");
+                    firstCategory.css("border", "2px solid white");
+                    firstCategory.css("width", "calc(50% - 24px)");
+                    firstCategory.css("height", "56px");
+                }
             }
         }
     });
@@ -162,4 +168,213 @@ function applySorting() {
 
 function closeSortDialog() {
     $("#sort-container").css("display", "none");
+}
+
+function setItemsBorder() {
+    var allCategories = $("#categories").find(".category");
+    allCategories.css("width", "calc(50% - 20px)");
+    allCategories.css("height", "60px");
+    allCategories.css("border", "0");
+    if (pointerIndex == -1) {
+        $("#search").css("border", "2px solid white");
+        $("#search").css("width", "46px");
+        $("#search").css("height", "46px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#search").offset().top
+        }, 0);
+    } else if (pointerIndex == -2) {
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "2px solid white");
+        $("#menu").css("width", "46px");
+        $("#menu").css("height", "46px");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#search").offset().top
+        }, 0);
+    } else if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+        var currentCategory = $("#categories").find(".category:eq("+pointerIndex+")");
+        currentCategory.css("width", "calc(50% - 24px)");
+        currentCategory.css("height", "56px");
+        currentCategory.css("border", "2px solid white");
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $(".category:eq(" + pointerIndex + ")").offset().top
+        }, 0);
+    } else if (pointerIndex == categories.length+1) {
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
+        $("#home").css("width", "194px");
+        $("#home").css("height", "34px");
+        $("#home").css("border", "3px solid white");
+        $("#back").css("width", "200px");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#home").offset().top
+        }, 0);
+    } else if (pointerIndex == categories.length+2) {
+        $("#search").css("border", "0");
+        $("#search").css("width", "50px");
+        $("#search").css("height", "50px");
+        $("#menu").css("border", "0");
+        $("#menu").css("width", "50px");
+        $("#menu").css("height", "50px");
+        $("#home").css("width", "200px");
+        $("#home").css("height", "40px");
+        $("#home").css("border", "0");
+        $("#back").css("width", "194px");
+        $("#back").css("height", "34px");
+        $("#back").css("border", "3px solid white");
+        $("html, body").animate({
+            scrollTop: $("#back").offset().top
+        }, 0);
+    }
+}
+
+function downKey() {
+    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+        if (pointerIndex < categories.length) {
+            pointerIndex += 2;
+        } else {
+            pointerIndex++;
+        }
+    } else {
+        if (pointerIndex < categories.length+2) {
+            pointerIndex++;
+        }
+    }
+    setItemsBorder();
+}
+
+function upKey() {
+    if (pointerIndex > 1 && pointerIndex <= categories.length) {
+        pointerIndex -= 2;
+    } else {
+        if (pointerIndex > -2) {
+            pointerIndex--;
+        }
+    }
+    setItemsBorder();
+}
+
+function rightKey() {
+    if (pointerIndex == -1) {
+        pointerIndex = -2;
+    } else if (pointerIndex < categories.length+2) {
+        pointerIndex++;
+    }
+    setItemsBorder();
+}
+
+function leftKey() {
+    if (pointerIndex == -2) {
+        pointerIndex = -1;
+    } else if (pointerIndex > 0) {
+        pointerIndex--;
+    }
+    setItemsBorder();
+}
+
+function enterKey() {
+    if (pointerIndex == -1) {
+        var title = "Cari channel";
+        if (getLanguage() == 1) {
+            title = "Find channel";
+        }
+        Native.showEditTextDialog(1, getLanguage(), title, "");
+    } else if (pointerIndex == -2) {
+        showOrHideMenu();
+    } else if (pointerIndex >= 0 && pointerIndex <= categories.length) {
+        var categoryName = categories[pointerIndex];
+        if (selectedSortType == 1) {
+            if (pointerIndex == 0) {
+                categoryName = "Semua";
+            }
+        } else if (selectedSortType == 2) {
+            if (pointerIndex == categories.length) {
+                categoryName = "Semua";
+            }
+        }
+        window.location.href = "channels/live.html?cat="+pointerIndex+"&name="+categoryName;
+    } else if (pointerIndex == categories.length+1) {
+        window.location.href = "landing.html";
+    } else if (pointerIndex == categories.length+2) {
+        window.history.back();
+    }
+}
+
+function focusChannel(index) {
+    var allCategories = $("#categories").find(".category");
+    allCategories.css("width", "calc(50% - 20px)");
+    allCategories.css("height", "60px");
+    allCategories.css("border", "0");
+    $("#search").css("border", "0");
+    $("#search").css("width", "50px");
+    $("#search").css("height", "50px");
+    $("#menu").css("border", "0");
+    $("#menu").css("width", "50px");
+    $("#menu").css("height", "50px");
+    $("#home").css("width", "200px");
+    $("#home").css("height", "40px");
+    $("#home").css("border", "0");
+    $("#back").css("width", "200px");
+    $("#back").css("height", "40px");
+    $("#back").css("border", "0");
+    var categoryItem = $("#categories").find(".category:eq("+index+")");
+    categoryItem.css("width", "calc(50% - 24px)");
+    categoryItem.css("height", "56px");
+    categoryItem.css("border", "2px solid white");
+    $("html, body").animate({
+        scrollTop: categoryItem.offset().top
+    }, 0);
+}
+
+function editTextFinished(code, value) {
+    Native.show("Searching for: "+value);
+    if (code == 1) {
+        value = value.toLowerCase();
+        for (var i=0; i<categories.length; i++) {
+            var category = categories[i];
+            if (category.toLowerCase() == value) {
+                Native.show("Channel found: "+category);
+                if (selectedSortType == 1) {
+                    focusChannel(i+1);
+                } else if (selectedSortType == 2) {
+                    focusChannel(i-1);
+                }
+                break;
+            }
+        }
+    }
 }
