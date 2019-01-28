@@ -2,10 +2,12 @@ var xmlData = null;
 var selectedLanguage = 0;
 var checkedLanguage = 0;
 var pointerIndex = 0;
+var selectLanguageDialogShown = false;
+var selectLanguagePointerIndex = 0;
 
 $(document).ready(function () {
     if (Native.isAndroidTV() == 1) {
-        $("#autostart").css("background-color", "#3498db");
+        $("#item1").css("background-color", "#3498db");
     }
     $("#time").html(getTime());
     $("#date").html(getDate());
@@ -108,10 +110,12 @@ function selectCheckedLanguage() {
 }
 
 function closeLanguageSelectDialog() {
+    selectLanguageDialogShown = false;
     $("#language-select-dialog-container").css("display", "none");
 }
 
 function showLanguageSelectDialog() {
+    selectLanguageDialogShown = true;
     $("#language-select-dialog-container").css("display", "flex");
 }
 
@@ -233,9 +237,79 @@ function setItemsBorder() {
     }
 }
 
+function setSelectLanguageItemsBorder() {
+    if (selectLanguagePointerIndex == 0) {
+        selectLanguage(0);
+    } else if (selectLanguagePointerIndex == 1) {
+        selectLanguage(1);
+    } else if (selectLanguagePointerIndex == 2) {
+        $("#indonesian-check-img").css("visibility", "hidden");
+        $("#english-check-img").css("visibility", "hidden");
+        $("#select-language-save").css("border", "2px solid #3498db");
+        $("#select-language-save").css("width", "calc(50% - 29px)");
+        $("#select-language-save").css("height", "36px");
+        $("#select-language-close").css("border", "0");
+        $("#select-language-close").css("width", "calc(50% - 25px)");
+        $("#select-language-close").css("height", "40px");
+    } else if (selectLanguagePointerIndex == 3) {
+        $("#indonesian-check-img").css("visibility", "hidden");
+        $("#english-check-img").css("visibility", "hidden");
+        $("#select-language-save").css("border", "0");
+        $("#select-language-save").css("width", "calc(50% - 25px)");
+        $("#select-language-save").css("height", "40px");
+        $("#select-language-close").css("border", "2px solid #3498db");
+        $("#select-language-close").css("width", "calc(50% - 29px)");
+        $("#select-language-close").css("height", "36px");
+    }
+}
+
 function downKey() {
-    if (pointerIndex < 5) {
-        pointerIndex++;
+    if (selectLanguageDialogShown) {
+        if (selectLanguagePointerIndex < 2) {
+            selectLanguagePointerIndex++;
+        }
+        setSelectLanguageItemsBorder();
+    } else {
+        if (pointerIndex < 5) {
+            pointerIndex++;
+        }
+        setItemsBorder();
+    }
+}
+
+function upKey() {
+    if (pointerIndex > 0) {
+        pointerIndex--;
     }
     setItemsBorder();
+}
+
+function rightKey() {
+    if (selectLanguagePointerIndex == 2) {
+        selectLanguagePointerIndex = 3;
+    }
+    setSelectLanguageItemsBorder();
+}
+
+function leftKey() {
+    if (selectLanguagePointerIndex == 3) {
+        selectLanguagePointerIndex = 2;
+    }
+    setSelectLanguageItemsBorder();
+}
+
+function enterKey() {
+    if (pointerIndex == 0) {
+        checkOrUncheckAutostart();
+    } else if (pointerIndex == 1) {
+        checkOrUncheckActiveSubtitle();
+    } else if (pointerIndex == 2) {
+        Native.showEditTextDialog(1, getLanguage(), "User Agent", $("#user-agent").val());
+    }
+}
+
+function editTextFinised(code, value) {
+    if (code == 1) {
+        $("#user-agent").val(value);
+    }
 }
