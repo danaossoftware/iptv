@@ -102,9 +102,9 @@ function setItemsBorder() {
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
         $("#save").css("border", "0");
-        $("#close").css("width", "calc(50% - 30px)");
-        $("#close").css("height", "40px");
-        $("#close").css("border", "0");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#option1").offset().top
         }, 0);
@@ -117,9 +117,9 @@ function setItemsBorder() {
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
         $("#save").css("border", "0");
-        $("#close").css("width", "calc(50% - 30px)");
-        $("#close").css("height", "40px");
-        $("#close").css("border", "0");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#option2").offset().top
         }, 0);
@@ -132,9 +132,9 @@ function setItemsBorder() {
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
         $("#save").css("border", "0");
-        $("#close").css("width", "calc(50% - 30px)");
-        $("#close").css("height", "40px");
-        $("#close").css("border", "0");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#option3").offset().top
         }, 0);
@@ -147,9 +147,9 @@ function setItemsBorder() {
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
         $("#save").css("border", "0");
-        $("#close").css("width", "calc(50% - 30px)");
-        $("#close").css("height", "40px");
-        $("#close").css("border", "0");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#option4").offset().top
         }, 0);
@@ -162,9 +162,9 @@ function setItemsBorder() {
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
         $("#save").css("border", "0");
-        $("#close").css("width", "calc(50% - 30px)");
-        $("#close").css("height", "40px");
-        $("#close").css("border", "0");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#option5").offset().top
         }, 0);
@@ -177,9 +177,9 @@ function setItemsBorder() {
         $("#save").css("width", "calc(50% - 36px)");
         $("#save").css("height", "34px");
         $("#save").css("border", "3px solid white");
-        $("#close").css("width", "calc(50% - 30px)");
-        $("#close").css("height", "40px");
-        $("#close").css("border", "0");
+        $("#back").css("width", "calc(50% - 30px)");
+        $("#back").css("height", "40px");
+        $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#save").offset().top
         }, 0);
@@ -192,11 +192,11 @@ function setItemsBorder() {
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
         $("#save").css("border", "0");
-        $("#close").css("width", "calc(50% - 36px)");
-        $("#close").css("height", "34px");
-        $("#close").css("border", "3px solid white");
+        $("#back").css("width", "calc(50% - 36px)");
+        $("#back").css("height", "34px");
+        $("#back").css("border", "3px solid white");
         $("html, body").animate({
-            scrollTop: $("#close").offset().top
+            scrollTop: $("#back").offset().top
         }, 0);
     }
 }
