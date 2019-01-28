@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $("#time").html(getTime());
     $("#date").html(getDate());
-    setTimeout(function() {
+    setTimeout(function () {
         $("#time").html(getTime());
         $("#date").html(getDate());
         setTimeout(this, 1000);
@@ -15,22 +15,14 @@ $(document).ready(function() {
 });
 
 function loadSettings() {
-    $.ajax({
-        type: 'GET',
-        url: SERVER_URL+'get-settings.php',
-        dataType: 'text',
-        cache: false,
-        success: function(a) {
-            var epgTimeShift = Native.readInt("epg_time_shift", 0);
-            $("#epg-time-shift").val(epgTimeShift);
-            $("#loading-container").fadeOut(300);
-        }
-    });
+    var epgTimeShift = Native.readInt("epg_time_shift", 0);
+    $("#epg-time-shift").val(epgTimeShift);
+    $("#loading-container").fadeOut(300);
 }
 
 function saveSettings() {
     $("#loading-container").css("display", "flex").hide().fadeIn(300);
-    var epgTimeShift = $("#epg-time-shift").val();
+    var epgTimeShift = parseInt($("#epg-time-shift").val());
     Native.writeInt("epg_time_shift", epgTimeShift);
     $("#loading-container").fadeOut(300);
     if (getLanguage() == 0) {
