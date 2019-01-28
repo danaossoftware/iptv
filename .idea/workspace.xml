@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
-    </list>
+    <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="647" column="25" selection-start-line="647" selection-start-column="25" selection-end-line="647" selection-end-column="25" />
+            <state relative-caret-position="458">
+              <caret line="669" column="1" lean-forward="true" selection-start-line="669" selection-start-column="1" selection-end-line="669" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -453,12 +451,12 @@
       <workItem from="1548662261408" duration="1891000" />
       <workItem from="1548677563703" duration="2045000" />
       <workItem from="1548712602010" duration="1782000" />
-      <workItem from="1548714451658" duration="1603000" />
+      <workItem from="1548714451658" duration="1661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206837000" />
+    <option name="totallyTimeSpent" value="206895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1112,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="647" column="25" selection-start-line="647" selection-start-column="25" selection-end-line="647" selection-end-column="25" />
+        <state relative-caret-position="458">
+          <caret line="669" column="1" lean-forward="true" selection-start-line="669" selection-start-column="1" selection-end-line="669" selection-end-column="1" />
         </state>
       </provider>
     </entry>
