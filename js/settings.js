@@ -38,7 +38,7 @@ function setItemSizes() {
         $("#general").css("height", "90px");
         $("#general").css("margin-top", "-5px");
         $("#general").css("margin-left", "-5px");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
@@ -75,7 +75,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px");
+        $("#epg-time-shift").css("width", "calc(33% - 10px)");
         $("#epg-time-shift").css("height", "90px");
         $("#epg-time-shift").css("margin-top", "-5px");
         $("#epg-time-shift").css("margin-left", "5px");
@@ -112,7 +112,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
@@ -149,7 +149,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
@@ -186,7 +186,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
@@ -223,7 +223,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
@@ -260,7 +260,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
@@ -297,7 +297,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
@@ -334,7 +334,7 @@ function setItemSizes() {
         $("#general").css("height", "80px");
         $("#general").css("margin-top", "0");
         $("#general").css("margin-left", "0");
-        $("#epg-time-shift").css("width", "calc(33% - 10px)");
+        $("#epg-time-shift").css("width", "calc(33% - 20px)");
         $("#epg-time-shift").css("height", "80px");
         $("#epg-time-shift").css("margin-top", "0");
         $("#epg-time-shift").css("margin-left", "10px");
