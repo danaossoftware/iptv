@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#live-tv").css("border", "3px solid white");=
+    $("#live-tv").css("border", "3px solid white");
     if (getLanguage() == 1) {
         $("#text1").html("RECORD");
     }
