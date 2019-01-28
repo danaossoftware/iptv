@@ -3,6 +3,12 @@ var menuShowed = false;
 var selectedSortType = 1;
 
 $(document).ready(function() {
+    if (Native.isAndroidTV() == 1) {
+        var firstCategory = $("#categories").find("div:eq(0)");
+        firstCategory.css("border", "2px solid white");
+        firstCategory.css("width", "calc(50% - 24px)");
+        firstCategory.css("height", "56px");
+    }
     loadCategories();
     $(document).mouseup(function(e) {
         var container = $("#menu-container");
@@ -76,7 +82,7 @@ function loadCategories() {
                         return 0;
                     });
                 }
-                $("#categories").append("<div class=\"category\" style=\"cursor: pointer; margin-left: 10px; margin-right: 10px; margin-top: 20px; position: relative; width: calc(50% - 20px);\">\n" +
+                $("#categories").append("<div class=\"category\" style=\"cursor: pointer; margin-left: 10px; margin-right: 10px; margin-top: 20px; position: relative; width: calc(50% - 20px); height: 60px;\">\n" +
                     "<div style='margin-left: 10px; height: 100%; display: flex; flex-flow: row nowrap; align-items: center;'>" +
                     "   <img src='img/channel.png' width='20px' height='18px'>" +
                     "   <div style='color: white; margin-left: 10px; margin-top: -3px;'>Semua</div>" +
@@ -94,7 +100,7 @@ function loadCategories() {
                     } else {
                         indicatorDisplay = "none";
                     }
-                    $("#categories").append("<div class=\"category\" style=\"cursor: pointer; margin-left: 10px; margin-right: 10px; margin-top: 20px; position: relative; width: calc(50% - 20px);\">\n" +
+                    $("#categories").append("<div class=\"category\" style=\"cursor: pointer; margin-left: 10px; margin-right: 10px; margin-top: 20px; position: relative; width: calc(50% - 20px); height: 60px;\">\n" +
                         "<div style='margin-left: 10px; height: 100%; display: flex; flex-flow: row nowrap; align-items: center;'>" +
                         "   <img src='img/channel.png' width='20px' height='18px'>" +
                         "   <div style='color: white; margin-left: 10px; margin-top: -3px;'>" + categoryName + "</div>" +

@@ -1,7 +1,11 @@
+var pointerIndex = 0;
 var xmlData;
 var selectedDecoder = 0;
 
 $(document).ready(function () {
+    if (Native.isAndroidTV() == 1) {
+        $("#option1").css("background-color", "#3498db");
+    }
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function () {
@@ -85,5 +89,139 @@ function saveSettings() {
         Native.show("Pengaturan disimpan");
     } else if (getLanguage() == 1) {
         Native.show("Settings saved");
+    }
+}
+
+function setItemsBorder() {
+    if (pointerIndex == 0) {
+        $("#option1").css("background-color", "#3498db");
+        $("#option2").css("background-color", "");
+        $("#option3").css("background-color", "");
+        $("#option4").css("background-color", "");
+        $("#option5").css("background-color", "");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 30px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (pointerIndex == 1) {
+        $("#option1").css("background-color", "");
+        $("#option2").css("background-color", "#3498db");
+        $("#option3").css("background-color", "");
+        $("#option4").css("background-color", "");
+        $("#option5").css("background-color", "");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 30px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (pointerIndex == 2) {
+        $("#option1").css("background-color", "");
+        $("#option2").css("background-color", "");
+        $("#option3").css("background-color", "#3498db");
+        $("#option4").css("background-color", "");
+        $("#option5").css("background-color", "");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 30px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (pointerIndex == 3) {
+        $("#option1").css("background-color", "");
+        $("#option2").css("background-color", "");
+        $("#option3").css("background-color", "");
+        $("#option4").css("background-color", "#3498db");
+        $("#option5").css("background-color", "");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 30px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (pointerIndex == 4) {
+        $("#option1").css("background-color", "");
+        $("#option2").css("background-color", "");
+        $("#option3").css("background-color", "");
+        $("#option4").css("background-color", "");
+        $("#option5").css("background-color", "#3498db");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 30px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (pointerIndex == 5) {
+        $("#option1").css("background-color", "");
+        $("#option2").css("background-color", "");
+        $("#option3").css("background-color", "");
+        $("#option4").css("background-color", "");
+        $("#option5").css("background-color", "");
+        $("#save").css("width", "calc(50% - 36px)");
+        $("#save").css("height", "34px");
+        $("#save").css("border", "3px solid white");
+        $("#close").css("width", "calc(50% - 30px)");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (pointerIndex == 6) {
+        $("#option1").css("background-color", "");
+        $("#option2").css("background-color", "");
+        $("#option3").css("background-color", "");
+        $("#option4").css("background-color", "");
+        $("#option5").css("background-color", "");
+        $("#save").css("width", "calc(50% - 30px)");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "calc(50% - 36px)");
+        $("#close").css("height", "34px");
+        $("#close").css("border", "3px solid white");
+    }
+}
+
+function downKey() {
+    if (pointerIndex < 6) {
+        pointerIndex++;
+    }
+    setItemsBorder();
+}
+
+function upKey() {
+    if (pointerIndex > 0) {
+        pointerIndex--;
+    }
+    setItemsBorder();
+}
+
+function rightKey() {
+    if (pointerIndex == 5) {
+        pointerIndex = 6;
+    }
+    setItemsBorder();
+}
+
+function leftKey() {
+    if (pointerIndex == 6) {
+        pointerIndex = 5;
+    }
+    setItemsBorder();
+}
+
+function enterKey() {
+    if (pointerIndex == 0) {
+        selectDecoder(0);
+    } else if (pointerIndex == 1) {
+        selectDecoder(1);
+    } else if (pointerIndex == 2) {
+        selectDecoder(2);
+    } else if (pointerIndex == 3) {
+        $("#option4").prop("checked", !$("#option4").prop("checked"));
+    } else if (pointerIndex == 4) {
+        $("#option5").prop("checked", !$("#option5").prop("checked"));
+    } else if (pointerIndex == 5) {
+        saveSettings();
+    } else if (pointerIndex == 6) {
+        window.history.back();
     }
 }
