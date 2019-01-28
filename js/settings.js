@@ -597,7 +597,7 @@ function enterKey() {
         } else if (pointerIndex == 8) {
             window.location.href = "settings/player.html";
         } else if (pointerIndex == 9) {
-            window.history.href = "home.html";
+            window.history.href = "landing.html";
         } else if (pointerIndex == 10) {
             window.history.back();
         }
