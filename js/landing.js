@@ -1,5 +1,13 @@
+var pointerIndex = 0;
+// 0 = Live TV
+// 1 = Movies
+// 2 = VIP
+// 3 = Record
+
 $(document).ready(function() {
-    $("#live-tv").css("border", "3px solid white");
+    if (Native.isAndroidTV() == 1) {
+        $("#live-tv").css("border", "3px solid white");
+    }
     if (getLanguage() == 1) {
         $("#text1").html("RECORD");
     }
@@ -49,4 +57,64 @@ function logout() {
 
 function backKey() {
     Native.finishApp();
+}
+
+function rightKey() {
+    if (pointerIndex < 2) {
+        pointerIndex++;
+    }
+    setMenuItemBorder();
+}
+
+function downKey() {
+    pointerIndex = 3;
+    setMenuItemBorder();
+}
+
+function upKey() {
+    pointerIndex = 0;
+    setMenuItemBorder();
+}
+
+function leftKey() {
+    if (pointerIndex > 0) {
+        pointerIndex--;
+    }
+    setMenuItemBorder();
+}
+
+function enterKey() {
+    if (pointerIndex == 0) {
+        window.location.href = "live-categories.html";
+    } else if (pointerIndex == 1) {
+        window.location.href = "movies.html"
+    } else if (pointerIndex == 2) {
+        window.location.href = "adult.html"
+    } else if (pointerIndex == 3) {
+        window.location.href = "recordings.html";
+    }
+}
+
+function setMenuItemBorder() {
+    if (pointerIndex == 0) {
+        $("#live-tv").css("border", "3px solid white");
+        $("#movies").css("border", "0");
+        $("#adult").css("border", "0");
+        $("#record").css("border", "0");
+    } else if (pointerIndex == 1) {
+        $("#live-tv").css("border", "0");
+        $("#movies").css("border", "3px solid white");
+        $("#adult").css("border", "0");
+        $("#record").css("border", "0");
+    } else if (pointerIndex == 2) {
+        $("#live-tv").css("border", "0");
+        $("#movies").css("border", "0");
+        $("#adult").css("border", "3px solid white");
+        $("#record").css("border", "0");
+    } else if (pointerIndex == 3) {
+        $("#live-tv").css("border", "0");
+        $("#movies").css("border", "0");
+        $("#adult").css("border", "0");
+        $("#record").css("border", "3px solid white");
+    }
 }
