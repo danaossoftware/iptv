@@ -265,7 +265,7 @@ function setSelectLanguageItemsBorder() {
 
 function downKey() {
     if (selectLanguageDialogShown) {
-        if (selectLanguagePointerIndex < 2) {
+        if (selectLanguagePointerIndex < 3) {
             selectLanguagePointerIndex++;
         }
         setSelectLanguageItemsBorder();
@@ -278,39 +278,72 @@ function downKey() {
 }
 
 function upKey() {
-    if (pointerIndex > 0) {
-        pointerIndex--;
+    if (!selectLanguageDialogShown) {
+        if (pointerIndex > 0) {
+            pointerIndex--;
+        }
+        setItemsBorder();
+    } else {
+        if (selectLanguagePointerIndex > 0) {
+            selectLanguagePointerIndex--;
+        }
+        setSelectLanguageItemsBorder();
     }
-    setItemsBorder();
 }
 
 function rightKey() {
-    if (selectLanguagePointerIndex == 4) {
-        selectLanguagePointerIndex = 5;
+    if (selectLanguageDialogShown) {
+        if (selectLanguagePointerIndex == 2) {
+            selectLanguagePointerIndex = 3;
+        }
+        setSelectLanguageItemsBorder();
+    } else {
+        if (pointerIndex == 4) {
+            pointerIndex = 5;
+        }
+        setItemsBorder();
     }
-    setSelectLanguageItemsBorder();
 }
 
 function leftKey() {
-    if (selectLanguagePointerIndex == 5) {
-        selectLanguagePointerIndex = 4;
+    if (selectLanguageDialogShown) {
+        if (selectLanguagePointerIndex == 3) {
+            selectLanguagePointerIndex = 2;
+        }
+        setSelectLanguageItemsBorder();
+    } else {
+        if (pointerIndex == 5) {
+            pointerIndex = 4;
+        }
+        setItemsBorder();
     }
-    setSelectLanguageItemsBorder();
 }
 
 function enterKey() {
-    if (pointerIndex == 0) {
-        checkOrUncheckAutostart();
-    } else if (pointerIndex == 1) {
-        checkOrUncheckActiveSubtitle();
-    } else if (pointerIndex == 2) {
-        Native.showEditTextDialog(1, getLanguage(), "User Agent", $("#user-agent").val());
-    } else if (pointerIndex == 3) {
-        showLanguageSelectDialog();
-    } else if (pointerIndex == 4) {
-        saveSettings();
-    } else if (pointerIndex == 5) {
-        window.history.back();
+    if (!selectLanguageDialogShown) {
+        if (pointerIndex == 0) {
+            checkOrUncheckAutostart();
+        } else if (pointerIndex == 1) {
+            checkOrUncheckActiveSubtitle();
+        } else if (pointerIndex == 2) {
+            Native.showEditTextDialog(1, getLanguage(), "User Agent", $("#user-agent").val());
+        } else if (pointerIndex == 3) {
+            showLanguageSelectDialog();
+        } else if (pointerIndex == 4) {
+            saveSettings();
+        } else if (pointerIndex == 5) {
+            window.history.back();
+        }
+    } else {
+        if (selectLanguagePointerIndex == 0) {
+            selectLanguage(0);
+        } else if (selectLanguagePointerIndex == 1) {
+            selectLanguage(1);
+        } else if (selectLanguagePointerIndex == 2) {
+            selectCheckedLanguage();
+        } else if (selectLanguagePointerIndex == 3) {
+            closeLanguageSelectDialog();
+        }
     }
 }
 
