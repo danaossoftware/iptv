@@ -126,7 +126,7 @@ function loadChannels() {
             $("#loading-container").hide();
             if (Native.isAndroidTV() == 1) {
                 var firstChannel = $("#channels").find(".channel:eq(0)");
-                firstChannel.addClass("active");
+                firstChannel.css("background-color", "red");
             }
         }
     });
