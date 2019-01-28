@@ -1,6 +1,7 @@
 var m3uData;
 var menuShowed = false;
 var selectedSortType = 1;
+var pointerIndex = 0;
 
 $(document).ready(function() {
     loadCategories();
@@ -107,7 +108,7 @@ function loadCategories() {
                 }
                 setCategoryClickListener();
                 if (Native.isAndroidTV() == 1) {
-                    var firstCategory = $("#categories").find(".category");
+                    var firstCategory = $("#categories").find("div:eq(0)");
                     firstCategory.css("border", "2px solid white");
                     firstCategory.css("width", "calc(50% - 24px)");
                     firstCategory.css("height", "56px");
@@ -208,4 +209,22 @@ function applySorting() {
 
 function closeSortDialog() {
     $("#sort-container").css("display", "none");
+}
+
+function setItemsBorder() {
+    var allCategories = $("#categories").find(".category");
+    allCategories.css("width", "calc(50% - 20px)");
+    allCategories.css("height", "60px");
+    allCategories.css("border", "0");
+    var currentCategory = $("#categories").find(".category");
+    currentCategory.css("width", "calc(50% - 24px)");
+    currentCategory.css("height", "56px");
+    currentCategory.css("border", "2px solid white");
+}
+
+function downKey() {
+    if (pointerIndex < categories.length) {
+        pointerIndex++;
+    }
+    setItemsBorder();
 }
