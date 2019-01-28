@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/automation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/automation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/epgtimeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/epgtimeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/players.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/players.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/streamformat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/streamformat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/timeformat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/timeformat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/timeformat.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -66,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/settings.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="599" column="49" lean-forward="true" selection-start-line="599" selection-start-column="49" selection-end-line="599" selection-end-column="49" />
+              <caret line="599" column="50" lean-forward="true" selection-start-line="599" selection-start-column="50" selection-end-line="599" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -242,7 +236,6 @@
         <option value="$PROJECT_DIR$/settings/timeformat.html" />
         <option value="$PROJECT_DIR$/js/epgtimeshift.js" />
         <option value="$PROJECT_DIR$/settings/common.html" />
-        <option value="$PROJECT_DIR$/js/settings.js" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/js/automation.js" />
         <option value="$PROJECT_DIR$/js/epgtimeline.js" />
@@ -250,6 +243,7 @@
         <option value="$PROJECT_DIR$/js/players.js" />
         <option value="$PROJECT_DIR$/js/streamformat.js" />
         <option value="$PROJECT_DIR$/js/timeformat.js" />
+        <option value="$PROJECT_DIR$/js/settings.js" />
       </list>
     </option>
   </component>
@@ -435,12 +429,12 @@
       <workItem from="1548677563703" duration="2045000" />
       <workItem from="1548712602010" duration="1782000" />
       <workItem from="1548714451658" duration="1812000" />
-      <workItem from="1548716294099" duration="347000" />
+      <workItem from="1548716294099" duration="380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207393000" />
+    <option name="totallyTimeSpent" value="207426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1033,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="599" column="49" lean-forward="true" selection-start-line="599" selection-start-column="49" selection-end-line="599" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1093,6 +1080,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="599" column="50" lean-forward="true" selection-start-line="599" selection-start-column="50" selection-end-line="599" selection-end-column="50" />
         </state>
       </provider>
     </entry>
