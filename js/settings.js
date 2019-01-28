@@ -3,6 +3,7 @@ var pointerIndex = 0;
 $(document).ready(function () {
     if (Native.isAndroidTV() == 1) {
         $("#general").css("background-color", "#3498db");
+        $("#text1").css("color", "white");
     }
     $("#time").html(getTime());
     $("#date").html(getDate());
@@ -50,7 +51,7 @@ function setItemSizes() {
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
         $("#items").animate({
-            scrollTop: $("#general").offset().top
+            scrollTop: 500
         }, 1000);
     } else if (pointerIndex == 1) {
         $("#general").css("background-color", "white");
