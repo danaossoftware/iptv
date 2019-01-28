@@ -51,7 +51,7 @@ function setItemSizes() {
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
         $("html, body").animate({
-            scrollTop: 500
+            scrollTop: $("#general").offset().top
         }, 1000);
     } else if (pointerIndex == 1) {
         $("#general").css("background-color", "white");
@@ -72,7 +72,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#general").offset().top
         }, 1000);
     } else if (pointerIndex == 2) {
@@ -94,7 +94,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#general").offset().top
         }, 1000);
     } else if (pointerIndex == 3) {
@@ -116,7 +116,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#time-format").offset().top
         }, 1000);
     } else if (pointerIndex == 4) {
@@ -138,7 +138,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#time-format").offset().top
         }, 1000);
     } else if (pointerIndex == 5) {
@@ -160,7 +160,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#time-format").offset().top
         }, 1000);
     } else if (pointerIndex == 6) {
@@ -182,7 +182,7 @@ function setItemSizes() {
         $("#text4").css("color", "white");
         $("#text5").css("color", "black");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#player").offset().top
         }, 1000);
     } else if (pointerIndex == 7) {
@@ -204,7 +204,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "white");
         $("#text6").css("color", "black");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#player").offset().top
         }, 1000);
     } else if (pointerIndex == 8) {
@@ -226,7 +226,7 @@ function setItemSizes() {
         $("#text4").css("color", "black");
         $("#text5").css("color", "black");
         $("#text6").css("color", "white");
-        $("#items").animate({
+        $("html, body").animate({
             scrollTop: $("#player").offset().top
         }, 1000);
     }
