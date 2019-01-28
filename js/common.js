@@ -305,6 +305,12 @@ function enterKey() {
         checkOrUncheckActiveSubtitle();
     } else if (pointerIndex == 2) {
         Native.showEditTextDialog(1, getLanguage(), "User Agent", $("#user-agent").val());
+    } else if (pointerIndex == 3) {
+        showLanguageSelectDialog();
+    } else if (pointerIndex == 4) {
+        saveSettings();
+    } else if (pointerIndex == 5) {
+        window.history.back();
     }
 }
 
