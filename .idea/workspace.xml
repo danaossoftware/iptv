@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/landing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="77" column="154" lean-forward="true" selection-start-line="77" selection-start-column="154" selection-end-line="77" selection-end-column="154" />
+            <state relative-caret-position="373">
+              <caret line="73" column="193" selection-start-line="73" selection-start-column="193" selection-end-line="73" selection-end-column="193" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -362,12 +362,12 @@
       <workItem from="1548644706430" duration="976000" />
       <workItem from="1548648223917" duration="1779000" />
       <workItem from="1548650992558" duration="1666000" />
-      <workItem from="1548652962305" duration="1026000" />
+      <workItem from="1548652962305" duration="1039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191495000" />
+    <option name="totallyTimeSpent" value="191508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -900,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/landing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="77" column="154" lean-forward="true" selection-start-line="77" selection-start-column="154" selection-end-line="77" selection-end-column="154" />
+        <state relative-caret-position="373">
+          <caret line="73" column="193" selection-start-line="73" selection-start-column="193" selection-end-line="73" selection-end-column="193" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
