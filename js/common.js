@@ -116,6 +116,7 @@ function closeLanguageSelectDialog() {
 
 function showLanguageSelectDialog() {
     selectLanguageDialogShown = true;
+    selectLanguagePointerIndex = 0;
     $("#language-select-dialog-container").css("display", "flex");
 }
 
