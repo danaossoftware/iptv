@@ -110,13 +110,13 @@ function enterKey() {
         window.location.href = "adult.html"
     } else if (pointerIndex == 3) {
         window.location.href = "recordings.html";
-    } else if (pointerIndex == 3) {
-        window.location.href = "notifications.html";
     } else if (pointerIndex == 4) {
-        window.location.href = "account.html";
+        window.location.href = "notifications.html";
     } else if (pointerIndex == 5) {
-        window.location.href = "settings.html";
+        window.location.href = "account.html";
     } else if (pointerIndex == 6) {
+        window.location.href = "settings.html";
+    } else if (pointerIndex == 7) {
         logout();
     }
 }

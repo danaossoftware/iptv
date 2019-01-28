@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/live-categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/live-categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/automation.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/automation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/epgtimeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/epgtimeline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/epgtimeshift.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/epgtimeshift.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/player.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/player.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/players.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/players.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/streamformat.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/streamformat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/timeformat.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings/timeformat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/landing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/live-categories.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="121" column="14" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
+            <state relative-caret-position="458">
+              <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -84,6 +77,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/landing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -134,20 +136,6 @@
                 <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings/automation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -376,7 +364,6 @@
         <option value="$PROJECT_DIR$/adult-categories.html" />
         <option value="$PROJECT_DIR$/js/global.js" />
         <option value="$PROJECT_DIR$/landing.html" />
-        <option value="$PROJECT_DIR$/js/landing.js" />
         <option value="$PROJECT_DIR$/settings/common.html" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/js/epgtimeshift.js" />
@@ -397,6 +384,7 @@
         <option value="$PROJECT_DIR$/settings/streamformat.html" />
         <option value="$PROJECT_DIR$/settings/timeformat.html" />
         <option value="$PROJECT_DIR$/live-categories.html" />
+        <option value="$PROJECT_DIR$/js/landing.js" />
       </list>
     </option>
   </component>
@@ -581,12 +569,12 @@
       <workItem from="1548662261408" duration="1891000" />
       <workItem from="1548677563703" duration="2045000" />
       <workItem from="1548712602010" duration="1782000" />
-      <workItem from="1548714451658" duration="196000" />
+      <workItem from="1548714451658" duration="298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205430000" />
+    <option name="totallyTimeSpent" value="205532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -874,13 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="315" column="6" selection-start-line="315" selection-start-column="6" selection-end-line="315" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/landing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1116,18 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings/timeformat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1181,10 +1150,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/live-categories.html">
+    <entry file="file://$PROJECT_DIR$/settings/timeformat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
-          <caret line="121" column="14" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
+          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/live-categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1238,6 +1219,13 @@
             <element signature="n#style#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
         </state>
       </provider>
     </entry>
