@@ -105,6 +105,9 @@ function setItemsBorder() {
         $("#close").css("width", "calc(50% - 30px)");
         $("#close").css("height", "40px");
         $("#close").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#option1").offset().top
+        }, 0);
     } else if (pointerIndex == 1) {
         $("#option1").css("background-color", "");
         $("#option2").css("background-color", "#3498db");
@@ -117,6 +120,9 @@ function setItemsBorder() {
         $("#close").css("width", "calc(50% - 30px)");
         $("#close").css("height", "40px");
         $("#close").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#option2").offset().top
+        }, 0);
     } else if (pointerIndex == 2) {
         $("#option1").css("background-color", "");
         $("#option2").css("background-color", "");
@@ -129,6 +135,9 @@ function setItemsBorder() {
         $("#close").css("width", "calc(50% - 30px)");
         $("#close").css("height", "40px");
         $("#close").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#option3").offset().top
+        }, 0);
     } else if (pointerIndex == 3) {
         $("#option1").css("background-color", "");
         $("#option2").css("background-color", "");
@@ -141,6 +150,9 @@ function setItemsBorder() {
         $("#close").css("width", "calc(50% - 30px)");
         $("#close").css("height", "40px");
         $("#close").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#option4").offset().top
+        }, 0);
     } else if (pointerIndex == 4) {
         $("#option1").css("background-color", "");
         $("#option2").css("background-color", "");
@@ -153,6 +165,9 @@ function setItemsBorder() {
         $("#close").css("width", "calc(50% - 30px)");
         $("#close").css("height", "40px");
         $("#close").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#option5").offset().top
+        }, 0);
     } else if (pointerIndex == 5) {
         $("#option1").css("background-color", "");
         $("#option2").css("background-color", "");
@@ -165,6 +180,9 @@ function setItemsBorder() {
         $("#close").css("width", "calc(50% - 30px)");
         $("#close").css("height", "40px");
         $("#close").css("border", "0");
+        $("html, body").animate({
+            scrollTop: $("#save").offset().top
+        }, 0);
     } else if (pointerIndex == 6) {
         $("#option1").css("background-color", "");
         $("#option2").css("background-color", "");
@@ -177,6 +195,9 @@ function setItemsBorder() {
         $("#close").css("width", "calc(50% - 36px)");
         $("#close").css("height", "34px");
         $("#close").css("border", "3px solid white");
+        $("html, body").animate({
+            scrollTop: $("#close").offset().top
+        }, 0);
     }
 }
 
