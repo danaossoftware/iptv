@@ -3,7 +3,7 @@ var selectedStreamFormat = 0;
 
 $(document).ready(function() {
     if (Native.isAndroidTV() == 1) {
-        $("#option1").css("background-color", "rgba(255, 255, 255, .5)");
+        $("#option1").css("background-color", "#3498db");
     }
     $("#time").html(getTime());
     $("#date").html(getDate());
@@ -59,7 +59,7 @@ function saveSettings() {
 
 function setItemsBorder() {
     if (pointerIndex == 0) {
-        $("#option1").css("background-color", "rgba(255, 255, 255, .5)");
+        $("#option1").css("background-color", "#3498db");
         $("#option2").css("background-color", "");
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
@@ -69,7 +69,7 @@ function setItemsBorder() {
         $("#back").css("border", "0");
     } else if (pointerIndex == 1) {
         $("#option1").css("background-color", "");
-        $("#option2").css("background-color", "rgba(255, 255, 255, .5)");
+        $("#option2").css("background-color", "#3498db");
         $("#save").css("width", "calc(50% - 30px)");
         $("#save").css("height", "40px");
         $("#save").css("border", "0");

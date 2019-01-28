@@ -7,7 +7,7 @@ var selectLanguagePointerIndex = 0;
 
 $(document).ready(function () {
     if (Native.isAndroidTV() == 1) {
-        $("#item1").css("background-color", "rgba(255, 255, 255, .5)");
+        $("#item1").css("background-color", "#3498db");
     }
     $("#time").html(getTime());
     $("#date").html(getDate());
@@ -148,7 +148,7 @@ function checkOrUncheckActiveSubtitle() {
 
 function setItemsBorder() {
     if (pointerIndex == 0) {
-        $("#item1").css("background-color", "rgba(255, 255, 255, .5)");
+        $("#item1").css("background-color", "#3498db");
         $("#item2").css("background-color", "");
         $("#user-agent").css("border", "0");
         $("#user-agent").css("width", "calc(100% - 10px);");
@@ -167,7 +167,7 @@ function setItemsBorder() {
         }, 0);
     } else if (pointerIndex == 1) {
         $("#item1").css("background-color", "");
-        $("#item2").css("background-color", "rgba(255, 255, 255, .5)");
+        $("#item2").css("background-color", "#3498db");
         $("#user-agent").css("border", "0");
         $("#user-agent").css("width", "calc(100% - 10px);");
         $("#user-agent").css("height", "30px");
