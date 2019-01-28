@@ -6,7 +6,6 @@ $(document).ready(function () {
         $("#date").html(getDate());
         setTimeout(this, 1000);
     }, 1000);
-    loadSettings();
     if (getLanguage() == 1) {
         $("#text1").html("General");
         $("#text2").html("Stream Format");
