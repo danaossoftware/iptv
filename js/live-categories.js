@@ -216,7 +216,7 @@ function setItemsBorder() {
     allCategories.css("width", "calc(50% - 20px)");
     allCategories.css("height", "60px");
     allCategories.css("border", "0");
-    var currentCategory = $("#categories").find(".category");
+    var currentCategory = $("#categories").find(".category:eq("+pointerIndex+")");
     currentCategory.css("width", "calc(50% - 24px)");
     currentCategory.css("height", "56px");
     currentCategory.css("border", "2px solid white");
