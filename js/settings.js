@@ -13,8 +13,8 @@ $(document).ready(function () {
     setTimeout(function () {
         $("#time").html(getTime());
         $("#date").html(getDate());
-        setTimeout(this, 500);
-    }, 500);
+        setTimeout(this, 0);
+    }, 0);
     if (getLanguage() == 1) {
         $("#text1").html("General");
         $("#text2").html("Stream Format");
@@ -70,7 +70,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#general").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 1) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "#3498db");
@@ -107,7 +107,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#general").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 2) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
@@ -144,7 +144,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#general").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 3) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
@@ -181,7 +181,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#time-format").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 4) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
@@ -218,7 +218,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#time-format").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 5) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
@@ -255,7 +255,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#time-format").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 6) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
@@ -292,7 +292,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#player").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 7) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
@@ -329,7 +329,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#player").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 8) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
@@ -366,7 +366,7 @@ function setItemSizes() {
         $("#back").css("border", "0");
         $("html, body").animate({
             scrollTop: $("#player").offset().top
-        }, 500);
+        }, 0);
     } else if (pointerIndex == 9) {
         $("#general").css("background-color", "white");
         $("#epg-time-shift").css("background-color", "white");
