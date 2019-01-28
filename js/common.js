@@ -117,6 +117,7 @@ function closeLanguageSelectDialog() {
 function showLanguageSelectDialog() {
     selectLanguageDialogShown = true;
     selectLanguagePointerIndex = 0;
+    $("#language1").css("background-color", "#eeeeee");
     $("#language-select-dialog-container").css("display", "flex");
 }
 
@@ -160,6 +161,9 @@ function setItemsBorder() {
         $("#item5").css("border", "0");
         $("#item5").css("width", "calc(50% - 30px)");
         $("#item5").css("height", "40px");
+        $("html, body").animate({
+            scrollTop: $("#option1").offset().top
+        }, 0);
     } else if (pointerIndex == 1) {
         $("#item1").css("background-color", "");
         $("#item2").css("background-color", "#3498db");
@@ -175,6 +179,9 @@ function setItemsBorder() {
         $("#item5").css("border", "0");
         $("#item5").css("width", "calc(50% - 30px)");
         $("#item5").css("height", "40px");
+        $("html, body").animate({
+            scrollTop: $("#item1").offset().top
+        }, 0);
     } else if (pointerIndex == 2) {
         $("#item1").css("background-color", "");
         $("#item2").css("background-color", "");
@@ -190,6 +197,9 @@ function setItemsBorder() {
         $("#item5").css("border", "0");
         $("#item5").css("width", "calc(50% - 30px)");
         $("#item5").css("height", "40px");
+        $("html, body").animate({
+            scrollTop: $("#item2").offset().top
+        }, 0);
     } else if (pointerIndex == 3) {
         $("#item1").css("background-color", "");
         $("#item2").css("background-color", "");
@@ -205,6 +215,9 @@ function setItemsBorder() {
         $("#item5").css("border", "0");
         $("#item5").css("width", "calc(50% - 30px)");
         $("#item5").css("height", "40px");
+        $("html, body").animate({
+            scrollTop: $("#item3").offset().top
+        }, 0);
     } else if (pointerIndex == 4) {
         $("#item1").css("background-color", "");
         $("#item2").css("background-color", "");
@@ -220,6 +233,9 @@ function setItemsBorder() {
         $("#item5").css("border", "0");
         $("#item5").css("width", "calc(50% - 30px)");
         $("#item5").css("height", "40px");
+        $("html, body").animate({
+            scrollTop: $("#item4").offset().top
+        }, 0);
     } else if (pointerIndex == 5) {
         $("#item1").css("background-color", "");
         $("#item2").css("background-color", "");
@@ -235,6 +251,9 @@ function setItemsBorder() {
         $("#item5").css("border", "3px solid white");
         $("#item5").css("width", "calc(50% - 36px)");
         $("#item5").css("height", "34px");
+        $("html, body").animate({
+            scrollTop: $("#item5").offset().top
+        }, 0);
     }
 }
 
