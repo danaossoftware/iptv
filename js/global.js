@@ -44,7 +44,13 @@ function guid() {
 
 function getTime() {
     var date = new Date();
-    var hour = date.getHours();
+    var hour;
+    var timeFormat = Native.readInt("time_format", 0);
+    if (timeFormat == 0) {
+        hour = date.getHours();
+    } else if (timeFormat == 1) {
+        hour = date.getHours()%12;
+    }
     var minute = date.getMinutes();
     if (hour < 10) {
         hour = "0"+hour;
