@@ -317,10 +317,8 @@ function downKey() {
 }
 
 function upKey() {
-    if (pointerIndex >= 0 && pointerIndex <= categories.length) {
-        if (pointerIndex > 0) {
-            pointerIndex -= 2;
-        }
+    if (pointerIndex > 1 && pointerIndex <= categories.length) {
+        pointerIndex -= 2;
     } else {
         if (pointerIndex > -2) {
             pointerIndex--;
