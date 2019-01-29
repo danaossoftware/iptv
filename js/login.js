@@ -15,7 +15,7 @@ $(document).ready(function() {
 });
 
 function login() {
-    $("#error").css("display", "none");
+    $("#error-container").css("display", "none");
     var phone = $("#phone").val();
     var password = $("#password").val();
     if (phone == '' || password == '') {
@@ -41,19 +41,19 @@ function login() {
                 if (response == -1) {
                     // User not found
                     $("#error").html("User tidak ditemukan");
-                    $("#error").css("display", "block");
+                    $("#error-container").css("display", "flex");
                 } else if (response == -2) {
                     // User not confirmed
                     $("#error").html("Maaf, akun Anda belum disetujui. Silahkan cek beberapa saat lagi sampai admin menyetujui akun Anda.");
-                    $("#error").css("display", "block");
+                    $("#error-container").css("display", "flex");
                 } else if (response == -3) {
                     // Password not macthes
                     $("#error").html("Kata sandi tidak cocok");
-                    $("#error").css("display", "block");
+                    $("#error-container").css("display", "flex");
                 } else if (response == -4) {
                     // Maximum connections reached
                     $("#error").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
-                    $("#error").css("display", "block");
+                    $("#error-container").css("display", "flex");
                     $.ajax({
                         type: 'GET',
                         url: SERVER_URL+'get-configuration.php',
@@ -65,7 +65,7 @@ function login() {
                                 // Error
                             } else {
                                 $("#error").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin di "+a["config1"].split("=")[1]+".");
-                                $("#error").css("display", "block");
+                                $("#error-container").css("display", "flex");
                             }
                         }
                     });
