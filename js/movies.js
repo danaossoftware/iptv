@@ -555,6 +555,16 @@ function enterKey() {
         } else if (sortingPointerIndex == 4) {
             closeSortDialog();
         }
+    } else if (channelMenuShown) {
+        if (channelMenuPointerIndex == 0) {
+            playWithVLC();
+        } else if (channelMenuPointerIndex == 1) {
+            playWithMX();
+        } else if (channelMenuPointerIndex == 2) {
+            addToFavorite();
+        } else if (channelMenuPointerIndex == 3) {
+            startRecording();
+        }
     } else if (menuShown) {
         if (menuPointerIndex == 0) {
             window.location.href = "../landing.html";
