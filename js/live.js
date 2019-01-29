@@ -1,4 +1,5 @@
 var m3uData;
+var currentCategory = 0;
 var selectedCategoryName;
 var fullScreen = false;
 var channelMenuShown = false;
@@ -36,10 +37,9 @@ $(document).ready(function () {
     });
     var params = location.search;
     params = params.substr(1, params.length);
-    var category = params.split("&")[0].split("=")[1];
+    currentCategory = params.split("&")[0].split("=")[1];
     selectedCategoryName = params.split("&")[1].split("=")[1];
-    selectedCategoryName = selectedCategoryName.toUpperCase();
-    $("#category-name").html(selectedCategoryName);
+    $("#category-name").html(selectedCategoryName.toUpperCase());
     loadChannels();
 });
 
@@ -54,7 +54,8 @@ function loadChannels() {
             m3uData = a;
             var length = occurrences(m3uData, "#EXTINF");
             channels = [];
-            if (selectedCategoryName == "SEMUA") {
+            selectedCategoryName = selectedCategoryName.toLowerCase();
+            if (selectedCategoryName == "semua") {
                 try {
                     var a = 0;
                     for (var i = 0; i < length; i++) {
@@ -86,6 +87,7 @@ function loadChannels() {
                         if (categoryName == "") {
                             categoryName = "Tidak terdefinisi";
                         }
+                        categoryName = categoryName.toLowerCase();
                         if (categoryName == selectedCategoryName) {
                             b = m3uData.indexOf("tvg-name", a) + 10;
                             c = m3uData.indexOf("\"", b);
@@ -591,4 +593,134 @@ function applySorting() {
 
 function closeSortDialog() {
     $("#sort-container").css("display", "none");
+}
+
+function toNextCategory() {
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'get-channels.php',
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            if (a < 0) {
+                // Error
+            } else {
+                m3uData = a;
+                var length = occurrences(m3uData, "#EXTINF");
+                // Get categories first
+                categories = [];
+                try {
+                    var a = 0;
+                    for (var i = 0; i < length; i++) {
+                        a = m3uData.indexOf("#EXTINF", a) + 7;
+                        var b = m3uData.indexOf("group-title", a) + 13;
+                        var c = m3uData.indexOf("\"", b);
+                        var categoryName = m3uData.substr(b, c - b);
+                        if (categoryName == "") {
+                            categoryName = "Tidak terdefinisi";
+                        }
+                        if (!isCategoryAlreadyAdded(categoryName)) {
+                            categories.push(categoryName);
+                        }
+                    }
+                } catch (e) {
+                }
+                var selectedSortType = Native.readInt("sort_type", 1);
+                if (selectedSortType == 1) {
+                    categories.sort(function(a, b) {
+                        a = a.toLowerCase();
+                        b = b.toLowerCase();
+                        if (a < b) {
+                            return -1;
+                        } else if (a > b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                } else if (selectedSortType == 2) {
+                    categories.sort(function(a, b) {
+                        a = a.toLowerCase();
+                        b = b.toLowerCase();
+                        if (a < b) {
+                            return 1;
+                        } else if (a > b) {
+                            return -1;
+                        }
+                        return 0;
+                    });
+                }
+                if (currentCategory < categories.length-1) {
+                    currentCategory++;
+                }
+                selectedCategoryName = categories[currentCategory];
+                $("#category-name").html(selectedCategoryName.toUpperCase());
+                loadChannels();
+            }
+        }
+    });
+}
+
+function toPreviousCategory() {
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'get-channels.php',
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            if (a < 0) {
+                // Error
+            } else {
+                m3uData = a;
+                var length = occurrences(m3uData, "#EXTINF");
+                // Get categories first
+                categories = [];
+                try {
+                    var a = 0;
+                    for (var i = 0; i < length; i++) {
+                        a = m3uData.indexOf("#EXTINF", a) + 7;
+                        var b = m3uData.indexOf("group-title", a) + 13;
+                        var c = m3uData.indexOf("\"", b);
+                        var categoryName = m3uData.substr(b, c - b);
+                        if (categoryName == "") {
+                            categoryName = "Tidak terdefinisi";
+                        }
+                        if (!isCategoryAlreadyAdded(categoryName)) {
+                            categories.push(categoryName);
+                        }
+                    }
+                } catch (e) {
+                }
+                var selectedSortType = Native.readInt("sort_type", 1);
+                if (selectedSortType == 1) {
+                    categories.sort(function(a, b) {
+                        a = a.toLowerCase();
+                        b = b.toLowerCase();
+                        if (a < b) {
+                            return -1;
+                        } else if (a > b) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                } else if (selectedSortType == 2) {
+                    categories.sort(function(a, b) {
+                        a = a.toLowerCase();
+                        b = b.toLowerCase();
+                        if (a < b) {
+                            return 1;
+                        } else if (a > b) {
+                            return -1;
+                        }
+                        return 0;
+                    });
+                }
+                if (currentCategory > 0) {
+                    currentCategory--;
+                }
+                selectedCategoryName = categories[currentCategory];
+                $("#category-name").html(selectedCategoryName.toUpperCase());
+                loadChannels();
+            }
+        }
+    });
 }

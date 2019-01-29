@@ -1,9 +1,9 @@
 var m3uData;
 var menuShown = false;
-var selectedSortType = 1;
 var pointerIndex = 0;
 
 $(document).ready(function() {
+    selectedSortType = Native.readInt("sort_type", 1);
     loadCategories();
     $(document).mouseup(function(e) {
         var container = $("#menu-container");
@@ -190,6 +190,7 @@ function sortCategories() {
 
 function selectSortType(type) {
     selectedSortType = type;
+    Native.writeInt("sort_type", selectedSortType);
     $("#sort-type-img-1").css("visibility", "hidden");
     $("#sort-type-img-2").css("visibility", "hidden");
     $("#sort-type-img-3").css("visibility", "hidden");
