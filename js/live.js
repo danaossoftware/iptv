@@ -498,6 +498,10 @@ function enterKey() {
                     currentChannel = pointerIndex;
                 }
             }
+        } else if (pointerIndex == -1) {
+            toNextCategory();
+        } else if (pointerIndex == -2) {
+            toPreviousCategory();
         } else if (pointerIndex == -3) {
             var title = "Cari channel";
             if (getLanguage() == 1) {
@@ -596,21 +600,24 @@ function closeSortDialog() {
 }
 
 function toNextCategory() {
+    Native.show("Go to next category...");
     var video = document.getElementById('live-video');
     video.pause();
+    Native.show("Loading categories...");
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-channels.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
+            Native.show("Channels data length: "+a.length);
             if (a < 0) {
                 // Error
             } else {
                 m3uData = a;
                 var length = occurrences(m3uData, "#EXTINF");
                 // Get categories first
-                categories = [];
+                var categories = [];
                 try {
                     var a = 0;
                     for (var i = 0; i < length; i++) {
@@ -627,6 +634,7 @@ function toNextCategory() {
                     }
                 } catch (e) {
                 }
+                Native.show("Categories length: "+categories.length);
                 var selectedSortType = Native.readInt("sort_type", 1);
                 if (selectedSortType == 1) {
                     categories.sort(function(a, b) {
