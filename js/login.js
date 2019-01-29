@@ -32,41 +32,43 @@ function login() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            alert(a);
             if (a == 0) {
                 // Success
                 window.location.href = 'landing.html';
-            } else if (a == -1) {
-                // User not found
-                $("#error").html("User tidak ditemukan");
-                $("#error").css("display", "block");
-            } else if (a == -2) {
-                // User not confirmed
-                $("#alert-text").html("Maaf, akun Anda belum disetujui. Silahkan cek beberapa saat lagi sampai admin menyetujui akun Anda.");
-                $("#alert-container").css("display", "flex");
-            } else if (a == -3) {
-                // Password not macthes
-                $("#alert-text").html("Kata sandi tidak cocok");
-                $("#alert-container").css("display", "flex");
-            } else if (a == -4) {
-                // Maximum connections reached
-                $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
-                $("#alert-container").css("display", "flex");
-                $.ajax({
-                    type: 'GET',
-                    url: SERVER_URL+'get-configuration.php',
-                    data: {'name': 'admin-info'},
-                    dataType: 'text',
-                    cache: false,
-                    success: function(a) {
-                        if (a < 0) {
-                            // Error
-                        } else {
-                            $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin di "+a["config1"].split("=")[1]+".");
-                            $("#alert-container").css("display", "flex");
+            } else {
+                Native.show("Response: "+a);
+                if (a == -1) {
+                    // User not found
+                    $("#error").html("User tidak ditemukan");
+                    $("#error").css("display", "block");
+                } else if (a == -2) {
+                    // User not confirmed
+                    $("#alert-text").html("Maaf, akun Anda belum disetujui. Silahkan cek beberapa saat lagi sampai admin menyetujui akun Anda.");
+                    $("#alert-container").css("display", "flex");
+                } else if (a == -3) {
+                    // Password not macthes
+                    $("#alert-text").html("Kata sandi tidak cocok");
+                    $("#alert-container").css("display", "flex");
+                } else if (a == -4) {
+                    // Maximum connections reached
+                    $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
+                    $("#alert-container").css("display", "flex");
+                    $.ajax({
+                        type: 'GET',
+                        url: SERVER_URL+'get-configuration.php',
+                        data: {'name': 'admin-info'},
+                        dataType: 'text',
+                        cache: false,
+                        success: function(a) {
+                            if (a < 0) {
+                                // Error
+                            } else {
+                                $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin di "+a["config1"].split("=")[1]+".");
+                                $("#alert-container").css("display", "flex");
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
         }
     });
