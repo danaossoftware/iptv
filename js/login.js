@@ -37,19 +37,20 @@ function login() {
                 window.location.href = 'landing.html';
             } else {
                 Native.show("Response: "+a);
-                if (a == -1) {
+                var response = parseInt(a);
+                if (response == -1) {
                     // User not found
                     $("#error").html("User tidak ditemukan");
                     $("#error").css("display", "block");
-                } else if (a == -2) {
+                } else if (response == -2) {
                     // User not confirmed
                     $("#alert-text").html("Maaf, akun Anda belum disetujui. Silahkan cek beberapa saat lagi sampai admin menyetujui akun Anda.");
                     $("#alert-container").css("display", "flex");
-                } else if (a == -3) {
+                } else if (response == -3) {
                     // Password not macthes
                     $("#alert-text").html("Kata sandi tidak cocok");
                     $("#alert-container").css("display", "flex");
-                } else if (a == -4) {
+                } else if (response == -4) {
                     // Maximum connections reached
                     $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
                     $("#alert-container").css("display", "flex");
