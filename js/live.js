@@ -600,10 +600,8 @@ function closeSortDialog() {
 }
 
 function toNextCategory() {
-    Native.show("Go to next category...");
     var video = document.getElementById('live-video');
     video.pause();
-    Native.show("Loading categories...");
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-channels.php',
