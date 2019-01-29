@@ -396,6 +396,7 @@ function focusChannel(index) {
     categoryItem.css("width", "calc(50% - 24px)");
     categoryItem.css("height", "56px");
     categoryItem.css("border", "2px solid white");
+    pointerIndex = index;
     $("html, body").animate({
         scrollTop: categoryItem.offset().top
     }, 0);

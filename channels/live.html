@@ -22,11 +22,11 @@
             <div id="time" style="color: white; font-size: 20px;"></div>
             <div id="date" style="color: white; margin-left: 20px; font-size: 16px;"></div>
         </div>
-        <div style="position: absolute; right: 0; top: 20px; display: flex; flex-flow: row nowrap; align-items: center;">
-            <div style="width: 50px; display: flex; justify-content: center;">
+        <div style="position: absolute; right: 0; top: 10px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <div id="search" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <img src="../img/search.png" width="23px" height="23px">
             </div>
-            <div onclick="showOrHideMenu()" style="width: 50px; display: flex; justify-content: center;">
+            <div id="menu" onclick="showOrHideMenu()" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <img src="../img/menu.png" width="20px" height="20px">
             </div>
         </div>
@@ -34,10 +34,10 @@
     <div style="width: calc(100% - 40px); height: calc(100% - 105px); margin-top: 20px; display: flex; flex-flow: row nowrap; padding-left: 20px; padding-right: 20px;">
         <div style="width: calc(50% - 8px); margin-right: 8px; height: 100%; background-color: rgba(0, 0, 0, .5);">
             <div style="width: 100%; position: relative; height: 50px; display: flex; justify-content: center; margin-top: 5px;">
-                <div style="width: 30px; height: 50px; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; left: 0;">
+                <div id="navigator-left" style="width: 30px; height: 50px; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; left: 0;">
                     <img src="../img/left.png" width="10px" height="15px">
                 </div>
-                <div style="width: 30px; height: 50px; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; right: 0;">
+                <div id="navigator-right" style="width: 30px; height: 50px; display: flex; justify-content: center; align-items: center; position: absolute; top: 0; right: 0;">
                     <img src="../img/right-2.png" width="10px" height="15px">
                 </div>
                 <div id="category-name" style="color: white; font-family: 'PalanquinBold';"></div>
@@ -59,7 +59,7 @@
     </div>
     <div style="position: fixed; left: 0; bottom: 0; margin-left: 20px; margin-right: 20px; width: calc(100% - 40px); height: 30px; background-color: rgba(0, 0, 0, .5);"></div>
 </div>
-<div id="menu-container" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .8);">
+<div id="channel-menu-container" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .8);">
     <div style="width: 400px; border-radius: 10px; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); background-color: white; display: flex; flex-flow: column nowrap;">
         <div style="width: 100%; display: flex; justify-content: center; margin-top: 5px;">
             <div style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">
@@ -67,20 +67,85 @@
             </div>
         </div>
         <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
-        <div onclick="playWithVLC()" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px;">
+        <div id="channel-menu-item-1" onclick="playWithVLC()" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px;">
             <div style="color: black;">Mainkan dengan VLC Player</div>
         </div>
         <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
-        <div onclick="playWithMX();" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px;">
+        <div id="channel-menu-item-2" onclick="playWithMX();" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px;">
             <div style="color: black;">Mainkan dengan Mx Player</div>
         </div>
         <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
-        <div onclick="addToFavorite()" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px;">
+        <div id="channel-menu-item-3" onclick="addToFavorite()" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px;">
             <div style="color: black;">Tambahkan ke Favorit</div>
         </div>
         <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
-        <div onclick="startRecording()" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px">
+        <div id="channel-menu-item-4" onclick="startRecording()" class="menu-item" style="width: calc(100% - 10px); padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px">
             <div style="color: black;">Mulai Rekam</div>
+        </div>
+    </div>
+</div>
+<div id="menu-container" style="z-index: 1000; width: 250px; box-shadow: 0 4px 32px rgba(0, 0, 0, .5); border-radius: 10px; position: fixed; right: 20px; top: 50px; background-color: white; display: none; flex-flow: column nowrap;">
+    <div onclick="window.location.href='landing.html'" class="menu-item top-menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+        <img src="../img/home-2.png" width="25px" height="25px">
+        <div id="text1" style="color: black; margin-left: 10px;">Beranda</div>
+    </div>
+    <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+    <div onclick="refreshChannels()" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+        <img src="../img/tv.png" width="25px" height="25px">
+        <div id="text4" style="color: black; margin-left: 10px;">Perbarui Daftar Channel</div>
+    </div>
+    <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+    <div onclick="Android.restartApp()" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+        <img src="../img/book-2.png" width="25px" height="25px">
+        <div id="text5" style="color: black; margin-left: 10px;">Perbarui Panel Bantuan</div>
+    </div>
+    <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+    <div onclick="sortCategories()" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+        <img src="../img/sort.png" width="25px" height="25px">
+        <div id="text6" style="color: black; margin-left: 10px;">Urutkan</div>
+    </div>
+    <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+    <div onclick="window.location.href='settings.html'" class="menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+        <img src="../img/settings-3.png" width="25px" height="25px">
+        <div id="text7" style="color: black; margin-left: 10px;">Pengaturan</div>
+    </div>
+    <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+    <div class="menu-item bottom-menu-item" style="padding-left: 10px; padding-top: 8px; padding-bottom: 8px; width: calc(100% - 10px); display: flex; flex-flow: row nowrap;">
+        <img src="../img/logout-3.png" width="25px" height="25px">
+        <div id="text8" style="color: black; margin-left: 10px;">Keluar</div>
+    </div>
+    <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1);"></div>
+</div>
+<div id="sort-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .8); display: none; justify-content: center; align-items: center;">
+    <div style="width: 400px; border-radius: 10px; background-color: white; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); display: flex; flex-flow: column nowrap;">
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <div style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">URUTKAN</div>
+        </div>
+        <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+        <div id="sort-option-1" onclick="selectSortType(0)" style="width: calc(100% - 10px); padding-left: 10px; padding-top: 5px; padding-bottom: 5px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img id="sort-type-img-1" src="img/check-2.png" width="17px" height="17px" style="visibility: hidden;">
+            <div style="color: black; font-size: 17px; margin-left: 10px;">Standar</div>
+        </div>
+        <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+        <div id="sort-option-2" onclick="selectSortType(1)" style="width: calc(100% - 10px); padding-left: 10px; padding-top: 5px; padding-bottom: 5px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img id="sort-type-img-2" src="img/check-2.png" width="17px" height="17px" style="">
+            <div style="color: black; font-size: 17px; margin-left: 10px;">A-Z</div>
+        </div>
+        <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+        <div id="sort-option-3" onclick="selectSortType(2)" style="width: calc(100% - 10px); padding-left: 10px; padding-top: 5px; padding-bottom: 5px; display: flex; flex-flow: row nowrap; align-items: center;">
+            <img id="sort-type-img-3" src="img/check-2.png" width="17px" height="17px" style="visibility: hidden;">
+            <div style="color: black; font-size: 17px; margin-left: 10px;">Z-A</div>
+        </div>
+        <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, .1); margin-top: 5px;"></div>
+        <div style="width: 100%; position: relative; height: 40px; margin-bottom: 10px; margin-top: 10px; display: flex; flex-flow: row nowrap; justify-content: center;">
+            <div id="save" onclick="applySorting()" style="margin-right: 5px; width: 150px; height: 40px; overflow: hidden;" class="button7">
+                <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                SIMPAN
+            </div>
+            <div id="close" onclick="closeSortDialog()" style="margin-left: 5px; width: 150px; height: 40px;" class="button8">
+                <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
+                TUTUP
+            </div>
         </div>
     </div>
 </div>

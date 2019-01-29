@@ -358,6 +358,7 @@ function focusChannel(index) {
     $("html, body").animate({
         scrollTop: categoryItem.offset().top
     }, 0);
+    pointerIndex = index;
 }
 
 function editTextFinished(code, value) {

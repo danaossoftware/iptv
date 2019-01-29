@@ -1,7 +1,8 @@
 var m3uData;
 var selectedCategoryName;
 var fullScreen = false;
-var menuShowed = false;
+var channelMenuShown = false;
+var menuShown = false;
 var pressEvent;
 var currentChannel = 0;
 var currentChannelMenu = 0;
@@ -10,6 +11,9 @@ var recordingData = [];
 var pointerIndex = 0;
 var channels = [];
 var currentPointerInMenu = false;
+var sortingMenuShown = false;
+var sortingPointerIndex = 0;
+var channelMenuPointerIndex = 0;
 
 $(document).ready(function () {
     $("#time").html(getTime());
@@ -147,8 +151,8 @@ function setChannelClickListener() {
     $(".channel-menu").unbind().click(function() {
         var channelNum = $(this).parent().parent().children().index($(this).parent());
         currentChannelMenu = channelNum;
-        $("#menu-container").css("display", "flex").hide().fadeIn(300);
-        menuShowed = true;
+        $("#channel-menu-container").css("display", "flex").hide().fadeIn(300);
+        channelMenuShown = true;
     });
 }
 
@@ -214,9 +218,9 @@ function backKey() {
         $("#live-video-container").css("margin-left", "8px");
         $("#live-video-container").css("background", "rgba(0, 0, 0, .5)");
         fullScreen = false;
-    } else if (menuShowed) {
-        $("#menu-container").fadeOut(300);
-        menuShowed = false;
+    } else if (channelMenuShown) {
+        $("#channel-menu-container").fadeOut(300);
+        channelMenuShown = false;
     } else {
         window.history.back();
     }
@@ -270,6 +274,17 @@ function setItemsBorder() {
     allChannelMenu.css("border", "0");
     allChannelMenu.css("width", "50px");
     allChannelMenu.css("height", "100%");
+    $("#navigator-right").css("border", "0");
+    $("#navigator-right").css("width", "30px");
+    $("#navigator-right").css("height", "50px");
+    $("#navigator-left").css("border", "0");
+    $("#navigator-left").css("width", "30px");
+    $("#navigator-left").css("height", "50px");
+    $("#search").css("width", "50px").css("height", "50px").css("border", "0");
+    $("#menu").css("width", "50px").css("height", "50px").css("border", "0");
+    $("#live-video-container").css("width", "calc(50% - 8px)");
+    $("#live-video-container").css("height", "100%");
+    $("#live-video-container").css("border", "0");
     if (pointerIndex >= 0 && pointerIndex < channels.length) {
         if (currentPointerInMenu) {
             var channelMenuItem = $("#channels").find(".channel-menu:eq(" + pointerIndex + ")");
@@ -280,45 +295,295 @@ function setItemsBorder() {
             var channelItem = $("#channels").find(".channel:eq(" + pointerIndex + ")");
             channelItem.css("background-color", "#e67e22");
         }
+    } else if (pointerIndex == -1) {
+        $("#navigator-right").css("border", "2px solid white");
+        $("#navigator-right").css("width", "26px");
+        $("#navigator-right").css("height", "46px");
+    } else if (pointerIndex == -2) {
+        $("#navigator-left").css("border", "2px solid white");
+        $("#navigator-left").css("width", "26px");
+        $("#navigator-left").css("height", "46px");
+    } else if (pointerIndex == -3) {
+        $("#search").css("width", "44px").css("height", "44px").css("border", "3px solid white");
+    } else if (pointerIndex == -4) {
+        $("#menu").css("width", "44px").css("height", "44px").css("border", "3px solid white");
+    } else if (pointerIndex == channels.length) {
+        $("#live-video-container").css("width", "calc(50% - 14px)");
+        $("#live-video-container").css("height", "calc(100% - 6px)");
+        $("#live-video-container").css("border", "3px solid white");
+    }
+}
+
+function setSortingItemsBorder() {
+    if (sortingPointerIndex == 0) {
+        $("#sort-option-1").css("background-color", "#eeeeee");
+        $("#sort-option-2").css("background-color", "");
+        $("#sort-option-3").css("background-color", "");
+        $("#save").css("width", "150px");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "150px");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (sortingPointerIndex == 1) {
+        $("#sort-option-1").css("background-color", "");
+        $("#sort-option-2").css("background-color", "#eeeeee");
+        $("#sort-option-3").css("background-color", "");
+        $("#save").css("width", "150px");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "150px");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (sortingPointerIndex == 2) {
+        $("#sort-option-1").css("background-color", "");
+        $("#sort-option-2").css("background-color", "");
+        $("#sort-option-3").css("background-color", "#eeeeee");
+        $("#save").css("width", "150px");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "150px");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (sortingPointerIndex == 3) {
+        $("#sort-option-1").css("background-color", "");
+        $("#sort-option-2").css("background-color", "");
+        $("#sort-option-3").css("background-color", "");
+        $("#save").css("width", "146px");
+        $("#save").css("height", "36px");
+        $("#save").css("border", "2px solid #3498db");
+        $("#close").css("width", "150px");
+        $("#close").css("height", "40px");
+        $("#close").css("border", "0");
+    } else if (sortingPointerIndex == 4) {
+        $("#sort-option-1").css("background-color", "");
+        $("#sort-option-2").css("background-color", "");
+        $("#sort-option-3").css("background-color", "");
+        $("#save").css("width", "150px");
+        $("#save").css("height", "40px");
+        $("#save").css("border", "0");
+        $("#close").css("width", "146px");
+        $("#close").css("height", "36px");
+        $("#close").css("border", "2px solid #3498db");
+    }
+}
+
+function setChannelMenuItemsBorder() {
+    $("#channel-menu-item-1").css("background-color", "");
+    $("#channel-menu-item-2").css("background-color", "");
+    $("#channel-menu-item-3").css("background-color", "");
+    $("#channel-menu-item-4").css("background-color", "");
+    if (channelMenuPointerIndex == 0) {
+        $("#channel-menu-item-1").css("background-color", "#eeeeee");
+    } else if (channelMenuPointerIndex == 1) {
+        $("#channel-menu-item-2").css("background-color", "#eeeeee");
+    } else if (channelMenuPointerIndex == 2) {
+        $("#channel-menu-item-3").css("background-color", "#eeeeee");
+    } else if (channelMenuPointerIndex == 3) {
+        $("#channel-menu-item-4").css("background-color", "#eeeeee");
     }
 }
 
 function downKey() {
-    if (pointerIndex < channels.length) {
-        pointerIndex++;
+    if (sortingMenuShown) {
+        if (sortingPointerIndex < 4) {
+            sortingPointerIndex++;
+        }
+        setSortingItemsBorder();
+    } else if (channelMenuShown) {
+        if (channelMenuPointerIndex < 3) {
+            channelMenuPointerIndex++;
+        }
+        setChannelMenuItemsBorder();
+    } else {
+        if (pointerIndex < channels.length) {
+            pointerIndex++;
+        }
+        setItemsBorder();
     }
-    setItemsBorder();
 }
 
 function upKey() {
-    if (pointerIndex > -4) {
-        pointerIndex--;
+    if (sortingMenuShown) {
+        if (sortingPointerIndex > 0) {
+            sortingPointerIndex--;
+        }
+        setSortingItemsBorder();
+    } else if (channelMenuShown) {
+        if (channelMenuPointerIndex > 0) {
+            channelMenuPointerIndex--;
+        }
+        setChannelMenuItemsBorder();
+    } else {
+        if (pointerIndex > -4) {
+            pointerIndex--;
+        }
+        setItemsBorder();
     }
-    setItemsBorder();
 }
 
 function rightKey() {
-    if (pointerIndex >= 0 && pointerIndex < channels.length) {
-        if (!currentPointerInMenu) {
-            currentPointerInMenu = true;
-        } else {
-            currentPointerInMenu = false;
-            pointerIndex = channels.length;
+    if (sortingMenuShown) {
+        if (sortingPointerIndex == 2) {
+            sortingPointerIndex = 3;
         }
-    } else if (pointerIndex == -3) {
-        pointerIndex = -4;
+        setSortingItemsBorder();
+    } else {
+        if (pointerIndex >= 0 && pointerIndex < channels.length) {
+            if (!currentPointerInMenu) {
+                currentPointerInMenu = true;
+            } else {
+                currentPointerInMenu = false;
+                pointerIndex = channels.length;
+            }
+        } else if (pointerIndex == -3) {
+            pointerIndex = -4;
+        }
+        setItemsBorder();
     }
-    setItemsBorder();
 }
 
 function leftKey() {
-    if (pointerIndex == channels.length) {
-        pointerIndex = 0;
-        currentPointerInMenu = true;
-    } else if (pointerIndex >= 0 && pointerIndex < channels.length) {
-        currentPointerInMenu = false;
-    } else if (pointerIndex == -4) {
-        pointerIndex = -3;
+    if (sortingMenuShown) {
+        if (sortingPointerIndex == 3) {
+            sortingPointerIndex = 2;
+        }
+        setSortingItemsBorder();
+    } else {
+        if (pointerIndex == channels.length) {
+            pointerIndex = 0;
+            currentPointerInMenu = true;
+        } else if (pointerIndex >= 0 && pointerIndex < channels.length) {
+            currentPointerInMenu = false;
+        } else if (pointerIndex == -4) {
+            pointerIndex = -3;
+        }
+        setItemsBorder();
     }
-    setItemsBorder();
+}
+
+function enterKey() {
+    if (sortingMenuShown) {
+        if (sortingPointerIndex == 0) {
+            selectSortType(0);
+        } else if (sortingPointerIndex == 1) {
+            selectSortType(1);
+        } else if (sortingPointerIndex == 2) {
+            selectSortType(2);
+        } else if (sortingPointerIndex == 3) {
+            applySorting();
+        } else if (sortingPointerIndex == 4) {
+            closeSortDialog();
+        }
+    } else {
+        if (pointerIndex == channels.length) {
+            switchToFullScreen();
+        } else if (pointerIndex >= 0 && pointerIndex < channels.length) {
+            if (currentPointerInMenu) {
+                currentChannelMenu = pointerIndex;
+                $("#channel-menu-container").css("display", "flex").hide().fadeIn(300);
+                $("#channel-menu-item-1").css("background-color", "#eeeeee");
+                channelMenuShown = true;
+            } else {
+                if (pointerIndex != currentChannel) {
+                    var channelURL = channels[pointerIndex]["url"];
+                    playVideo(channelURL);
+                    currentChannel = pointerIndex;
+                }
+            }
+        } else if (pointerIndex == -3) {
+            var title = "Cari channel";
+            if (getLanguage() == 1) {
+                title = "Find channel";
+            }
+            Native.showEditTextDialog(1, getLanguage(), title, "");
+        } else if (pointerIndex == -4) {
+            showOrHideMenu();
+        }
+    }
+}
+
+function focusChannel(index) {
+    var allChannels = $("#channels").find(".channel");
+    allChannels.css("background-color", "");
+    var allChannelMenu = $("#channels").find(".channel-menu");
+    allChannelMenu.css("border", "0");
+    allChannelMenu.css("width", "50px");
+    allChannelMenu.css("height", "100%");
+    $("#navigator-right").css("border", "0");
+    $("#navigator-right").css("width", "30px");
+    $("#navigator-right").css("height", "50px");
+    $("#navigator-left").css("border", "0");
+    $("#navigator-left").css("width", "30px");
+    $("#navigator-left").css("height", "50px");
+    $("#search").css("width", "50px").css("height", "50px").css("border", "0");
+    $("#menu").css("width", "50px").css("height", "50px").css("border", "0");
+    $("#live-video-container").css("width", "calc(50% - 8px)");
+    $("#live-video-container").css("height", "100%");
+    $("#live-video-container").css("border", "0");
+    var channelItem = $("#channels").find(".channel:eq("+index+")");
+    channelItem.css("background-color", "#e67e22");
+    pointerIndex = index;
+    currentPointerInMenu = false;
+}
+
+function editTextFinished(code, value) {
+    if (code == 1) {
+        value = value.toLowerCase();
+        for (var i=0; i<channels.length; i++) {
+            var channel = channels[i];
+            if (channel.toLowerCase() == channel) {
+                focusChannel(i);
+                break;
+            }
+        }
+    }
+}
+
+function showOrHideMenu() {
+    if (!menuShown) {
+        $("#menu-container").css("display", "flex");
+        menuShown = true;
+    } else {
+        $("#menu-container").css("display", "none");
+        menuShown = false;
+    }
+}
+
+function refreshChannels() {
+    $("#menu-container").css("display", "none");
+    loadChannels();
+}
+
+function sortCategories() {
+    $("#menu-container").css("display", "none");
+    $("#sort-container").css("display", "flex");
+    if (Native.isAndroidTV() == 1) {
+        $("#sort-option-1").css("background-color", "#eeeeee");
+    }
+    sortingMenuShown = true;
+    sortingPointerIndex = 0;
+}
+
+function selectSortType(type) {
+    selectedSortType = type;
+    $("#sort-type-img-1").css("visibility", "hidden");
+    $("#sort-type-img-2").css("visibility", "hidden");
+    $("#sort-type-img-3").css("visibility", "hidden");
+    if (type == 0) {
+        $("#sort-type-img-1").css("visibility", "visible");
+    } else if (type == 1) {
+        $("#sort-type-img-2").css("visibility", "visible");
+    } else if (type == 2) {
+        $("#sort-type-img-3").css("visibility", "visible");
+    }
+}
+
+function applySorting() {
+    $("#sort-container").css("display", "none");
+    loadCategories();
+}
+
+function closeSortDialog() {
+    $("#sort-container").css("display", "none");
 }
