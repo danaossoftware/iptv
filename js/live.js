@@ -139,6 +139,7 @@ function loadChannels() {
                 var firstChannel = $("#channels").find(".channel:eq(0)");
                 firstChannel.css("background-color", "#e67e22");
             }
+            pointerIndex = 0;
         }
     });
 }
@@ -678,6 +679,7 @@ function toPreviousCategory() {
         dataType: 'text',
         cache: false,
         success: function(a) {
+            Native.show("Channels data length: "+a.length);
             if (a < 0) {
                 // Error
             } else {
@@ -701,6 +703,7 @@ function toPreviousCategory() {
                     }
                 } catch (e) {
                 }
+                Native.show("Categories length: "+categories.length);
                 var selectedSortType = Native.readInt("sort_type", 1);
                 if (selectedSortType == 1) {
                     categories.sort(function(a, b) {
