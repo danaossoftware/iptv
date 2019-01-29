@@ -648,6 +648,11 @@ function showOrHideMenu() {
         menuShown = true;
         menuPointerIndex = 0;
         $("#menu-option-1").css("background-color", "#eeeeee");
+        $("#menu-option-2").css("background-color", "");
+        $("#menu-option-3").css("background-color", "");
+        $("#menu-option-4").css("background-color", "");
+        $("#menu-option-5").css("background-color", "");
+        $("#menu-option-6").css("background-color", "");
     } else {
         $("#menu-container").css("display", "none");
         menuShown = false;
