@@ -73,3 +73,7 @@ function login() {
         }
     });
 }
+
+function backKey() {
+    Native.finishApp();
+}

@@ -84,3 +84,7 @@ function validatePhoneNumber(phone) {
     }
     return isPhone;
 }
+
+function backKey() {
+    Native.finishApp();
+}
