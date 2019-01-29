@@ -109,6 +109,30 @@ function loadChannels() {
                     console.log(e);
                 }
             }
+            var selectedSortType = Native.readInt("sort_type", 1);
+            if (selectedSortType == 1) {
+                channels.sort(function(a, b) {
+                    a = a.toLowerCase();
+                    b = b.toLowerCase();
+                    if (a < b) {
+                        return -1;
+                    } else if (a > b) {
+                        return 1;
+                    }
+                    return 0;
+                });
+            } else if (selectedSortType == 2) {
+                channels.sort(function(a, b) {
+                    a = a.toLowerCase();
+                    b = b.toLowerCase();
+                    if (a < b) {
+                        return 1;
+                    } else if (a > b) {
+                        return -1;
+                    }
+                    return 0;
+                });
+            }
             for (var i = 0; i < channels.length; i++) {
                 var channelName = channels[i]["name"];
                 var logoURL = channels[i]["logo"];
@@ -145,6 +169,7 @@ function loadChannels() {
             sortingMenuShown = false;
             menuShown = false;
             channelMenuShown = false;
+            resetView();
         }
     });
 }
@@ -279,7 +304,7 @@ function startRecording() {
     }, 5000);
 }
 
-function setItemsBorder() {
+function resetView() {
     var allChannels = $("#channels").find(".channel");
     allChannels.css("background-color", "");
     var allChannelMenu = $("#channels").find(".channel-menu");
@@ -297,6 +322,10 @@ function setItemsBorder() {
     $("#live-video-container").css("width", "calc(50% - 8px)");
     $("#live-video-container").css("height", "100%");
     $("#live-video-container").css("border", "0");
+}
+
+function setItemsBorder() {
+    resetView();
     if (pointerIndex >= 0 && pointerIndex < channels.length) {
         if (currentPointerInMenu) {
             var channelMenuItem = $("#channels").find(".channel-menu:eq(" + pointerIndex + ")");
@@ -468,8 +497,8 @@ function upKey() {
 
 function rightKey() {
     if (sortingMenuShown) {
-        if (sortingPointerIndex == 2) {
-            sortingPointerIndex = 3;
+        if (sortingPointerIndex == 3) {
+            sortingPointerIndex = 4;
         }
         setSortingItemsBorder();
     } else {
@@ -649,7 +678,8 @@ function selectSortType(type) {
 
 function applySorting() {
     $("#sort-container").css("display", "none");
-    loadCategories();
+    Native.writeInt("sort_type", selectedSortType);
+    loadChannels();
 }
 
 function closeSortDialog() {
