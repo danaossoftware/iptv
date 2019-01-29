@@ -19,6 +19,9 @@ var categories = [];
 var menuPointerIndex = 0;
 
 $(document).ready(function () {
+    if (getLanguage() == 1) {
+        $("#text9").html("| Live");
+    }
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function() {
