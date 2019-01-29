@@ -141,6 +141,10 @@ function loadChannels() {
                 firstChannel.css("background-color", "#e67e22");
             }
             pointerIndex = 0;
+            currentPointerInMenu = false;
+            sortingMenuShown = false;
+            menuShown = false;
+            channelMenuShown = false;
         }
     });
 }
@@ -607,6 +611,7 @@ function showOrHideMenu() {
         $("#menu-container").css("display", "flex");
         menuShown = true;
         menuPointerIndex = 0;
+        $("#menu-option-1").css("background-color", "#eeeeee");
     } else {
         $("#menu-container").css("display", "none");
         menuShown = false;
