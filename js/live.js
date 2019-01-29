@@ -610,14 +610,17 @@ function toNextCategory() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            Native.show("Channels data length: "+a.length);
             if (a < 0) {
                 // Error
             } else {
                 m3uData = a;
                 var length = occurrences(m3uData, "#EXTINF");
+                var selectedSortType = Native.readInt("sort_type", 1);
                 // Get categories first
                 categories = [];
+                if (selectedSortType == 1) {
+                    categories.push("Semua");
+                }
                 try {
                     var a = 0;
                     for (var i = 0; i < length; i++) {
@@ -634,8 +637,6 @@ function toNextCategory() {
                     }
                 } catch (e) {
                 }
-                Native.show("Categories length: "+categories.length);
-                var selectedSortType = Native.readInt("sort_type", 1);
                 if (selectedSortType == 1) {
                     categories.sort(function(a, b) {
                         a = a.toLowerCase();
@@ -658,6 +659,9 @@ function toNextCategory() {
                         }
                         return 0;
                     });
+                }
+                if (selectedSortType == 2) {
+                    categories.push("Semua");
                 }
                 if (currentCategory < categories.length-1) {
                     currentCategory++;
@@ -679,14 +683,17 @@ function toPreviousCategory() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            Native.show("Channels data length: "+a.length);
             if (a < 0) {
                 // Error
             } else {
                 m3uData = a;
                 var length = occurrences(m3uData, "#EXTINF");
+                var selectedSortType = Native.readInt("sort_type", 1);
                 // Get categories first
                 categories = [];
+                if (selectedSortType == 1) {
+                    categories.push("Semua");
+                }
                 try {
                     var a = 0;
                     for (var i = 0; i < length; i++) {
@@ -703,8 +710,6 @@ function toPreviousCategory() {
                     }
                 } catch (e) {
                 }
-                Native.show("Categories length: "+categories.length);
-                var selectedSortType = Native.readInt("sort_type", 1);
                 if (selectedSortType == 1) {
                     categories.sort(function(a, b) {
                         a = a.toLowerCase();
@@ -727,6 +732,9 @@ function toPreviousCategory() {
                         }
                         return 0;
                     });
+                }
+                if (selectedSortType == 2) {
+                    categories.push("Semua");
                 }
                 if (currentCategory > 0) {
                     currentCategory--;
