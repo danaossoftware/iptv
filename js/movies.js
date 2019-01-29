@@ -565,6 +565,9 @@ function enterKey() {
         } else if (channelMenuPointerIndex == 3) {
             startRecording();
         }
+        $("#channel-menu-container").hide();
+        channelMenuShown = false;
+        channelMenuPointerIndex = 0;
     } else if (menuShown) {
         if (menuPointerIndex == 0) {
             window.location.href = "../landing.html";
