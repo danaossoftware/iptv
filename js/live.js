@@ -110,29 +110,33 @@ function loadChannels() {
                 }
             }
             var selectedSortType = Native.readInt("sort_type", 1);
-            /*if (selectedSortType == 1) {
+            if (selectedSortType == 1) {
                 channels.sort(function(a, b) {
-                    a = a.toLowerCase();
-                    b = b.toLowerCase();
-                    if (a < b) {
+                    var channelNameA = a["name"];
+                    var channelNameB = b["name"];
+                    channelNameA = channelNameA.toLowerCase();
+                    channelNameB = channelNameB.toLowerCase();
+                    if (channelNameA < channelNameB) {
                         return -1;
-                    } else if (a > b) {
+                    } else if (channelNameA > channelNameB) {
                         return 1;
                     }
                     return 0;
                 });
             } else if (selectedSortType == 2) {
                 channels.sort(function(a, b) {
-                    a = a.toLowerCase();
-                    b = b.toLowerCase();
-                    if (a < b) {
+                    var channelNameA = a["name"];
+                    var channelNameB = b["name"];
+                    channelNameA = channelNameA.toLowerCase();
+                    channelNameB = channelNameB.toLowerCase();
+                    if (channelNameA < channelNameB) {
                         return 1;
-                    } else if (a > b) {
+                    } else if (channelNameA > channelNameB) {
                         return -1;
                     }
                     return 0;
                 });
-            }*/
+            }
             for (var i = 0; i < channels.length; i++) {
                 var channelName = channels[i]["name"];
                 var logoURL = channels[i]["logo"];
