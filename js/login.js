@@ -78,3 +78,7 @@ function login() {
 function backKey() {
     Native.finishApp();
 }
+
+function closeErrorDialog() {
+    $("#error-container").fadeOut(300);
+}
