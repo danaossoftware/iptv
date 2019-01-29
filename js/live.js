@@ -296,17 +296,17 @@ function setItemsBorder() {
             channelItem.css("background-color", "#e67e22");
         }
     } else if (pointerIndex == -1) {
-        $("#navigator-right").css("border", "2px solid white");
-        $("#navigator-right").css("width", "26px");
-        $("#navigator-right").css("height", "46px");
+        $("#navigator-right").css("border", "1px solid white");
+        $("#navigator-right").css("width", "28px");
+        $("#navigator-right").css("height", "48px");
     } else if (pointerIndex == -2) {
-        $("#navigator-left").css("border", "2px solid white");
-        $("#navigator-left").css("width", "26px");
-        $("#navigator-left").css("height", "46px");
+        $("#navigator-left").css("border", "1px solid white");
+        $("#navigator-left").css("width", "28px");
+        $("#navigator-left").css("height", "48px");
     } else if (pointerIndex == -3) {
-        $("#search").css("width", "44px").css("height", "44px").css("border", "3px solid white");
+        $("#search").css("width", "46px").css("height", "46px").css("border", "2px solid white");
     } else if (pointerIndex == -4) {
-        $("#menu").css("width", "44px").css("height", "44px").css("border", "3px solid white");
+        $("#menu").css("width", "46px").css("height", "46px").css("border", "2px solid white");
     } else if (pointerIndex == channels.length) {
         $("#live-video-container").css("width", "calc(50% - 14px)");
         $("#live-video-container").css("height", "calc(100% - 6px)");
@@ -438,6 +438,8 @@ function rightKey() {
             }
         } else if (pointerIndex == -3) {
             pointerIndex = -4;
+        } else if (pointerIndex == -2) {
+            pointerIndex = -1;
         }
         setItemsBorder();
     }
@@ -457,6 +459,8 @@ function leftKey() {
             currentPointerInMenu = false;
         } else if (pointerIndex == -4) {
             pointerIndex = -3;
+        } else if (pointerIndex == -1) {
+            pointerIndex = -2;
         }
         setItemsBorder();
     }

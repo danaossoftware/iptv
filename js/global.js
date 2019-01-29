@@ -1,6 +1,11 @@
 const SERVER_URL = "http://iptvjoss.com/iptv/php/";
 
 $(document).ready(function() {
+    var backFunctionExists = 0;
+    if (typeof backKey !== "undefined") {
+        backFunctionExists = 1;
+    }
+    Native.backFunctionExists(backFunctionExists);
     $.ajax({
         type: 'GET',
         url: 'http://iptvjoss.com/iptv/php/check-session.php',
@@ -110,4 +115,8 @@ function getLanguage() {
     } catch (e) {
         return 0;
     }
+}
+
+function isBackFunctionExists() {
+    return (typeof backKey !== "undefined");
 }
