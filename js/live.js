@@ -44,6 +44,7 @@ $(document).ready(function () {
 });
 
 function loadChannels() {
+    $("#channels").find("*").remove();
     $.ajax({
         type: 'GET',
         url: SERVER_URL + 'get-channels.php',
