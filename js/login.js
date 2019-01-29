@@ -44,16 +44,16 @@ function login() {
                     $("#error").css("display", "block");
                 } else if (response == -2) {
                     // User not confirmed
-                    $("#alert-text").html("Maaf, akun Anda belum disetujui. Silahkan cek beberapa saat lagi sampai admin menyetujui akun Anda.");
-                    $("#alert-container").css("display", "flex");
+                    $("#error").html("Maaf, akun Anda belum disetujui. Silahkan cek beberapa saat lagi sampai admin menyetujui akun Anda.");
+                    $("#error").css("display", "block");
                 } else if (response == -3) {
                     // Password not macthes
-                    $("#alert-text").html("Kata sandi tidak cocok");
-                    $("#alert-container").css("display", "flex");
+                    $("#error").html("Kata sandi tidak cocok");
+                    $("#error").css("display", "block");
                 } else if (response == -4) {
                     // Maximum connections reached
-                    $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
-                    $("#alert-container").css("display", "flex");
+                    $("#error").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
+                    $("#error").css("display", "block");
                     $.ajax({
                         type: 'GET',
                         url: SERVER_URL+'get-configuration.php',
@@ -64,8 +64,8 @@ function login() {
                             if (a < 0) {
                                 // Error
                             } else {
-                                $("#alert-text").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin di "+a["config1"].split("=")[1]+".");
-                                $("#alert-container").css("display", "flex");
+                                $("#error").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin di "+a["config1"].split("=")[1]+".");
+                                $("#error").css("display", "block");
                             }
                         }
                     });
