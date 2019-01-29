@@ -61,9 +61,9 @@ function logout() {
     });
 }
 
-function backKey() {
+/*function backKey() {
     Native.finishApp();
-}
+}*/
 
 function rightKey() {
     if (pointerIndex < 2) {
