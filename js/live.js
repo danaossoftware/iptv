@@ -7,6 +7,9 @@ var currentChannel = 0;
 var currentChannelMenu = 0;
 var recording = false;
 var recordingData = [];
+var pointerIndex = 0;
+var channels = [];
+var currentPointerInMenu = false;
 
 $(document).ready(function () {
     $("#time").html(getTime());
@@ -126,7 +129,7 @@ function loadChannels() {
             $("#loading-container").hide();
             if (Native.isAndroidTV() == 1) {
                 var firstChannel = $("#channels").find(".channel:eq(0)");
-                firstChannel.css("background-color", "red");
+                firstChannel.css("background-color", "#e67e22");
             }
         }
     });
@@ -258,4 +261,64 @@ function startRecording() {
         recording = false;
         Native.writeFile("/sdcard/a.mp4", allRecordingData);
     }, 5000);
+}
+
+function setItemsBorder() {
+    var allChannels = $("#channels").find(".channel");
+    allChannels.css("background-color", "");
+    var allChannelMenu = $("#channels").find(".channel-menu");
+    allChannelMenu.css("border", "0");
+    allChannelMenu.css("width", "50px");
+    allChannelMenu.css("height", "100%");
+    if (pointerIndex >= 0 && pointerIndex < channels.length) {
+        if (currentPointerInMenu) {
+            var channelMenuItem = $("#channels").find(".channel-menu:eq(" + pointerIndex + ")");
+            channelMenuItem.css("width", "46px");
+            channelMenuItem.css("height", "calc(100% - 4px)");
+            channelMenuItem.css("border", "2px solid white");
+        } else {
+            var channelItem = $("#channels").find(".channel:eq(" + pointerIndex + ")");
+            channelItem.css("background-color", "#e67e22");
+        }
+    }
+}
+
+function downKey() {
+    if (pointerIndex < channels.length) {
+        pointerIndex++;
+    }
+    setItemsBorder();
+}
+
+function upKey() {
+    if (pointerIndex > -4) {
+        pointerIndex--;
+    }
+    setItemsBorder();
+}
+
+function rightKey() {
+    if (pointerIndex >= 0 && pointerIndex < channels.length) {
+        if (!currentPointerInMenu) {
+            currentPointerInMenu = true;
+        } else {
+            currentPointerInMenu = false;
+            pointerIndex = channels.length;
+        }
+    } else if (pointerIndex == -3) {
+        pointerIndex = -4;
+    }
+    setItemsBorder();
+}
+
+function leftKey() {
+    if (pointerIndex == channels.length) {
+        pointerIndex = 0;
+        currentPointerInMenu = true;
+    } else if (pointerIndex >= 0 && pointerIndex < channels.length) {
+        currentPointerInMenu = false;
+    } else if (pointerIndex == -4) {
+        pointerIndex = -3;
+    }
+    setItemsBorder();
 }
