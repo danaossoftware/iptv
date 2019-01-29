@@ -15,6 +15,7 @@ var currentPointerInMenu = false;
 var sortingMenuShown = false;
 var sortingPointerIndex = 0;
 var channelMenuPointerIndex = 0;
+var categories = [];
 
 $(document).ready(function () {
     $("#time").html(getTime());
@@ -615,7 +616,7 @@ function toNextCategory() {
                 m3uData = a;
                 var length = occurrences(m3uData, "#EXTINF");
                 // Get categories first
-                var categories = [];
+                categories = [];
                 try {
                     var a = 0;
                     for (var i = 0; i < length; i++) {
@@ -733,4 +734,15 @@ function toPreviousCategory() {
             }
         }
     });
+}
+
+function isCategoryAlreadyAdded(name) {
+    // Check if categori exists
+    for (var i = 0; i < categories.length; i++) {
+        var category = categories[i];
+        if (category == name) {
+            return true;
+        }
+    }
+    return false;
 }
