@@ -16,6 +16,7 @@ var sortingMenuShown = false;
 var sortingPointerIndex = 0;
 var channelMenuPointerIndex = 0;
 var categories = [];
+var menuPointerIndex = 0;
 
 $(document).ready(function () {
     $("#time").html(getTime());
@@ -32,7 +33,7 @@ $(document).ready(function () {
         cache: false,
         success: function(a) {
             if (a == -1) {
-                window.location.href = 'login.html';
+                window.location.href = '../login.html';
             }
         }
     });
@@ -226,6 +227,8 @@ function backKey() {
     } else if (channelMenuShown) {
         $("#channel-menu-container").fadeOut(300);
         channelMenuShown = false;
+    } else if (menuShown) {
+        showOrHideMenu();
     } else {
         window.history.back();
     }
@@ -389,12 +392,39 @@ function setChannelMenuItemsBorder() {
     }
 }
 
+function setMenuItemsBorder() {
+    $("#menu-option-1").css("background-color", "");
+    $("#menu-option-2").css("background-color", "");
+    $("#menu-option-3").css("background-color", "");
+    $("#menu-option-4").css("background-color", "");
+    $("#menu-option-5").css("background-color", "");
+    $("#menu-option-6").css("background-color", "");
+    if (menuPointerIndex == 0) {
+        $("#menu-option-1").css("background-color", "#eeeeee");
+    } else if (menuPointerIndex == 1) {
+        $("#menu-option-2").css("background-color", "#eeeeee");
+    } else if (menuPointerIndex == 2) {
+        $("#menu-option-3").css("background-color", "#eeeeee");
+    } else if (menuPointerIndex == 3) {
+        $("#menu-option-4").css("background-color", "#eeeeee");
+    } else if (menuPointerIndex == 4) {
+        $("#menu-option-5").css("background-color", "#eeeeee");
+    } else if (menuPointerIndex == 5) {
+        $("#menu-option-6").css("background-color", "#eeeeee");
+    }
+}
+
 function downKey() {
     if (sortingMenuShown) {
         if (sortingPointerIndex < 4) {
             sortingPointerIndex++;
         }
         setSortingItemsBorder();
+    } else if (menuShown) {
+        if (menuPointerIndex < 5) {
+            menuPointerIndex++;
+        }
+        setMenuItemsBorder();
     } else if (channelMenuShown) {
         if (channelMenuPointerIndex < 3) {
             channelMenuPointerIndex++;
@@ -419,6 +449,11 @@ function upKey() {
             channelMenuPointerIndex--;
         }
         setChannelMenuItemsBorder();
+    } else if (menuShown) {
+        if (menuPointerIndex > 0) {
+            menuPointerIndex--;
+        }
+        setMenuItemsBorder();
     } else {
         if (pointerIndex > -4) {
             pointerIndex--;
@@ -483,6 +518,20 @@ function enterKey() {
             applySorting();
         } else if (sortingPointerIndex == 4) {
             closeSortDialog();
+        }
+    } else if (menuShown) {
+        if (menuPointerIndex == 0) {
+            window.location.href = "../landing.html";
+        } else if (menuPointerIndex == 1) {
+            refreshChannels();
+        } else if (menuPointerIndex == 2) {
+            Native.restartApp();
+        } else if (menuPointerIndex == 3) {
+            sortCategories();
+        } else if (menuPointerIndex == 4) {
+            window.location.href = "../settings.html";
+        } else if (menuPointerIndex == 5) {
+            logout();
         }
     } else {
         if (pointerIndex == channels.length) {
@@ -557,6 +606,7 @@ function showOrHideMenu() {
     if (!menuShown) {
         $("#menu-container").css("display", "flex");
         menuShown = true;
+        menuPointerIndex = 0;
     } else {
         $("#menu-container").css("display", "none");
         menuShown = false;
@@ -756,4 +806,24 @@ function isCategoryAlreadyAdded(name) {
         }
     }
     return false;
+}
+
+function logout() {
+    $("#loading-container").css("display", "flex").hide().fadeIn(300);
+    $("#time").html(getTime());
+    $("#date").html(getDate());
+    setTimeout(function() {
+        $("#time").html(getTime());
+        $("#date").html(getDate());
+        setTimeout(this, 1000);
+    }, 1000);
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL+'logout.php',
+        dataType: 'text',
+        cache: false,
+        success: function(a) {
+            window.location.href = "../login.html";
+        }
+    });
 }
