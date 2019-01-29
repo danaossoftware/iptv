@@ -596,6 +596,8 @@ function closeSortDialog() {
 }
 
 function toNextCategory() {
+    var video = document.getElementById('live-video');
+    video.pause();
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-channels.php',
@@ -661,6 +663,8 @@ function toNextCategory() {
 }
 
 function toPreviousCategory() {
+    var video = document.getElementById('live-video');
+    video.pause();
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-channels.php',
