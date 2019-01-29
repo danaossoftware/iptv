@@ -110,7 +110,7 @@ function loadChannels() {
                 }
             }
             var selectedSortType = Native.readInt("sort_type", 1);
-            if (selectedSortType == 1) {
+            /*if (selectedSortType == 1) {
                 channels.sort(function(a, b) {
                     a = a.toLowerCase();
                     b = b.toLowerCase();
@@ -132,7 +132,7 @@ function loadChannels() {
                     }
                     return 0;
                 });
-            }
+            }*/
             for (var i = 0; i < channels.length; i++) {
                 var channelName = channels[i]["name"];
                 var logoURL = channels[i]["logo"];
