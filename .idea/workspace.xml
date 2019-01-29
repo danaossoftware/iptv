@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/live.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="133" column="43" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+            <state relative-caret-position="220">
+              <caret line="251" column="43" selection-start-line="251" selection-start-column="43" selection-end-line="251" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -220,7 +220,6 @@
       <find>menusown</find>
       <find>menu-container</find>
       <find>setMenuItemsBorder</find>
-      <find>backkey</find>
       <find>menuShown</find>
       <find>downkey</find>
       <find>u</find>
@@ -238,6 +237,7 @@
       <find>simpan</find>
       <find>native.read</find>
       <find>selectedSortType</find>
+      <find>backkey</find>
     </findStrings>
     <replaceStrings>
       <replace>http://iptvjoss.com/iptv/</replace>
@@ -527,12 +527,12 @@
       <workItem from="1548719942409" duration="1783000" />
       <workItem from="1548721754633" duration="1793000" />
       <workItem from="1548723594368" duration="1794000" />
-      <workItem from="1548725423512" duration="409000" />
+      <workItem from="1548725423512" duration="470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216397000" />
+    <option name="totallyTimeSpent" value="216458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1206,8 +1206,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/live.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="133" column="43" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+        <state relative-caret-position="220">
+          <caret line="251" column="43" selection-start-line="251" selection-start-column="43" selection-end-line="251" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />

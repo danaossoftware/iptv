@@ -249,6 +249,7 @@ function switchToFullScreen() {
 }
 
 function backKey() {
+    Native.show("Menu showed: "+menuShown);
     if (fullScreen) {
         $("#live-video-container").css("position", "");
         $("#live-video-container").css("left", "");
