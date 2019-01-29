@@ -4,6 +4,7 @@
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/js/adult.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/adult.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/live.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/live.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/movies.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -688,12 +689,12 @@
       <workItem from="1548719942409" duration="1783000" />
       <workItem from="1548721754633" duration="1793000" />
       <workItem from="1548723594368" duration="1794000" />
-      <workItem from="1548725423512" duration="1441000" />
+      <workItem from="1548725423512" duration="1442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217429000" />
+    <option name="totallyTimeSpent" value="217430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
