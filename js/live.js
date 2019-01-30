@@ -65,8 +65,11 @@ function loadChannels() {
                     var a = 0;
                     for (var i = 0; i < length; i++) {
                         a = m3uData.indexOf("#EXTINF", a) + 7;
-                        var b = m3uData.indexOf("tvg-name", a) + 10;
+                        var b = m3uData.indexOf("group-title", a) + 13;
                         var c = m3uData.indexOf("\"", b);
+                        var categoryName = m3uData.substr(b, c-b);
+                        b = m3uData.indexOf("tvg-name", a) + 10;
+                        c = m3uData.indexOf("\"", b);
                         var channelName = m3uData.substr(b, c - b);
                         b = m3uData.indexOf("tvg-logo", a) + 10;
                         c = m3uData.indexOf("\"", b);
@@ -76,7 +79,7 @@ function loadChannels() {
                         c = m3uData.indexOf("\n", b);
                         var channelURL = m3uData.substr(b, c - b);
                         channelURL = channelURL.trim();
-                        channels.push({'name': channelName, 'logo': logoURL, 'url': channelURL});
+                        channels.push({'name': channelName, 'logo': logoURL, 'url': channelURL, 'group': categoryName});
                     }
                 } catch (e) {
                     console.log(e);
@@ -105,7 +108,7 @@ function loadChannels() {
                             c = m3uData.indexOf("\n", b);
                             var channelURL = m3uData.substr(b, c - b);
                             channelURL = channelURL.trim();
-                            channels.push({'name': channelName, 'logo': logoURL, 'url': channelURL});
+                            channels.push({'name': channelName, 'logo': logoURL, 'url': channelURL, 'group': categoryName});
                         }
                     }
                 } catch (e) {
@@ -165,7 +168,80 @@ function loadChannels() {
                     "</div>");
             }
             setChannelClickListener();
-            playVideo(channels[0]["url"]);
+            var defaultPlayer = Native.readInt("default_player", 0);
+            if (defaultPlayer == 1) {
+                var playlistData = "#EXTM3U\n";
+                for (var i=0; i<channels.length; i++) {
+                    var channel = channels[i];
+                    playlistData += "#EXTINF:-1 tvg-id=\"";
+                    playlistData += channel["name"].trim();
+                    playlistData += "\"";
+                    playlistData += " tvg-name=\"";
+                    playlistData += channel["name"];
+                    playlistData += "\"";
+                    playlistData += " tvg-logo=\"";
+                    playlistData += channel["url"];
+                    playlistData += "\"";
+                    playlistData += " group-title=\"";
+                    playlistData += channel["group"];
+                    playlistData += "\"";
+                    playlistData += ",";
+                    playlistData += channel["name"];
+                    playlistData += "\n";
+                }
+                var fd = new FormData();
+                var playlistName = guid()+".m3u";
+                fd.append("data", playlistData);
+                fd.append("name", playlistName);
+                $.ajax({
+                    type: 'POST',
+                    url: SERVER_URL+'upload-playlist.php',
+                    data: fd,
+                    processData: false,
+                    contentType: false,
+                    dataType: 'text',
+                    success: function(a) {
+                        Native.playWithVLC("http://iptvjoss.com/iptv/playlists/"+playlistName);
+                    }
+                });
+            } else if (defaultPlayer == 2) {
+                var playlistData = "#EXTM3U\n";
+                for (var i=0; i<channels.length; i++) {
+                    var channel = channels[i];
+                    playlistData += "#EXTINF:-1 tvg-id=\"";
+                    playlistData += channel["name"].trim();
+                    playlistData += "\"";
+                    playlistData += " tvg-name=\"";
+                    playlistData += channel["name"];
+                    playlistData += "\"";
+                    playlistData += " tvg-logo=\"";
+                    playlistData += channel["url"];
+                    playlistData += "\"";
+                    playlistData += " group-title=\"";
+                    playlistData += channel["group"];
+                    playlistData += "\"";
+                    playlistData += ",";
+                    playlistData += channel["name"];
+                    playlistData += "\n";
+                }
+                var fd = new FormData();
+                var playlistName = guid()+".m3u";
+                fd.append("data", playlistData);
+                fd.append("name", playlistName);
+                $.ajax({
+                    type: 'POST',
+                    url: SERVER_URL+'upload-playlist.php',
+                    data: fd,
+                    processData: false,
+                    contentType: false,
+                    dataType: 'text',
+                    success: function(a) {
+                        Native.playWithMX("http://iptvjoss.com/iptv/playlists/"+playlistName);
+                    }
+                });
+            } else {
+                playVideo(channels[0]["url"]);
+            }
             $("#loading-container").hide();
             if (Native.isAndroidTV() == 1) {
                 var firstChannel = $("#channels").find(".channel:eq(0)");
