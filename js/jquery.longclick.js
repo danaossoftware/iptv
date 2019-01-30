@@ -1,6 +1,6 @@
 /*
  Longclick Event
- Copyright (c) 2010 Petr Vostrel (http://petr.vostrel.cz/)
+ Copyright (c) 2010 Petr Vostrel (https://petr.vostrel.cz/)
  Dual licensed under the MIT (MIT-LICENSE.txt)
  and GPL (GPL-LICENSE.txt) licenses.
 

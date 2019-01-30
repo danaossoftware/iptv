@@ -31,7 +31,7 @@ $(document).ready(function () {
     }, 1000);
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/check-session.php',
+        url: 'https://iptvjoss.com/iptv/php/check-session.php',
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -201,7 +201,7 @@ function loadChannels() {
                     contentType: false,
                     dataType: 'text',
                     success: function(a) {
-                        Native.playWithVLC("http://iptvjoss.com/iptv/playlists/"+playlistName);
+                        Native.playWithVLC("https://iptvjoss.com/iptv/playlists/"+playlistName);
                     }
                 });
             } else if (defaultPlayer == 2) {
@@ -236,7 +236,7 @@ function loadChannels() {
                     contentType: false,
                     dataType: 'text',
                     success: function(a) {
-                        Native.playWithMX("http://iptvjoss.com/iptv/playlists/"+playlistName);
+                        Native.playWithMX("https://iptvjoss.com/iptv/playlists/"+playlistName);
                     }
                 });
             } else {

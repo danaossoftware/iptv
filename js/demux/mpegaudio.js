@@ -52,7 +52,7 @@ const MpegAudio = {
   ],
 
   appendFrame: function (track, data, offset, pts, frameIndex) {
-    // Using http://www.datavoyage.com/mpgscript/mpeghdr.htm as a reference
+    // Using https://www.datavoyage.com/mpgscript/mpeghdr.htm as a reference
     if (offset + 24 > data.length) {
       return undefined;
     }
@@ -105,7 +105,7 @@ const MpegAudio = {
   isHeader: function (data, offset) {
     // Look for MPEG header | 1111 1111 | 111X XYZX | where X can be either 0 or 1 and Y or Z should be 1
     // Layer bits (position 14 and 15) in header should be always different from 0 (Layer I or Layer II or Layer III)
-    // More info http://www.mp3-tech.org/programmer/frame_header.html
+    // More info https://www.mp3-tech.org/programmer/frame_header.html
     if (offset + 1 < data.length && this.isHeaderPattern(data, offset)) {
       return true;
     }

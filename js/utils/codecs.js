@@ -1,4 +1,4 @@
-// from http://mp4ra.org/codecs.html
+// from https://mp4ra.org/codecs.html
 const sampleEntryCodesISO = {
   audio: {
     'a3ds': true,

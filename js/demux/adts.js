@@ -80,7 +80,7 @@ export function getAudioConfig (observer, data, offset, audioCodec) {
       adtsExtensionSampleingIndex = adtsSampleingIndex;
     }
   }
-  /* refer to http://wiki.multimedia.cx/index.php?title=MPEG-4_Audio#Audio_Specific_Config
+  /* refer to https://wiki.multimedia.cx/index.php?title=MPEG-4_Audio#Audio_Specific_Config
       ISO 14496-3 (AAC).pdf - Table 1.13 — Syntax of AudioSpecificConfig()
     Audio Profile / Audio Object Type
     0: Null

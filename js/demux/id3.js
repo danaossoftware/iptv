@@ -10,7 +10,7 @@ class ID3 {
    */
   static isHeader (data, offset) {
     /*
-    * http://id3.org/id3v2.3.0
+    * https://id3.org/id3v2.3.0
     * [0]     = 'I'
     * [1]     = 'D'
     * [2]     = '3'
@@ -284,8 +284,8 @@ class ID3 {
     }
   }
 
-  // http://stackoverflow.com/questions/8936984/uint8array-to-string-in-javascript/22373197
-  // http://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt
+  // https://stackoverflow.com/questions/8936984/uint8array-to-string-in-javascript/22373197
+  // https://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt
   /* utf.js - UTF-8 <=> UTF-16 convertion
    *
    * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>

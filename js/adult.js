@@ -30,7 +30,7 @@ $(document).ready(function () {
     }, 1000);
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/check-session.php',
+        url: 'https://iptvjoss.com/iptv/php/check-session.php',
         dataType: 'text',
         cache: false,
         success: function(a) {

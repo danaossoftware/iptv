@@ -240,7 +240,7 @@ class BufferController extends EventHandler {
 
   onSBUpdateError (event) {
     logger.error('sourceBuffer error:', event);
-    // according to http://www.w3.org/TR/media-source/#sourcebuffer-append-error
+    // according to https://www.w3.org/TR/media-source/#sourcebuffer-append-error
     // this error might not always be fatal (it is fatal if decode error is set, in that case
     // it will be followed by a mediaElement error ...)
     this.hls.trigger(Event.ERROR, { type: ErrorTypes.MEDIA_ERROR, details: ErrorDetails.BUFFER_APPENDING_ERROR, fatal: false });
@@ -321,7 +321,7 @@ class BufferController extends EventHandler {
 
   onBufferAppendFail (data) {
     logger.error('sourceBuffer error:', data.event);
-    // according to http://www.w3.org/TR/media-source/#sourcebuffer-append-error
+    // according to https://www.w3.org/TR/media-source/#sourcebuffer-append-error
     // this error might not always be fatal (it is fatal if decode error is set, in that case
     // it will be followed by a mediaElement error ...)
     this.hls.trigger(Event.ERROR, { type: ErrorTypes.MEDIA_ERROR, details: ErrorDetails.BUFFER_APPENDING_ERROR, fatal: false });
@@ -557,7 +557,7 @@ class BufferController extends EventHandler {
               hls.trigger(Event.ERROR, event);
             }
           } else {
-            // QuotaExceededError: http://www.w3.org/TR/html5/infrastructure.html#quotaexceedederror
+            // QuotaExceededError: https://www.w3.org/TR/html5/infrastructure.html#quotaexceedederror
             // let's stop appending any segments, and report BUFFER_FULL_ERROR error
             this.segments = [];
             event.details = ErrorDetails.BUFFER_FULL_ERROR;

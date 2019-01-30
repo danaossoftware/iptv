@@ -26,7 +26,7 @@ class MP3Demuxer {
     if (id3Data && ID3.getTimeStamp(id3Data) !== undefined) {
       // Look for MPEG header | 1111 1111 | 111X XYZX | where X can be either 0 or 1 and Y or Z should be 1
       // Layer bits (position 14 and 15) in header should be always different from 0 (Layer I or Layer II or Layer III)
-      // More info http://www.mp3-tech.org/programmer/frame_header.html
+      // More info https://www.mp3-tech.org/programmer/frame_header.html
       for (offset = id3Data.length, length = Math.min(data.length - 1, offset + 100); offset < length; offset++) {
         if (MpegAudio.probe(data, offset)) {
           logger.log('MPEG Audio sync word found !');

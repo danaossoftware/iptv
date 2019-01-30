@@ -1,4 +1,4 @@
-const SERVER_URL = "http://iptvjoss.com/iptv/php/";
+const SERVER_URL = "https://iptvjoss.com/iptv/php/";
 
 $(document).ready(function() {
     var backFunctionExists = 0;
@@ -8,7 +8,7 @@ $(document).ready(function() {
     Native.backFunctionExists(backFunctionExists);
     /*$.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/check-session.php',
+        url: 'https://iptvjoss.com/iptv/php/check-session.php',
         dataType: 'text',
         cache: false,
         success: function(a) {

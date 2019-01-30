@@ -1,4 +1,4 @@
-const SERVER_URL = "http://iptvjoss.com/iptv/php/";
+const SERVER_URL = "https://iptvjoss.com/iptv/php/";
 
 $(document).ready(function() {
     $.ajax({
@@ -27,7 +27,7 @@ function login() {
     }
     $.ajax({
         type: 'GET',
-        url: 'http://iptvjoss.com/iptv/php/login.php',
+        url: 'https://iptvjoss.com/iptv/php/login.php',
         data: {'phone': phone, 'password': password, 'remember-me': rememberMe},
         dataType: 'text',
         cache: false,
