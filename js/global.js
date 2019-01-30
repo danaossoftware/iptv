@@ -6,7 +6,7 @@ $(document).ready(function() {
         backFunctionExists = 1;
     }
     Native.backFunctionExists(backFunctionExists);
-    $.ajax({
+    /*$.ajax({
         type: 'GET',
         url: 'http://iptvjoss.com/iptv/php/check-session.php',
         dataType: 'text',
@@ -16,7 +16,7 @@ $(document).ready(function() {
                 window.location.href = 'login.html';
             }
         }
-    });
+    });*/
 });
 
 function occurrences(string, subString, allowOverlapping) {
