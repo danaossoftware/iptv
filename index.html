@@ -14,7 +14,8 @@
                 dataType: 'text',
                 cache: false,
                 success: function(a) {
-                    if (a == 0) {
+                    var response = parseInt(a);
+                    if (response == 0) {
                         // Logged in
                         window.location.href = "landing.html";
                     } else {
