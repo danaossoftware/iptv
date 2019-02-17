@@ -120,3 +120,7 @@ function getLanguage() {
 function isBackFunctionExists() {
     return (typeof backKey !== "undefined");
 }
+
+function show(msg) {
+    Native.showToast(msg);
+}
