@@ -31,15 +31,32 @@ $(document).ready(function() {
         cache: false,
         success: function(a) {
             var account = JSON.parse(a);
-            var date = new Date(parseInt(account["end_date"]));
-            if (getLanguage() == 0) {
-                $("#expiry").html("Batas waktu: " + date.getDate() + " " + getMonthName(date.getMonth()) + " " + date.getFullYear());
-            } else if (getLanguage() == 1) {
-                $("#expiry").html("Expiration: " + date.getDate() + " " + getMonthName(date.getMonth()) + " " + date.getFullYear());
+            var dateInt = parseInt(account["end_date"]);
+            if (dateInt < new Date().getTime()) {
+                Native.showAlertDialog("Waktu berlangganan Anda sudah habis. Apakah Anda ingin berlangganan lagi?", "Ya", "Tidak", 1);
+            } else {
+                var date = new Date(dateInt);
+                if (getLanguage() == 0) {
+                    $("#expiry").html("Batas waktu: " + date.getDate() + " " + getMonthName(date.getMonth()) + " " + date.getFullYear());
+                } else if (getLanguage() == 1) {
+                    $("#expiry").html("Expiration: " + date.getDate() + " " + getMonthName(date.getMonth()) + " " + date.getFullYear());
+                }
             }
         }
     });
 });
+
+function okSelected(code) {
+    if (code == 1) {
+        window.location.href = "upgrade.html";
+    }
+}
+
+function cancelSelected(code) {
+    if (code == 1) {
+        Native.finishApp();
+    }
+}
 
 function logout() {
     $("#loading-container").css("display", "flex").hide().fadeIn(300);
