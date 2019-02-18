@@ -1,0 +1,91 @@
+{
+  "": "",
+  "settings": {
+    "purchasing": [
+      {
+        "month": 1,
+        "price": 75000,
+        "features": [
+          {
+            "msg": "Fitur 1A"
+          },
+          {
+            "msg": "Fitur 2A"
+          },
+          {
+            "msg": "Fitur 3A"
+          },
+          {
+            "msg": "Fitur 4A"
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "price": 210000,
+        "features": [
+          {
+            "msg": "Fitur 1B"
+          },
+          {
+            "msg": "Fitur 2B"
+          },
+          {
+            "msg": "Fitur 3B"
+          },
+          {
+            "msg": "Fitur 4B"
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "price": 420000,
+        "features": [
+          {
+            "msg": "Fitur 1C"
+          },
+          {
+            "msg": "Fitur 2C"
+          },
+          {
+            "msg": "Fitur 3C"
+          },
+          {
+            "msg": "Fitur 4C"
+          }
+        ]
+      },
+      {
+        "month": 12,
+        "price": 850000,
+        "features": [
+          {
+            "msg": "Fitur 1D"
+          },
+          {
+            "msg": "Fitur 2D"
+          },
+          {
+            "msg": "Fitur 3D"
+          },
+          {
+            "msg": "Fitur 4D"
+          }
+        ]
+      }
+    ],
+    "banks": [
+      {
+        "holder": "ANDI SUPARTO",
+        "number": "8910 374 312",
+        "type": "BCA"
+      },
+      {
+        "type": "Mandiri",
+        "holder": "ANDI SUPARTO",
+        "number": "900 00 4200200 7"
+      }
+    ]
+  }
+}
