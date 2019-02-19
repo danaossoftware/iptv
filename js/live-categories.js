@@ -131,7 +131,8 @@ function setCategoryClickListener() {
                 categoryName = "Semua";
             }
         }
-        window.location.href = "channels/live.html?cat="+index+"&name="+categoryName;
+        //window.location.href = "channels/live.html?cat="+index+"&name="+categoryName;
+        Native.playWithNativePlayer(index, categoryName);
     });
 }
 
@@ -368,7 +369,8 @@ function enterKey() {
                 categoryName = "Semua";
             }
         }
-        window.location.href = "channels/live.html?cat="+pointerIndex+"&name="+categoryName;
+        //window.location.href = "channels/live.html?cat="+pointerIndex+"&name="+categoryName;
+        Native.playWithNativePlayer(pointerIndex, categoryName);
     } else if (pointerIndex == categories.length+1) {
         window.location.href = "landing.html";
     } else if (pointerIndex == categories.length+2) {

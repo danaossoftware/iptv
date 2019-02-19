@@ -32,7 +32,9 @@ $(document).ready(function() {
         success: function(a) {
             var account = JSON.parse(a);
             var dateInt = parseInt(account["end_date"]);
-            if (dateInt < new Date().getTime()) {
+            Native.log("Date: "+dateInt);
+            Native.log("Current time: "+Date.now());
+            if (dateInt < Date.now()) {
                 Native.showAlertDialog("Waktu berlangganan Anda sudah habis. Apakah Anda ingin berlangganan lagi?", "Ya", "Tidak", 1);
             } else {
                 var date = new Date(dateInt);
