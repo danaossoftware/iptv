@@ -1,6 +1,7 @@
 var m3uData;
 var menuShown = false;
 var pointerIndex = 0;
+var currentIndex = 0;
 
 $(document).ready(function() {
     selectedSortType = Native.readInt("sort_type", 1);
@@ -122,7 +123,8 @@ function setCategoryClickListener() {
     $(".category").on("click", function() {
         var index = $(".category").parent().children().index(this);
         var categoryName = categories[index];
-        if (selectedSortType == 1) {
+        Native.log("Selected sort type: "+selectedSortType);
+        /*if (selectedSortType == 1) {
             if (index == 0) {
                 categoryName = "Semua";
             }
@@ -130,10 +132,29 @@ function setCategoryClickListener() {
             if (index == categories.length) {
                 categoryName = "Semua";
             }
+        }*/
+        if (index == 0) {
+            categoryName = "Semua";
         }
         //window.location.href = "channels/live.html?cat="+index+"&name="+categoryName;
         Native.playWithNativePlayer(index, categoryName);
     });
+}
+
+function toNextCategory() {
+    if (currentIndex < categories.length-1) {
+        currentIndex++;
+    }
+    var categoryName = categories[currentIndex-1];
+    Native.playWithNativePlayer(currentIndex, categoryName);
+}
+
+function toPrevCategory() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    }
+    var categoryName = categories[currentIndex];
+    Native.playWithNativePlayer(currentIndex, categoryName);
 }
 
 function getChannelsCount(categoryName) {
