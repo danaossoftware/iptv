@@ -16,10 +16,21 @@ $(document).ready(function() {
 
 function signup() {
     $("#error").css("display", "none");
-    var phone = $("#phone").val();
-    var password = $("#password").val();
-    if (phone == '' || password == '') {
-        $("#error").html("Mohon masukkan phone dan kata sandi");
+    var phone = $("#phone").val().trim();
+    var password = $("#password").val().trim();
+    var username = $("#username").val().trim();
+    if (phone == '') {
+        $("#error").html("Mohon masukkan no. HP");
+        $("#error").css("display", "block");
+        return;
+    }
+    if (username == '') {
+        $("#error").html("Mohon masukkan username");
+        $("#error").css("display", "block");
+        return;
+    }
+    if (password == '') {
+        $("#error").html("Mohon masukkan kata sandi");
         $("#error").css("display", "block");
         return;
     }
@@ -37,7 +48,7 @@ function signup() {
     $.ajax({
         type: 'GET',
         url: 'https://iptvjoss.com/iptv/php/signup.php',
-        data: {'phone': phone, 'username': randomString(), 'password': password},
+        data: {'phone': phone, 'username': username, 'password': password},
         dataType: 'text',
         cache: false,
         success: function(a) {

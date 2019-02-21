@@ -3,7 +3,7 @@ include 'db.php';
 $phone = $_GET["phone"];
 $password = $_GET["password"];
 $rememberMe = $_GET["remember-me"];
-$results = $c->query("SELECT * FROM users WHERE phone='" . $phone . "'");
+$results = $c->query("SELECT * FROM users WHERE phone='" . $phone . "' OR username='" . $phone . "'");
 if ($results && $results->num_rows > 0) {
     $row = $results->fetch_assoc();
     $confirmed = $row["confirmed"];
