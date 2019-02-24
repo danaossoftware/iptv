@@ -1,3 +1,5 @@
+var currentIndex = -1;
+
 $(document).ready(function() {
     $("#time").html(getTime());
     $("#date").html(getDate());
@@ -6,6 +8,15 @@ $(document).ready(function() {
         $("#date").html(getDate());
         setTimeout(this, 1000);
     }, 1000);
+    if (getLanguage() == 1) {
+        $("#text1").html("BACK TO HOME");
+        $("#text2").html("Account Status:");
+        $("#text3").html("Expiry:");
+        $("#text4").html("Trial Account:");
+        $("#text5").html("Active Connections:");
+        $("#text6").html("Made On:");
+        $("#text7").html("Maximum Connections:");
+    }
     loadSettings();
 });
 
@@ -40,4 +51,46 @@ function loadSettings() {
             $("#active-connections").html(a);
         }
     });
+}
+
+function downKey() {
+    if (currentIndex < 1) {
+        currentIndex++;
+    }
+    focusToCurrentIndex();
+}
+
+function upKey() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    }
+    focusToCurrentIndex();
+}
+
+function rightKey() {
+    currentIndex = 1;
+    focusToCurrentIndex();
+}
+
+function leftKey() {
+    currentIndex = 0;
+    focusToCurrentIndex();
+}
+
+function enterKey() {
+    if (currentIndex == 0) {
+        window.location.href='upgrade.html';
+    } else if (currentIndex == 1) {
+        window.location.href='landing.html';
+    }
+}
+
+function focusToCurrentIndex() {
+    if (currentIndex == 0) {
+        $("#upgrade").css("border", "3px solid white").css("width", "194px").css("height", "34px");
+        $("#back").css("border", "0").css("width", "200px").css("height", "40px");
+    } else if (currentIndex == 1) {
+        $("#upgrade").css("border", "0").css("width", "200px").css("height", "40px");
+        $("#back").css("border", "3px solid white").css("width", "194px").css("height", "34px");
+    }
 }

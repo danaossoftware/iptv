@@ -16,7 +16,7 @@
     <div style="width: 100%; display: flex; justify-content: center; color: white; font-size: 20px; font-family: 'PalanquinBold';">UPGRADE AKUN ANDA</div>
     <div style="width: 100%; display: flex; justify-content: center; color: white;">Upgrade akun Anda untuk mendapatkan fitur-fitur terbaik</div>
     <!-- BULANAN -->
-    <div style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#6181e6, #8355b7); padding: 20px;">
+    <div id="type-1" style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#6181e6, #8355b7); padding: 20px;">
         <div id="month1" style="color: white;">BULANAN</div>
         <div style="width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; height: 1px; background-color: rgba(255, 255, 255, .8); margin-top: 8px;"></div>
         <div id="price1" style="color: white; font-family: 'PalanquinBold'; font-size: 25px;"></div>
@@ -25,7 +25,7 @@
             Fitur 1
         </div>-->
         <div onclick="window.location.href='purchase.html?type=1'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
-            <div style="color: white;">UPGRADE</div>
+            <div id="upgrade-1" style="color: white;">UPGRADE</div>
         </div>
     </div>
     <!-- 3 BULAN -->
@@ -38,12 +38,12 @@
             Fitur 1
         </div>-->
         <div onclick="window.location.href='purchase.html?type=2'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
-            <div style="color: white;">UPGRADE</div>
+            <div id="upgrade-3" style="color: white;">UPGRADE</div>
         </div>
         <img src="img/best.png" width="50px" height="50px" style="position: absolute; top: 0; right: 10px;">
     </div>
     <!-- 6 BULAN -->
-    <div style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#ff4e51, #f9d223); padding: 20px;">
+    <div id="type-6" style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#ff4e51, #f9d223); padding: 20px;">
         <div id="month3" style="color: white;">6 BULAN</div>
         <div style="width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; height: 1px; background-color: rgba(255, 255, 255, .8); margin-top: 8px;"></div>
         <div id="price3" style="color: white; font-family: 'PalanquinBold'; font-size: 25px;"></div>
@@ -52,11 +52,11 @@
             Fitur 1
         </div>-->
         <div onclick="window.location.href='purchase.html?type=3'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
-            <div style="color: white;">UPGRADE</div>
+            <div id="upgrade-6" style="color: white;">UPGRADE</div>
         </div>
     </div>
     <!-- 1 TAHUN -->
-    <div style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#24c4da, #4367ad); padding: 20px;">
+    <div id="type-12" style="width: 160px; padding-bottom: 20px; margin-top: 20px; display: flex; align-items: center; flex-flow: column nowrap; border-radius: 8px; background-image: linear-gradient(#24c4da, #4367ad); padding: 20px;">
         <div id="month4" style="color: white;">TAHUNAN</div>
         <div style="width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; height: 1px; background-color: rgba(255, 255, 255, .8); margin-top: 8px;"></div>
         <div id="price4" style="color: white; font-family: 'PalanquinBold'; font-size: 25px;"></div>
@@ -64,12 +64,12 @@
         <!--<div style="color: #eeeeee; width: 100%; display: flex; justify-content: center;">
             Fitur 1
         </div>-->
-        <div onclick="window.location.href='purchase.html?type=3'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
-            <div style="color: white;">UPGRADE</div>
+        <div onclick="window.location.href='purchase.html?type=4'" class="upgrade-item" style="width: 80%; height: 40px; border-radius: 20px; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+            <div id="upgrade-12" style="color: white;">UPGRADE</div>
         </div>
     </div>
     <div style="color: white; margin-top: 10px;">*Syarat dan ketentuan berlaku</div>
-    <div onclick="window.history.back()" style="margin-top: 20px; margin-right: 10px; margin-bottom: 30px; width: 200px; margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
+    <div id="back" onclick="window.history.back()" style="margin-top: 20px; margin-right: 10px; margin-bottom: 30px; width: 200px; margin-left: 20px; height: 40px; overflow: hidden;" class="button9">
         <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
         KEMBALI
     </div>
