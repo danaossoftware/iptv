@@ -128,11 +128,7 @@ function enterKey() {
         Native.playWithNativePlayer(0, "movie");
     } else if (pointerIndex == 2) {
         //window.location.href = "channels/adult.html"
-        var title = "Masukkan kata sandi";
-        if (getLanguage() == 1) {
-            title = "Enter password";
-        }
-        Native.showPasswordDialog(1, getLanguage(), title, "");
+        openVIP();
     } else if (pointerIndex == 3) {
         window.location.href = "recordings.html";
     } else if (pointerIndex == 4) {
@@ -144,6 +140,14 @@ function enterKey() {
     } else if (pointerIndex == 7) {
         logout();
     }
+}
+
+function openVIP() {
+    var title = "Masukkan kata sandi";
+    if (getLanguage() == 1) {
+        title = "Enter password";
+    }
+    Native.showPasswordDialog(1, getLanguage(), title, "");
 }
 
 function setMenuItemBorder() {
@@ -363,9 +367,11 @@ function editTextFinished(code, value) {
             dataType: 'text',
             cache: false,
             success: function(a) {
+                Native.log(a);
                 Native.hideProgressDialog();
-                var settings = JSON.parse(a);
+                var settings = new DOMParser().parseFromString(a, "text/xml");
                 var password = settings.getElementsByTagName("vip-password")[0].childNodes[0].nodeValue;
+                Native.log("Password: "+password);
                 if (password.trim() != value.trim()) {
                     var errorMsg = "Kata sandi tidak cocok";
                     if (getLanguage() == 1) {
