@@ -2,6 +2,14 @@ var currentIndex = -1;
 const SERVER_URL = "https://iptvjoss.com/iptv/php/";
 
 $(document).ready(function() {
+    if (getLanguage() == 1) {
+        $("#text1").html("Signup");
+        $("#phone").attr("placeholder", "Phone Number");
+        $("#username").attr("placeholder", "Username");
+        $("#password").attr("placeholder", "Password");
+        $("#signup").html("SIGN UP");
+        $("#text2").html("Have account already? Login here");
+    }
     $("#phone").focus();
     $.ajax({
         type: 'GET',

@@ -1,7 +1,13 @@
 var currentIndex = -1;
 const SERVER_URL = "https://iptvjoss.com/iptv/php/";
+var dialogShown = false;
 
 $(document).ready(function() {
+    if (getLanguage() == 1) {
+        $("#text1").html("Enter your login detail");
+        $("#phone").attr("placeholder", "Phone Number");
+        $("#password").attr("placeholder", "Password");
+    }
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'check-session.php',
@@ -53,6 +59,7 @@ function login() {
                     $("#error-container").css("display", "flex");
                 } else if (response == -4) {
                     // Maximum connections reached
+                    dialogShown = true;
                     $("#error").html("Maaf, jumlah maksimum koneksi terlampaui. Silahkan keluar dari perangkat lain terlebih dahulu, atau hubungi admin.");
                     $("#error-container").css("display", "flex");
                     $.ajax({
@@ -82,6 +89,7 @@ function backKey() {
 
 function closeErrorDialog() {
     $("#error-container").fadeOut(300);
+    dialogShown = false;
 }
 
 function downKey() {
@@ -99,20 +107,24 @@ function upKey() {
 }
 
 function enterKey() {
-    if (currentIndex == 2) {
-        login();
-    } else if (currentIndex == 3) {
-        var checked = $("#remember-me").prop("checked");
-        Native.log("Checked: "+checked);
-        if (checked) {
-            $("#remember-me").prop("checked", false);
-        } else {
-            $("#remember-me").prop("checked", true);
+    if (dialogShown) {
+        closeErrorDialog();
+    } else {
+        if (currentIndex == 2) {
+            login();
+        } else if (currentIndex == 3) {
+            var checked = $("#remember-me").prop("checked");
+            Native.log("Checked: " + checked);
+            if (checked) {
+                $("#remember-me").prop("checked", false);
+            } else {
+                $("#remember-me").prop("checked", true);
+            }
+        } else if (currentIndex == 4) {
+            window.location.href = "signup.html";
         }
-    } else if (currentIndex == 4) {
-        window.location.href = "signup.html";
+        disableKeyListener();
     }
-    disableKeyListener();
 }
 
 function focusToIndex() {

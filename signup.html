@@ -17,16 +17,16 @@
             <img src="img/icon.png" width="150px" height="150px">
         </div>
         <div style="width: calc(50% - 50px); display: flex; padding-left: 50px; flex-flow: column nowrap; justify-content: center; align-content: center; align-items: flex-start;">
-            <div style="color: white; font-family: 'PalanquinBold'; font-size: 20px;">
+            <div id="text1" style="color: white; font-family: 'PalanquinBold'; font-size: 20px;">
                 Pendaftaran
             </div>
             <input class="input5" id="phone" type="text" name="phone" style="margin-top: 10px; width: 340px;" placeholder="Nomor Handphone">
             <input class="input5" id="username" type="text" name="username" style="margin-top: 10px; width: 340px;" placeholder="Username">
             <input class="input5" id="password" type="password" name="password" style="margin-top: 10px; width: 340px;" placeholder="Kata Sandi">
             <div id="error" style="margin-left: 15px; color: #e74c3c; font-family: 'PalanquinBold'; display: none;"></div>
-            <button onclick="signup()" class="button10" style="width: 350px; margin-top: 10px;">DAFTAR</button>
+            <button id="signup" onclick="signup()" class="button10" style="width: 350px; margin-top: 10px;">DAFTAR</button>
             <div style="width: 350px; display: flex; justify-content: center; margin-top: 15px;">
-                <div onclick="window.location.href='login.html'" style="cursor: pointer; color: white;">Sudah punya akun? Masuk di sini</div>
+                <div id="text2" onclick="window.location.href='login.html'" style="cursor: pointer; color: white;">Sudah punya akun? Masuk di sini</div>
             </div>
         </div>
     </div>
