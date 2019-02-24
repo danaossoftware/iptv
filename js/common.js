@@ -32,33 +32,39 @@ $(document).ready(function () {
 });
 
 function loadSettings() {
+    Native.log("Loading settings...");
     $.ajax({
         type: 'GET',
         url: SERVER_URL + 'get-settings.php',
         dataType: 'text',
         cache: false,
         success: function (a) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(a, "text/xml");
-            xmlData = xml;
-            var userAgent = Native.getUserAgent();
-            $("#user-agent").val(userAgent);
-            var autoStart = Native.readInt("autostart", 0);
-            if (autoStart == 1) {
-                $("#auto-start").prop("checked", true);
+            Native.log("Response: "+a);
+            try {
+                var parser = new DOMParser();
+                var xml = parser.parseFromString(a, "text/xml");
+                xmlData = xml;
+                var userAgent = Native.getUserAgent();
+                $("#user-agent").val(userAgent);
+                var autoStart = Native.readInt("autostart", 0);
+                if (autoStart == 1) {
+                    $("#auto-start").prop("checked", true);
+                }
+                var subtitle = Native.readInt("enable_subtitle", 0);
+                if (subtitle == 1) {
+                    $("#active-subtitle").prop("checked", true);
+                }
+                var language = Native.readInt("language", 0);
+                if (language == 0) {
+                    $("#language-text").html("Bahasa Indonesia");
+                } else if (language == 1) {
+                    $("#language-text").html("English");
+                }
+                selectedLanguage = language;
+                $("#loading-container").fadeOut(300);
+            } catch (e) {
+                Native.log("Error: "+e.toString());
             }
-            var subtitle = Native.readInt("enable_subtitle", 0);
-            if (subtitle == 1) {
-                $("#active-subtitle").prop("checked", true);
-            }
-            var language = Native.readInt("language", 0);
-            if (language == 0) {
-                $("#language-text").html("Bahasa Indonesia");
-            } else if (language == 1) {
-                $("#language-text").html("English");
-            }
-            selectedLanguage = language;
-            $("#loading-container").fadeOut(300);
         }
     });
 }

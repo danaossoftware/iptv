@@ -15,28 +15,30 @@
     <div style="position: relative; width: 100%; display: flex; justify-content: center; height: 50px;">
         <div style="position: absolute; left: 50px; top: 20px; display: flex; justify-content: flex-start; flex-flow: row nowrap;">
             <img src="img/icon.png" width="40px" height="40px">
-            <div style="color: #888888; margin-left: 20px;">| REKAMAN</div>
+            <div id="text1" style="color: #888888; margin-left: 20px;">| REKAMAN</div>
         </div>
         <div style="display: flex; flex-flow: row nowrap; margin-top: 28px; align-items: center;">
-            <div style="color: white; font-size: 20px;">08:36</div>
-            <div style="color: white; margin-left: 20px; font-size: 16px;">19 Januari 2019</div>
+            <div id="time" style="color: white; font-size: 20px;"></div>
+            <div id="date" style="color: white; margin-left: 20px; font-size: 16px;"></div>
         </div>
     </div>
+    <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+        <button id="back" onclick="window.history.back()" class="button9">KEMBALI</button>
+    </div>
     <div style="margin-top: 20px; width: calc(100% - 80px); margin-left: 40px; margin-right: 40px; display: flex; flex-flow: row nowrap; justify-content: space-between;">
-        <div id="current-record-loc" style="color: white;">Lokasi folder rekaman: path:/</div>
-        <div onclick="changeDirectory()" style="margin-left: 5px; width: 200px; height: 35px;" class="button11">
+        <div id="current-record-loc" style="color: white; white-space: nowrap; max-width: calc(100% - 210px);">Lokasi folder rekaman:</div>
+        <div id="change-recording-dir" onclick="changeDirectory()" style="margin-left: 5px; width: 200px; height: 35px;" class="button11">
             <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
-            UBAH FOLDER
+            <div id="text2">UBAH FOLDER</div>
         </div>
+    </div>
+    <div id="recordings" style="width: 100%; display: flex; flex-flow: column nowrap; margin-top: 5px;">
     </div>
 </div>
 <div id="no-recording-container" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; display: flex; justify-content: center; align-items: center;">
-    <div style="color: white; font-family: 'SegoeUILight'; font-size: 25px;">
+    <div id="no-recording" style="color: white; font-family: 'SegoeUILight'; font-size: 25px;">
         TIDAK ADA REKAMAN
     </div>
-</div>
-<div style="position: absolute; left: 0; bottom: 0; width: 100%; display: flex; justify-content: center;">
-    <button onclick="window.history.back()" class="button9">KEMBALI</button>
 </div>
 </body>
 </html>
