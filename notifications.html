@@ -16,19 +16,19 @@
             <div style="position: absolute; left: 50px; top: 20px; display: flex; justify-content: flex-start;">
                 <img src="img/icon.png" width="40px" height="40px">
             </div>
-            <div style="color: white; font-family: 'PalanquinBold'; font-size: 20px; margin-top: 20px;">NOTIFIKASI</div>
+            <div id="text2" style="color: white; font-family: 'PalanquinBold'; font-size: 20px; margin-top: 20px;">NOTIFIKASI</div>
             <div style="position: absolute; right: 20px; top: 0; display: flex; flex-flow: row nowrap; margin-top: 28px; align-items: center;">
-                <div style="color: white; font-size: 20px;">08:36</div>
-                <div style="color: white; margin-left: 20px; font-size: 16px;">19 Januari 2019</div>
+                <div id="time" style="color: white; font-size: 20px;"></div>
+                <div id="date" style="color: white; margin-left: 20px; font-size: 16px;"></div>
             </div>
         </div>
-        <div id="notifications" style="padding-left: 20px; padding-right: 20px; width: calc(100% - 40px); display: flex; flex-flow: column nowrap;">
-        </div>
-        <div style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">
-            <div onclick="window.history.back()" style="margin-right: 10px; width: calc(50% - 25px); margin-left: 5px; height: 40px; overflow: hidden;" class="button8">
+        <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+            <div id="back" onclick="window.history.back()" style="margin-right: 10px; width: calc(50% - 25px); margin-left: 5px; height: 40px; overflow: hidden;" class="button8">
                 <div style="position: absolute; left: -30px; top: -40px; width: calc(100% + 60px); height: 60px; background-color: rgba(255, 255, 255, .2); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;"></div>
-                KEMBALI
+                <div id="text1">KEMBALI</div>
             </div>
+        </div>
+        <div id="notifications" style="margin-top: 10px; padding-left: 20px; padding-right: 20px; width: calc(100% - 40px); display: flex; flex-flow: column nowrap;">
         </div>
     </div>
     <div id="loading-container" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .8);">
@@ -39,10 +39,10 @@
     <div id="notification-dialog-ctr" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; flex-flow: column nowrap; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .3);">
         <div style="width: calc(100% - 40px); height: calc(100% - 90px); border-top-left-radius: 10px; border-top-right-radius: 10px; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5); background-color: white;">
             <div style="width: 100%; display: flex; justify-content: center; margin-top: 5px;">
-                <div style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">BACA NOTIFIKASI</div>
+                <div id="text3" style="color: black; font-family: 'PalanquinBold'; font-size: 20px;">BACA NOTIFIKASI</div>
             </div>
-            <div id="notification-title" style="font-family: 'PalanquinBold'; margin-top: 10px; width: calc(100% - 40px); margin-left: 20px; margin-right: 20px; font-size: 18px;">This is title</div>
-            <div id="notification-text" style="width: calc(100% - 40px); margin-top: 0; margin-left: 20px; margin-right: 20px;">This is notification</div>
+            <div id="notification-title" style="font-family: 'PalanquinBold'; margin-top: 10px; width: calc(100% - 40px); margin-left: 20px; margin-right: 20px; font-size: 18px;"></div>
+            <div id="notification-text" style="width: calc(100% - 40px); margin-top: 0; margin-left: 20px; margin-right: 20px;"></div>
         </div>
         <div style="display: flex; justify-content: center; width: calc(100% - 40px); height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; background-color: white; box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .5);">
             <div onclick="closeNotificationReviewDialog()" style="margin-right: 10px; width: calc(50% - 25px); margin-left: 5px; height: 40px; overflow: hidden;" class="button8">
