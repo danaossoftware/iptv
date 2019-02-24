@@ -109,9 +109,15 @@ function focusToCurrentIndex() {
     if (currentIndex == 0) {
         $("#back").css("border", "3px solid white").css("width", "calc(50% - 31px)").css("height", "34px");
         $(".notification-item").css("border", "0").css("width", "calc(100% - 50px)");
+        $("html, body").animate({
+            scrollTop: $("#back").offset().top
+        });
     } else {
         $("#back").css("border", "0").css("width", "calc(50% - 25px)").css("height", "40px");
         $(".notification-item").css("border", "0").css("width", "calc(100% - 50px)");
         $(".notification-item:eq("+(currentIndex-1)+")").css("border", "3px solid white").css("width", "calc(100% - 56px)");
+        $("html, body").animate({
+            scrollTop: $(".notification-item:eq("+(currentIndex-1)+")").offset().top
+        });
     }
 }
