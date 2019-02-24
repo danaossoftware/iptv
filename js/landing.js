@@ -128,7 +128,11 @@ function enterKey() {
         Native.playWithNativePlayer(0, "movie");
     } else if (pointerIndex == 2) {
         //window.location.href = "channels/adult.html"
-        Native.playWithNativePlayer(0, "vip");
+        var title = "Masukkan kata sandi";
+        if (getLanguage() == 1) {
+            title = "Enter password";
+        }
+        Native.showPasswordDialog(1, getLanguage(), title, "");
     } else if (pointerIndex == 3) {
         window.location.href = "recordings.html";
     } else if (pointerIndex == 4) {
@@ -343,5 +347,35 @@ function setMenuItemBorder() {
         $("#logout").css("border", "2px solid white");
         $("#logout").css("width", "56px");
         $("#logout").css("height", "56px");
+    }
+}
+
+function editTextFinished(code, value) {
+    if (code == 1) {
+        var msg = "Memuat...";
+        if (getLanguage() == 1) {
+            msg = "Loading...";
+        }
+        Native.showProgressDialog(msg);
+        $.ajax({
+            type: 'GET',
+            url: SERVER_URL+'get-settings.php',
+            dataType: 'text',
+            cache: false,
+            success: function(a) {
+                Native.hideProgressDialog();
+                var settings = JSON.parse(a);
+                var password = settings.getElementsByTagName("vip-password")[0].childNodes[0].nodeValue;
+                if (password.trim() != value.trim()) {
+                    var errorMsg = "Kata sandi tidak cocok";
+                    if (getLanguage() == 1) {
+                        errorMsg = "Password not matches";
+                    }
+                    show(errorMsg);
+                } else {
+                    Native.playWithNativePlayer(0, "vip");
+                }
+            }
+        });
     }
 }

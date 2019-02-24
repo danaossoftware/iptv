@@ -16,6 +16,7 @@
         <auto-update-epg>0</auto-update-epg>
     </automation>
     <control-password>a</control-password>
+    <vip-password>Hello123</vip-password>
     <player>
         <app>0</app>
         <decoder>1</decoder>
