@@ -23,8 +23,12 @@ if ($results && $results->num_rows > 0) {
         return;
     }
     $lastActive = round(microtime(true)*1000);
-    $ip = $_SERVER["REMOTE_ADDR"];
-    $c->query("INSERT INTO sessions (id, user_id, ip, last_active, remember_me) VALUES ('" . uniqid(). "', '" . $userId . "', '" . $ip . "', " . $lastActive . ", " . $rememberMe . ")");
+    /*$ip = $_SERVER["REMOTE_ADDR"];
+    $c->query("INSERT INTO sessions (id, user_id, ip, last_active, remember_me) VALUES ('" . uniqid(). "', '" . $userId . "', '" . $ip . "', " . $lastActive . ", " . $rememberMe . ")");*/
+    session_id("jossstream");
+    session_start();
+    $_SESSION["jossstream_user_id"] = $userId;
+    $c->query("UPDATE users SET active_connections = active_connections + 1 WHERE id='" . $userId . "'");
     echo 0;
 } else {
     echo -1;

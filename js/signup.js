@@ -1,6 +1,8 @@
+var currentIndex = -1;
 const SERVER_URL = "https://iptvjoss.com/iptv/php/";
 
 $(document).ready(function() {
+    $("#phone").focus();
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'check-session.php',
@@ -98,4 +100,43 @@ function validatePhoneNumber(phone) {
 
 function backKey() {
     Native.finishApp();
+}
+
+function downKey() {
+    if (currentIndex < 4) {
+        currentIndex++;
+    }
+    focusToIndex();
+}
+
+function upKey() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    }
+    focusToIndex();
+}
+
+function focusToIndex() {
+    switch (currentIndex) {
+        case 0:
+            $("#phone").focus();
+            break;
+        case 1:
+            $("#username").focus();
+            break;
+        case 2:
+            $("#password").focus();
+            break;
+        case 3:
+            $("#password").blur();
+            break;
+    }
+}
+
+function enterKey() {
+    if (currentIndex == 3) {
+        signup();
+    } else if (currentIndex == 4) {
+        window.location.href = "login.html";
+    }
 }

@@ -85,6 +85,7 @@ function backKey() {
 }
 
 function rightKey() {
+    show("Right key")
     if (pointerIndex < 2) {
         pointerIndex++;
     } else if (pointerIndex >= 4 && pointerIndex < 7) {

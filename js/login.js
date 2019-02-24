@@ -1,3 +1,4 @@
+var currentIndex = -1;
 const SERVER_URL = "https://iptvjoss.com/iptv/php/";
 
 $(document).ready(function() {
@@ -81,4 +82,55 @@ function backKey() {
 
 function closeErrorDialog() {
     $("#error-container").fadeOut(300);
+}
+
+function downKey() {
+    if (currentIndex < 4) {
+        currentIndex++;
+    }
+    focusToIndex();
+}
+
+function upKey() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    }
+    focusToIndex();
+}
+
+function enterKey() {
+    if (currentIndex == 2) {
+        login();
+    } else if (currentIndex == 3) {
+        var checked = $("#remember-me").prop("checked");
+        Native.log("Checked: "+checked);
+        if (checked) {
+            $("#remember-me").prop("checked", false);
+        } else {
+            $("#remember-me").prop("checked", true);
+        }
+    } else if (currentIndex == 4) {
+        window.location.href = "signup.html";
+    }
+    disableKeyListener();
+}
+
+function focusToIndex() {
+    Native.log("Current index: "+currentIndex);
+    disableKeyListener();
+    switch (currentIndex) {
+        case 0:
+            $("#phone").focus();
+            break;
+        case 1:
+            $("#password").focus();
+            break;
+        default:
+            hideKeyboard();
+            break;
+    }
+}
+
+function disableKeyListener() {
+    Native.disableKeyListener();
 }

@@ -124,3 +124,22 @@ function isBackFunctionExists() {
 function show(msg) {
     Native.showToast(msg);
 }
+
+function type() {
+    Native.showKeyboard();
+}
+
+function hideKeyboard() {
+    $("input").each(function() {
+        $(this).trigger("blur");
+    });
+    Native.hideKeyboard();
+}
+
+function disableKeyListener() {
+    Native.disableKeyListener();
+}
+
+function enableKeyListener() {
+    Native.enableKeyListener();
+}
