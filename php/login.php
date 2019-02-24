@@ -15,10 +15,10 @@ if ($results && $results->num_rows > 0) {
         echo -3;
         return;
     }
+    $activeConnections = $row["active_connections"];
     $maximumConnections = $row["maximum_connections"];
     $userId = $row["id"];
-    $results2 = $c->query("SELECT * FROM sessions WHERE user_id='" . $userId . "'");
-    if ($results2->num_rows >= $maximumConnections) {
+    if ($activeConnections >= $maximumConnections) {
         echo -4;
         return;
     }

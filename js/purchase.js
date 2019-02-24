@@ -1,5 +1,6 @@
 var currentBankType = 1;
 var selectedBankType = 0;
+var currentIndex = -1;
 
 $(document).ready(function() {
     var params = location.search;
@@ -81,4 +82,21 @@ function setBankType() {
         $("#bank-name").html("PT Bank Mandiri (Persero) Tbk");
     }
     $("#bank-change-dialog").fadeOut(300);
+}
+
+function downKey() {
+    currentIndex = 0;
+    focusToCurrentIndex();
+}
+
+function focusToCurrentIndex() {
+    if (currentIndex == 0) {
+        $("#back").css("border", "3px solid #3498db");
+    }
+}
+
+function enterKey() {
+    if (currentIndex == 0) {
+        window.history.back();
+    }
 }
