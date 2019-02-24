@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/notifications.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/add-to-favorite.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/add-to-favorite.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/get-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/get-account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/get-active-connections.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/get-active-connections.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/get-configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/get-configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/update-profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/update-profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +69,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/get-account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            <state relative-caret-position="153">
+              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/db.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/get-active-connections.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -228,12 +235,12 @@
         <option value="$PROJECT_DIR$/notifications.html" />
         <option value="$PROJECT_DIR$/php/get-notifications.php" />
         <option value="$PROJECT_DIR$/js/notifications.js" />
-        <option value="$PROJECT_DIR$/php/get-account.php" />
         <option value="$PROJECT_DIR$/php/logout.php" />
         <option value="$PROJECT_DIR$/php/get-configuration.php" />
         <option value="$PROJECT_DIR$/php/update-profile.php" />
         <option value="$PROJECT_DIR$/php/add-to-favorite.php" />
         <option value="$PROJECT_DIR$/php/get-active-connections.php" />
+        <option value="$PROJECT_DIR$/php/get-account.php" />
       </list>
     </option>
   </component>
@@ -462,12 +469,12 @@
       <workItem from="1551004608635" duration="1766000" />
       <workItem from="1551006460592" duration="1774000" />
       <workItem from="1551008305223" duration="1765000" />
-      <workItem from="1551010179242" duration="280000" />
+      <workItem from="1551010179242" duration="401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252480000" />
+    <option name="totallyTimeSpent" value="252601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -498,20 +505,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/live.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/movie-categories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="360" column="25" selection-start-line="360" selection-start-column="25" selection-end-line="360" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
@@ -1206,10 +1199,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/db.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/get-active-connections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/get-account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
