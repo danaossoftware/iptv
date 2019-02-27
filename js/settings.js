@@ -3,11 +3,11 @@ var controlShown = false;
 var controlPointerIndex = 0;
 
 $(document).ready(function () {
-    if (Native.isAndroidTV() == 1) {
+    //if (Native.isAndroidTV() == 1) {
         $("#general").css("background-color", "#3498db");
         $("#general-img").attr("src", "img/settings-3-white.png");
         $("#text1").css("color", "white");
-    }
+    //}
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function () {

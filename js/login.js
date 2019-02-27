@@ -1,9 +1,11 @@
 var currentIndex = -1;
 const SERVER_URL = "https://iptvjoss.com/iptv/php/";
 var dialogShown = false;
+var language = 0;
 
 $(document).ready(function() {
-    if (getLanguage() == 1) {
+	language = Native.readInt("language", 0);
+    if (language == 1) {
         $("#text1").html("Enter your login detail");
         $("#phone").attr("placeholder", "Phone Number");
         $("#password").attr("placeholder", "Password");
@@ -93,7 +95,8 @@ function closeErrorDialog() {
 }
 
 function downKey() {
-    if (currentIndex < 4) {
+	Native.log("Down key");
+    if (currentIndex < 3) {
         currentIndex++;
     }
     focusToIndex();
@@ -110,34 +113,66 @@ function enterKey() {
     if (dialogShown) {
         closeErrorDialog();
     } else {
-        if (currentIndex == 2) {
+		if (currentIndex == 0) {
+			var title = "No. HP atau username";
+			if (language == 1) {
+				title = "Phone number or username";
+			}
+			Native.showEditTextDialog(1, language, title, "");
+		} else if (currentIndex == 1) {
+			var title = "Kata sandi";
+			if (language == 1) {
+				title = "Password";
+			}
+			Native.showPasswordDialog(2, language, title, "");
+        } else if (currentIndex == 2) {
             login();
         } else if (currentIndex == 3) {
-            var checked = $("#remember-me").prop("checked");
-            Native.log("Checked: " + checked);
-            if (checked) {
-                $("#remember-me").prop("checked", false);
-            } else {
-                $("#remember-me").prop("checked", true);
-            }
-        } else if (currentIndex == 4) {
             window.location.href = "signup.html";
-        }
-        disableKeyListener();
+		}
     }
+}
+
+function editTextFinished(code, value) {
+	if (code == 1) {
+		$("#phone").val(value);
+	} else if (code == 2) {
+		$("#password").val(value);
+	}
 }
 
 function focusToIndex() {
     Native.log("Current index: "+currentIndex);
-    disableKeyListener();
     switch (currentIndex) {
         case 0:
-            $("#phone").focus();
+			$("#phone").css("border", "2px solid #3498db");
+			$("#password").css("border", "0");
+			$("#login").css("border", "0");
+			$("#div1").css("border", "0");
             break;
         case 1:
-            $("#password").focus();
+			$("#phone").css("border", "0");
+			$("#password").css("border", "2px solid #3498db");
+			$("#login").css("border", "0");
+			$("#div1").css("border", "0");
             break;
+		case 2:
+			$("#phone").css("border", "0");
+			$("#password").css("border", "0");
+			$("#login").css("border", "2px solid #3498db");
+			$("#div1").css("border", "0");
+			break;
+		case 3:
+			$("#phone").css("border", "0");
+			$("#password").css("border", "0");
+			$("#login").css("border", "0");
+			$("#div1").css("border", "2px solid #3498db");
+			break;
         default:
+			$("#phone").css("border", "0");
+			$("#password").css("border", "0");
+			$("#login").css("border", "0");
+			$("#div1").css("border", "0");
             hideKeyboard();
             break;
     }

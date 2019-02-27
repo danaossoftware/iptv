@@ -3,9 +3,9 @@ var xmlData;
 var selectedDecoder = 0;
 
 $(document).ready(function () {
-    if (Native.isAndroidTV() == 1) {
+    //if (Native.isAndroidTV() == 1) {
         $("#option1").css("background-color", "#3498db");
-    }
+    //}
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function () {

@@ -9,11 +9,9 @@ var pointerIndex = 0;
 // 7 = Log Out
 
 $(document).ready(function() {
-    if (Native.isAndroidTV() == 1) {
-        $("#live-tv").css("border", "3px solid white");
-        $("#live-tv").css("width", "144px");
-        $("#live-tv").css("height", "144px");
-    }
+    $("#live-tv").css("border", "3px solid white");
+    $("#live-tv").css("width", "144px");
+    $("#live-tv").css("height", "144px");
     if (getLanguage() == 1) {
         $("#text1").html("RECORD");
     }

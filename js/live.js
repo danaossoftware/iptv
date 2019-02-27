@@ -243,10 +243,10 @@ function loadChannels() {
                 playVideo(channels[0]["url"]);
             }
             $("#loading-container").hide();
-            if (Native.isAndroidTV() == 1) {
+            //if (Native.isAndroidTV() == 1) {
                 var firstChannel = $("#channels").find(".channel:eq(0)");
                 firstChannel.css("background-color", "#e67e22");
-            }
+            //}
             pointerIndex = 0;
             currentPointerInMenu = false;
             sortingMenuShown = false;
@@ -743,9 +743,9 @@ function refreshChannels() {
 function sortCategories() {
     $("#menu-container").css("display", "none");
     $("#sort-container").css("display", "flex");
-    if (Native.isAndroidTV() == 1) {
+    //if (Native.isAndroidTV() == 1) {
         $("#sort-option-1").css("background-color", "#eeeeee");
-    }
+    //}
     sortingMenuShown = true;
     sortingPointerIndex = 0;
 }

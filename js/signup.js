@@ -1,8 +1,10 @@
 var currentIndex = -1;
 const SERVER_URL = "https://iptvjoss.com/iptv/php/";
+var language = 0;
 
 $(document).ready(function() {
-    if (getLanguage() == 1) {
+	language = Native.readInt("language", 0);
+    if (language == 1) {
         $("#text1").html("Signup");
         $("#phone").attr("placeholder", "Phone Number");
         $("#username").attr("placeholder", "Username");
@@ -10,7 +12,6 @@ $(document).ready(function() {
         $("#signup").html("SIGN UP");
         $("#text2").html("Have account already? Login here");
     }
-    $("#phone").focus();
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'check-session.php',
@@ -127,24 +128,75 @@ function upKey() {
 function focusToIndex() {
     switch (currentIndex) {
         case 0:
-            $("#phone").focus();
+			$("#phone").css("border", "2px solid #3498db");
+			$("#username").css("border", "0");
+			$("#password").css("border", "0");
+			$("#signup").css("border", "0");
+			$("#text2").css("border", "0");
             break;
         case 1:
-            $("#username").focus();
+			$("#phone").css("border", "0");
+			$("#username").css("border", "2px solid #3498db");
+			$("#password").css("border", "0");
+			$("#signup").css("border", "0");
+			$("#text2").css("border", "0");
             break;
         case 2:
-            $("#password").focus();
+			$("#phone").css("border", "0");
+			$("#username").css("border", "0");
+			$("#password").css("border", "2px solid #3498db");
+			$("#signup").css("border", "0");
+			$("#text2").css("border", "0");
             break;
         case 3:
-            $("#password").blur();
+			$("#phone").css("border", "0");
+			$("#username").css("border", "0");
+			$("#password").css("border", "0");
+			$("#signup").css("border", "2px solid #3498db");
+			$("#text2").css("border", "0");
+            break;
+        case 4:
+			$("#phone").css("border", "0");
+			$("#username").css("border", "0");
+			$("#password").css("border", "0");
+			$("#signup").css("border", "0");
+			$("#text2").css("border", "2px solid #3498db");
             break;
     }
 }
 
 function enterKey() {
-    if (currentIndex == 3) {
+	if (currentIndex == 0) {
+		var title = "Nomor handphone";
+		if (language == 1) {
+			title = "Phone number";
+		}
+		Native.showEditTextDialog(1, language, title, "");
+    } else if (currentIndex == 1) {
+		var title = "Nama pengguna";
+		if (language == 1) {
+			title = "Username";
+		}
+		Native.showEditTextDialog(2, language, title, "");
+    } else if (currentIndex == 2) {
+		var title = "Kata sandi";
+		if (language == 1) {
+			title = "Password";
+		}
+		Native.showPasswordDialog(3, language, title, "");
+    } else if (currentIndex == 3) {
         signup();
     } else if (currentIndex == 4) {
         window.location.href = "login.html";
     }
+}
+
+function editTextFinished(code, value) {
+	if (code == 1) {
+		$("#phone").val(value);
+	} else if (code == 2) {
+		$("#username").val(value);
+	} else if (code == 3) {
+		$("#password").val(value);
+	}
 }

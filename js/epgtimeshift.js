@@ -1,11 +1,11 @@
 var pointerIndex = 0;
 
 $(document).ready(function () {
-    if (Native.isAndroidTV() == 1) {
+    //if (Native.isAndroidTV() == 1) {
         $("#epg-time-shift").css("border", "3px solid #3498db");
         $("#epg-time-shift").css("width", "calc(100% - 16px)");
         $("#epg-time-shift").css("height", "24px");
-    }
+    //}
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function () {

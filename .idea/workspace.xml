@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/adult.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/adult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/automation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/automation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/epgtimeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/epgtimeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/epgtimeshift.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/epgtimeshift.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/landing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/live-categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/live-categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/live.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/live.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/movie-categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/movie-categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/movies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/players.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/players.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/streamformat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/streamformat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/timeformat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/timeformat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recordings.html" beforeDir="false" afterPath="$PROJECT_DIR$/recordings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="371" column="78" selection-start-line="371" selection-start-column="78" selection-end-line="371" selection-end-column="78" />
+            <state relative-caret-position="305">
+              <caret line="373" column="60" lean-forward="true" selection-start-line="373" selection-start-column="60" selection-end-line="373" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -38,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/systemdata/settings.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -46,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/landing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
+            <state relative-caret-position="1003">
               <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -84,7 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>load</find>
       <find>loading-container</find>
       <find>kembali</find>
       <find>kem</find>
@@ -114,6 +132,7 @@
       <find>showpass</find>
       <find>vip</find>
       <find>progressDialog</find>
+      <find>isandroidtv</find>
     </findStrings>
     <replaceStrings>
       <replace>padding-top: 20px; padding-bottom: 20px;</replace>
@@ -155,6 +174,7 @@
       <dir>C:\Users\Dana\Documents\WebFiles\iptv</dir>
       <dir>C:\Users\Dana\Documents\AndroidStudioProjects\iTVPlayer\app\src\main\assets\iptv</dir>
       <dir>C:\Users\Dana\Documents\AndroidStudioProjects\iTVPlayer\app\src\main\assets\iptv\php</dir>
+      <dir>C:\Users\Dana\Documents\AndroidStudioProjects\iTVPlayer\app\src\main\assets\iptv\js</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -163,29 +183,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/live-categories.html" />
-        <option value="$PROJECT_DIR$/movie-categories.html" />
-        <option value="$PROJECT_DIR$/js/movie-categories.js" />
-        <option value="$PROJECT_DIR$/js/adult.js" />
-        <option value="$PROJECT_DIR$/settings.html" />
-        <option value="$PROJECT_DIR$/php/upload-playlist.php" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/channels.m3u" />
-        <option value="$PROJECT_DIR$/channels/movies.html" />
-        <option value="$PROJECT_DIR$/channels/adult.html" />
         <option value="$PROJECT_DIR$/channels/live.html" />
         <option value="$PROJECT_DIR$/settings/timeformat.html" />
         <option value="$PROJECT_DIR$/php/get-json-settings.php" />
-        <option value="$PROJECT_DIR$/js/live-categories.js" />
         <option value="$PROJECT_DIR$/php/get-channels.php" />
         <option value="$PROJECT_DIR$/php/set-location.php" />
         <option value="$PROJECT_DIR$/js/global.js" />
         <option value="$PROJECT_DIR$/php/check-session.php" />
-        <option value="$PROJECT_DIR$/js/movies.js" />
         <option value="$PROJECT_DIR$/recordings.html" />
-        <option value="$PROJECT_DIR$/js/live.js" />
         <option value="$PROJECT_DIR$/js/recordings.js" />
-        <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/php/get-settings.php" />
         <option value="$PROJECT_DIR$/notifications.html" />
         <option value="$PROJECT_DIR$/php/get-notifications.php" />
@@ -214,6 +220,20 @@
         <option value="$PROJECT_DIR$/systemdata/settings.xml" />
         <option value="$PROJECT_DIR$/landing.html" />
         <option value="$PROJECT_DIR$/js/landing.js" />
+        <option value="$PROJECT_DIR$/js/players.js" />
+        <option value="$PROJECT_DIR$/js/live.js" />
+        <option value="$PROJECT_DIR$/js/player.js" />
+        <option value="$PROJECT_DIR$/js/movies.js" />
+        <option value="$PROJECT_DIR$/js/adult.js" />
+        <option value="$PROJECT_DIR$/js/live-categories.js" />
+        <option value="$PROJECT_DIR$/js/timeformat.js" />
+        <option value="$PROJECT_DIR$/js/streamformat.js" />
+        <option value="$PROJECT_DIR$/js/epgtimeshift.js" />
+        <option value="$PROJECT_DIR$/js/epgtimeline.js" />
+        <option value="$PROJECT_DIR$/js/automation.js" />
+        <option value="$PROJECT_DIR$/js/movie-categories.js" />
+        <option value="$PROJECT_DIR$/js/settings.js" />
+        <option value="$PROJECT_DIR$/js/common.js" />
       </list>
     </option>
   </component>
@@ -231,7 +251,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,6 +297,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,18 +464,19 @@
       <workItem from="1551008305223" duration="1765000" />
       <workItem from="1551010179242" duration="1725000" />
       <workItem from="1551011969466" duration="1705000" />
-      <workItem from="1551014007137" duration="1005000" />
+      <workItem from="1551014007137" duration="1276000" />
+      <workItem from="1551209918904" duration="223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256635000" />
+    <option name="totallyTimeSpent" value="257129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.64826024" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18759455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1066,9 +1087,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="373" column="60" lean-forward="true" selection-start-line="373" selection-start-column="60" selection-end-line="373" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/get-settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/systemdata/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/landing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
+        <state relative-caret-position="1003">
           <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1098,27 +1140,6 @@
             <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/systemdata/settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/get-settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="371" column="78" selection-start-line="371" selection-start-column="78" selection-end-line="371" selection-end-column="78" />
         </state>
       </provider>
     </entry>

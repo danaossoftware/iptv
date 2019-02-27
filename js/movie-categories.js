@@ -75,12 +75,12 @@ function loadCategories() {
                         "</div>");
                 }
                 setCategoryClickListener();
-                if (Native.isAndroidTV() == 1) {
+                //if (Native.isAndroidTV() == 1) {
                     var firstCategory = $("#categories").find("div:eq(0)");
                     firstCategory.css("border", "2px solid white");
                     firstCategory.css("width", "calc(50% - 24px)");
                     firstCategory.css("height", "56px");
-                }
+                //}
             }
         }
     });
