@@ -2,10 +2,12 @@
 #EXTINF:-1 tvg-id="Trans7.id" tvg-name="Trans 7" tvg-logo="https://upload.wikimedia.org/wikipedia/id/thumb/7/79/Trans_7_2013.svg/1280px-Trans_7_2013.svg.png" group-title="Lokal",Trans 7
 http://202.80.222.171/000001/2/ch14041511545447343123/index.m3u8?virtualDomain=000001.live_hls.zte.com
 #EXTINF:-1 tvg-id="SCTV.id" tvg-name="SCTV" tvg-logo="https://upload.wikimedia.org/wikipedia/id/thumb/1/1f/Antv_logo_%282017%29.svg/1200px-Antv_logo_%282017%29.svg.png" group-title="Lokal",SCTV
-https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SCTV_Logo.svg/1280px-SCTV_Logo.svg.png
+http://202.80.222.171/000001/2/ch15010918464887721048/index.m3u8?virtualDomain=000001.live_hls.zte.com
 #EXTINF:-1 tvg-id="RCTI.id" tvg-name="RCTI" tvg-logo="https://upload.wikimedia.org/wikipedia/id/0/09/RCTI_MNC-Group.png" group-title="Lokal",RCTI
 http://202.80.222.171/000001/2/ch14041511532707866226/index.m3u8?virtualDomain=000001.live_hls.zte.com
 #EXTINF:-1 tvg-id="XXX.id" tvg-name="XXX" tvg-logo="https://upload.wikimedia.org/wikipedia/id/0/09/RCTI_MNC-Group.png" group-title="VIP",XXX
 http://cdn1.stream4.me/vlxx/01200-01299/01283_720p.mp4
 #EXTINF:-1 tvg-id="kungfusex.id" tvg-name="Kungfu Sex" tvg-logo="https://upload.wikimedia.org/wikipedia/id/0/09/RCTI_MNC-Group.png" group-title="Movie",Kungfu Sex
 http://cdn1.stream4.me/vlxx/00100-00199/00136_360p.mp4
+#EXTINF:-1 tvg-id="TVOne.id" tvg-name="TV One" tvg-logo="https://1.bp.blogspot.com/-pzwyeasLoY4/W-y9fy3hvxI/AAAAAAAAQAE/gSQD9SQxUVYxYqsT-yT0N0Z7rVa_s1lUQCLcBGAs/w1200-h630-p-k-no-nu/TVONE.png" group-title="Lokal",TV One
+http://210.210.155.35/session/5b77e1b0-3a34-11e9-b6f2-c81f66f89318/qwr9ew/s/s02/02.m3u8

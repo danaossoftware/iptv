@@ -122,23 +122,24 @@ function loadCategories() {
 function setCategoryClickListener() {
     $(".category").on("click", function() {
         var index = $(".category").parent().children().index(this);
-        var categoryName = categories[index];
         Native.log("Selected sort type: "+selectedSortType);
-        /*if (selectedSortType == 1) {
+        Native.log("Selected index: "+index);
+		var categoryName = categories[index];
+        if (selectedSortType == 1) {
             if (index == 0) {
                 categoryName = "Semua";
-            }
+            } else {
+				index--;
+				categoryName = categories[index];
+			}
         } else if (selectedSortType == 2) {
             if (index == categories.length) {
                 categoryName = "Semua";
             }
-        }*/
-        if (index == 0) {
-            categoryName = "Semua";
         }
-		if (index > 0) {
-			index--;
-		}
+        /*if (index == 0) {
+            categoryName = "Semua";
+        }*/
         //window.location.href = "channels/live.html?cat="+index+"&name="+categoryName;
         Native.playWithNativePlayer(index, categoryName);
     });
