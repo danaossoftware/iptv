@@ -136,6 +136,9 @@ function setCategoryClickListener() {
         if (index == 0) {
             categoryName = "Semua";
         }
+		if (index > 0) {
+			index--;
+		}
         //window.location.href = "channels/live.html?cat="+index+"&name="+categoryName;
         Native.playWithNativePlayer(index, categoryName);
     });
