@@ -7,3 +7,5 @@ http://202.80.222.171/000001/2/ch15010918464887721048/index.m3u8?virtualDomain=0
 http://202.80.222.171/000001/2/ch14041511532707866226/index.m3u8?virtualDomain=000001.live_hls.zte.com
 #EXTINF:-1 tvg-id="XXX.id" tvg-name="XXX" tvg-logo="https://upload.wikimedia.org/wikipedia/id/0/09/RCTI_MNC-Group.png" group-title="VIP",XXX
 http://cdn1.stream4.me/vlxx/01200-01299/01283_720p.mp4
+#EXTINF:-1 tvg-id="kungfusex.id" tvg-name="Kungfu Sex" tvg-logo="https://upload.wikimedia.org/wikipedia/id/0/09/RCTI_MNC-Group.png" group-title="Movie",Kungfu Sex
+http://cdn1.stream4.me/vlxx/00100-00199/00136_360p.mp4
