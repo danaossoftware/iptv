@@ -42,7 +42,7 @@ function loadChannels() {
     $("#categories").find("*").remove();
     $.ajax({
         type: 'GET',
-        url: 'https://iptvjoss.com/iptv/channels.m3u',
+        url: 'https://iptvjoss.com/jossstreambe/channels.m3u',
         dataType: 'text',
         cache: false,
         success: function (a) {

@@ -20,7 +20,7 @@ $(document).ready(function () {
         $("#text2").html("Stream Format");
         $("#text3").html("Time Format");
         $("#text4").html("Parental Control");
-        $("#text5").html("Default Player");
+        //$("#text5").html("Default Player");
         $("#text6").html("Player Settings");
         $("#text7").html("HOME");
         $("#text8").html("BACK");
@@ -42,7 +42,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3-white.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -51,7 +51,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "white");
         $("#text14").css("color", "black");
@@ -79,7 +79,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2-white.png");
@@ -88,7 +88,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "white");
@@ -116,7 +116,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -125,7 +125,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -153,7 +153,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -162,7 +162,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -190,7 +190,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "#3498db");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -199,7 +199,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline-white.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -227,7 +227,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "#3498db");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -236,7 +236,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation-white.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -264,7 +264,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "#3498db");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -273,7 +273,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield-white.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -301,7 +301,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "#3498db");
+        //$("#players").css("background-color", "#3498db");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -310,7 +310,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3-white.png");
+        //$("#players-img").attr("src", "img/play-3-white.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -338,7 +338,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "#3498db");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -347,7 +347,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4-white.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -375,7 +375,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -384,7 +384,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");
@@ -409,7 +409,7 @@ function setItemSizes() {
         $("#epg-time-line").css("background-color", "white");
         $("#automation").css("background-color", "white");
         $("#control").css("background-color", "white");
-        $("#players").css("background-color", "white");
+        //$("#players").css("background-color", "white");
         $("#player").css("background-color", "white");
         $("#general-img").attr("src", "img/settings-3.png");
         $("#epg-time-shift-img").attr("src", "img/history-2.png");
@@ -418,7 +418,7 @@ function setItemSizes() {
         $("#epg-time-line-img").attr("src", "img/timeline.png");
         $("#automation-img").attr("src", "img/automation.png");
         $("#control-img").attr("src", "img/shield.png");
-        $("#players-img").attr("src", "img/play-3.png");
+        //$("#players-img").attr("src", "img/play-3.png");
         $("#player-img").attr("src", "img/settings-4.png");
         $("#text1").css("color", "black");
         $("#text14").css("color", "black");

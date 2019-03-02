@@ -1,2 +1,2 @@
 <?php
-echo file_get_contents("../systemdata/settings.json");
+echo file_get_contents("https://iptvjoss.com/jossstreambe/systemdata/settings.json");
