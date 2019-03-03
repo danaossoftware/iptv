@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c3ff6e-339e-4f48-ab9b-da79ac120ef5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php/get-user-info-by-phone.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/get-user-info-by-username.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/landing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +24,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/get-user-info-by-phone.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/landing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="1" lean-forward="true" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="220">
+              <caret line="62" column="20" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/get-user-info-by-phone.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/get-user-info-by-username.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -48,7 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>editTextFinished</find>
       <find>loading</find>
       <find>showpass</find>
       <find>vip</find>
@@ -78,6 +84,7 @@
       <find>userid</find>
       <find>id</find>
       <find>phone</find>
+      <find>logout</find>
     </findStrings>
     <replaceStrings>
       <replace>padding-top: 20px; padding-bottom: 20px;</replace>
@@ -160,7 +167,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/login.js" />
         <option value="$PROJECT_DIR$/php/get-account.php" />
-        <option value="$PROJECT_DIR$/js/landing.js" />
         <option value="$PROJECT_DIR$/php/update-profile.php" />
         <option value="$PROJECT_DIR$/php/add-to-favorite.php" />
         <option value="$PROJECT_DIR$/js/live.js" />
@@ -179,6 +185,7 @@
         <option value="$PROJECT_DIR$/php/update-settings.php" />
         <option value="$PROJECT_DIR$/php/get-user-info-by-phone.php" />
         <option value="$PROJECT_DIR$/php/get-user-info-by-username.php" />
+        <option value="$PROJECT_DIR$/js/landing.js" />
       </list>
     </option>
   </component>
@@ -395,12 +402,12 @@
       <workItem from="1551601386535" duration="1000000" />
       <workItem from="1551610466128" duration="599000" />
       <workItem from="1551615677256" duration="1558000" />
-      <workItem from="1551618747171" duration="235000" />
+      <workItem from="1551618747171" duration="951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262716000" />
+    <option name="totallyTimeSpent" value="263432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -864,13 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/landing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -913,17 +913,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/get-user-info-by-phone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/get-user-info-by-username.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/get-user-info-by-phone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="62" column="20" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
         </state>
       </provider>
     </entry>

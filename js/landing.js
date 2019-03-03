@@ -60,7 +60,8 @@ function cancelSelected(code) {
 }
 
 function logout() {
-    $("#loading-container").css("display", "flex").hide().fadeIn(300);
+    Native.logout();
+    /*$("#loading-container").css("display", "flex").hide().fadeIn(300);
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function() {
@@ -76,7 +77,7 @@ function logout() {
         success: function(a) {
             window.location.href = "login.html";
         }
-    });
+    });*/
 }
 
 function backKey() {
