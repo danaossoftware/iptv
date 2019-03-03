@@ -25,6 +25,7 @@ $(document).ready(function() {
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-account.php',
+        data: {'user_id': Native.getUserID()},
         dataType: 'text',
         cache: false,
         success: function(a) {

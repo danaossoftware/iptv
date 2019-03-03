@@ -10,6 +10,7 @@ function loadProfile() {
     $.ajax({
         type: 'GET',
         url: 'https://iptvjoss.com/iptv/php/get-user-info.php',
+        data: {'user_id': Native.getUserID()},
         dataType: 'text',
         cache: false,
         success: function(a) {

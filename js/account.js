@@ -24,6 +24,7 @@ function loadSettings() {
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-account.php',
+        data: {'user_id': Native.getUserID()},
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -45,6 +46,7 @@ function loadSettings() {
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-active-connections.php',
+        data: {'user_id': Native.getUserID()},
         dataType: 'text',
         cache: false,
         success: function(a) {

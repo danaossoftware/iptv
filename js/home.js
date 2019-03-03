@@ -10,6 +10,7 @@ function loadProfile() {
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-user-info.php',
+        data: {'user_id': Native.getUserID()},
         dataType: 'text',
         cache: false,
         success: function(a) {

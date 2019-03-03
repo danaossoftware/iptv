@@ -11,6 +11,7 @@ if ($results && $results->num_rows > 0) {
 }*/
 session_id("jossstream");
 session_start();
-$userId = $_SESSION["jossstream_user_id"];
+//$userId = $_SESSION["jossstream_user_id"];
+$userId = $_GET["user_id"];
 $results = $c->query("SELECT * FROM sessions WHERE user_id='" . $userId . "'");
 echo $results->num_rows;

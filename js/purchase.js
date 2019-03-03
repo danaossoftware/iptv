@@ -18,7 +18,7 @@ $(document).ready(function() {
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'get-purchase-info.php',
-        data: {'type': type},
+        data: {'user_id': Native.getUserID(), 'type': type},
         dataType: 'text',
         cache: false,
         success: function(a) {

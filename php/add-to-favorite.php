@@ -5,6 +5,7 @@ $channelInfo = $_GET["channel-info"];
 $userId = $c->query("SELECT * FROM sessions WHERE ip='" . $ip . "'")->fetch_assoc()["user_id"];*/
 session_id("jossstream");
 session_start();
-$userId = $_SESSION["jossstream_user_id"];
+//$userId = $_SESSION["jossstream_user_id"];
+$userId = $_GET["user_id"];
 $c->query("INSERT INTO favorites (id, user_id, favorite) VALUES ('" . uniqid() . "', '" . $userId . "', '" . $channelInfo . "')");
 $c->query("UPDATE users SET last_update=" . round(microtime(true)*1000) . " WHERE id='" . $userId . "'");

@@ -8,6 +8,7 @@ function loadProfile() {
     $.ajax({
         type: 'GET',
         url: 'https://iptvjoss.com/iptv/php/get-user-info.php',
+        data: {'user_id': Native.getUserID()},
         dataType: 'text',
         cache: false,
         success: function(a) {
@@ -53,6 +54,7 @@ function saveEdittedProfile() {
         var fd = new FormData();
         fd.append("img-file-name", profilePictureName);
         fd.append("img-file", profilePictureFile);
+        fd.append("user_id", Native.getUserID());
         $.ajax({
             type: 'POST',
             url: SERVER_URL+'upload-img.php',
@@ -64,7 +66,7 @@ function saveEdittedProfile() {
                 $.ajax({
                     type: 'GET',
                     url: 'https://iptvjoss.com/iptv/php/update-profile.php',
-                    data: {'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
+                    data: {'user_id': Native.getUserID(), 'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
                     dataType: 'text',
                     cache: false,
                     success: function(a) {
@@ -84,7 +86,7 @@ function saveEdittedProfile() {
         $.ajax({
             type: 'GET',
             url: 'https://iptvjoss.com/iptv/php/update-profile.php',
-            data: {'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
+            data: {'user_id': Native.getUserID(), 'name': name, 'username': username, 'city': city, 'profile-picture-url': profilePictureURL},
             dataType: 'text',
             cache: false,
             success: function(a) {

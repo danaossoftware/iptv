@@ -362,7 +362,7 @@ function addToFavorite() {
     $.ajax({
         type: 'GET',
         url: SERVER_URL+'add-to-favorite.php',
-        data: {'channel-info': channel},
+        data: {'user_id': Native.getUserID(), 'channel-info': channel},
         dataType: 'text',
         cache: false,
         success: function(a) {
