@@ -34,7 +34,8 @@ function login() {
     if ($("#remember-me").prop("checked") == true) {
         rememberMe = 1;
     }
-    $.ajax({
+    Native.login(phone, password);
+    /*$.ajax({
         type: 'GET',
         url: 'https://iptvjoss.com/iptv/php/login.php',
         data: {'phone': phone, 'password': password, 'remember-me': rememberMe},
@@ -82,7 +83,7 @@ function login() {
                 }
             }
         }
-    });
+    });*/
 }
 
 function backKey() {

@@ -8,7 +8,7 @@
                 get: function () { return "Chrome/60.0.3112.113"; }
             });
 
-            $.ajax({
+            /*$.ajax({
                 type: 'GET',
                 url: 'https://iptvjoss.com/iptv/php/check-session.php',
                 dataType: 'text',
@@ -26,7 +26,14 @@
                 error: function(a, b, c) {
                     alert(a+' '+b+' '+c);
                 }
-            });
+            });*/
+
+            if (Native.checkSession() == 1) {
+                window.location.href = "landing.html";
+            } else {
+                window.location.href = "login.html";
+            }
+
         </script>
     </head>
     <body>
