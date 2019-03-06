@@ -49,8 +49,10 @@ function loadCategories() {
                         if (categoryName == "") {
                             categoryName = "Tidak terdefinisi";
                         }
-                        if (!isCategoryAlreadyAdded(categoryName)) {
-                            categories.push(categoryName);
+                        if (categoryName != 'VIP' && categoryName != 'vip') {
+                            if (!isCategoryAlreadyAdded(categoryName)) {
+                                categories.push(categoryName);
+                            }
                         }
                     }
                 } catch (e) {

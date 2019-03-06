@@ -363,24 +363,31 @@ function editTextFinished(code, value) {
         Native.showProgressDialog(msg);
         $.ajax({
             type: 'GET',
-            url: SERVER_URL+'get-settings.php',
+            url: 'https://iptvjoss.com/iptv/php/get-settings.php',
             dataType: 'text',
             cache: false,
             success: function(a) {
+                Native.show(a);
                 Native.log(a);
                 Native.hideProgressDialog();
                 var settings = new DOMParser().parseFromString(a, "text/xml");
                 var password = settings.getElementsByTagName("vip-password")[0].childNodes[0].nodeValue;
+                Native.show("Password: "+password);
                 Native.log("Password: "+password);
-                if (password.trim() != value.trim()) {
+                if (password != value) {
                     var errorMsg = "Kata sandi tidak cocok";
                     if (getLanguage() == 1) {
                         errorMsg = "Password not matches";
                     }
-                    show(errorMsg);
+                    Native.show("Password not matches");
+                    //Native.show(errorMsg);
                 } else {
+                    Native.show("Password matches");
                     Native.playWithNativePlayer(0, "vip");
                 }
+            },
+            error: function(a, b, c) {
+                Native.show("Error: "+b+" "+c);
             }
         });
     }
