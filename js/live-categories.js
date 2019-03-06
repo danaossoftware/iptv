@@ -49,7 +49,7 @@ function loadCategories() {
                         if (categoryName == "") {
                             categoryName = "Tidak terdefinisi";
                         }
-                        if (categoryName != 'VIP' && categoryName != 'vip') {
+                        if (categoryName.toLowerCase() != 'vip' && categoryName.toLowerCase() != 'film') {
                             if (!isCategoryAlreadyAdded(categoryName)) {
                                 categories.push(categoryName);
                             }
