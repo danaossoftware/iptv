@@ -17,19 +17,34 @@ $(document).ready(function() {
     }
     $.ajax({
         type: 'GET',
-        url: SERVER_URL+'get-purchase-info.php',
-        data: {'user_id': Native.getUserID(), 'type': type},
+        url: SERVER_URL+'get-user-info.php',
+        data: {'user_id': Native.getUserID()},
         dataType: 'text',
         cache: false,
         success: function(a) {
             try {
-                var price = "Rp" + formatMoney(a, ",", ".") + ",-";
-                $("#price").html(price);
-                $("#price-2").html(price);
+                var userInfo = JSON.parse(a);
+                $("#name").html(userInfo["username"]);
             } catch (e) {
-                console.log(e);
+                Native.log(e.toString());
             }
-            $("#loading-container").fadeOut(300);
+            $.ajax({
+                type: 'GET',
+                url: SERVER_URL+'get-purchase-info.php',
+                data: {'user_id': Native.getUserID(), 'type': type},
+                dataType: 'text',
+                cache: false,
+                success: function(a) {
+                    try {
+                        var price = "Rp" + formatMoney(a, ",", ".") + ",-";
+                        $("#price").html(price);
+                        $("#price-2").html(price);
+                    } catch (e) {
+                        console.log(e);
+                    }
+                    $("#loading-container").fadeOut(300);
+                }
+            });
         }
     });
 });
