@@ -25,11 +25,7 @@ function loadProfile() {
                     var date = new Date(endDate);
                     $("#enddate").html("" + date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear());
                 } else {
-                    var msg = "Tidak diketahui";
-                    if (Native.getLanguage() == 1) {
-                        msg = "Unknown";
-                    }
-                    $("#enddate").html(msg);
+                    $("#enddate").html("-");
                 }
                 if (user["is_trial"] == 1) {
                     $("#trial").html("Ya");
