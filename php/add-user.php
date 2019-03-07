@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 $userId = $_POST["user_id"];
-$phone = $_POST["phone"];
+$email = $_POST["email"];
 $username = $_POST["username"];
 $password = $_POST["password"];
-$c->query("INSERT INTO users (id, phone, password, username) VALUES ('" . $userId . "', '" . $phone . "', '" . $password . "', '" . $username . "')");
+$c->query("INSERT INTO users (id, email, password, username) VALUES ('" . $userId . "', '" . $email . "', '" . $password . "', '" . $username . "')");

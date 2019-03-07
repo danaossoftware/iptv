@@ -20,9 +20,16 @@ function loadProfile() {
             } else {
                 var user = JSON.parse(a);
                 $("#username").html(user["username"]);
-                if (user["end_date"] != '' && user["made_in"] != 0) {
-                    var date = new Date(parseInt(user["end_date"]));
+                var endDate = parseInt(user["end_date"]);
+                if (endDate != 0) {
+                    var date = new Date(endDate);
                     $("#enddate").html("" + date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear());
+                } else {
+                    var msg = "Tidak diketahui";
+                    if (Native.getLanguage() == 1) {
+                        msg = "Unknown";
+                    }
+                    $("#enddate").html(msg);
                 }
                 if (user["is_trial"] == 1) {
                     $("#trial").html("Ya");
@@ -30,9 +37,16 @@ function loadProfile() {
                     $("#trial").html("Tidak");
                 }
                 $("#active-connections").html(user["active_connections"]);
-                if (user["made_in"] != '' && user["made_in"] != 0) {
-                    date = new Date(parseInt(user["made_in"]));
+                var madeIn = parseInt(user["made_in"]);
+                if (madeIn != 0) {
+                    date = new Date(madeIn);
                     $("#made-in").html(date.getDate()+" "+monthNames[date.getMonth()]+" "+date.getFullYear());
+                } else {
+                    var msg = "Tidak diketahui";
+                    if (Native.getLanguage() == 1) {
+                        msg = "Unknown";
+                    }
+                    $("#made-in").html(msg);
                 }
                 $("#maximum-connections").html(user["maximum_connections"]);
                 var profilePictureURL = user["profile_picture_url"];
