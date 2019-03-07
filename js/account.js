@@ -1,6 +1,7 @@
 var currentIndex = -1;
 
 $(document).ready(function() {
+    $("#loading-container").fadeOut(300);
     $("#time").html(getTime());
     $("#date").html(getDate());
     setTimeout(function() {
@@ -30,17 +31,22 @@ function loadSettings() {
         success: function(a) {
             var account = JSON.parse(a);
             $("#username").html(account["username"]);
-            var endDate = new Date(parseInt(account["end_date"]));
-            $("#end-date").html(endDate.getDate()+" "+getMonthName(endDate.getMonth())+" "+endDate.getFullYear());
+            var endDateInt = parseInt(account["end_date"].trim());
+            if (endDateInt != 0) {
+                var endDate = new Date(endDateInt);
+                $("#end-date").html(endDate.getDate()+" "+getMonthName(endDate.getMonth())+" "+endDate.getFullYear());
+            }
             if (account["is_trial"] == "1") {
                 $("#is-trial").html("YA");
             } else {
                 $("#is-trial").html("TIDAK");
             }
-            var madeDate = new Date(parseInt(account["made_on"]));
-            $("#made-on").html(madeDate.getDate()+" "+getMonthName([madeDate.getMonth()])+" "+madeDate.getFullYear());
+            var madeDateInt = parseInt(account["made_in"].trim());
+            if (madeDateInt != 0) {
+                var madeDate = new Date(madeDateInt);
+                $("#made-in").html(madeDate.getDate() + " " + getMonthName([madeDate.getMonth()]) + " " + madeDate.getFullYear());
+            }
             $("#maximum-connections").html(account["maximum_connections"]);
-            $("#loading-container").fadeOut(300);
         }
     });
     $.ajax({

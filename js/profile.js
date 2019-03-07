@@ -3,6 +3,7 @@ var monthNames = [
 ];
 
 $(document).ready(function() {
+    Native.log("Hello, world 3");
     loadProfile();
 });
 
@@ -21,8 +22,9 @@ function loadProfile() {
                 var user = JSON.parse(a);
                 $("#username").html(user["username"]);
                 var endDate = parseInt(user["end_date"]);
+                Native.log("End date: "+endDate);
                 if (endDate != 0) {
-                    var date = new Date(endDate);
+                    var date = new Date(1551924607134);
                     $("#enddate").html("" + date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear());
                 } else {
                     $("#enddate").html("-");
